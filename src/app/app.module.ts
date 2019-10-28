@@ -61,6 +61,9 @@ import { LinkedinComponent } from './user/login/linkedin/linkedin.component';
 import { LayoutComponent } from './page/layout/layout.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { TermsComponent } from './page/terms/terms.component';
+import { ProfileComponent } from './page-user/profile/profile.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
+
 
 export function tokenGetter(){
    return localStorage.getItem('access_token');
@@ -112,7 +115,8 @@ export function tokenGetter(){
     LinkedinComponent,
     LayoutComponent,
     SidebarComponent,
-    TermsComponent
+    TermsComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
@@ -135,7 +139,8 @@ export function tokenGetter(){
     MatIconModule,
     MatListModule,
     AngularEditorModule,
-    NgmEditorModule
+    NgmEditorModule,
+    MatFormFieldModule
   ],
   providers: [
     {provide: APP_BASE_HREF, useValue: '/'},

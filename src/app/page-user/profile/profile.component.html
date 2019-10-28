@@ -1,0 +1,22 @@
+<div class="lm__timeline" fxLayout="column">
+
+   <mat-card>
+      <mat-card-content>
+
+         <div class="container-text-area" fxLayout="column">        
+            <mat-form-field fxFlex="100%" appearance="outline" color="#d2b7ed">
+               <textarea   matInput 
+                           placeholder="Write your post here .." 
+                           rows="5" #postVar
+                           [formControl]="post"
+                           (keyup)="postContent($event)"
+               >
+               </textarea>
+               <mat-hint>{{ 500 - postVar.textLength }} characters left</mat-hint>
+            </mat-form-field>            
+         </div>
+
+      </mat-card-content>
+   </mat-card>
+      
+</div>

@@ -125,6 +125,7 @@ exports.register = async (req, res) => {
       authToken,
       authTokenExpire
    });
+
    await user.setPassword(req.body.password);
    const response = await user.save()
       .catch(error => res.json(error));
@@ -138,7 +139,8 @@ exports.register = async (req, res) => {
    }
 };
 
-exports.authenticateAuthToken = async (req, res) => {   
+exports.authenticateAuthToken = async (req, res) => {  
+   //  req.body.authToken 
    const user = await User.findOneAndUpdate(
       { authToken: req.body.authToken }, 
       { authenticated: true, terms: true }, 
@@ -146,13 +148,13 @@ exports.authenticateAuthToken = async (req, res) => {
    )
    .catch(error => res.json(error));
 
-   if(user){
-     
+
+   if(user && user._id){
       let currentDate = Date.now();
       let authTokenExpire = user.authTokenExpire.getMilliseconds();
       if(currentDate > authTokenExpire) {
          let jwtToken = user.generateJwt();
-         user.token = jwtToken;         
+         user.token = jwtToken;       
          res.json(user);         
       }
       else res.json({ status: 401, statusText: 'Unauthorized'})
@@ -190,12 +192,14 @@ exports.authenticate = async (req, res, next) => {
 }; //
 
 exports.login = async (req, res) => {   
+
    const authenticate = User.authenticate();
    const authenticateUser = await authenticate(req.body.email, req.body.password)
        .catch(error => res.json(error));
+
    const user = authenticateUser.user;
    
-   if(user){
+   if(user && user._id){
        
        const token = user.generateJwt();
        user.token = token;
@@ -229,14 +233,12 @@ exports.updateProfile = async (req, res) => {
 exports.updateStateCountryByCity = async (req, res) => {
    
    let data = res.locals.autoCompleteStateCountry; // { state: 'Pahang', country: 'Malaysia', phonecode: '60' }
-   console.log(req.body);
    let phoneCode = Number(data.phonecode);
    const user = await User.findOneAndUpdate(
       { _id: req.body._id}, 
       { state: data.state, country: data.country, phoneCode },
       { new: true, useFindAndModify: false }
    ).catch(error => res.json(error));
-   console.log(user);
    if(user && user._id) res.json(user);      
 };
 
@@ -308,7 +310,6 @@ exports.forgotPassword = async(req, res) => {
 exports.forgotPassword1 = async(req, res, next) => {
    const result = await User.findOne({ email: req.body.email })
    .catch(error => res.json(error));
-   console.log(result);
    if(result && result._id){
       res.locals.user = result;
       return next();
@@ -318,19 +319,10 @@ exports.forgotPassword1 = async(req, res, next) => {
 
 exports.forgotPassword2 = async(req, res, next) => {
    const user = res.locals.user;
-   console.log(user);
    res.json(user);
 }
 
 // ** Reset Password
-exports.reqValidateResetPassword = [
-
-   body('email').isEmail().normalizeEmail(),
-   body('password').not().isEmpty().trim().escape(),
-   body('passwordConfirm').not().isEmpty().trim().escape()
-                           
-];
-
 exports.resetPassword = async(req, res) => {
 
    const user = await User.findOne({authToken: req.body.token})

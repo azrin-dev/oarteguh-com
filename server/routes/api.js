@@ -38,7 +38,7 @@ router.post('/user/register',
 router.post('/user/register/authenticate', 
    validateController.reqValidateToken,
    catchErrors(userController.authenticateAuthToken)
-)
+);
 
 router.post('/user/authenticate', 
     validateController.reqValidateAuth,
@@ -56,8 +56,7 @@ router.post('/user/forgot-password',
 );
 
 router.post('/user/reset-password',
-    userController.reqValidateResetPassword,
-    validateController.validationErrors,
+    validateController.reqValidateResetPassword,
     catchErrors(userController.resetPassword)
 );
 

@@ -23,6 +23,7 @@ import { ForgotPasswordComponent } from './user/forgot-password/forgot-password.
 import { CallbackComponent } from './user/login/callback/callback.component';
 import { LinkedinComponent } from './user/login/linkedin/linkedin.component';
 import { TermsComponent } from './page/terms/terms.component';
+import { ProfileComponent } from './page-user/profile/profile.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent, data: { name: 'Home', icon: 'home', tooltip: 'Home Page', type: 'public' } },      
@@ -30,6 +31,7 @@ export const routes: Routes = [
   { path: 'terms', component: TermsComponent, data: { name: 'Terms', icon: 'policy', tooltip: 'Terms', type: 'public' } }, 
   { path: 'contact', component: ContactFormComponent, data: { name: 'Contact Us', icon: 'alternate_email', tooltip: 'Contact Us', type: 'public' }}, 
   
+  { path: 'user/profile', component: ProfileComponent, data: { name: 'Name', icon: 'account_circle', tooltip: 'Profile Page', type: 'user' } }, 
   { path: 'posts/tags/tag/:tag', component: TagsComponent, data: { name: 'Tag', icon: 'dashboard', tooltip: 'Tag Page', type: 'user' } }, 
   { path: 'user/login', component: LoginComponent, data: { name: 'Login', icon: 'person', tooltip: 'Login Page', type: 'auth' } },
   { path: 'user/login/linkedin', component: LinkedinComponent, data: { name: 'Linkedin', icon: 'person', tooltip: 'Linkedin Callback Page', type: 'admin' } },

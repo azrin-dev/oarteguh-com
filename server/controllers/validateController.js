@@ -244,3 +244,24 @@ exports.validationErrors = (req, res, next) => {
    }
    else return next();
 };
+
+exports.reqValidateResetPassword = (req, res, next) => {   
+   req.sanitizeBody('email').normalizeEmail({
+      remove_dots: false,
+      remove_extensions: false,
+      gmail_remove_subaddress: false 
+   });
+   req.check('email').not().isEmpty();
+
+   req.sanitizeBody('password');
+   req.check('password').not().isEmpty(); 
+   
+   req.sanitizeBody('passwordConfirm');
+   req.check('passwordConfirm').not().isEmpty();
+
+   const errors = req.body.validationErrors; 
+   
+   if (errors) {
+      return res.json({ errors: errors.array(), status: 422 }) } 
+   return next();
+};

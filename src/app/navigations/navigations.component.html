@@ -17,6 +17,11 @@
                </button>
             </span>
             <span class="lm__nav-toolbar-icon" fxHide.xs>
+               <button mat-icon-button  class="lm__menu-span-button shadow__text-right" *ngIf="profile" matTooltip="Profile" routerLink="/user/profile">
+                  <mat-icon class="lm__menu-span-button-icon">
+                     account_circle
+                  </mat-icon>
+               </button>
                <button mat-icon-button  class="lm__menu-span-button shadow__text-right" *ngIf="profile" matTooltip="Logout" (click)="logout()">
                   <mat-icon class="lm__menu-span-button-icon">
                      person_add_disabled

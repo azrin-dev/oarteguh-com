@@ -13,7 +13,9 @@ export class SidebarComponent implements OnInit {
       { img: 'assets/images/products/125.jpg', alt: '125' },
       { img: 'assets/images/products/126.jpg', alt: '126' },
       { img: 'assets/images/products/127.jpg', alt: '127' },
-      { img: 'assets/images/products/128.jpg', alt: '128' }
+      { img: 'assets/images/products/128.jpg', alt: '128' },
+      { img: 'assets/images/products/129.jpg', alt: '129' },
+      { img: 'assets/images/products/130.jpg', alt: '130' }
    ];
 
   constructor() { }
