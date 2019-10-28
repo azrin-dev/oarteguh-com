@@ -2,19 +2,20 @@
 // @import '@angular/material/prebuilt-themes/pink-bluegrey.css';
 @import './app/configurations/scss/index.scss';
 
-$primary: #fe4365;
 $white:#fff;
-$primary-light: #fc9d9a;
-$accent: #ff8943;
-$accent-light: #ff884365;
+$off-white: #f5f5f5;
+$primary: #FFF66B;
+$primary-light: #FFF88F;
+$accent: #915CC7;
+$accent-light: #F2B0E5;
 $warn: #f44336;
-$dark-dark-bg: #262626;
-$dark-bg: #303030;
-$dark-light-bg: #424242;
+$dark-dark-bg: #1D1821;
+$dark-bg: #272529;
+$dark-light-bg: #403B44;
 $font: rgba(255, 255, 255, 0.7);
 
 html, body { height: 100%;}
-body { margin: 0; font-family: Lato, Oswald, Roboto, "Helvetica Neue", sans-serif; background-color: $dark-light-bg }
+body { margin: 0; font-family: Lato, Oswald, Roboto, "Helvetica Neue", sans-serif; background-color: $off-white }
 .mat-list-item-content{
    padding-right: 0 !important; 
    padding-left: 0 !important; 

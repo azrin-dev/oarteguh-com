@@ -27,20 +27,13 @@ import { AdminMessageComponent } from './admin/admin-message/admin-message.compo
 import { LayoutModule } from '@angular/cdk/layout';
 import { NavigationsComponent } from './navigations/navigations.component';
 import { TagsComponent } from './tags/tags.component';
-import { SideBarComponent } from './side-bar/side-bar.component';
-import { HomeComponent } from './home/home.component';
+import { HomeComponent } from './page/home/home.component';
 import { AuthRegisterComponent } from './user/auth-register/auth-register.component';
-import { AccordionComponent } from './side-bar/accordion/accordion.component';
-import { FormPersonalComponent } from './side-bar/accordion/form-personal/form-personal.component';
-import { FormAvatarComponent } from './side-bar/accordion/form-avatar/form-avatar.component';
-import { FormAddressComponent } from './side-bar/accordion/form-address/form-address.component';
-import { FormHandphoneComponent } from './side-bar/accordion/form-handphone/form-handphone.component';
 import { VisitorComponent } from './visitor/visitor.component';
 import { VisitorFormComponent } from './visitor/visitor-form/visitor-form.component';
 import { VisitorAvatarComponent } from './visitor/visitor-form/visitor-avatar/visitor-avatar.component';
 import { AdminPostComponent } from './admin/admin-post/admin-post.component';
 import { FormPostComponent } from './admin/admin-post/form-post/form-post.component';
-import { LayoutContentComponent } from './layout-content/layout-content.component';
 import { Logo4remComponent } from './logo/logo4rem/logo4rem.component';
 import { Logo2remComponent } from './logo/logo2rem/logo2rem.component';
 import { ChipCategoriesComponent } from './admin/admin-post/form-post/chip-categories/chip-categories.component';
@@ -48,14 +41,10 @@ import { ENTER, COMMA } from '@angular/cdk/keycodes';
 import { ChipTagsComponent } from './admin/admin-post/form-post/chip-tags/chip-tags.component';
 import { Logo2remLightComponent } from './logo/logo2rem-light/logo2rem-light.component';
 import { PreviewPostComponent } from './admin/admin-post/form-post/preview-post/preview-post.component';
-import { TestComponent } from './test/test.component';
 import { AngularEditorModule } from './configurations/angular-editor/angular-editor.module';
 import { NgmEditorModule } from './ngm-editor/ngm-editor.module';
-import { AboutComponent } from './about/about.component';
 import { PostComponent } from './post/post.component';
 import { CommentsComponent } from './comments/comments.component';
-import { SalesPageComponent } from './sales-page/sales-page.component';
-import { WebsiteComponent } from './sales-page/website/website.component';
 import { AboutWhoComponent } from './home/about-who/about-who.component';
 import { AboutWhatComponent } from './home/about-what/about-what.component';
 import { PostsComponent } from './posts/posts.component';
@@ -69,7 +58,9 @@ import { ForgotPasswordComponent } from './user/forgot-password/forgot-password.
 import { MainLogoComponent } from './logo/main-logo/main-logo.component';
 import { CallbackComponent } from './user/login/callback/callback.component';
 import { LinkedinComponent } from './user/login/linkedin/linkedin.component';
-import { BannerHalfComponent } from './banner/banner-half/banner-half.component';
+import { LayoutComponent } from './page/layout/layout.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
+import { TermsComponent } from './page/terms/terms.component';
 
 export function tokenGetter(){
    return localStorage.getItem('access_token');
@@ -91,32 +82,21 @@ export function tokenGetter(){
     AdminMessageComponent,
     NavigationsComponent,
     TagsComponent,
-    SideBarComponent,
     HomeComponent,
     AuthRegisterComponent,
-    AccordionComponent,
-    FormPersonalComponent,
-    FormAvatarComponent,
-    FormAddressComponent,
-    FormHandphoneComponent,
     VisitorComponent,
     VisitorFormComponent,
     VisitorAvatarComponent,
     AdminPostComponent,
     FormPostComponent,
-    LayoutContentComponent,
     Logo4remComponent,
     Logo2remComponent,
     ChipCategoriesComponent,
     ChipTagsComponent,
     Logo2remLightComponent,
     PreviewPostComponent,
-    TestComponent,
-    AboutComponent,
     PostComponent,
     CommentsComponent,
-    SalesPageComponent,
-    WebsiteComponent,
     AboutWhoComponent,
     AboutWhatComponent,
     PostsComponent,
@@ -130,7 +110,9 @@ export function tokenGetter(){
     MainLogoComponent,
     CallbackComponent,
     LinkedinComponent,
-    BannerHalfComponent
+    LayoutComponent,
+    SidebarComponent,
+    TermsComponent
   ],
   imports: [
     BrowserModule,

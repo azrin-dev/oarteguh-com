@@ -1,0 +1,17 @@
+<div class="lm__page-container">
+   <mat-tab-group color="accent">
+
+      <mat-tab label="Produk"> 
+         <div class="lm__sidebar-items" fxLayout="row wrap" fxLayoutAlign="center center">
+            <div class="lm__sidebar-item" *ngFor="let item of items" fxFlex="40">
+               <img class="lm__sidebar-img shadow-png-ac-right" src="{{ item.img }}" alt="{{ item.alt }}">
+            </div>
+         </div>
+      </mat-tab>
+
+      <mat-tab label="Terkini"> 
+         Content 2 
+      </mat-tab>
+
+   </mat-tab-group>
+</div>

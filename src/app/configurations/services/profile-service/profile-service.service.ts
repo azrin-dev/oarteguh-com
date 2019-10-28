@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { throwError, BehaviorSubject, Observable } from 'rxjs';
 import { Router } from '@angular/router';
@@ -11,7 +11,8 @@ import { MatSnackBar } from '@angular/material';
 @Injectable({
   providedIn: 'root'
 })
-export class ProfileService {
+export class ProfileService implements OnInit{
+
    token: string;
    decodedToken: boolean = false;
    user: User;
@@ -29,7 +30,15 @@ export class ProfileService {
      private http: HttpClient, 
      private router: Router,
      public snackBar: MatSnackBar
-   ) { this.getUserSource() }  
+   ) {   
+         
+   }
+   
+   ngOnInit(){
+         const token = localStorage.getItem('token');
+         if (token) this.getUserSource(token);
+         else return null;
+   }
 
    getLocation()   
    {  this.http.post('/api/user/location', { location: '' }).subscribe(
@@ -56,7 +65,7 @@ export class ProfileService {
       )
    }
 
-   getUserSource(): void   
+   getUserSource(jwtToken): void   
    {  if(jwtToken){      
          this.http.get('/api/user/profile', httpOptions).subscribe(
             (response: User[]) => {

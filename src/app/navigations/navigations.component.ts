@@ -33,7 +33,7 @@ export class NavigationsComponent implements OnInit{
    sideNavIcon: boolean = true;
    opened: boolean = true;
    links: Menu;
-   profile: User;
+   profile: User = null;
 
   constructor(
      private breakpointObserver: BreakpointObserver,
@@ -46,8 +46,8 @@ export class NavigationsComponent implements OnInit{
       this.profileService.profile.subscribe(
          (response: User) => {
             if(response && response._id) this.profile = response;
-            else this.profile = null;
-         }
+         },
+         (error => console.log('Error : ' + error))
       )
       let pages = routes.reduce((acc, value) => {                        
             if(value.data.type === 'public') acc.public.push(value);

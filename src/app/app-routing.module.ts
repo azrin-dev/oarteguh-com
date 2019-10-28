@@ -9,28 +9,25 @@ import { AdminMessageComponent } from './admin/admin-message/admin-message.compo
 import { UserComponent } from './user/user.component';
 import { RegisterComponent } from './user/register/register.component';
 import { TagsComponent } from './tags/tags.component';
-import { HomeComponent } from './home/home.component';
+import { HomeComponent } from './page/home/home.component';
 import { AuthRegisterComponent } from './user/auth-register/auth-register.component';
 import { AdminPostComponent } from './admin/admin-post/admin-post.component';
 import { PreviewPostComponent } from './admin/admin-post/form-post/preview-post/preview-post.component';
-import { TestComponent } from './test/test.component';
 import { NgmEditorComponent } from './ngm-editor/ngm-editor.component';
 import { AngularEditorComponent } from './configurations/angular-editor/angular-editor.component';
-import { AboutComponent } from './about/about.component';
 import { PostComponent } from './post/post.component';
-import { SalesPageComponent } from './sales-page/sales-page.component';
-import { WebsiteComponent } from './sales-page/website/website.component';
 import { PostsComponent } from './posts/posts.component';
 import { AdminPostsComponent } from './admin/admin-posts/admin-posts.component';
 import { AdminPostEditComponent } from './admin/admin-post/admin-post-edit/admin-post-edit.component';
 import { ForgotPasswordComponent } from './user/forgot-password/forgot-password.component';
 import { CallbackComponent } from './user/login/callback/callback.component';
 import { LinkedinComponent } from './user/login/linkedin/linkedin.component';
+import { TermsComponent } from './page/terms/terms.component';
 
 export const routes: Routes = [
-  { path: '', component: HomeComponent, data: { name: 'Home', icon: 'home', tooltip: 'Home Page', type: 'public' } },    
-  { path: 'about', component: AboutComponent, data: { name: 'About', icon: 'work', tooltip: 'About', type: 'public' } },   
-  { path: 'articles', component: PostsComponent, data: { name: 'Articles', icon: 'menu_book', tooltip: 'Articles', type: 'public' } },  
+  { path: '', component: HomeComponent, data: { name: 'Home', icon: 'home', tooltip: 'Home Page', type: 'public' } },      
+  { path: 'articles', component: PostsComponent, data: { name: 'Articles', icon: 'menu_book', tooltip: 'Articles', type: 'public' } }, 
+  { path: 'terms', component: TermsComponent, data: { name: 'Terms', icon: 'policy', tooltip: 'Terms', type: 'public' } }, 
   { path: 'contact', component: ContactFormComponent, data: { name: 'Contact Us', icon: 'alternate_email', tooltip: 'Contact Us', type: 'public' }}, 
   
   { path: 'posts/tags/tag/:tag', component: TagsComponent, data: { name: 'Tag', icon: 'dashboard', tooltip: 'Tag Page', type: 'user' } }, 
@@ -49,8 +46,6 @@ export const routes: Routes = [
   { path: 'admin/posts/post/new', component: AdminPostComponent, canActivate: [AuthGuardService, AdminAuthGuardService], data: { name: 'Post', icon: 'book', type: 'admin'  } },
   { path: 'admin/posts/post/edit/:id', component: AdminPostEditComponent, canActivate: [AuthGuardService, AdminAuthGuardService], data: { name: 'Post', icon: 'book', type: 'admin'  } },
   { path: 'admin/posts', component: AdminPostsComponent, canActivate: [AuthGuardService, AdminAuthGuardService], data: { name: 'Posts', icon: 'book', type: 'admin'  } },
-  { path: 'services', component: SalesPageComponent, data: { name: 'Services', icon: 'devices', tooltip: 'Services', type: 'admin' }}, 
-  { path: 'buat-website', component: WebsiteComponent, data: { name: 'Buat Website', icon: 'devices', tooltip: 'Buat Website', type: 'admin' }}, 
 
   // Wildcard routes
   { path: '**', component: HomeComponent, data: { name: 'Back to Home', icon: 'dashboard', type: 'wildcard' } },

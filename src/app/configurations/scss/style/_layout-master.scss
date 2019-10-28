@@ -1,17 +1,92 @@
 @mixin layout-master($name){
 
    $white:#fff;
-   $primary: #fe4365;
-   $primary-light: #fc9d9a;
-   $accent: #ff8943;
-   $accent-light: #ff884365;
+   $off-white: #f5f5f5;
+   $primary: #FFF66B;
+   $primary-light: #FFF88F;
+   $accent: #915CC7;
+   $accent-light: #F2B0E5;
    $warn: #f44336;
-   $dark-dark-bg: #262626;
-   $dark-bg: #303030;
-   $dark-light-bg: #424242;
+   $dark-dark-bg: #1D1821;
+   $dark-bg: #272529;
+   $dark-light-bg: #403B44;
    $font: rgba(255, 255, 255, 0.7);
 
    .#{$name} {
+
+      &__nav{
+
+         &-toolbar{
+            z-index: 10;
+            position: fixed;
+            width:100%;
+            height: 64px; 
+            border-bottom: 3px solid $dark-dark-bg;
+            background-color: $dark-bg;
+
+            &-logo{
+               padding-left: 10vw;
+            }
+
+            &-icon{
+               padding-right: 10vw;
+            }
+         }
+      
+         &-sidenav{
+      
+            &-content{
+               padding-top: 69px;
+               padding-right: 5px;
+               padding-left: 49px;
+            }
+         }
+      
+         &-drawer{
+      
+            padding-top: 64px;
+            background-color: $dark-bg;
+      
+            &-open{
+               width: 250px;
+            }
+      
+            &-menu{
+               background-color: $dark-light-bg;
+               padding-top: 10px;
+               padding-bottom: 10px;
+
+               &-item{
+                  color: $primary;
+               }
+
+               &-items{
+                  color: $primary;
+               }
+
+               &-link{
+                  color: $primary;
+               }
+            }
+      
+            &-link-icon{
+               padding-left: 10px;
+               padding-right: 10px;
+            }
+         }
+
+         &-item{
+
+            &-link{
+               color: $off-white;
+            }
+
+            &-icon{
+               padding: 0 10px 0 10px;
+            }
+
+         }
+      }
 
       &__container{
 
@@ -49,7 +124,7 @@
 
       &__logo{
 
-         width: 300px;
+         width: 70px;
          height: auto;
 
          &-3rem{
@@ -61,10 +136,7 @@
          }
          
          &-2rem{
-            font-family: 'Luckiest Guy', cursive;
-            color: $primary;   
-            font-size: 2rem;  
-            padding: 0 10px 0 10px;
+            height: 90px;
          }
 
          &-2rem-menu{
@@ -125,19 +197,50 @@
 
       &__page{
 
-         &-timeline{
-            //min-height: 400px;
-            min-height: 87vh;
-            height: 87vh;  
-            padding:  5px 7px 0 5px;  
-            overflow-y: scroll;
+         &-container{
+            background-color: transparent;
+            margin-bottom: 20px;
+         }
+
+         &-content-main{
+            height: 86vh;
+            overflow-y: auto;
+            overflow-x: hidden;
+            margin-bottom: 2vh;
          }
          
-         &-sidebar{
+         &-content-sidebar{
             position: sticky;
-            position: -webkit-sticky; 
-            padding: 5px 7px 0 5px;   
+            position: -webkit-sticky;
+            top: 10px;
+            margin-top: 10px;
+            padding: 10px;
+            background-color: $white; 
+            height: 50vh;  
+            min-height: 82vh;
+            overflow:hidden;
          }
+
+         &-full{
+            min-height: 82vh;
+            background-color: $white;
+            margin-top: 10px;
+            padding: 10px 10px 10px 10px;
+            overflow: hidden;
+         }
+
+         &-full-hidden{
+            min-height: 83vh;
+            background-color: $white;
+            margin-top: 10px;
+            padding: 10px 10px 0 10px;
+            
+         }
+
+         &-title{
+            text-align: center;
+         }
+
 
          &-100p{                        
             height: 100%;
@@ -177,6 +280,7 @@
          &-100vh{
             height: 100vh;
             overflow: hidden;
+            background-color: transparent;
          }
 
          &-min100vh-auto{
@@ -199,6 +303,12 @@
             height: 88vh;
             overflow-y: hidden;
          }
+      }
+
+      &__timeline{
+         margin-top: 10px;
+         background-color: $white;
+         padding: 10px;
       }
 
       &__cards{
@@ -248,6 +358,22 @@
       }
 
       &__sidebar{
+
+         &-item{
+            padding: 10px;
+            border-radius: 5px;
+         }
+
+         &-img{
+            padding: 5px;
+            border-radius: 5px;
+         }
+
+         &-img:hover{
+            padding: 5px;
+            transform: scale(1.1);
+            overflow: hidden;
+         }
 
          &-content{
             height: 100%;
@@ -475,8 +601,10 @@
       }
 
       &__img{
-         max-width: 100%; 
+
+         width: 100%;
          height: auto;
+         padding: 10px 0 10px 0;
 
          &-profile{
             border-radius: 50%;
@@ -608,6 +736,11 @@
       }
 
       &__text{
+
+         &-highlight{
+            color: $accent;
+            font-weight: bold;
+         }
 
          &-intro{
             font-size: 30px;
@@ -744,6 +877,33 @@
             
          }
          
+      }
+
+      &__footer{
+
+         bottom: 0;
+         z-index: 10;
+         position: fixed;
+         font-size: 1rem;
+         height: 40px;
+         color: $primary;
+         border-top-color: $primary;
+         border-top-width: 2px;
+         border-top-style: solid;
+         background-color: $dark-bg;         
+
+         &-text{
+            padding: 0 10px 0 10px;
+         }
+
+         &-icon{
+            padding-top: 10px;
+            color: $white;
+         } 
+      }
+
+      &__footer:hover{
+         transform: scale(1.2, 1.2);
       }
 
    }
