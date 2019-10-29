@@ -1,16 +1,5 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["main"],{
 
-/***/ "./node_modules/raw-loader/index.js!./src/app/about/about.component.html":
-/*!**********************************************************************!*\
-  !*** ./node_modules/raw-loader!./src/app/about/about.component.html ***!
-  \**********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"lm__page-min70vh-hidden\" fxLayout=\"row\" fxLayout.lt-lg=\"column\" fxLayoutAlign=\"center\">\n\n   <app-banner-half></app-banner-half>\n\n</div>\n"
-
-/***/ }),
-
 /***/ "./node_modules/raw-loader/index.js!./src/app/admin/admin-message/admin-message.component.html":
 /*!********************************************************************************************!*\
   !*** ./node_modules/raw-loader!./src/app/admin/admin-message/admin-message.component.html ***!
@@ -165,17 +154,6 @@ module.exports = "<div class=\"spinner\" fxLayout=\"column\" fxLayoutAlign=\"cen
 
 /***/ }),
 
-/***/ "./node_modules/raw-loader/index.js!./src/app/banner/banner-half/banner-half.component.html":
-/*!*****************************************************************************************!*\
-  !*** ./node_modules/raw-loader!./src/app/banner/banner-half/banner-half.component.html ***!
-  \*****************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div  class=\"lm__container-60vh-padding-top\" \n      fxLayout=\"column\"\n      fxLayoutAlign=\" center\"\n>\n   <!-- <div  class=\"lm__text-intro\" \n         fxFlexAlign=\"start\"\n         @banner1Enter\n         (@banner1Enter.done)=\"banner1Done($event)\"\n   >\n      <div class=\"shadow__text-right banner1-enter\"  \n      >\n         Thank you for making the ...\n      </div>\n   </div>\n\n   <div  class=\"lm__text-intro\" \n         fxFlexAlign=\"start\"\n         @banner2Enter\n         *ngIf=\"banner1AnimationDone\"\n         (@banner2Enter.done)=\"banner2Done($event)\"\n   >\n      <div class=\"lm__text-intro-accent shadow__text-right banner2-enter\">\n         right choice in visiting ...\n      </div>\n   </div> -->\n\n   <div  class=\"lm__img-intro\"\n         fxLayout=\"column\"    \n         fxLayoutAlign=\"center center\"        \n   >\n      <div  class=\"banner3\"\n            fxLayout=\"column\"    \n            fxLayoutAlign=\"center center\" \n            *ngIf=\"banner2AnimationDone\"\n            @banner3Enter   \n            (@banner3Enter.done)=\"banner3Done($event)\"\n      >\n         <img  class=\"lm__img-profile shadow__png-ac-right banner3-enter\" \n               src=\"assets/images/azrin.jpg\" \n               alt=\"Azrin Amin\"\n\n         >\n      </div>\n      <div  class=\"banner4\"\n            fxLayout=\"column\"    \n            fxLayoutAlign=\"center center\"  \n            *ngIf=\"banner3AnimationDone\"\n            @banner4Enter   \n            (@banner4Enter.done)=\"banner4Done($event)\"\n      >\n         <img  class=\"lm__img-logo shadow__png-ac-right banner4-enter\"\n               src=\"assets/images/logo.png\" \n               alt=\"Azrin Amin Logo\"\n         >\n      </div>\n   \n      <div  *ngIf=\"banner4AnimationDone\"\n            @banner5Enter  \n      >\n         <div  class=\"lm__text-intro-subtitle shadow__text-right banner5-enter\"\n               fxLayout=\"column\"    \n               fxLayoutAlign=\"center center\" \n         >\n            {{ pageTitle | titlecase }}\n            <!-- <br>\n            <button  class=\"lm__banner-button\" \n                     mat-raised-button color=\"accent\"\n                     fxLayout=\"column\"    \n                     fxLayoutAlign=\"center center\" \n                     routerLink=\"#info\"\n            >\n               <mat-icon>info</mat-icon>\n               Further Info\n            </button> -->\n         </div>      \n      </div>\n   \n   </div>\n\n</div>\n"
-
-/***/ }),
-
 /***/ "./node_modules/raw-loader/index.js!./src/app/comments/comments.component.html":
 /*!****************************************************************************!*\
   !*** ./node_modules/raw-loader!./src/app/comments/comments.component.html ***!
@@ -216,7 +194,7 @@ module.exports = "<div (focus)=\"onEditorFocus()\" class=\"angular-editor\" \n  
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"lm__page-min70vh-hidden\" fxLayout=\"column\" fxLayoutAlign=\"center center\">\n   <div class=\"contact\" fxLayout=\"column\" fxLayoutAlign=\"center center\">\n      <div class=\"container\"*ngIf=\"useForm\" fxLayout=\"column\" fxLayoutAlign=\"center center\">\n\n         <app-logo4rem></app-logo4rem>\n\n         <mat-card class=\"instruction__card\" *ngIf=\"!contact\">\n\n            <mat-card-title>\n               Contact Form\n            </mat-card-title>\n\n            <mat-card-content>            \n               <form [formGroup]=\"contactForm\">\n                  <div class=\"contactForm\" fxLayout=\"column\" fxLayoutAlign=\"center center\">\n\n                     <mat-form-field appearance=\"fill\">\n                        <mat-label>Name</mat-label>\n                        <input matInput placeholder=\"Enter Name\" formControlName=\"name\" required>\n                        <mat-icon matSuffix color=\"primary\">contacts</mat-icon>\n                        <mat-hint>Ex: Severus Snape</mat-hint>\n                        <mat-error *ngIf=\"name.invalid\">\n                           Name is <strong>required</strong>\n                        </mat-error>\n                     </mat-form-field>\n\n                     <mat-form-field appearance=\"fill\">\n                        <mat-label>Phone No</mat-label>\n                        <input matInput placeholder=\"Enter Phone No\" formControlName=\"phone\" type=\"number\" required>\n                        <mat-icon matSuffix color=\"primary\">contact_phone</mat-icon>\n                        <mat-hint>Ex: 111111111</mat-hint>\n                        <mat-error *ngIf=\"phone.invalid\">\n                           Phone no is <strong>required</strong>\n                        </mat-error>\n                     </mat-form-field>\n\n                     <mat-form-field appearance=\"fill\">\n                        <mat-label>Email</mat-label>\n                        <input matInput type=\"email\" placeholder=\"Enter email\" formControlName=\"email\" required>\n                        <mat-icon matSuffix color=\"primary\">contact_mail</mat-icon>\n                        <mat-hint>Ex: snape@hogwarts.com</mat-hint>\n                        <mat-error *ngIf=\"email.invalid\">\n                           Email is <strong>required</strong>\n                        </mat-error>\n                     </mat-form-field>\n\n                     <mat-form-field appearance=\"fill\">\n                        <textarea matInput formControlName=\"comment\" placeholder=\"Leave a comment\" required></textarea>\n                        <mat-icon matSuffix color=\"primary\">contact_mail</mat-icon>\n                        <mat-error *ngIf=\"comment.invalid\">\n                           Comment is <strong>required</strong>\n                        </mat-error>\n                     </mat-form-field>\n\n                     <div class=\"card__review-button\" fxLayout fxLayoutAlign=\"center center\">\n                        <button mat-raised-button color=\"primary\" (click)=\"submitContact()\">Submit Contact</button>\n                     </div>\n\n                  </div>\n               </form>             \n            </mat-card-content>\n\n         </mat-card>\n\n         <mat-card class=\"gold-theme\" *ngIf=\"contact\">\n            <mat-card-title>\n               Thank You\n            </mat-card-title>\n            <mat-card-content >\n               Your request has been submitted, our local representative will contact you back as soon as possible.\n            </mat-card-content>\n         </mat-card>\n      </div>\n   </div>\n</div>"
+module.exports = "<div class=\"lm__page-full\" fxLayout=\"column\" fxLayoutAlign=\"center center\">\n   <div class=\"contact\" fxLayout=\"column\" fxLayoutAlign=\"center center\">\n      <div class=\"container\"*ngIf=\"useForm\" fxLayout=\"column\" fxLayoutAlign=\"center center\">\n\n         <app-logo4rem></app-logo4rem>\n\n         <mat-card class=\"instruction__card\" *ngIf=\"!contact\">\n\n            <app-main-logo></app-main-logo>\n            \n            <mat-card-title>\n               Contact Form\n            </mat-card-title>\n\n            <mat-card-content>            \n               <form [formGroup]=\"contactForm\">\n                  <div class=\"contactForm\" fxLayout=\"column\" fxLayoutAlign=\"center center\">\n\n                     <mat-form-field appearance=\"fill\">\n                        <mat-label>Name</mat-label>\n                        <input matInput placeholder=\"Enter Name\" formControlName=\"name\" required>\n                        <mat-icon matSuffix color=\"accent\">contacts</mat-icon>\n                        <mat-hint>Ex: Severus Snape</mat-hint>\n                        <mat-error *ngIf=\"name.invalid\">\n                           Name is <strong>required</strong>\n                        </mat-error>\n                     </mat-form-field>\n\n                     <mat-form-field appearance=\"fill\">\n                        <mat-label>Phone No</mat-label>\n                        <input matInput placeholder=\"Enter Phone No\" formControlName=\"phone\" type=\"number\" required>\n                        <mat-icon matSuffix color=\"accent\">contact_phone</mat-icon>\n                        <mat-hint>Ex: 111111111</mat-hint>\n                        <mat-error *ngIf=\"phone.invalid\">\n                           Phone no is <strong>required</strong>\n                        </mat-error>\n                     </mat-form-field>\n\n                     <mat-form-field appearance=\"fill\">\n                        <mat-label>Email</mat-label>\n                        <input matInput type=\"email\" placeholder=\"Enter email\" formControlName=\"email\" required>\n                        <mat-icon matSuffix color=\"accent\">contact_mail</mat-icon>\n                        <mat-hint>Ex: snape@hogwarts.com</mat-hint>\n                        <mat-error *ngIf=\"email.invalid\">\n                           Email is <strong>required</strong>\n                        </mat-error>\n                     </mat-form-field>\n\n                     <mat-form-field appearance=\"fill\">\n                        <textarea matInput formControlName=\"comment\" placeholder=\"Leave a comment\" required></textarea>\n                        <mat-icon matSuffix color=\"accent\">contact_mail</mat-icon>\n                        <mat-error *ngIf=\"comment.invalid\">\n                           Comment is <strong>required</strong>\n                        </mat-error>\n                     </mat-form-field>\n\n                     <div class=\"card__review-button\" fxLayout fxLayoutAlign=\"center center\">\n                        <button mat-raised-button color=\"accent\" (click)=\"submitContact()\">Submit Contact</button>\n                     </div>\n\n                  </div>\n               </form>             \n            </mat-card-content>\n\n         </mat-card>\n\n         <mat-card class=\"gold-theme\" *ngIf=\"contact\">\n            <mat-card-title>\n               Thank You\n            </mat-card-title>\n            <mat-card-content >\n               Your request has been submitted, our local representative will contact you back as soon as possible.\n            </mat-card-content>\n         </mat-card>\n      </div>\n   </div>\n</div>"
 
 /***/ }),
 
@@ -227,7 +205,7 @@ module.exports = "<div class=\"lm__page-min70vh-hidden\" fxLayout=\"column\" fxL
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\n   <mat-toolbar class=\"footer\" fxLayout=\"row\" fxLayoutAlign=\"center center\">\n      <span class=\"footer__text\">\n         Copyright \n      </span>\n      <span>\n         <mat-icon color=\"primary\" class=\"footer__icon\">copyright</mat-icon>\n      </span>\n      <span class=\"footer__text\">\n         2017,  www.azrin.dev\n      </span>\n   </mat-toolbar>\n</div> "
+module.exports = "<div class=\"container\">\n   <mat-toolbar class=\"lm__footer\" fxLayout=\"row\" fxLayoutAlign=\"center center\">\n      <span class=\"lm__footer-text\">\n         Copyright \n      </span>\n      <span>\n         <mat-icon color=\"primary\" class=\"lm__footer-icon\">copyright</mat-icon>\n      </span>\n      <span class=\"lm__footer-text\">\n         2016,  www.oarteguh.com\n      </span>\n   </mat-toolbar>\n</div> "
 
 /***/ }),
 
@@ -261,28 +239,6 @@ module.exports = "<div class=\"lm__container-light-bg\">\n\n   <div class=\"lm__
 /***/ (function(module, exports) {
 
 module.exports = "<div  class=\"lm__container-100vh-padding-top\" \n      fxLayout=\"column\"\n      fxLayoutAlign=\" center\"\n>\n   <div  class=\"lm__text-intro\" \n         fxFlexAlign=\"start\"\n         @banner1Enter\n         (@banner1Enter.done)=\"banner1Done($event)\"\n   >\n      <div class=\"shadow__text-right banner1-enter\"  \n      >\n         Thank you for making the ...\n      </div>\n   </div>\n\n   <div  class=\"lm__text-intro\" \n         fxFlexAlign=\"start\"\n         @banner2Enter\n         *ngIf=\"banner1AnimationDone\"\n         (@banner2Enter.done)=\"banner2Done($event)\"\n   >\n      <div class=\"lm__text-intro-accent shadow__text-right banner2-enter\">\n         right choice in visiting ...\n      </div>\n   </div>\n\n   <div  class=\"lm__img-intro\"\n         fxLayout=\"column\"    \n         fxLayoutAlign=\"center center\"        \n   >\n      <div  class=\"banner3\"\n            fxLayout=\"column\"    \n            fxLayoutAlign=\"center center\" \n            *ngIf=\"banner2AnimationDone\"\n            @banner3Enter   \n            (@banner3Enter.done)=\"banner3Done($event)\"\n      >\n         <img  class=\"lm__img-profile shadow__png-ac-right banner3-enter\" \n               src=\"assets/images/azrin.jpg\" \n               alt=\"Azrin Amin\"\n\n         >\n      </div>\n      <div  class=\"banner4\"\n            fxLayout=\"column\"    \n            fxLayoutAlign=\"center center\"  \n            *ngIf=\"banner3AnimationDone\"\n            @banner4Enter   \n            (@banner4Enter.done)=\"banner4Done($event)\"\n      >\n         <img  class=\"lm__img-logo shadow__png-ac-right banner4-enter\"\n               src=\"assets/images/logo.png\" \n               alt=\"Azrin Amin Logo\"\n         >\n      </div>\n   \n      <div  *ngIf=\"banner4AnimationDone\"\n            @banner5Enter  \n      >\n         <div  class=\"lm__text-intro-subtitle shadow__text-right banner5-enter\"\n               fxLayout=\"column\"    \n               fxLayoutAlign=\"center center\" \n         >\n            Freelance Consultant & Application Developer\n            <br>\n            <button  class=\"lm__banner-button\" \n                     mat-raised-button color=\"accent\"\n                     fxLayout=\"column\"    \n                     fxLayoutAlign=\"center center\" \n            >\n               <mat-icon>info</mat-icon>\n               Further Info\n            </button>\n         </div>      \n      </div>\n   \n   </div>\n\n</div>\n\n"
-
-/***/ }),
-
-/***/ "./node_modules/raw-loader/index.js!./src/app/home/home.component.html":
-/*!********************************************************************!*\
-  !*** ./node_modules/raw-loader!./src/app/home/home.component.html ***!
-  \********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<app-banner-full></app-banner-full>\n\n<app-about-who></app-about-who>\n\n<app-about-what></app-about-what>\n\n<app-posts></app-posts>\n"
-
-/***/ }),
-
-/***/ "./node_modules/raw-loader/index.js!./src/app/layout-content/layout-content.component.html":
-/*!****************************************************************************************!*\
-  !*** ./node_modules/raw-loader!./src/app/layout-content/layout-content.component.html ***!
-  \****************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"lm__page-min100vh-hidden profile\" fxLayout=\"row\" fxLayout.lt-md=\"column\">\n\n   \n\n   <div fxFlex=\"40\" fxFlex.lt-md=\"100\" class=\"sidebar\">\n      <app-side-bar></app-side-bar>         \n   </div>\n   \n   <div fxFlex=\"60\" fxFlex.lt-md=\"100\" class=\"timeline lm__page-100p-auto\">\n            <!-- Content -->\n            <router-outlet></router-outlet>  \n   </div>\n\n</div>\n            \n\n\n\n\n\n\n\n\n"
 
 /***/ }),
 
@@ -326,7 +282,7 @@ module.exports = "<div fxLayout=\"column\" fxLayoutAlign=\"center center\">\n   
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div fxLayout=\"column\" fxLayoutAlign=\"center center\">\n   <img  class=\"lm__logo\"\n         alt=\"\"\n         src=\"{{ logo }}\" \n   >\n</div>\n"
+module.exports = "<div fxLayout=\"column\" fxLayoutAlign=\"center center\">\n   <img  class=\"lm__logo shadow__png-ac-right\"\n         alt=\"\"\n         src=\"{{ logo }}\" \n   >\n</div>\n"
 
 /***/ }),
 
@@ -337,7 +293,7 @@ module.exports = "<div fxLayout=\"column\" fxLayoutAlign=\"center center\">\n   
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"lm__container-100vh\">\n\n   <div class=\"nav\">\n\n      <div class=\"nav__toolbar\">\n         <mat-toolbar color=\"primary\">  \n            <span class=\"lm__menu-span-logo\" [ngClass]=\"{ 'shadow__text-left': !(isHandset$|async), 'shadow__text-center': (isHandset$|async) }\" routerLink=\"/\" matTooltip=\"Back to Home Page\">\n              <app-logo2rem-light></app-logo2rem-light>\n            </span>\n            <span class=\"lm__menu-span-filler\" fxHide.xs></span>\n            <span class=\"lm__menu-span-buttons\" fxHide.xs>\n               <button mat-icon-button  class=\"lm__menu-span-button shadow__text-right\" *ngFor=\"let link of links.public\" routerLink=\"{{ link.path }}\" matTooltip=\"{{ link.data.tooltip }}\">\n                  <mat-icon class=\"lm__menu-span-button-icon\">\n                     {{ link.data.icon }}\n                  </mat-icon>\n               </button>\n            </span>\n            <span class=\"lm__menu-span-buttons\" fxHide.xs>\n               <button mat-icon-button  class=\"lm__menu-span-button shadow__text-right\" *ngIf=\"profile\" matTooltip=\"Logout\" (click)=\"logout()\">\n                  <mat-icon class=\"lm__menu-span-button-icon\">\n                     person_add_disabled\n                  </mat-icon>\n               </button>\n            </span>\n         </mat-toolbar> \n      </div> \n\n      <div class=\"nav__sidenav\">\n         <mat-sidenav-container hasBackdrop=\"false\"> \n\n            <mat-sidenav #drawer class=\"nav__drawer\"    \n               [ngClass]=\"{ 'nav__drawer-open': !sideNavIcon }\"          \n               fixedInViewport\n               attr.role=\"navigation\" \n               [@fadeOut]=\"sideNavIcon\"                 \n               mode=\"over\"\n               [opened]=\"opened\"\n            >       \n               <div class=\"nav__drawer-menu\" fxLayout=\"row\" fxLayoutAlign=\"center center\">\n                     <div *ngIf=\"sideNavIcon\">\n                        <button mat-icon-button color=\"primary\" (click)=\"toggleSidenav()\">\n                           <mat-icon>chevron_right</mat-icon>\n                        </button>\n                     </div>\n                     <div class=\"nav__sidenav-drawer-menu-item\" fxLayout=\"row\" fxLayoutAlign=\"center center\">\n                        <div fxFlex=\"80\" *ngIf=\"!sideNavIcon\"><h2>Menu</h2></div>\n                        <div fxFlex=\"20\" *ngIf=\"!sideNavIcon\">\n                           <button mat-icon-button (click)=\"toggleSidenav()\">\n                              <mat-icon  color=\"primary\">close</mat-icon>\n                           </button>\n                        </div>\n                     </div>\n               </div>  \n\n               <!-- Public menu -->\n               <mat-nav-list class=\"nav__drawer-links\" fxLayout=\"column\" fxLayoutAlign=\"start\">\n\n                  <div class=\"nav__drawer-link\" *ngFor=\"let link of links.public\">\n                     <a mat-list-item class=\"list\" routerLink=\"{{link.path}}\" matTooltip=\"{{ link.data.tooltip }}\" (click)=\"itemClicked()\">\n                        <mat-icon class=\"nav__drawer-link-icon\" color=\"primary\">\n                           {{ link.data.icon }}\n                        </mat-icon>\n                        <div class=\"nav__drawer-link-text\" *ngIf=\"!sideNavIcon\">\n                           {{ link.data.name }}\n                        </div>                        \n                     </a> \n                  </div>\n                  <div *ngIf=\"!profile\">\n                     <div class=\"nav__drawer-link\" *ngFor=\"let link of links.auth\" >\n                        <a mat-list-item class=\"list\" routerLink=\"{{link.path}}\" matTooltip=\"{{ link.data.tooltip }}\" (click)=\"itemClicked()\">\n                           <mat-icon class=\"nav__drawer-link-icon\" color=\"primary\">\n                              {{ link.data.icon }}\n                           </mat-icon>\n                           <div class=\"nav__drawer-link-text\" *ngIf=\"!sideNavIcon\">\n                              {{ link.data.name }}\n                           </div>                        \n                        </a> \n                     </div>\n                  </div>\n\n                  <!-- <mat-divider *ngIf=\"sideNavIcon\"></mat-divider>\n\n                  <div class=\"nav__drawer-link\" *ngIf=\"sideNavIcon\">\n                     <button class=\"nav__drawer-link-menu-button\" mat-icon-button [matMenuTriggerFor]=\"menuSettings\" color=\"primary\">\n                        <mat-icon class=\"nav__drawer-menu-link-icon\" >\n                           account_circle\n                        </mat-icon>\n                     </button>\n                     <mat-menu #menuSettings=\"matMenu\" >\n                           <button mat-menu-item *ngFor=\"let link of links.user\" routerLink=\"{{ link.path }}\">\n                              <mat-icon color=\"primary\">\n                                 {{ link.data.icon }}\n                              </mat-icon>\n                              {{ link.data.name }}\n                           </button>\n                     </mat-menu>\n                  </div>\n\n                  <mat-divider *ngIf=\"sideNavIcon\"></mat-divider> -->\n\n                  <div *ngIf=\"profile && profile.admin\">\n                     <div class=\"nav__drawer-link\" *ngIf=\"sideNavIcon\">\n                        <button class=\"nav__drawer-link-menu-button\" mat-icon-button [matMenuTriggerFor]=\"menuSettings\" color=\"primary\" >\n                           <mat-icon class=\"nav__drawer-menu-link-icon\" >\n                              settings\n                           </mat-icon>\n                        </button>\n                        <mat-menu #menuSettings=\"matMenu\" >\n                              <button mat-menu-item *ngFor=\"let link of links.admin\"   routerLink=\"{{ link.path }}\">\n                                 <mat-icon color=\"primary\">\n                                    {{ link.data.icon }}\n                                 </mat-icon>\n                                 {{ link.data.name }}\n                              </button>\n                        </mat-menu>\n                     </div>\n                  </div>\n\n               </mat-nav-list>\n\n               <mat-divider></mat-divider>\n\n               <!-- User menu -->\n               <!-- <mat-expansion-panel *ngIf=\"!sideNavIcon\">\n                  <mat-expansion-panel-header >\n                     <mat-panel-title>\n                        <mat-icon class=\"lm__icon\" color=\"primary\">settings</mat-icon>\n                        <span>Settings</span>\n                     </mat-panel-title>\n                  </mat-expansion-panel-header>                  \n                  <mat-nav-list >\n                     <div class=\"links\" *ngFor=\"let link of links.user\">\n                        <a mat-list-item routerLink=\"{{link.path}}\" >\n                           <mat-icon class=\"lm__icon\" color=\"primary\">{{ link.data.icon }}</mat-icon>\n                           <div class=\"text\" *ngIf=\"!sideNavIcon\">{{ link.data.name }}</div>                        \n                        </a> \n                     </div>\n                     <div class=\"links\" *ngIf=\"sideNavIcon\">\n                        <a mat-list-item >\n                           <mat-icon class=\"lm__icon\" color=\"primary\">settings</mat-icon>                       \n                        </a> \n                     </div>\n                  </mat-nav-list>             \n               </mat-expansion-panel> -->\n\n               <!-- Logout -->\n               <mat-nav-list class=\"nav__drawer-links\" fxLayout=\"column\" fxLayoutAlign=\"start\">\n                  <div *ngIf=\"profile\">\n                     <div class=\"nav__drawer-link\">\n                        <a mat-list-item class=\"list\" (click)=\"logout()\">\n                           <mat-icon class=\"nav__drawer-link-icon\" color=\"primary\">\n                              person_add_disabled\n                           </mat-icon>\n                           <div class=\"nav__drawer-link-text\" *ngIf=\"!sideNavIcon\">\n                              Logout\n                           </div>                        \n                        </a> \n                     </div>\n                  </div>\n               </mat-nav-list>\n\n            </mat-sidenav>\n\n            <mat-sidenav-content role=\"main\" class=\"nav__sidenav-content\"[@fadeOut]=\"!sideNavIcon\">               \n               <!-- Add Content Here -->\n               <router-outlet></router-outlet>              \n            </mat-sidenav-content>\n\n         </mat-sidenav-container>\n      </div>  \n\n   </div>\n   \n   <app-footer></app-footer>\n   \n</div>"
+module.exports = "<div class=\"lm__container-100vh\">\n\n   <div class=\"nav\">\n\n      <div class=\"lm__nav\">\n         <mat-toolbar class=\"lm__nav-toolbar\">  \n            <span class=\"lm__nav-toolbar-logo\" [ngClass]=\"{ 'shadow__text-left': !(isHandset$|async), 'shadow__text-center': (isHandset$|async) }\"                routerLink=\"/\" matTooltip=\"Back to Home Page\"\n            >\n               <app-main-logo></app-main-logo>\n            </span>\n            <span class=\"lm__menu-span-filler\" fxHide.xs></span>\n            <span class=\"lm__menu-span-buttons\" fxHide.xs>\n               <button mat-icon-button  class=\"lm__menu-span-button shadow__text-right\" *ngFor=\"let link of links.public\" routerLink=\"{{ link.path }}\" matTooltip=\"{{ link.data.tooltip }}\">\n                  <mat-icon class=\"lm__menu-span-button-icon\">\n                     {{ link.data.icon }}\n                  </mat-icon>\n               </button>\n            </span>\n            <span class=\"lm__nav-toolbar-icon\" fxHide.xs>\n               <button mat-icon-button  class=\"lm__menu-span-button shadow__text-right\" *ngIf=\"profile\" matTooltip=\"Profile\" routerLink=\"/user/profile\">\n                  <mat-icon class=\"lm__menu-span-button-icon\">\n                     account_circle\n                  </mat-icon>\n               </button>\n               <button mat-icon-button  class=\"lm__menu-span-button shadow__text-right\" *ngIf=\"profile\" matTooltip=\"Logout\" (click)=\"logout()\">\n                  <mat-icon class=\"lm__menu-span-button-icon\">\n                     person_add_disabled\n                  </mat-icon>\n               </button>\n            </span>\n         </mat-toolbar> \n      </div> \n\n      <div class=\"nav__sidenav\">\n         <mat-sidenav-container hasBackdrop=\"false\"> \n\n            <mat-sidenav #drawer class=\"lm__nav-drawer\"    \n               [ngClass]=\"{ 'nav__drawer-open': !sideNavIcon }\"          \n               fixedInViewport\n               attr.role=\"navigation\" \n               [@fadeOut]=\"sideNavIcon\"                 \n               mode=\"over\"\n               [opened]=\"opened\"\n            >       \n               <div class=\"lm__nav-drawer-menu\" fxLayout=\"row\" fxLayoutAlign=\"center center\">\n                     <div *ngIf=\"sideNavIcon\">\n                        <button mat-icon-button color=\"primary\" (click)=\"toggleSidenav()\">\n                           <mat-icon>chevron_right</mat-icon>\n                        </button>\n                     </div>\n                     <div class=\"lm__nav-drawer-menu-item\" fxLayout=\"row\" fxLayoutAlign=\"center center\">\n                        <div fxFlex=\"80\" *ngIf=\"!sideNavIcon\"><h2>Menu</h2></div>\n                        <div fxFlex=\"20\" *ngIf=\"!sideNavIcon\">\n                           <button mat-icon-button (click)=\"toggleSidenav()\">\n                              <mat-icon  color=\"primary\">close</mat-icon>\n                           </button>\n                        </div>\n                     </div>\n               </div>  \n\n               <!-- Public menu -->\n               <mat-nav-list class=\"lm__nav-drawer-menu-items\" fxLayout=\"column\" fxLayoutAlign=\"start\">\n\n                  <div class=\"nav__drawer-link\" *ngFor=\"let link of links.public\">\n                     <a mat-list-item class=\"list\" routerLink=\"{{link.path}}\" matTooltip=\"{{ link.data.tooltip }}\" (click)=\"itemClicked()\">\n                        <mat-icon class=\"lm__nav-item-icon\" color=\"primary\">\n                           {{ link.data.icon }}\n                        </mat-icon>\n                        <div class=\"lm__nav-item-link\" *ngIf=\"!sideNavIcon\">\n                           {{ link.data.name }}\n                        </div>                        \n                     </a> \n                  </div>\n                  <div *ngIf=\"!profile\">\n                     <div class=\"nav__drawer-link\" *ngFor=\"let link of links.auth\" >\n                        <a mat-list-item class=\"list\" routerLink=\"{{link.path}}\" matTooltip=\"{{ link.data.tooltip }}\" (click)=\"itemClicked()\">\n                           <mat-icon class=\"lm__nav-item-icon\" color=\"primary\">\n                              {{ link.data.icon }}\n                           </mat-icon>\n                           <div class=\"lm__nav-item-link\" *ngIf=\"!sideNavIcon\">\n                              {{ link.data.name }}\n                           </div>                        \n                        </a> \n                     </div>\n                  </div>\n\n                  <!-- <mat-divider *ngIf=\"sideNavIcon\"></mat-divider>\n\n                  <div class=\"nav__drawer-link\" *ngIf=\"sideNavIcon\">\n                     <button class=\"nav__drawer-link-menu-button\" mat-icon-button [matMenuTriggerFor]=\"menuSettings\" color=\"primary\">\n                        <mat-icon class=\"nav__drawer-menu-link-icon\" >\n                           account_circle\n                        </mat-icon>\n                     </button>\n                     <mat-menu #menuSettings=\"matMenu\" >\n                           <button mat-menu-item *ngFor=\"let link of links.user\" routerLink=\"{{ link.path }}\">\n                              <mat-icon color=\"primary\">\n                                 {{ link.data.icon }}\n                              </mat-icon>\n                              {{ link.data.name }}\n                           </button>\n                     </mat-menu>\n                  </div>\n\n                  <mat-divider *ngIf=\"sideNavIcon\"></mat-divider> -->\n\n                  <div *ngIf=\"profile && profile.admin\">\n                     <div class=\"nav__drawer-link\" *ngIf=\"sideNavIcon\">\n                        <button class=\"nav__drawer-link-menu-button\" mat-icon-button [matMenuTriggerFor]=\"menuSettings\" color=\"primary\" >\n                           <mat-icon class=\"lm__nav-item-icon\" color=\"primary\">\n                              settings\n                           </mat-icon>\n                        </button>\n                        <mat-menu #menuSettings=\"matMenu\" >\n                              <button mat-menu-item *ngFor=\"let link of links.admin\"   routerLink=\"{{ link.path }}\">\n                                 <mat-icon color=\"primary\">\n                                    {{ link.data.icon }}\n                                 </mat-icon>\n                                 {{ link.data.name }}\n                              </button>\n                        </mat-menu>\n                     </div>\n                  </div>\n\n               </mat-nav-list>\n\n               <mat-divider></mat-divider>\n\n               <!-- User menu -->\n               <!-- <mat-expansion-panel *ngIf=\"!sideNavIcon\">\n                  <mat-expansion-panel-header >\n                     <mat-panel-title>\n                        <mat-icon class=\"lm__icon\" color=\"primary\">settings</mat-icon>\n                        <span>Settings</span>\n                     </mat-panel-title>\n                  </mat-expansion-panel-header>                  \n                  <mat-nav-list >\n                     <div class=\"links\" *ngFor=\"let link of links.user\">\n                        <a mat-list-item routerLink=\"{{link.path}}\" >\n                           <mat-icon class=\"lm__icon\" color=\"primary\">{{ link.data.icon }}</mat-icon>\n                           <div class=\"text\" *ngIf=\"!sideNavIcon\">{{ link.data.name }}</div>                        \n                        </a> \n                     </div>\n                     <div class=\"links\" *ngIf=\"sideNavIcon\">\n                        <a mat-list-item >\n                           <mat-icon class=\"lm__icon\" color=\"primary\">settings</mat-icon>                       \n                        </a> \n                     </div>\n                  </mat-nav-list>             \n               </mat-expansion-panel> -->\n\n               <!-- Logout -->\n               <mat-nav-list class=\"lm__nav-item-link\" fxLayout=\"column\" fxLayoutAlign=\"start\">\n                  <div *ngIf=\"profile\">\n                     <div class=\"lm__nav-item-link\">\n                        <a mat-list-item class=\"list\" (click)=\"logout()\">\n                           <mat-icon class=\"lm__nav-item-icon\" color=\"primary\">\n                              person_add_disabled\n                           </mat-icon>\n                           <div class=\"lm__nav-item-link\" *ngIf=\"!sideNavIcon\">\n                              Logout\n                           </div>                        \n                        </a> \n                     </div>\n                  </div>\n               </mat-nav-list>\n\n            </mat-sidenav>\n\n            <mat-sidenav-content role=\"main\" class=\"nav__sidenav-content\"[@fadeOut]=\"!sideNavIcon\">               \n               <!-- Add Content Here -->\n               <app-layout></app-layout>            \n            </mat-sidenav-content>\n\n         </mat-sidenav-container>\n      </div>  \n\n   </div>\n   \n   <app-footer></app-footer>\n   \n</div>"
 
 /***/ }),
 
@@ -349,6 +305,50 @@ module.exports = "<div class=\"lm__container-100vh\">\n\n   <div class=\"nav\">\
 /***/ (function(module, exports) {
 
 module.exports = "   <!-- Editor Preview -->\n   <div class=\"editor\">\n      <mat-tab-group>\n\n         <mat-tab label=\"HTML\">   \n            <div  id=\"content\"   \n                  class=\"ngm__content mat-elevation-z8\"\n                  contenteditable=\"true\"\n                  (click)=\"contentSelected()\"\n                  (keyup)=\"contentSelected()\"\n                  (keyup.enter)=\"createNodeFromKb('br')\"\n                  style=\"padding: 20px\"\n                  [innerHTML]=\"content\"\n            >\n                        \n            </div>                     \n         </mat-tab>\n         \n         <mat-tab label=\"Code\">\n            <div  id=\"rawContent\"   \n                  class=\"ngm__content mat-elevation-z8\"\n                  contenteditable=\"false\"\n                  style=\"padding: 20px\"\n                  [innerHTML]=\"content\"\n                  *ngIf=\"content\"\n            >               \n            </div>\n         </mat-tab>\n         \n      </mat-tab-group>\n   </div>\n   \n   <!-- Editor Toolbar -->\n   <div class=\"toolbar\" fxLayout=\"row\" fxLayoutAlign=\"start center\">\n   \n      <!-- Bold Button  -->\n      <button mat-icon-button \n            [color]=\"(selected.button.id === 'strong') ? 'primary' : 'accent'\"\n            id=\"strong\"\n            #strong\n            (click)=\"createNode(strong)\"\n            matTooltip=\"Bold\"\n      >\n         <mat-icon>format_bold</mat-icon>\n      </button>\n   \n      <!-- Italic Button  -->\n      <button mat-icon-button \n            [color]=\"(selected.button.id === 'italic') ? 'primary' : 'accent'\"\n            id=\"italic\"\n            #italic\n            (click)=\"createNode(italic)\"\n            matTooltip=\"Italic\"\n      >\n         <mat-icon>format_italic</mat-icon>\n      </button>\n\n      <!-- Paragraph Button  -->\n      <button mat-icon-button \n            [color]=\"(selected.button.id === 'p') ? 'primary' : 'accent'\"\n            id=\"p\"\n            #paragraph\n            (click)=\"createNode(paragraph)\"\n            matTooltip=\"Paragraph\"\n      >\n         <mat-icon>notes</mat-icon>\n      </button>\n\n      <!-- Break Button  -->\n      <button mat-icon-button \n            [color]=\"(selected.button.id === 'br') ? 'primary' : 'accent'\"\n            id=\"br\"\n            #br\n            (click)=\"createNode(br)\"\n            matTooltip=\"Enter\"\n      >\n         <mat-icon>keyboard_return</mat-icon>\n      </button>\n\n      <!-- Format Clear Button  -->\n      <button mat-icon-button \n            [color]=\"(selected.button.id === 'format-clear') ? 'primary' : 'accent'\"\n            id=\"format-clear\"\n            #formatClear\n            (click)=\"clearFormat()\"\n            matTooltip=\"Clear Format\"\n      >\n         <mat-icon>format_clear</mat-icon>\n      </button>\n\n      <!-- Align Left Button  -->\n      <button mat-icon-button \n            [color]=\"(selected.button.id === 'align-left') ? 'primary' : 'accent'\"\n            id=\"align-left\"\n            #alignLeft\n            (click)=\"createNode(alignLeft)\"\n            matTooltip=\"Align Left\"\n      >\n         <mat-icon>format_align_left</mat-icon>\n      </button>\n\n      <!-- Align Center Button  -->\n      <button mat-icon-button \n            [color]=\"(selected.button.id === 'align-center') ? 'primary' : 'accent'\"\n            id=\"align-center\"\n            #alignCenter\n            (click)=\"createNode(alignCenter)\"\n            matTooltip=\"Align Center\"\n      >\n         <mat-icon>format_align_center</mat-icon>\n      </button>\n\n      <!-- h1 Button  -->\n      <button mat-icon-button \n            [color]=\"(selected.button.id === 'h1') ? 'primary' : 'accent'\"\n            id=\"h1\"\n            #h1\n            (click)=\"createNode(h1)\"\n            matTooltip=\"Header 1\"\n      >\n         <mat-icon>looks_one</mat-icon>\n      </button>\n\n      <!-- h2 Button  -->\n      <button mat-icon-button \n            [color]=\"(selected.button.id === 'h2') ? 'primary' : 'accent'\"\n            id=\"h2\"\n            #h2\n            (click)=\"createNode(h2)\"\n            matTooltip=\"Header 2\"\n      >\n         <mat-icon>looks_two</mat-icon>\n      </button>\n\n      <!-- h3 Button  -->\n      <button mat-icon-button \n            [color]=\"(selected.button.id === 'h3') ? 'primary' : 'accent'\"\n            id=\"h3\"\n            #h3\n            (click)=\"createNode(h3)\"\n            matTooltip=\"Header 3\"\n      >\n         <mat-icon>looks_3</mat-icon>\n      </button>\n\n      <!-- h4 Button  -->\n      <button mat-icon-button \n            [color]=\"(selected.button.id === 'h4') ? 'primary' : 'accent'\"\n            id=\"h4\"\n            #h4\n            (click)=\"createNode(h4)\"\n            matTooltip=\"Header 4\"\n      >\n         <mat-icon>looks_4</mat-icon>\n      </button>\n   \n   </div>\n"
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/index.js!./src/app/page-user/profile/profile.component.html":
+/*!************************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/page-user/profile/profile.component.html ***!
+  \************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"lm__timeline\" fxLayout=\"column\">\n\n   <mat-card>\n      <mat-card-content>\n\n         <div class=\"container-text-area\" fxLayout=\"column\">        \n            <mat-form-field fxFlex=\"100%\" appearance=\"outline\" color=\"#d2b7ed\">\n               <textarea   matInput \n                           placeholder=\"Write your post here ..\" \n                           rows=\"5\" #postVar\n                           [formControl]=\"post\"\n                           (keyup)=\"postContent($event)\"\n               >\n               </textarea>\n            </mat-form-field>  \n            <div class=\"lm__post-control\" fxLayout=\"row\" fxLayoutAlign=\"space-between cente\">  \n               <mat-hint>{{ 500 - postVar.textLength }} characters left</mat-hint>\n               <button mat-raised-button color=\"primary\">Submit</button>\n            </div>\n                      \n         </div>\n\n      </mat-card-content>\n   </mat-card>\n      \n</div>\n"
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/index.js!./src/app/page/home/home.component.html":
+/*!*************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/page/home/home.component.html ***!
+  \*************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n<div class=\"lm__timeline\">\n   <div class=\"lm__timeline-cards\">\n\n      <mat-card class=\"lm__timeline-card\">\n         <img mat-card-image src=\"assets/images/oarteguh.jpg\" alt=\"Logo OAR Teguh\">\n         <mat-card-title>\n            Selamat datang ke laman web OAR Teguh\n         </mat-card-title>\n         <mat-card-subtitle>\n            Tentang Kami\n         </mat-card-subtitle>\n         <mat-card-content>\n            <p><span class=\"lm__text-highlight\">OAR TEGUH SDN BHD</span> (OAR) telah ditubuhkan di malaysia menjalankan aktiviti pemasaran & aktiviti latihan teknikal, termasuk pemasaran dalam talian dan pengedaran produk kesihatan, kecantikan & kosmetik.</p>            \n         </mat-card-content>\n      </mat-card>\n\n      <mat-card class=\"lm__timeline-card\">\n         <img mat-card-image src=\"assets/images/img-dept/admin.jpg\" alt=\"Admin Department\" matTooltip=\"Admin Department\">\n         <mat-card-content>\n            <p><span class=\"lm__text-highlight\">OAR TEGUH SDN BHD</span> mula beroperasi pada 10 Mei 2016 dan dimiliki sepenuhnya oleh usahawan Bumiputera.</p>\n         </mat-card-content>        \n      </mat-card>\n\n      <mat-card class=\"lm__timeline-card\">\n         <img mat-card-image src=\"assets/images/img-dept/sales-marketing.jpg\" alt=\"Sales Department\" matTooltip=\"Sales & Marketing Department\">\n         <mat-card-content>\n            <p><span class=\"lm__text-highlight\">OAR TEGUH SDN BHD</span> merupakan sebuah syarikat penghasilan, perdagangan &  komersial di dalam semua jenis perniagaan berkaitan kesihatan kecantikan & kosmetik.Menyediakan kontrak, perjanjian dan susunan dengan rakan perniagaan, koperasi, usahasama.</p>\n         </mat-card-content>         \n      </mat-card>\n\n      <mat-card class=\"lm__timeline-card\">\n         <img mat-card-image src=\"assets/images/img-dept/finance.jpg\" alt=\"Finance Department\" matTooltip=\"Finance Department\">\n         <mat-card-subtitle>VISI SYARIKAT</mat-card-subtitle>   \n         <mat-card-content>\n            <p>Menjadi  syarikat pemasaran bumiputera yang berdaya saing dipasaran tempatan dan antarabangsa.</p>\n         </mat-card-content>\n      </mat-card>\n\n      <mat-card class=\"lm__timeline-card\">\n         <img mat-card-image src=\"assets/images/img-dept/art-creative.jpg\" alt=\"Art & Creative Department\" matTooltip=\"Art & Creative Department\">\n         <mat-card-subtitle>MISI SYARIKAT</mat-card-subtitle>   \n         <mat-card-content>\n            <div fxLayout=\"row\">\n               <mat-icon fxFlex=\"5\" color=\"accent\">trending_up</mat-icon> <span>Mencipta lebih ramai rakan niaga dalam perniagaan pemasaran dalam talian.</span>\n            </div>            \n         </mat-card-content>\n      </mat-card>\n\n      <mat-card class=\"lm__timeline-card\">\n         <img mat-card-image src=\"assets/images/img-dept/store-logistic.jpg\" alt=\"Store & Logistic\" matTooltip=\"Store & Logistic\">\n         <mat-card-content>\n            <div fxLayout=\"row\">\n               <mat-icon fxFlex=\"5\" color=\"accent\">trending_up</mat-icon> Menyediakan platform kepada rakan niaga yang ingin menceburkan diri dalam bidang pemasaran dalam talian.\n            </div>\n            <div fxLayout=\"row\">\n               <mat-icon fxFlex=\"5\" color=\"accent\">trending_up</mat-icon> Menyediakan pelan pemasaran yang mudah dan senang dicapai dan memberi pulangan yang adil serta lumayan.\n            </div>\n         </mat-card-content>\n      </mat-card>\n\n   </div>\n</div>"
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/index.js!./src/app/page/layout/layout.component.html":
+/*!*****************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/page/layout/layout.component.html ***!
+  \*****************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div  class=\"lm__page-container\" \n      fxLayout=\"row\" \n      fxLayout.lt-md=\"column\"\n      fxLayoutAlign=\"center stretch\" \n      fxLayoutGap=\"10px\"\n>\n\n      <div fxFlex=\"45\" fxFlex.lt-md=\"100\" class=\"lm__page-content-main\">\n         <router-outlet></router-outlet>               \n      </div>\n\n      <div fxFlex=\"25\" fxFlex.lt-md=\"100\" class=\"lm__page-content-sidebar\">\n         <app-sidebar></app-sidebar>\n      </div>\n \n</div>\n"
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/index.js!./src/app/page/terms/terms.component.html":
+/*!***************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/page/terms/terms.component.html ***!
+  \***************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"lm__page-full\">\n\n   <h2 class=\"lm__page-title\">Privacy Policy</h2>\n\n   <p> This Privacy Policy describes how your personal information is collected, used, and shared when you visit or make a purchase from oarteguh.com (the “Site”).</p>\n\n   <h4>PERSONAL INFORMATION WE COLLECT</h4>\n   <p>When you visit the Site, we automatically collect certain information about your device, including information about your web browser, IP address, time zone, and some of the cookies that are installed on your device. Additionally, as you browse the Site, we collect information about the individual web pages or products that you view, what websites or search terms referred you to the Site, and information about how you interact with the Site. We refer to this automatically-collected information as “Device Information.”</p> \n\n   <p> We collect Device Information using the following technologies:</p>\n\n   <p>“Cookies” are data files that are placed on your device or computer and often include an anonymous unique identifier. For more information about cookies, and how to disable cookies, visit http://www.allaboutcookies.org.</p>\n\n   <p>“Log files” track actions occurring on the Site, and collect data including your IP address, browser type, Internet service provider, referring/exit pages, and date/time stamps.</p> \n\n   <p>“Web beacons,” “tags,” and “pixels” are electronic files used to record information about how you browse the Site.\n   “JWT token” are data files that are placed on your device or computer browser and often include an anonymous unique identifier. For more information about cookies, and how to disable cookies, visit  https://jwt.io/</p>\n\n   <p>Additionally when you make a purchase or attempt to make a purchase through the Site, we collect certain information from you, including your name, ip address, billing address, shipping address, payment information (including credit card numbers, email address, and phone number. We refer to this information as “Order Information.</p> \n\n   <p>When we talk about “Personal Information” in this Privacy Policy, we are talking both about Device Information and Order Information.</p>\n\n   <h4>HOW DO WE USE YOUR PERSONAL INFORMATION?</h4>\n   <p>We use the Order Information that we collect generally to fulfill any orders placed through the Site (including processing your payment information, arranging for shipping, and providing you with invoices and/or order confirmations). Additionally, we use this Order Information to:\n   Communicate with you;</p>\n   \n   <p>Screen our orders for potential risk or fraud; and\n   When in line with the preferences you have shared with us, provide you with information or advertising relating to our products or services.</p>\n\n   <p>We use the Device Information that we collect to help us screen for potential risk and fraud (in particular, your IP address), and more generally to improve and optimize our Site (for example, by generating analytics about how our customers browse and interact with the Site, and to assess the success of our marketing and advertising campaigns).</p>\n\n   <h4>SHARING YOUR PERSONAL INFORMATION</h4>\n   <p>We share your Personal Information with third parties i.e. Google Analytics to help us understand how our customers use the Site–you can read more about how Google uses your Personal Information here: https://www.google.com/intl/en/policies/privacy/. You can also opt-out of Google Analytics here: https://tools.google.com/dlpage/gaoptout.</p>\n\n  <p> Finally, we may also share your Personal Information to comply with applicable laws and regulations, to respond to a subpoena, search warrant or other lawful request for information we receive, or to otherwise protect our rights.</p>\n\n   <p>As described above, we use your Personal Information to provide you with targeted advertisements or marketing communications we believe may be of interest to you. For more information about how targeted advertising works, you can visit the Network Advertising Initiative’s (“NAI”) educational page at http://www.networkadvertising.org/understanding-online-advertising/how-does-it-work.</p>\n\n   <p>You can opt out of targeted advertising by:</p>\n\n   FACEBOOK – https://www.facebook.com/settings/?tab=ads\n   GOOGLE – https://www.google.com/settings/ads/anonymous\n   Additionally, you can opt out of some of these services by visiting the Digital Advertising Alliance’s opt-out portal at: http://optout.aboutads.info/.\n\n   <h4>DO NOT TRACK</h4>\n   <p>Please note that we do not alter our Site’s data collection and use practices when we see a Do Not Track signal from your browser.</p>\n\n   <h4>YOUR RIGHTS</h4>\n   <p>If you are a European resident, you have the right to access personal information we hold about you and to ask that your personal information be corrected, updated, or deleted. If you would like to exercise this right, please contact us through the contact information below.</p>\n\n   <p>Additionally, if you are a European resident we note that we are processing your information in order to fulfill contracts we might have with you (for example if you make an order through the Site), or otherwise to pursue our legitimate business interests listed above. Additionally, please note that your information will be transferred outside of Europe, including to Canada and the United States.</p>\n\n   <h4>DATA RETENTION</h4>\n   <p>When you place an order through the Site, we will maintain your Order Information for our records unless and until you ask us to delete this information.</p>\n\n   <h4>MINORS</h4>\n   <p>The Site is not intended for individuals under the age of 15.</p>\n\n   <h4>CHANGES</h4>\n   <p>We may update this privacy policy from time to time in order to reflect, for example, changes to our practices or for other operational, legal or regulatory reasons.</p>\n\n   <h4>CONTACT US</h4>\n   <p>For more information about our privacy practices, if you have questions, or if you would like to make a complaint, please contact us by e-mail at me@oarteguh.com or by mail using the details provided below:</p>\n</div>\n\n<app-contact-form></app-contact-form>\n"
 
 /***/ }),
 
@@ -381,95 +381,18 @@ module.exports = "<div  class=\"lm__post-container-bg-light\"\n      fxLayout=\"
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"lm__container-light-bg\">\n\n   <div class=\"lm__cards\">\n\n      <div class=\"lm__cards-title mat-elevation-z8\">\n         LATEST POSTS\n      </div>\n\n      <div class=\"lm__cards-container mat-elevation-z8\" \n            fxLayout=\"row wrap\"\n            fxLayoutAlign=\"space-evenly center\"\n            fxLayoutGap=\"10px\"\n      >\n\n         <mat-card   class=\"lm__card timeline__card x-enter shadow__png-ac-right\" \n                     fxFlex=\"40\"\n                     fxFlex.xs=\"100\"\n                     *ngFor=\"let row of posts\"\n         >   \n            \n            <!-- Owner  -->\n            <div class=\"lm__posts-card-header\" fxLayout=\"row\" fxLayoutAlign=\"start\">\n               <div fxFlex=\"5\" fxFlexAlign=\"start\">\n                  <!-- Profile Image -->\n                  <img mat-card-avatar id=\"{{ row.image }}\" class=\"lm__avatar\" src=\"assets/images/uploads/{{ row.owner.image }}\" >\n               </div>\n               <div class=\"lm__profile-info\" fxFlexAlign=\"start\">    \n                  <!-- Profile Name  -->\n                  <mat-card-title class=\"lm__profile-title\">\n                     <a class=\"lm__a\" matTooltip=\"Go to this user profile\"\n                        routerLink=\"user/profile/{{ row.owner.name }}/{{ row.owner.id }}\"\n                     >                  \n                        {{ row.owner.name | titlecase }}\n                     </a>\n                  </mat-card-title>                                   \n                  <!-- Profile Motto -->\n                  <mat-card-subtitle>\n                     \"{{ row.owner.country | titlecase | slice:0:50 }}\"\n                     <br>\n                     <!-- Post Date  -->\n                     <em>Posted on: {{ row.created| date:'d/M/y, h:mm:ss a' }}</em> \n                  </mat-card-subtitle>\n               </div>\n            </div>\n\n            <!-- Card Image  -->\n            <div  id=\"{{ row.image }}\"\n                  @imageEnter\n                  *ngIf=\"row.image ? true : elseBlock\"                                 \n            >\n               <img mat-card-image                                      \n                  class=\"image-enter lm__card-image\" \n                  src=\"assets/images/uploads/{{ row.image }}\" \n                  alt=\"{{ row.image | titlecase }}\" \n                  (mouseout)=\"mouseLeaveImage($event)\"                  \n               >                                      \n            </div> \n            <ng-template #elseBlock >\n               <div id=\"{{ row.image }}\" \n                  *ngIf=\"row.image\"\n                  (mouseenter)=\"mouseEnterImage($event)\" \n               >\n                  <img mat-card-image  \n                     src=\"{{ row.image }}\" \n                     alt=\"{{ row.image | titlecase }}\"               \n                  > \n               </div>\n            </ng-template> \n\n            <!-- Post Title  -->\n            <mat-card-title color=\"primary\" class=\"lm__a-primary\">\n               <a [@xEnter]=\"postsExist\" class=\"lm__a\" matTooltip=\"Go to this post\"\n                  routerLink=\"{{ row.slug }}\"\n               >\n                  {{ row.title | titlecase }}\n               </a>\n            </mat-card-title>\n\n            <!-- Post Subtitle  -->\n            <mat-card-subtitle>{{ row.subtitle | titlecase }}</mat-card-subtitle>\n\n            <!-- Post Categories  -->\n            <mat-card-content>\n               <div class=\"lm__mat-chip\" fxLayout=\"row wrap\" fxLayoutAlign=\"start center\">\n                  <span class=\"lm__post-chip-categories\">Categories: </span>\n                  <mat-chip-list>\n                     <mat-chip \n                        *ngFor=\"let chip of row.categories\" \n                        color=\"primary\" \n                        selected\n                        routerLink=\"/posts/tags/tag/{{ chip.categories | lowercase }}\"\n                        matTooltip=\"Go to this Category\"\n                     >\n                        {{ chip | titlecase }}\n                     </mat-chip>\n                  </mat-chip-list>\n               </div>\n            </mat-card-content> \n\n            <!-- Contents  -->\n            <div id=\"{{ row.id }}\" (mouseenter)=\"mouseEnterCard($event)\" >                  \n\n               <!-- Post Social -->\n               <mat-card-content>\n                  <div class=\"lm__icons\" fxLayout=\"row\" fxLayoutAlign=\"center center\"> \n\n                     <!-- Liked  -->\n                     <div class=\"lm__icon-badge\">\n                        <mat-icon matBadge=\"{{ row.vote.length }}\"             \n                           matBadgeColor=\"accent\"\n                           matTooltip=\"Like and Dislike\"\n                        >\n                           thumbs_up_down\n                        </mat-icon>\n                     </div>\n\n                     <!-- Post Shared  -->\n                     <div class=\"lm__icon-badge\">\n                        <mat-icon matBadge=\"{{ row.shared }}\"             \n                           matBadgeColor=\"accent\"\n                           matTooltip=\"Shared\"\n                        >\n                           share\n                        </mat-icon>\n                     </div>\n\n                     <!-- Post Comment  -->\n                     <div class=\"lm__icon-badge\">\n                        <mat-icon matBadge=\"{{ row.comments.length }}\" \n                           matBadgeColor=\"accent\"\n                           matTooltip=\"Comments\"\n                        >\n                           comment\n                        </mat-icon>\n                     </div>\n                     \n                  </div>                           \n                  \n                  <!-- Post Content  -->\n                  <div class=\"lm__posts-content lm__text-capitalize\">          \n                     {{ row.content | slice:0:300 }} ...\n                     <button  class=\"lm__a-button\" \n                              mat-button color=\"accent\" \n                              routerLink=\"/post/{{ row.owner.name }}/{{ row.id }}/{{ row.title }}\"\n                     >\n                        Read More\n                     </button>\n                  </div>     \n                  \n                  <!-- Post Tags  -->\n                  <div class=\"lm__mat-chip\" fxLayout fxLayoutAlign=\"start center\">\n                     <span class=\"lm__post-chip-categories\">Tags: </span>\n                     <mat-chip-list>\n                        <mat-chip class=\"lm__mat-chip-list\" \n                           *ngFor=\"let tag of row.tags\" \n                           color=\"accent\" \n                           selected\n                           routerLink=\"/posts/tags/tag/{{ tag.tags | lowercase }}\"\n                           matTooltip=\"Go to this tag\"\n                        >\n                           {{ tag | titlecase }}\n                        </mat-chip>\n                     </mat-chip-list>\n                  </div>\n               </mat-card-content>\n               \n               <!-- Post Link  -->\n               <mat-card-actions>\n                  <div class=\"lm__card-actions\" \n                     fxLayout=\"row\"                    \n                     fxLayoutAlign=\"center center\" \n                     @iconButtonEnter \n                     *ngIf=\"postId === row.id\"     \n                  >\n                     <button class=\"lm__card-button x-button-enter\" \n                        mat-raised-button color=\"primary\"\n                        matTooltip=\"Go to this post\"\n                        routerLink=\"/post/{{ row.owner.name }}/{{ row.id }}/{{ row.title }}\"\n                     >\n                        <mat-icon class=\"y-icon-enter\">touch_app</mat-icon>\n                        Read More\n                     </button>\n                  </div>\n               </mat-card-actions>\n            </div> \n\n         </mat-card>\n\n      </div>\n      \n   </div>\n</div>"
+module.exports = "<div class=\"lm__page-full\">\n\n   <div class=\"lm__posts\" fxLayout=\"column\" fxLayoutAlign=\"center center\">\n\n      <h2>LATEST POSTS</h2>\n\n      <mat-card *ngFor=\"let row of posts\">   \n         \n         <!-- Owner  -->\n         <div class=\"lm__posts-card-header\" fxLayout=\"row\" fxLayoutAlign=\"start\">\n            <div fxFlex=\"5\" fxFlexAlign=\"start\">\n               <!-- Profile Image -->\n               <img mat-card-avatar id=\"{{ row.image }}\" class=\"lm__avatar\" src=\"assets/images/uploads/{{ row.owner.image }}\" >\n            </div>\n            <div class=\"lm__profile-info\" fxFlexAlign=\"start\">    \n               <!-- Profile Name  -->\n               <mat-card-title class=\"lm__profile-title\">\n                  <a class=\"lm__a\" matTooltip=\"Go to this user profile\"\n                     routerLink=\"user/profile/{{ row.owner.name }}/{{ row.owner.id }}\"\n                  >                  \n                     {{ row.owner.name | titlecase }}\n                  </a>\n               </mat-card-title>                                   \n               <!-- Profile Motto -->\n               <mat-card-subtitle>\n                  \"{{ row.owner.country | titlecase | slice:0:50 }}\"\n                  <br>\n                  <!-- Post Date  -->\n                  <em>Posted on: {{ row.created| date:'d/M/y, h:mm:ss a' }}</em> \n               </mat-card-subtitle>\n            </div>\n         </div>\n\n         <!-- Card Image  -->\n         <div  id=\"{{ row.image }}\"\n               @imageEnter\n               *ngIf=\"row.image ? true : elseBlock\"                                 \n         >\n            <img mat-card-image                                      \n               class=\"image-enter lm__card-image\" \n               src=\"assets/images/uploads/{{ row.image }}\" \n               alt=\"{{ row.image | titlecase }}\" \n               (mouseout)=\"mouseLeaveImage($event)\"                  \n            >                                      \n         </div> \n         <ng-template #elseBlock >\n            <div id=\"{{ row.image }}\" \n               *ngIf=\"row.image\"\n               (mouseenter)=\"mouseEnterImage($event)\" \n            >\n               <img mat-card-image  \n                  src=\"{{ row.image }}\" \n                  alt=\"{{ row.image | titlecase }}\"               \n               > \n            </div>\n         </ng-template> \n\n         <!-- Post Title  -->\n         <mat-card-title color=\"primary\" class=\"lm__a-primary\">\n            <a [@xEnter]=\"postsExist\" class=\"lm__a\" matTooltip=\"Go to this post\"\n               routerLink=\"{{ row.slug }}\"\n            >\n               {{ row.title | titlecase }}\n            </a>\n         </mat-card-title>\n\n         <!-- Post Subtitle  -->\n         <mat-card-subtitle>{{ row.subtitle | titlecase }}</mat-card-subtitle>\n\n         <!-- Post Categories  -->\n         <mat-card-content>\n            <div class=\"lm__mat-chip\" fxLayout=\"row wrap\" fxLayoutAlign=\"start center\">\n               <span class=\"lm__post-chip-categories\">Categories: </span>\n               <mat-chip-list>\n                  <mat-chip \n                     *ngFor=\"let chip of row.categories\" \n                     color=\"primary\" \n                     selected\n                     routerLink=\"/posts/tags/tag/{{ chip.categories | lowercase }}\"\n                     matTooltip=\"Go to this Category\"\n                  >\n                     {{ chip | titlecase }}\n                  </mat-chip>\n               </mat-chip-list>\n            </div>\n         </mat-card-content> \n\n         <!-- Contents  -->\n         <div id=\"{{ row.id }}\" (mouseenter)=\"mouseEnterCard($event)\" >                  \n\n            <!-- Post Social -->\n            <mat-card-content>\n               <div class=\"lm__icons\" fxLayout=\"row\" fxLayoutAlign=\"center center\"> \n\n                  <!-- Liked  -->\n                  <div class=\"lm__icon-badge\">\n                     <mat-icon matBadge=\"{{ row.vote.length }}\"             \n                        matBadgeColor=\"accent\"\n                        matTooltip=\"Like and Dislike\"\n                     >\n                        thumbs_up_down\n                     </mat-icon>\n                  </div>\n\n                  <!-- Post Shared  -->\n                  <div class=\"lm__icon-badge\">\n                     <mat-icon matBadge=\"{{ row.shared }}\"             \n                        matBadgeColor=\"accent\"\n                        matTooltip=\"Shared\"\n                     >\n                        share\n                     </mat-icon>\n                  </div>\n\n                  <!-- Post Comment  -->\n                  <div class=\"lm__icon-badge\">\n                     <mat-icon matBadge=\"{{ row.comments.length }}\" \n                        matBadgeColor=\"accent\"\n                        matTooltip=\"Comments\"\n                     >\n                        comment\n                     </mat-icon>\n                  </div>\n                  \n               </div>                           \n               \n               <!-- Post Content  -->\n               <div class=\"lm__posts-content lm__text-capitalize\">          \n                  {{ row.content | slice:0:300 }} ...\n                  <button  class=\"lm__a-button\" \n                           mat-button color=\"accent\" \n                           routerLink=\"/post/{{ row.owner.name }}/{{ row.id }}/{{ row.title }}\"\n                  >\n                     Read More\n                  </button>\n               </div>     \n               \n               <!-- Post Tags  -->\n               <div class=\"lm__mat-chip\" fxLayout fxLayoutAlign=\"start center\">\n                  <span class=\"lm__post-chip-categories\">Tags: </span>\n                  <mat-chip-list>\n                     <mat-chip class=\"lm__mat-chip-list\" \n                        *ngFor=\"let tag of row.tags\" \n                        color=\"accent\" \n                        selected\n                        routerLink=\"/posts/tags/tag/{{ tag.tags | lowercase }}\"\n                        matTooltip=\"Go to this tag\"\n                     >\n                        {{ tag | titlecase }}\n                     </mat-chip>\n                  </mat-chip-list>\n               </div>\n            </mat-card-content>\n            \n            <!-- Post Link  -->\n            <mat-card-actions>\n               <div class=\"lm__card-actions\" \n                  fxLayout=\"row\"                    \n                  fxLayoutAlign=\"center center\" \n                  @iconButtonEnter \n                  *ngIf=\"postId === row.id\"     \n               >\n                  <button class=\"lm__card-button x-button-enter\" \n                     mat-raised-button color=\"primary\"\n                     matTooltip=\"Go to this post\"\n                     routerLink=\"/post/{{ row.owner.name }}/{{ row.id }}/{{ row.title }}\"\n                  >\n                     <mat-icon class=\"y-icon-enter\">touch_app</mat-icon>\n                     Read More\n                  </button>\n               </div>\n            </mat-card-actions>\n         </div> \n\n      </mat-card>\n      \n   </div>\n</div>"
 
 /***/ }),
 
-/***/ "./node_modules/raw-loader/index.js!./src/app/sales-page/sales-page.component.html":
-/*!********************************************************************************!*\
-  !*** ./node_modules/raw-loader!./src/app/sales-page/sales-page.component.html ***!
-  \********************************************************************************/
+/***/ "./node_modules/raw-loader/index.js!./src/app/sidebar/sidebar.component.html":
+/*!**************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/sidebar/sidebar.component.html ***!
+  \**************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"lm__page-min70vh-hidden\" fxLayout=\"row\" fxLayout.lt-lg=\"column\" fxLayoutAlign=\"center\">\n   \n   <div fxFlex=\"40\" class=\"lm__page-sidebar\" >\n      <app-side-bar></app-side-bar>\n   </div>\n\n   <div fxFlex=\"60\" class=\"lm__page-timeline\">\n      \n   </div>\n\n   \n</div>\n"
-
-/***/ }),
-
-/***/ "./node_modules/raw-loader/index.js!./src/app/sales-page/website/website.component.html":
-/*!*************************************************************************************!*\
-  !*** ./node_modules/raw-loader!./src/app/sales-page/website/website.component.html ***!
-  \*************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"lm__page-min70vh-hidden\" fxLayout=\"row\" fxLayout.lt-lg=\"column\" fxLayoutAlign=\"center\">\n   \n   <div fxFlex=\"40\" fxHide.lt-md class=\"lm__page-sidebar\" >\n      <app-side-bar></app-side-bar>\n   </div>\n\n   <div fxFlex=\"60\" class=\"lm__page-timeline\">\n\n      <div fxLayout=\"column\" fxLayoutAlign=\"center center\" fxLayoutGap=\"10px\" *ngIf=\"issues\">\n\n         <div class=\"lm__sales-issues\" *ngFor=\"let issue of issues\">\n            <mat-card id=\"issue-{{ issue.id }}\">\n               <div  class=\"lm__sale-sect\" \n                     fxLayout=\"column\" \n                     fxLayoutAlign=\"center center\"\n                     fxLayoutGap=\"20px\"\n               >\n                  <mat-card-title class=\"lm__sale-sect-title\" [innerHTML]=\"issue.title\">\n                  </mat-card-title>\n                  <img  class=\"lm__sale-sect-image shadow__png-ac\" \n                        fxFlex=\"400px\"\n                        fxFlex.lt-md=\"50vw\" \n                        src=\"assets/images/{{ issue.image }}\" \n                        alt=\"{{ issue.title }}\"\n                  >\n                  <button  mat-raised-button \n                           id=\"btn-{{issue.id}}\"\n                           color=\"primary\"\n                           (click)=\"onClick($event)\"\n                  >\n                     Jika betul, klik butang ini \n                     <mat-icon>\n                        touch_app\n                     </mat-icon>\n                  </button>\n               </div>\n            </mat-card>\n         </div>\n\n      </div>   \n\n   </div>\n\n   \n</div>"
-
-/***/ }),
-
-/***/ "./node_modules/raw-loader/index.js!./src/app/side-bar/accordion/accordion.component.html":
-/*!***************************************************************************************!*\
-  !*** ./node_modules/raw-loader!./src/app/side-bar/accordion/accordion.component.html ***!
-  \***************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<form [formGroup]=\"formProfile\">\n\n   <mat-accordion class=\"lm__accordion\">\n      <mat-expansion-panel #panelOpen [expanded]=\"step === 0\" (opened)=\"setStep(0)\" hideToggle>\n         <mat-expansion-panel-header class=\"mat-elevation-z8\" ngClass=\"{ 'lm__text-primary': panelOpen.expanded }\" fxLayout=\"row\" fxLayoutAlign=\"space-between center\">\n            <mat-panel-title fxFlex=\"30\">\n               Personal Information \n            </mat-panel-title>\n            <mat-panel-description fxFlex=\"70\" fxLayout=\"row\" fxLayoutAlign.gt-xs=\"space-between center\" fxLayoutAlign.xs=\"end end\">\n               <span fxFlexAlign=\"start\" fxHide.xs>Update your personal Information</span> \n               <mat-icon fxFlexAlign=\"end\" [color]=\"panelOpen.expanded ? 'accent' : 'primary'\">account_circle</mat-icon>\n            </mat-panel-description>\n         </mat-expansion-panel-header>\n         <app-form-personal></app-form-personal>\n         <mat-action-row>\n            <button mat-button color=\"primary\" (click)=\"nextStep()\">Next</button>\n         </mat-action-row>\n      </mat-expansion-panel>\n   </mat-accordion>\n\n   <mat-accordion class=\"lm__accordion\">\n      <mat-expansion-panel #secondPanelOpen [expanded]=\"step === 1\" (opened)=\"setStep(1)\" hideToggle>\n         <mat-expansion-panel-header class=\"mat-elevation-z8\" ngClass=\"{ 'lm__text-primary': secondPanelOpen.expanded }\" fxLayout=\"row\" fxLayoutAlign=\"space-between center\">         \n            <mat-panel-title fxFlex=\"30\">\n               Handphone setup\n            </mat-panel-title>\n            <mat-panel-description fxFlex=\"70\" fxLayout=\"row\" fxLayoutAlign=\"space-between center\" fxLayoutAlign.xs=\"end end\">\n               <span fxHide.xs>Setup and authenticate your handphone</span>\n               <mat-icon [color]=\"secondPanelOpen.expanded ? 'accent' : 'primary'\">contact_phone</mat-icon>\n            </mat-panel-description>\n         </mat-expansion-panel-header>\n         <app-form-handphone></app-form-handphone>  \n         <mat-action-row class=\"mat-elevation-z8\">\n            <button mat-button color=\"accent\" (click)=\"prevStep()\">Previous</button>\n            <button mat-button color=\"primary\" (click)=\"nextStep()\">Next</button>\n         </mat-action-row>\n      </mat-expansion-panel>      \n   </mat-accordion>   \n\n   <mat-accordion class=\"lm__accordion\">\n      <mat-expansion-panel #thirdPanelOpen [expanded]=\"step === 2\" (opened)=\"setStep(2)\" hideToggle>\n         <mat-expansion-panel-header class=\"mat-elevation-z8\" ngClass=\"{ 'lm__text-primary': thirdPanelOpen.expanded }\" fxLayout=\"row\" fxLayoutAlign=\"space-between center\">         \n            <mat-panel-title fxFlex=\"30\">\n               Personal Avatar\n            </mat-panel-title>\n            <mat-panel-description fxFlex=\"70\" fxLayout=\"row\" fxLayoutAlign=\"space-between center\" fxLayoutAlign.xs=\"end end\">\n               <span fxHide.xs>Choose an Avatar</span>\n               <mat-icon [color]=\"thirdPanelOpen.expanded ? 'accent' : 'primary'\">face</mat-icon>\n            </mat-panel-description>\n         </mat-expansion-panel-header>\n         <app-form-avatar></app-form-avatar>  \n         <mat-action-row>\n            <button mat-button color=\"accent\" (click)=\"prevStep()\">Previous</button>\n            <button mat-button color=\"primary\" (click)=\"nextStep()\">Next</button>\n         </mat-action-row>\n      </mat-expansion-panel>      \n   </mat-accordion>\n\n   <mat-accordion class=\"lm__accordion\">\n      <mat-expansion-panel #fourthPanelOpen [expanded]=\"step === 3\" (opened)=\"setStep(3)\" hideToggle>\n         <mat-expansion-panel-header class=\"mat-elevation-z8\" ngClass=\"{'lm__text-primary': fourthPanelOpen.expanded }\" fxLayout=\"row\" fxLayoutAlign=\"space-between center\">         \n               <mat-panel-title fxFlex=\"30\">\n                  Address Information \n               </mat-panel-title >\n               <mat-panel-description fxFlex=\"70\" fxLayout=\"row\" fxLayoutAlign=\"space-between center\" fxLayoutAlign.xs=\"end end\">\n                  <span fxHide.xs>Update your Address Information</span>\n                  <mat-icon [color]=\"fourthPanelOpen.expanded ? 'accent' : 'primary'\">contacts</mat-icon>\n               </mat-panel-description>\n         </mat-expansion-panel-header>\n         <app-form-address></app-form-address>  \n         <mat-action-row>\n            <button mat-button color=\"accent\" (click)=\"prevStep()\">Previous</button>\n         </mat-action-row>\n      </mat-expansion-panel>\n   </mat-accordion>   \n\n</form>"
-
-/***/ }),
-
-/***/ "./node_modules/raw-loader/index.js!./src/app/side-bar/accordion/form-address/form-address.component.html":
-/*!*******************************************************************************************************!*\
-  !*** ./node_modules/raw-loader!./src/app/side-bar/accordion/form-address/form-address.component.html ***!
-  \*******************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<form [formGroup]=\"formAddressProfile\">         \n\n   <!-- Address -->\n   <mat-form-field class=\"lm__form-field\" fxLayout=\"row\" fxLayoutAlign=\"space-between center\" fxFill>\n      <input matInput \n         placeholder=\"{{ profile.address || 'Address' | titlecase }}\"\n         formControlName=\"address\"\n         (keyup.enter)=\"updateProfile({ _id: profile._id, address: addressCtrl.value, type: 'string' })\" \n      >   \n      <mat-icon matSuffix [color]=\"addressCtrl.invalid ? 'warn' : 'primary'\" >mode_edit</mat-icon>  \n      <mat-hint *ngIf=\"addressCtrl.pristine\">Address : Click on the <mat-icon color=\"primary\" inline=\"true\">mode_edit</mat-icon> icon to edit.</mat-hint>\n      <mat-hint *ngIf=\"!addressCtrl.pristine && addressCtrl.valid\">Press <strong class=\"lm__hint-primary\">Enter</strong> to submit.</mat-hint>                     \n      <mat-error *ngIf=\"addressCtrl.hasError('minlength')\">\n         Please key in a valid address. <br>\n         Example: <strong>No 20, Red Apartment</strong>\n      </mat-error >\n   </mat-form-field> \n   \n   <!-- Address 2 -->\n   <mat-form-field class=\"lm__form-field\" fxLayout=\"row\" fxLayoutAlign=\"space-between center\" fxFill>\n      <input matInput \n         placeholder=\"{{ profile.address2 || 'Address 2' | titlecase }}\"\n         formControlName=\"address2\"\n         (keyup.enter)=\"updateProfile({ _id: profile._id, address2: address2Ctrl.value, type: 'string' })\" \n      >   \n      <mat-icon matSuffix [color]=\"address2Ctrl.invalid ? 'warn' : 'primary'\" >mode_edit</mat-icon>  \n      <mat-hint *ngIf=\"address2Ctrl.pristine\">Address 2 : Click on the <mat-icon color=\"primary\" inline=\"true\">mode_edit</mat-icon> icon to edit.</mat-hint>\n      <mat-hint *ngIf=\"!address2Ctrl.pristine && address2Ctrl.valid\">Press <strong class=\"lm__hint-primary\">Enter</strong> to submit.</mat-hint>                     \n      <mat-error *ngIf=\"address2Ctrl.hasError('minlength')\">\n         Please key in a valid address 2. <br>\n         Example: <strong>Maple Street</strong>\n      </mat-error >\n   </mat-form-field>  \n\n   <!-- City -->\n   <mat-form-field class=\"lm__form-field\" fxLayout=\"row\" fxLayoutAlign=\"space-between center\" fxFill>\n      <input matInput \n         placeholder=\"{{ profile.city || 'City' | titlecase }}\"\n         formControlName=\"city\"\n         (keyup)=\"getCity()\"\n         (keyup.enter)=\"updateCity({ _id: profile._id, city: cityCtrl.value, type: 'string' })\" \n         [matAutocomplete]=\"city\"\n      >   \n      <mat-icon matSuffix [color]=\"cityCtrl.invalid ? 'warn' : 'primary'\" >mode_edit</mat-icon>  \n      <mat-hint *ngIf=\"cityCtrl.pristine\">City : Click on the <mat-icon color=\"primary\" inline=\"true\">mode_edit</mat-icon> icon to edit.</mat-hint>\n      <mat-hint *ngIf=\"!cityCtrl.pristine && cityCtrl.valid\">Press <strong class=\"lm__hint-primary\">Enter</strong> to submit.</mat-hint>                     \n      <mat-error *ngIf=\"cityCtrl.hasError('minlength')\">\n         Please key in minimum of <strong>{{ cityCtrl.errors.minlength.requiredLength }}</strong> characters.\n      </mat-error >\n   </mat-form-field>\n   <mat-autocomplete #city=\"matAutocomplete\">\n      <mat-option *ngFor=\"let option of citiesData\" [value]=\"option.name\">\n         {{ option.name }}\n      </mat-option>\n   </mat-autocomplete>\n\n   <!-- State -->\n   <mat-form-field class=\"lm__form-field\" fxLayout=\"row\" fxLayoutAlign=\"space-between center\" fxFill>\n      <input matInput \n         placeholder=\"{{ profile.state || 'State' | titlecase }}\"\n         formControlName=\"state\"\n         (keyup)=\"getStates()\"\n         (keyup.enter)=\"updateCountryProfile({ _id: profile._id, state: stateCtrl.value, type: 'string' })\" \n         [matAutocomplete]=\"state\"\n      >   \n      <mat-icon matSuffix [color]=\"stateCtrl.invalid ? 'warn' : 'primary'\" >mode_edit</mat-icon>  \n      <mat-hint *ngIf=\"stateCtrl.pristine\">State : Click on the <mat-icon color=\"primary\" inline=\"true\">mode_edit</mat-icon> icon to edit.</mat-hint>\n      <mat-hint *ngIf=\"!stateCtrl.pristine && stateCtrl.valid\">Press <strong class=\"lm__hint-primary\">Enter</strong> to submit.</mat-hint>                     \n      <mat-error *ngIf=\"stateCtrl.hasError('minlength')\">\n         Please key in minimum of <strong>{{ stateCtrl.errors.minlength.requiredLength }}</strong> characters.\n      </mat-error >\n   </mat-form-field>\n   <mat-autocomplete #state=\"matAutocomplete\">\n      <mat-option *ngFor=\"let option of statesData\" [value]=\"option.name\">\n         {{ option.name }}\n      </mat-option>\n   </mat-autocomplete>\n\n   <!-- Country -->\n   <mat-form-field class=\"lm__form-field\" fxLayout=\"row\" fxLayoutAlign=\"space-between center\" fxFill>\n      <input matInput \n         placeholder=\"{{ profile.country || 'Country' | titlecase }}\"\n         formControlName=\"country\"\n         (keyup)=\"getCountry()\"\n         (keyup.enter)=\"updateProfile({ _id: profile._id, country: countryCtrl.value, type: 'string' })\" \n         [matAutocomplete]=\"country\"\n      >   \n      <mat-icon matSuffix [color]=\"countryCtrl.invalid ? 'warn' : 'primary'\" >mode_edit</mat-icon>  \n      <mat-hint *ngIf=\"countryCtrl.pristine\">Country : Click on the <mat-icon color=\"primary\" inline=\"true\">mode_edit</mat-icon> icon to edit.</mat-hint>\n      <mat-hint *ngIf=\"!countryCtrl.pristine && countryCtrl.valid\">Press <strong class=\"lm__hint-primary\">Enter</strong> to submit.</mat-hint>                     \n      <mat-error *ngIf=\"countryCtrl.hasError('minlength')\">\n         Please key in minimum of <strong>{{ countryCtrl.errors.minlength.requiredLength }}</strong> characters.\n      </mat-error >\n   </mat-form-field>\n   <mat-autocomplete #country=\"matAutocomplete\">\n      <mat-option *ngFor=\"let option of countriesData\" [value]=\"option.name\">\n         {{ option.name }}\n      </mat-option>\n   </mat-autocomplete>\n\n</form>\n"
-
-/***/ }),
-
-/***/ "./node_modules/raw-loader/index.js!./src/app/side-bar/accordion/form-avatar/form-avatar.component.html":
-/*!*****************************************************************************************************!*\
-  !*** ./node_modules/raw-loader!./src/app/side-bar/accordion/form-avatar/form-avatar.component.html ***!
-  \*****************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<form [formGroup]=\"formAvatarGroup\">\n\n   <mat-tab-group color=\"primary\">\n\n      <mat-tab class=\"lm__tab\" label=\"Man\">   \n         <mat-radio-group aria-label=\"Select an option\" \n            formControlName=\"image\" \n            (change)=\"updateProfile({ _id: profile._id, image: imageCtrl.value, type: 'string' })\"\n         >          \n            <div class=\"lm__avatar-ls\" fxLayout=\"row wrap\" fxLayoutAlign=\"center center\" >\n               <div fxFlex=\"33\" fxFlex.xs=\"50\" class=\"lm__avatar-container\" fxLayout=\"column\" fxLayoutAlign=\"center center\" *ngFor=\"let avatar of avatars.boys\">\n                  <img class=\"lm__avatar-ls-image mat-elevation-z8\" src=\"assets/images/{{ avatar }}.png\">\n                  <mat-radio-button value=\"{{ avatar }}\">{{ avatar | slice:8 }}</mat-radio-button>\n               </div>         \n            </div>\n         </mat-radio-group>\n      </mat-tab>\n\n      <mat-tab class=\"lm__tab\" label=\"Woman\">   \n         <mat-radio-group aria-label=\"Select an option\" \n            formControlName=\"image\" \n            (change)=\"updateProfile({ _id: profile._id, image: imageCtrl.value, type: 'string' })\"\n         >          \n            <div class=\"lm__avatar-ls\" fxLayout=\"row wrap\" fxLayoutAlign=\"center center\" >\n               <div fxFlex=\"33\" fxFlex=\"50\" class=\"lm__avatar-container\" fxLayout=\"column\" fxLayoutAlign=\"center center\" *ngFor=\"let avatar of avatars.girls\">\n                  <img class=\"lm__avatar-ls-image mat-elevation-z8\" src=\"assets/images/{{ avatar }}.png\">\n                  <mat-radio-button value=\"{{ avatar }}\">{{ avatar | slice:8 }}</mat-radio-button>\n               </div>         \n            </div>\n         </mat-radio-group>\n      </mat-tab>\n   \n   </mat-tab-group>\n\n\n</form>"
-
-/***/ }),
-
-/***/ "./node_modules/raw-loader/index.js!./src/app/side-bar/accordion/form-handphone/form-handphone.component.html":
-/*!***********************************************************************************************************!*\
-  !*** ./node_modules/raw-loader!./src/app/side-bar/accordion/form-handphone/form-handphone.component.html ***!
-  \***********************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<form [formGroup]=\"formHandphoneProfile\">\n\n   <div class=\"lm__handphone-container\" fxLayout=\"row\" fxLayout.xs=\"column\" fxLayoutAlign=\"start center\" fxLayoutGap=\"10px\">\n\n      <!-- Country Code -->\n      <mat-form-field fxFlex.gt-xs=\"30\">\n         <input matInput \n            placeholder=\"{{ profile.country || 'Country' | titlecase }} ( + {{ profile.phoneCode || 'Country code' }} )\"\n            formControlName=\"phoneCode\"\n            (keyup)=\"getCountry()\"\n            [matAutocomplete]=\"phoneCode\"\n            (keyup.enter)=\"updateProfile({ _id: profile._id, phoneCode: phoneCodeCtrl.value, type: 'number' })\"  \n         > \n         <mat-icon matSuffix [color]=\"phoneCodeCtrl.invalid ? 'warn' : 'primary'\" >mode_edit</mat-icon>  \n         <mat-hint *ngIf=\"phoneCodeCtrl.pristine\">Key in your country. <br>Example: \"<span class=\"lm__text-primary\">Italy</span>\"</mat-hint>  \n         <mat-hint *ngIf=\"!phoneCodeCtrl.pristine && phoneCodeCtrl.value\">Press <span class=\"lm__text-primary\">Enter</span> to submit</mat-hint>\n         <mat-error *ngIf=\"phoneCodeCtrl.invalid\">\n            Please key in minimum {{ phoneCodeCtrl.errors.minlength.requiredLength }} characters.\n         </mat-error>\n      </mat-form-field>\n      <mat-autocomplete #phoneCode=\"matAutocomplete\">\n         <mat-option *ngFor=\"let option of countriesData\" [value]=\"option.phonecode\">\n            {{ option.name }} (+ {{ option.phonecode }} )\n         </mat-option>\n      </mat-autocomplete>\n\n      <!-- Handphone No -->\n      <mat-form-field fxFlex.gt-xs=\"70\">\n         <input matInput \n            placeholder=\"{{ profile.handphone || 'Handphone' }}\"\n            formControlName=\"handphone\"\n            (keyup.enter)=\"updateProfile({ _id: profile._id, handphone: handphoneCtrl.value, type: 'number' })\"  \n         > \n         <mat-icon matSuffix [color]=\"handphoneCtrl.invalid ? 'warn' : 'primary'\" >mode_edit</mat-icon>  \n         <mat-hint *ngIf=\"handphoneCtrl.pristine\">Key in your handphone. <br>Example: \"<span class=\"lm__text-primary\">11 1111 1111</span>\"</mat-hint>  \n         <mat-hint *ngIf=\"!handphoneCtrl.pristine && handphoneCtrl.value\">Press <span class=\"lm__text-primary\">Enter</span> to submit</mat-hint>\n         <mat-error *ngIf=\"handphoneCtrl.hasError('minlength')\">\n            Please key in minimum {{ handphoneCtrl.errors.minlength.requiredLength }} numbers.\n         </mat-error>\n         <mat-error *ngIf=\"handphoneCtrl.hasError('maxlength')\">\n            Please key in maximum {{ handphoneCtrl.errors.maxlength.requiredLength }} characters.\n         </mat-error>\n      </mat-form-field>\n\n   </div>\n\n</form>"
-
-/***/ }),
-
-/***/ "./node_modules/raw-loader/index.js!./src/app/side-bar/accordion/form-personal/form-personal.component.html":
-/*!*********************************************************************************************************!*\
-  !*** ./node_modules/raw-loader!./src/app/side-bar/accordion/form-personal/form-personal.component.html ***!
-  \*********************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<form [formGroup]=\"formPersonalProfile\">\n   \n   <!-- Email -->\n   <mat-form-field class=\"lm__form-field\"  fxLayout=\"row\" fxLayoutAlign=\"space-between center\" fxFill>\n      <input matInput type=\"email\"\n         placeholder=\"{{ profile.email || '' | lowercase }}\" \n         formControlName=\"email\"                \n         (keyup.enter)=\"updateProfile({ email: emailCtrl.value })\"             \n      >\n      <mat-icon matSuffix color=\"primary\">lock</mat-icon>         \n      <mat-hint *ngIf=\"emailCtrl.pristine\">Email: Email can not be changed. Please contact system Admin for help.</mat-hint>\n      <mat-hint *ngIf=\"!emailCtrl.pristine && emailCtrl.valid\">Press <strong class=\"lm__hint-primary\">Enter</strong> to submit.</mat-hint>         \n      <mat-error *ngIf=\"emailCtrl.hasError('email')\">\n         Please key in a valid email. <br>\n         Example: <strong>john@mail.com</strong>\n      </mat-error >\n   </mat-form-field>         \n\n   <!-- Name -->\n   <mat-form-field class=\"lm__form-field\" fxLayout=\"row\" fxLayoutAlign=\"space-between center\" fxFill>\n      <input matInput \n         placeholder=\"{{ profile.name || '' | titlecase }}\"\n         formControlName=\"name\"\n         (keyup.enter)=\"updateProfile({ _id: profile._id, name: nameCtrl.value, type: 'string' })\" \n      >   \n      <mat-icon matSuffix [color]=\"nameCtrl.invalid ? 'warn' : 'primary'\" >mode_edit</mat-icon>  \n      <mat-hint *ngIf=\"nameCtrl.pristine\">Name: Click on the <mat-icon color=\"primary\" inline=\"true\">mode_edit</mat-icon> icon to edit.</mat-hint>\n      <mat-hint *ngIf=\"!nameCtrl.pristine && nameCtrl.valid\">Press <strong class=\"lm__hint-primary\">Enter</strong> to submit.</mat-hint>                     \n      <mat-error *ngIf=\"nameCtrl.hasError('minlength')\">\n         Please key in a valid name. <br>\n         Example: <strong>John Alexander</strong>\n      </mat-error >\n   </mat-form-field>       \n\n   <!-- Birthday -->\n   <mat-form-field class=\"lm__form-field\" fxLayout=\"row\" fxLayoutAlign=\"space-between center\" fxFill>\n      <input matInput [matDatepicker]=\"picker\" \n         placeholder=\"{{ profile.birthday || '' | date }}\" \n         formControlName=\"birthday\"\n         (keyup.enter)=\"updateProfile({ _id: profile._id, birthday: birthdayCtrl.value, type: 'date' })\" \n      >\n      <mat-datepicker-toggle matSuffix [for]=\"picker\">\n         <mat-icon matDatepickerToggleIcon [color]=\"birthdayCtrl.touched ? 'warn': 'primary'\">today</mat-icon>\n      </mat-datepicker-toggle>\n      <mat-datepicker #picker></mat-datepicker>\n      <mat-hint *ngIf=\"birthdayCtrl.pristine\">Birthday: Click on the <mat-icon color=\"primary\" inline=\"true\">today</mat-icon> icon to edit.</mat-hint>\n      <mat-hint *ngIf=\"!birthdayCtrl.pristine\">Press <strong \n         class=\"lm__hint-warn\"\n         >Enter</strong> to submit.\n      </mat-hint>\n   </mat-form-field> \n\n</form>"
-
-/***/ }),
-
-/***/ "./node_modules/raw-loader/index.js!./src/app/side-bar/side-bar.component.html":
-/*!****************************************************************************!*\
-  !*** ./node_modules/raw-loader!./src/app/side-bar/side-bar.component.html ***!
-  \****************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"lm__page-100p-test\" fxLayout=\"column\" fxLayoutAlign=\"center center\">\n\n   <mat-card *ngIf=\"profile; else elseBlock\">\n      <mat-card-content>\n\n         <mat-card>\n            <mat-card-title class=\"lm__card-title\" fxLayout=\"column\" fxLayoutAlign=\"center center\">\n               Hello {{ profile.name || profile.email | titlecase }}\n            </mat-card-title>   \n            <mat-card-content>\n               <div @imageEnterDrop *ngIf=\"enteredImage; else elseImage\"\n                  fxLayout=\"column\" fxLayoutAlign=\"center center\"\n                  (mouseleave)=\"mouseLeaveImage($event)\"\n               >\n                  <img class=\"lm__profile-image image-enter-drop mat-elevation-z8\" src=\"assets/images/uploads/{{ profile.image || avatars/man }}\" alt=\"{{ profile.name || profile.email }}\">\n               </div>\n\n               <ng-template #elseImage>\n                  <div fxLayout=\"column\" fxLayoutAlign=\"center center\"\n                     (mouseenter)=\"mouseEnterImage($event)\"\n                  >\n                     <img class=\"lm__profile-image image-enter-drop mat-elevation-z8\" src=\"assets/images/uploads/{{ profile.image || avatars/man }}\" alt=\"{{ profile.name || profile.email }}\">\n                  </div>\n               </ng-template>               \n\n               <div class=\"lm__card-tab\">\n                  <mat-tab-group>\n\n                     <mat-tab label=\"Profile\" *ngIf=\"!profile\">\n                        <app-login></app-login>\n                     </mat-tab>\n\n                     <mat-tab label=\"Profile\" *ngIf=\"profile\">\n                        <app-accordion></app-accordion>\n                     </mat-tab>\n\n                     <mat-tab label=\"Latest News\" >\n                        News\n                     </mat-tab>\n\n                     <mat-tab label=\"Latest Posts\">\n                        Posts\n                        <div class=\"posts\" fxLayout=\"column\">\n                           <mat-list role=\"list\">\n                              <mat-list-item role=\"listitem\" *ngFor=\"let row of posts\">\n                                 <a class=\"lm__a-small\" matTooltip=\"Go to this post\"\n                                    routerLink=\"/post/{{ row.post.slug }}\"\n                                 >\n                                    {{ row.post.title | titlecase }}\n                                 </a>\n                              </mat-list-item>\n                           </mat-list> \n                        </div> \n                     </mat-tab>           \n\n                  </mat-tab-group>\n               </div>\n                        \n            </mat-card-content>\n         </mat-card>\n      \n      </mat-card-content>\n   </mat-card>\n\n   <ng-template #elseBlock>\n      <mat-card-content>\n\n         <mat-card>\n\n            <mat-card-title fxLayout=\"row\" fxLayout.lt-md=\"column\" fxLayoutAlign=\"center center\">            \n               <span *ngIf=\"!visitor\" class=\"lm__logo-2rem-text\">Hello friend, welcome to </span> \n               <span *ngIf=\"visitor\"  class=\"lm__logo-2rem-text\">Hello {{ visitor.name }}, welcome to </span> \n               <app-logo2rem></app-logo2rem>\n            </mat-card-title>\n         \n            <div @imageEnterDrop *ngIf=\"enteredImage; else elseImage\"\n               fxLayout=\"column\" fxLayoutAlign=\"center center\"\n               (mouseleave)=\"mouseLeaveImage($event)\"\n            >\n               <img class=\"lm__profile-image image-enter-drop mat-elevation-z8\"  src=\"/assets/images/{{ visitor.image }}.png\" alt=\"\">\n            </div>\n            <ng-template #elseImage >\n               <div *ngIf=\"visitor && visitor.image\" fxLayout=\"column\" fxLayoutAlign=\"center center\" (mouseenter)=\"mouseEnterImage($event)\">\n                  <img class=\"lm__profile-image image-enter-drop mat-elevation-z8\"  src=\"/assets/images/{{ visitor.image }}.png\" alt=\"\">\n               </div>\n            </ng-template>\n         \n            <mat-card-content>\n         \n               <div class=\"lm__card-tab\">\n                  <mat-tab-group>\n\n                     <mat-tab label=\"Visitor\" *ngIf=\"!visitor\">\n                        <app-visitor-form></app-visitor-form>\n                     </mat-tab>\n\n                     <mat-tab label=\"Avatars\" *ngIf=\"visitor\">\n                        <app-visitor-avatar></app-visitor-avatar>\n                     </mat-tab>\n         \n                     <mat-tab label=\"Login\">\n                        <app-login></app-login>\n                     </mat-tab>\n         \n                     <mat-tab label=\"Register\">\n                        <app-register></app-register>\n                     </mat-tab>           \n         \n                  </mat-tab-group>\n               </div>\n                        \n            </mat-card-content>\n            \n         </mat-card>\n\n      </mat-card-content>\n   </ng-template>\n\n</div>"
+module.exports = "<div class=\"lm__page-container\">\n   <mat-tab-group color=\"accent\">\n\n      <mat-tab label=\"Produk\"> \n         <div class=\"lm__sidebar-items\" fxLayout=\"row wrap\" fxLayoutAlign=\"center center\">\n            <div class=\"lm__sidebar-item\" *ngFor=\"let item of items\" fxFlex=\"40\">\n               <img class=\"lm__sidebar-img shadow-png-ac-right\" src=\"{{ item.img }}\" alt=\"{{ item.alt }}\">\n            </div>\n         </div>\n      </mat-tab>\n\n      <mat-tab label=\"Terkini\"> \n         Content 2 \n      </mat-tab>\n\n   </mat-tab-group>\n</div>"
 
 /***/ }),
 
@@ -480,18 +403,7 @@ module.exports = "<div class=\"lm__page-100p-test\" fxLayout=\"column\" fxLayout
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"lm__page-100p profile\" fxLayout=\"row\" fxLayout.xs=\"column\">\n\n   <div fxFlex=\"60\" fxFlex.xs=\"100\" class=\"timeline\">\n\n      <div class=\"posts\" *ngFor=\"let row of posts\" >\n         <div [@xEnter]=\"postsExist\">\n            <mat-card  fxLayout=\"column\" class=\"lm__card timeline__card x-enter\">   \n               \n               <!-- Card Image  -->\n               <div  id=\"{{ row.post.image }}\"\n                     @imageEnter\n                     *ngIf=\"row.post.image == imagePost; else elseBlock\"                        \n               >\n                  <img mat-card-image                                      \n                     class=\"image-enter lm__card-image\" \n                     src=\"{{ row.post.image }}\" \n                     alt=\"{{ row.poster.name | titlecase }}\" \n                     (mouseout)=\"mouseLeaveImage($event)\"                    \n                  >                                      \n               </div> \n               <ng-template #elseBlock>\n                  <div id=\"{{ row.post.image }}\"\n                     (mouseenter)=\"mouseEnterImage($event)\" \n                  >\n                     <img mat-card-image  \n                        src=\"{{ row.post.image }}\" \n                        alt=\"{{ row.poster.name | titlecase }}\"                     \n                     > \n                  </div>\n               </ng-template> \n\n               <div id=\"{{ row.post.id }}\" (mouseenter)=\"mouseEnterCard($event)\" >\n                  <mat-card-header>\n                     <img mat-card-avatar id=\"{{ row.post.image }}\" class=\"lm__avatar\" src=\"{{ row.poster.avatar || 'assets/images/man.png'}}\" >\n                     <mat-card-title class=\"lm__profile-title\">\n                        <a class=\"lm__a\" matTooltip=\"Go to this user profile\"\n                           routerLink=\"{{ row.poster.slug }}\"\n                        >                  \n                           {{ row.poster.name | titlecase }}\n                        </a>\n                     </mat-card-title>\n                     <mat-card-subtitle>\n                        \"{{ row.poster.about | titlecase | slice:0:50 }}\"\n                     </mat-card-subtitle>\n                     <mat-card-subtitle>Posted on: {{ row.post.date | date:'d/M/y, h:mm:ss a' }} </mat-card-subtitle>\n                  </mat-card-header>\n                  <mat-card-title color=\"primary\" class=\"lm__a-primary\">\n                     <a [@xEnter]=\"postsExist\" class=\"lm__a\" matTooltip=\"Go to this post\"\n                        routerLink=\"/post/{{ row.post.slug }}\"\n                     >\n                        {{ row.post.title | titlecase }}\n                     </a>\n                  </mat-card-title>\n                  <mat-card-content>\n                     <div class=\"lm__icons\" fxLayout=\"row\" fxLayoutAlign=\"center center\"> \n                        <div class=\"lm__icon-badge\">\n                           <mat-icon matBadge=\"{{ row.post.liked.length }}\" matBadgeColor=\"accent\">\n                              thumbs_up_down\n                           </mat-icon>\n                        </div>\n                        <div class=\"lm__icon-badge\"></div>\n                           <mat-icon matBadge=\"{{ row.post.comment.length }}\" matBadgeColor=\"accent\">\n                              comment\n                           </mat-icon>\n                     </div>\n                  </mat-card-content>\n                  <mat-card-subtitle>{{ row.post.subtitle | titlecase }}</mat-card-subtitle>\n                  <mat-card-content>                \n                     {{ row.post.content | slice:0:200 }} ...\n                     <button class=\"lm__a\" mat-button color=\"accent\" routerLink=\"{{ row.post.slug }}\">Read More</button>\n                  </mat-card-content>\n                  <mat-card-content>\n                     <div class=\"lm__mat-chip\" fxLayout fxLayoutAlign=\"center center\">\n                        <mat-chip-list aria-label=\"Fish selection\">\n                           <mat-chip class=\"lm__mat-chip-list\" \n                              *ngFor=\"let tag of row.post.tags\" \n                              color=\"accent\" \n                              selected\n                              routerLink=\"/posts/tags/tag/{{ tag.tag | lowercase }}\"\n                              matTooltip=\"Go to this tag\"\n                           >\n                              {{ tag.tag | titlecase }}\n                           </mat-chip>\n                        </mat-chip-list>\n                     </div>\n                  </mat-card-content>\n                  <mat-card-actions>\n                     <div class=\"lm__card-actions\" fxLayout=\"row\" fxLayoutAlign=\"center center\" @iconButtonEnter *ngIf=\"postId === row.post.id\">\n                        <button class=\"lm__card-button x-button-enter\" routerLink=\"{{ row.post.slug }}\" mat-raised-button color=\"primary\">\n                           <mat-icon class=\"y-icon-enter\">touch_app</mat-icon>\n                           Read More\n                        </button>\n                     </div>\n                  </mat-card-actions>\n               </div>\n            </mat-card>\n         </div>\n      </div>\n   </div>\n\n   <div fxFlex=\"40\" fxFlex.xs=\"100\" class=\"sidebar\">\n      <div>   \n         <app-side-bar></app-side-bar>\n      </div> \n   </div>\n\n</div>\n\n\n"
-
-/***/ }),
-
-/***/ "./node_modules/raw-loader/index.js!./src/app/test/test.component.html":
-/*!********************************************************************!*\
-  !*** ./node_modules/raw-loader!./src/app/test/test.component.html ***!
-  \********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<!-- Editor Preview -->\n<div class=\"editor\">\n   <mat-tab-group>\n\n      <mat-tab label=\"HTML\">\n         <mat-card>\n            <mat-card-content>\n\n               <div  id=\"content\"   \n                     contenteditable=\"true\"\n                     (click)=\"contentSelected()\"\n                     style=\"padding: 20px\"\n               >\n                  {{ content }}\n                     \n            </div>\n\n            </mat-card-content>\n         </mat-card>         \n      </mat-tab>\n\n      <mat-tab label=\"Code\">\n      </mat-tab>\n      \n   </mat-tab-group>\n</div>\n\n<!-- Editor Toolbar -->\n<div class=\"toolbar\" fxLayout=\"row\" fxLayoutAlign=\"start center\">\n\n   <!-- Bold Button  -->\n   <button mat-icon-button \n         [color]=\"selected.button.color\"\n         id=\"strong\"\n         #strong\n         (click)=\"createNode(strong)\"\n   >\n      <mat-icon>format_bold</mat-icon>\n   </button>\n\n   <!-- Italic Button  -->\n   <button mat-icon-button \n         [color]=\"selected.button.color\"\n         id=\"italic\"\n         #italic\n         (click)=\"createNode(italic)\"\n   >\n      <mat-icon>format_italic</mat-icon>\n   </button>\n\n</div>"
+module.exports = "<div class=\"lm__page-100p profile\" fxLayout=\"row\" fxLayout.xs=\"column\">\n\n   <div fxFlex=\"60\" fxFlex.xs=\"100\" class=\"timeline\">\n\n      <div class=\"posts\" *ngFor=\"let row of posts\" >\n         <div [@xEnter]=\"postsExist\">\n            <mat-card  fxLayout=\"column\" class=\"lm__card timeline__card x-enter\">   \n               \n               <!-- Card Image  -->\n               <div  id=\"{{ row.post.image }}\"\n                     @imageEnter\n                     *ngIf=\"row.post.image == imagePost; else elseBlock\"                        \n               >\n                  <img mat-card-image                                      \n                     class=\"image-enter lm__card-image\" \n                     src=\"{{ row.post.image }}\" \n                     alt=\"{{ row.poster.name | titlecase }}\" \n                     (mouseout)=\"mouseLeaveImage($event)\"                    \n                  >                                      \n               </div> \n               <ng-template #elseBlock>\n                  <div id=\"{{ row.post.image }}\"\n                     (mouseenter)=\"mouseEnterImage($event)\" \n                  >\n                     <img mat-card-image  \n                        src=\"{{ row.post.image }}\" \n                        alt=\"{{ row.poster.name | titlecase }}\"                     \n                     > \n                  </div>\n               </ng-template> \n\n               <div id=\"{{ row.post.id }}\" (mouseenter)=\"mouseEnterCard($event)\" >\n                  <mat-card-header>\n                     <img mat-card-avatar id=\"{{ row.post.image }}\" class=\"lm__avatar\" src=\"{{ row.poster.avatar || 'assets/images/man.png'}}\" >\n                     <mat-card-title class=\"lm__profile-title\">\n                        <a class=\"lm__a\" matTooltip=\"Go to this user profile\"\n                           routerLink=\"{{ row.poster.slug }}\"\n                        >                  \n                           {{ row.poster.name | titlecase }}\n                        </a>\n                     </mat-card-title>\n                     <mat-card-subtitle>\n                        \"{{ row.poster.about | titlecase | slice:0:50 }}\"\n                     </mat-card-subtitle>\n                     <mat-card-subtitle>Posted on: {{ row.post.date | date:'d/M/y, h:mm:ss a' }} </mat-card-subtitle>\n                  </mat-card-header>\n                  <mat-card-title color=\"primary\" class=\"lm__a-primary\">\n                     <a [@xEnter]=\"postsExist\" class=\"lm__a\" matTooltip=\"Go to this post\"\n                        routerLink=\"/post/{{ row.post.slug }}\"\n                     >\n                        {{ row.post.title | titlecase }}\n                     </a>\n                  </mat-card-title>\n                  <mat-card-content>\n                     <div class=\"lm__icons\" fxLayout=\"row\" fxLayoutAlign=\"center center\"> \n                        <div class=\"lm__icon-badge\">\n                           <mat-icon matBadge=\"{{ row.post.liked.length }}\" matBadgeColor=\"accent\">\n                              thumbs_up_down\n                           </mat-icon>\n                        </div>\n                        <div class=\"lm__icon-badge\"></div>\n                           <mat-icon matBadge=\"{{ row.post.comment.length }}\" matBadgeColor=\"accent\">\n                              comment\n                           </mat-icon>\n                     </div>\n                  </mat-card-content>\n                  <mat-card-subtitle>{{ row.post.subtitle | titlecase }}</mat-card-subtitle>\n                  <mat-card-content>                \n                     {{ row.post.content | slice:0:200 }} ...\n                     <button class=\"lm__a\" mat-button color=\"accent\" routerLink=\"{{ row.post.slug }}\">Read More</button>\n                  </mat-card-content>\n                  <mat-card-content>\n                     <div class=\"lm__mat-chip\" fxLayout fxLayoutAlign=\"center center\">\n                        <mat-chip-list aria-label=\"Fish selection\">\n                           <mat-chip class=\"lm__mat-chip-list\" \n                              *ngFor=\"let tag of row.post.tags\" \n                              color=\"accent\" \n                              selected\n                              routerLink=\"/posts/tags/tag/{{ tag.tag | lowercase }}\"\n                              matTooltip=\"Go to this tag\"\n                           >\n                              {{ tag.tag | titlecase }}\n                           </mat-chip>\n                        </mat-chip-list>\n                     </div>\n                  </mat-card-content>\n                  <mat-card-actions>\n                     <div class=\"lm__card-actions\" fxLayout=\"row\" fxLayoutAlign=\"center center\" @iconButtonEnter *ngIf=\"postId === row.post.id\">\n                        <button class=\"lm__card-button x-button-enter\" routerLink=\"{{ row.post.slug }}\" mat-raised-button color=\"primary\">\n                           <mat-icon class=\"y-icon-enter\">touch_app</mat-icon>\n                           Read More\n                        </button>\n                     </div>\n                  </mat-card-actions>\n               </div>\n            </mat-card>\n         </div>\n      </div>\n   </div>\n\n   <div fxFlex=\"40\" fxFlex.xs=\"100\" class=\"sidebar\">\n      <div>   \n         \n      </div> \n   </div>\n\n</div>\n\n\n"
 
 /***/ }),
 
@@ -502,7 +414,7 @@ module.exports = "<!-- Editor Preview -->\n<div class=\"editor\">\n   <mat-tab-g
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"lm__page-min70vh-hidden\" fxLayout=\"column\" fxLayoutAlign=\"center center\">\n   <div class=\"lm__logo-4rem\">\n      azrin.dev\n   </div>\n   <div class=\"lm__card\" (mouseenter)=\"mouseEnterCard($event)\" (mouseleave)=\"mouseLeaveCard($event)\">\n      \n      <mat-card>\n         <mat-card-title class=\"lm__card-title\">\n            Email Authentication\n         </mat-card-title>\n         <mat-card-content>\n\n            <p>If you agree to the <span><button mat-button class=\"auth__tnc-button\" color=\"accent\">Terms and Conditions</button></span> of our website, please click the authentication button below;</p>\n\n            <div @iconClickButton *ngIf=\"mouseEnter; else elseBlock\" class=\"auth__button\" fxLayout=\"column\" fxLayoutAlign=\"center center\">\n               <button class=\"x-button-enter\" mat-raised-button color=\"primary\" (click)=\"agreeTnc()\">\n                  <mat-icon class=\"y-icon-enter\">touch_app</mat-icon>\n                  I agree to the Terms and Conditions \n               </button>\n            </div>\n            <ng-template #elseBlock>\n               <div @iconClickButton class=\"auth__button\" fxLayout=\"column\" fxLayoutAlign=\"center center\">            \n                  <button class=\"x-button-enter\" mat-raised-button color=\"primary\" (click)=\"agreeTnc()\">\n                     <mat-icon class=\"y-icon-enter\">touch_app</mat-icon>\n                     I agree to the Terms and Conditions \n                  </button>\n               </div>\n            </ng-template>\n\n         </mat-card-content>\n      </mat-card>\n   </div>\n\n\n\n</div>\n"
+module.exports = "<div class=\"lm__page-full\" fxLayout=\"column\" fxLayoutAlign=\"center center\">\n   \n   <div class=\"lm__card\" (mouseenter)=\"mouseEnterCard($event)\" (mouseleave)=\"mouseLeaveCard($event)\">\n      \n      <mat-card>\n         <app-main-logo></app-main-logo>\n         <mat-card-title class=\"lm__card-title\">\n            Email Authentication\n         </mat-card-title>\n         <mat-card-content>\n\n            <p>If you agree to the <span><button mat-button class=\"auth__tnc-button\" color=\"accent\">Terms and Conditions</button></span> of our website, please click the authentication button below;</p>\n\n            <div @iconClickButton *ngIf=\"mouseEnter; else elseBlock\" class=\"auth__button\" fxLayout=\"column\" fxLayoutAlign=\"center center\">\n               <button class=\"x-button-enter\" mat-raised-button color=\"primary\" (click)=\"agreeTnc()\">\n                  <mat-icon class=\"y-icon-enter\">touch_app</mat-icon>\n                  I agree to the Terms and Conditions \n               </button>\n            </div>\n            <ng-template #elseBlock>\n               <div @iconClickButton class=\"auth__button\" fxLayout=\"column\" fxLayoutAlign=\"center center\">            \n                  <button class=\"x-button-enter\" mat-raised-button color=\"primary\" (click)=\"agreeTnc()\">\n                     <mat-icon class=\"y-icon-enter\">touch_app</mat-icon>\n                     I agree to the Terms and Conditions \n                  </button>\n               </div>\n            </ng-template>\n\n         </mat-card-content>\n      </mat-card>\n   </div>\n\n\n\n</div>\n"
 
 /***/ }),
 
@@ -546,7 +458,7 @@ module.exports = "<div class=\"lm__linkedin\" *ngIf=\"userLinkedin\">\n\n  {{ us
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"lm__page-min70vh-hidden\" id=\"top\" fxLayout=\"column\" fxLayoutAlign=\"center center\">\n\n   <div fxLayout=\"column\" fxLayoutAlign=\"center center\">\n\n      <app-main-logo></app-main-logo>\n\n      <div class=\"card\">\n         <mat-card>\n            <mat-card-title>\n               Login Form \n            </mat-card-title>\n            <mat-card-content>\n\n               <div class=\"login__form\">\n\n                  <form [formGroup]=\"loginForm\" (ngSubmit)=\"login()\">\n\n                     <div fxLayout=\"column\" fxLayoutAlign=\"center center\">\n\n                        <mat-form-field class=\"lm__form-input\" appearance=\"fill\">\n                           <mat-label>Email</mat-label>\n                           <input   matInput                                     \n                                    placeholder=\"Email\" \n                                    #email \n                                    formControlName=\"email\" \n                                    required autocomplete=\"email\"\n                           >\n                           <mat-icon matSuffix color=\"primary\">alternate_email</mat-icon>\n                           <mat-hint>Enter email here</mat-hint>\n\n                           <mat-error *ngIf=\"loginForm.get('email').hasError('required')\">\n                              Email is <strong>required</strong>\n                           </mat-error>\n                           <mat-error *ngIf=\"loginForm.get('email').hasError('email')\">\n                              Please enter a valid <strong>email</strong>\n                           </mat-error>\n                        </mat-form-field>\n\n                        <mat-form-field class=\"lm__form-input\" appearance=\"fill\">\n                           <mat-label>Password</mat-label>\n                           <input   matInput                                     \n                                    type=\"password\" \n                                    placeholder=\"Password\" \n                                    formControlName=\"password\" \n                                    required \n                                    autocomplete=\"password\"\n                           >\n                           <mat-icon matSuffix color=\"primary\">vpn_key</mat-icon>\n                           <mat-hint>Enter password here</mat-hint>\n                           <mat-error *ngIf=\"loginForm.get('password').hasError('required')\">\n                              Password is <strong>required</strong>\n                           </mat-error>\n                        </mat-form-field>\n\n                        <button mat-raised-button class=\"lm__form-button\" type=\"submit\" [disabled]=\"loginForm.invalid\" color=\"primary\" >\n                           <mat-icon>check_circle</mat-icon>\n                           Login\n                        </button>\n\n                     </div>\n\n                     {{ loginForm.errors }}\n\n                  </form>\n\n               </div>               \n\n            </mat-card-content>\n\n            <mat-card-actions>\n               <button mat-button class=\"lm__form-button-linkedin\" (click)=\"signInLinkedin()\">\n                     <!-- (click)=\"signInLinkedin()\" -->\n                  <img src=\"assets/logo_icons/Sign-In-Small---Default.png\" alt=\"\">\n               </button>\n            </mat-card-actions>\n\n            <mat-card-footer>\n               <mat-divider></mat-divider>\n               <button mat-button routerLink=\"/user/forgot-password\">Forgot Password</button>\n               <span> | </span>\n               <button mat-button routerLink=\"/user/register\">Register</button>\n            </mat-card-footer>\n         </mat-card>\n      </div>\n   </div>\n   \n</div>\n"
+module.exports = "<div class=\"lm__page-full\" id=\"top\" fxLayout=\"column\" fxLayoutAlign=\"center center\">\n\n   <div fxLayout=\"column\" fxLayoutAlign=\"center center\">\n\n      \n\n      <div class=\"card\">\n         <mat-card>\n            <app-main-logo></app-main-logo>\n            <mat-card-title>\n               Login Form \n            </mat-card-title>\n            <mat-card-content>\n\n               <div class=\"login__form\">\n\n                  <form [formGroup]=\"loginForm\" (ngSubmit)=\"login()\">\n\n                     <div fxLayout=\"column\" fxLayoutAlign=\"center center\">\n\n                        <mat-form-field class=\"lm__form-input\" appearance=\"fill\">\n                           <mat-label>Email</mat-label>\n                           <input   matInput                                     \n                                    placeholder=\"Email\" \n                                    #email \n                                    formControlName=\"email\" \n                                    required autocomplete=\"email\"\n                           >\n                           <mat-icon matSuffix color=\"primary\">alternate_email</mat-icon>\n                           <mat-hint>Enter email here</mat-hint>\n\n                           <mat-error *ngIf=\"loginForm.get('email').hasError('required')\">\n                              Email is <strong>required</strong>\n                           </mat-error>\n                           <mat-error *ngIf=\"loginForm.get('email').hasError('email')\">\n                              Please enter a valid <strong>email</strong>\n                           </mat-error>\n                        </mat-form-field>\n\n                        <mat-form-field class=\"lm__form-input\" appearance=\"fill\">\n                           <mat-label>Password</mat-label>\n                           <input   matInput                                     \n                                    type=\"password\" \n                                    placeholder=\"Password\" \n                                    formControlName=\"password\" \n                                    required \n                                    autocomplete=\"password\"\n                           >\n                           <mat-icon matSuffix color=\"primary\">vpn_key</mat-icon>\n                           <mat-hint>Enter password here</mat-hint>\n                           <mat-error *ngIf=\"loginForm.get('password').hasError('required')\">\n                              Password is <strong>required</strong>\n                           </mat-error>\n                        </mat-form-field>\n\n                        <button mat-raised-button class=\"lm__form-button\" type=\"submit\" [disabled]=\"loginForm.invalid\" color=\"primary\" >\n                           <mat-icon>check_circle</mat-icon>\n                           Login\n                        </button>\n\n                     </div>\n\n                     {{ loginForm.errors }}\n\n                  </form>\n\n               </div>               \n\n            </mat-card-content>\n\n            <!-- <mat-card-actions>\n               <button mat-button class=\"lm__form-button-linkedin\" (click)=\"signInLinkedin()\">\n                     (click)=\"signInLinkedin()\"\n                  <img src=\"assets/logo_icons/Sign-In-Small---Default.png\" alt=\"\">\n               </button>\n            </mat-card-actions> -->\n\n            <mat-card-footer>\n               <mat-divider></mat-divider>\n               <button mat-button routerLink=\"/user/forgot-password\">Forgot Password</button>\n               <span> | </span>\n               <button mat-button routerLink=\"/user/register\">Register</button>\n            </mat-card-footer>\n         </mat-card>\n      </div>\n   </div>\n   \n</div>\n"
 
 /***/ }),
 
@@ -557,7 +469,7 @@ module.exports = "<div class=\"lm__page-min70vh-hidden\" id=\"top\" fxLayout=\"c
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"lm__page-min70vh-hidden\" id=\"top\" fxLayout=\"column\" fxLayoutAlign=\"center center\">\n\n   <div fxLayout=\"column\" fxLayoutAlign=\"center center\">\n\n         <app-main-logo></app-main-logo>\n\n      <div class=\"card\">\n         <mat-card>\n            <mat-card-title>\n               Register Form \n            </mat-card-title>\n            <mat-card-content>\n\n               <div>\n\n                  <form [formGroup]=\"registerForm\" (ngSubmit)=\"register()\">\n\n                     <div fxLayout=\"column\" fxLayoutAlign=\"center center\">\n\n                        <mat-form-field class=\"register__input\" appearance=\"fill\">\n                           <mat-label>Email</mat-label>\n                           <input matInput placeholder=\"Email\" #email formControlName=\"email\" required autocomplete=\"email\">\n                           <mat-icon matSuffix color=\"primary\">alternate_email</mat-icon>\n                           <mat-hint>Enter email here</mat-hint>\n                           <mat-error *ngIf=\"registerForm.get('email').hasError('required')\">\n                              Email is <strong>required</strong>\n                           </mat-error>\n                           <mat-error *ngIf=\"registerForm.get('email').hasError('email')\">\n                              Please enter a valid <strong>email</strong>\n                           </mat-error>\n                        </mat-form-field>\n\n                        <mat-form-field class=\"register__input\" appearance=\"fill\">\n                           <mat-label>Password</mat-label>\n                           <input matInput type=\"password\" placeholder=\"Password\" formControlName=\"password\" required autocomplete=\"password\">\n                           <mat-icon matSuffix color=\"primary\">vpn_key</mat-icon>\n                           <mat-hint>Enter password here</mat-hint>\n                           <mat-error *ngIf=\"registerForm.get('password').hasError('required')\">\n                              Password is <strong>required</strong>\n                           </mat-error>\n                           <mat-error *ngIf=\"registerForm.get('password').hasError('minlength')\">\n                              Minimum password is <strong>{{ registerForm.get('password').errors.minlength.requiredLength }}</strong> characters. Now you entered only <strong>{{ registerForm.get('password').errors.minlength.actualLength }}</strong>\n                           </mat-error>\n                        </mat-form-field>\n\n                        <button mat-raised-button class=\"register__form-button\" type=\"submit\" [disabled]=\"registerForm.invalid\" color=\"primary\" >\n                           <mat-icon>check_circle</mat-icon>\n                           Register\n                        </button>\n\n                     </div>\n\n                     {{ registerForm.errors }}\n\n                  </form>\n\n               </div>\n\n            </mat-card-content>\n\n            <mat-card-actions>\n               <mat-divider></mat-divider>\n               <span>If you have already registered:</span>\n               <button mat-button routerLink=\"/user/login\">Login</button>\n            </mat-card-actions>\n            \n         </mat-card>\n      </div>\n   </div>\n\n</div>\n"
+module.exports = "<div class=\"lm__page-full\" id=\"top\" fxLayout=\"column\" fxLayoutAlign=\"center center\">\n\n   <div fxLayout=\"column\" fxLayoutAlign=\"center center\">         \n\n      <div class=\"card\">\n         <mat-card>\n            <app-main-logo></app-main-logo>\n            <mat-card-title>\n               Register Form \n            </mat-card-title>\n            <mat-card-content>\n\n               <div>\n\n                  <form [formGroup]=\"registerForm\" (ngSubmit)=\"register()\">\n\n                     <div fxLayout=\"column\" fxLayoutAlign=\"center center\">\n\n                        <mat-form-field class=\"register__input\" appearance=\"fill\">\n                           <mat-label>Email</mat-label>\n                           <input matInput placeholder=\"Email\" #email formControlName=\"email\" required autocomplete=\"email\">\n                           <mat-icon matSuffix color=\"accent\">alternate_email</mat-icon>\n                           <mat-hint>Enter email here</mat-hint>\n                           <mat-error *ngIf=\"registerForm.get('email').hasError('required')\">\n                              Email is <strong>required</strong>\n                           </mat-error>\n                           <mat-error *ngIf=\"registerForm.get('email').hasError('email')\">\n                              Please enter a valid <strong>email</strong>\n                           </mat-error>\n                        </mat-form-field>\n\n                        <mat-form-field class=\"register__input\" appearance=\"fill\">\n                           <mat-label>Password</mat-label>\n                           <input matInput type=\"password\" placeholder=\"Password\" formControlName=\"password\" required autocomplete=\"password\">\n                           <mat-icon matSuffix color=\"accent\">vpn_key</mat-icon>\n                           <mat-hint>Enter password here</mat-hint>\n                           <mat-error *ngIf=\"registerForm.get('password').hasError('required')\">\n                              Password is <strong>required</strong>\n                           </mat-error>\n                           <mat-error *ngIf=\"registerForm.get('password').hasError('minlength')\">\n                              Minimum password is <strong>{{ registerForm.get('password').errors.minlength.requiredLength }}</strong> characters. Now you entered only <strong>{{ registerForm.get('password').errors.minlength.actualLength }}</strong>\n                           </mat-error>\n                        </mat-form-field>\n\n                        <button mat-raised-button class=\"register__form-button\" type=\"submit\" [disabled]=\"registerForm.invalid\" color=\"accent\" >\n                           <mat-icon>check_circle</mat-icon>\n                           Register\n                        </button>\n\n                     </div>\n\n                     {{ registerForm.errors }}\n\n                  </form>\n\n               </div>\n\n            </mat-card-content>\n\n            <mat-card-actions>\n               <mat-divider></mat-divider>\n               <span>If you have already registered:</span>\n               <button mat-button routerLink=\"/user/login\">Login</button>\n            </mat-card-actions>\n            \n         </mat-card>\n      </div>\n   </div>\n\n</div>\n"
 
 /***/ }),
 
@@ -568,7 +480,7 @@ module.exports = "<div class=\"lm__page-min70vh-hidden\" id=\"top\" fxLayout=\"c
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"lm__page-100p profile\" fxLayout=\"row\" fxLayout.xs=\"column\">\n\n   <div fxFlex=\"60\" fxFlex.xs=\"100\" class=\"timeline\">\n\n      <div class=\"posts\" *ngFor=\"let row of posts\" >\n         <div [@xEnter]=\"postsExist\">\n            <mat-card  fxLayout=\"column\" class=\"lm__card timeline__card x-enter\">   \n               \n               <!-- Card Image  -->\n               <div  id=\"{{ row.post.image }}\"\n                     @imageEnter\n                     *ngIf=\"row.post.image == imagePost; else elseBlock\"                        \n               >\n                  <img mat-card-image                                      \n                     class=\"image-enter lm__card-image\" \n                     src=\"{{ row.post.image }}\" \n                     alt=\"{{ row.poster.name | titlecase }}\" \n                     (mouseout)=\"mouseLeaveImage($event)\"                    \n                  >                                      \n               </div> \n               <ng-template #elseBlock >\n                  <div id=\"{{ row.post.image }}\" \n                     *ngIf=\"row.post.image\"\n                     (mouseenter)=\"mouseEnterImage($event)\" \n                  >\n                     <img mat-card-image  \n                        src=\"{{ row.post.image }}\" \n                        alt=\"{{ row.poster.name | titlecase }}\"                     \n                     > \n                  </div>\n               </ng-template> \n\n               <div id=\"{{ row.post.id }}\" (mouseenter)=\"mouseEnterCard($event)\" >\n                  <mat-card-header>\n                     <img mat-card-avatar id=\"{{ row.post.image }}\" class=\"lm__avatar\" src=\"{{ row.poster.avatar || 'assets/images/man.png'}}\" >\n                     <mat-card-title class=\"lm__profile-title\">\n                        <a class=\"lm__a\" matTooltip=\"Go to this user profile\"\n                           routerLink=\"{{ row.poster.slug }}\"\n                        >                  \n                           {{ row.poster.name | titlecase }}\n                        </a>\n                     </mat-card-title>\n                     <mat-card-subtitle>\n                        \"{{ row.poster.about | titlecase | slice:0:50 }}\"\n                     </mat-card-subtitle>\n                     <mat-card-subtitle>Posted on: {{ row.post.date | date:'d/M/y, h:mm:ss a' }} </mat-card-subtitle>\n                  </mat-card-header>\n                  <mat-card-title color=\"primary\" class=\"lm__a-primary\">\n                     <a [@xEnter]=\"postsExist\" class=\"lm__a\" matTooltip=\"Go to this post\"\n                        routerLink=\"/post/{{ row.post.slug }}\"\n                     >\n                        {{ row.post.title | titlecase }}\n                     </a>\n                  </mat-card-title>\n                  <mat-card-content>\n                     <div class=\"lm__icons\" fxLayout=\"row\" fxLayoutAlign=\"center center\"> \n                        <div class=\"lm__icon-badge\">\n                           <mat-icon matBadge=\"{{ row.post.liked.length }}\"             matBadgeColor=\"accent\"\n                              matTooltip=\"Like and Dislike\"\n                           >\n                              thumbs_up_down\n                           </mat-icon>\n                        </div>\n                        <div class=\"lm__icon-badge\">\n                           <mat-icon matBadge=\"{{ row.post.comments.length }}\"             matBadgeColor=\"accent\"\n                              matTooltip=\"Like and Dislike\"\n                           >\n                              share\n                           </mat-icon>\n                        </div>\n                        <div class=\"lm__icon-badge\">\n                           <mat-icon matBadge=\"{{ row.post.shared.length }}\" matBadgeColor=\"accent\">\n                              comment\n                           </mat-icon>\n                        </div>\n                     </div>\n                  </mat-card-content>\n                  <mat-card-subtitle>{{ row.post.subtitle | titlecase }}</mat-card-subtitle>\n                  <mat-card-content>                \n                     {{ row.post.content | slice:0:200 }} ...\n                     <button class=\"lm__a-button\" mat-button color=\"accent\" routerLink=\"{{ row.post.slug }}\">Read More</button>\n                  </mat-card-content>\n                  <mat-card-content>\n                     <div class=\"lm__mat-chip\" fxLayout fxLayoutAlign=\"center center\">\n                        <mat-chip-list aria-label=\"Fish selection\">\n                           <mat-chip class=\"lm__mat-chip-list\" \n                              *ngFor=\"let tag of row.post.tags\" \n                              color=\"accent\" \n                              selected\n                              routerLink=\"/posts/tags/tag/{{ tag.tag | lowercase }}\"\n                              matTooltip=\"Go to this tag\"\n                           >\n                              {{ tag.tag | titlecase }}\n                           </mat-chip>\n                        </mat-chip-list>\n                     </div>\n                  </mat-card-content>\n                  <mat-card-actions>\n                     <div class=\"lm__card-actions\" \n                        fxLayout=\"row\"                    \n                        fxLayoutAlign=\"center center\" \n                        @iconButtonEnter \n                        *ngIf=\"postId === row.post.id\"     \n                     >\n                        <button                            \n                           class=\"lm__card-button x-button-enter\" \n                           mat-raised-button color=\"primary\"\n                           matTooltip=\"Go to this post\"\n                           routerLink=\"{{ row.post.slug }}\"\n                        >\n                           <mat-icon class=\"y-icon-enter\">touch_app</mat-icon>\n                           Read More\n                        </button>\n                     </div>\n                  </mat-card-actions>\n               </div>\n            </mat-card>\n         </div>\n      </div>\n   </div>\n\n   <div fxFlex=\"40\" fxFlex.xs=\"100\" class=\"sidebar\">\n      <div>   \n         <mat-card class=\"sidebar__card\">\n            <mat-card-title class=\"lm__card-title\">\n               You might like\n            </mat-card-title>\n            <mat-card-content>\n\n               <div class=\"lm__card-tab\">\n                  <mat-tab-group *ngFor=\"let category of categoriesPosts\">\n                     <mat-tab label=\"{{ category | titlecase }}\">\n                        <div class=\"posts\" fxLayout=\"column\">\n                           <mat-list role=\"list\">\n                              <mat-list-item role=\"listitem\" *ngFor=\"let row of posts\">\n                                 <a class=\"lm__a-small\" matTooltip=\"Go to this post\"\n                                    routerLink=\"/post/{{ row.post.slug }}\"\n                                 >\n                                    {{ row.post.title | titlecase }}\n                                 </a>\n                              </mat-list-item>\n                           </mat-list> \n                        </div> \n                     </mat-tab>\n                     <mat-tab label=\"Second\"> Content 2 </mat-tab>\n                     <mat-tab label=\"Third\"> Content 3 </mat-tab>\n                  </mat-tab-group>\n               </div>\n                        \n            </mat-card-content>\n         </mat-card>\n      </div> \n   </div>\n\n</div>\n\n"
+module.exports = "<div class=\"lm__page-container\" fxLayout=\"row\" fxLayout.xs=\"column\">\n\n   <div fxFlex=\"60\" fxFlex.xs=\"100\" class=\"timeline\">\n\n      <div class=\"posts\" *ngFor=\"let row of posts\" >\n         <div [@xEnter]=\"postsExist\">\n            <mat-card  fxLayout=\"column\" class=\"lm__card timeline__card x-enter\">  \n               <app-main-logo></app-main-logo> \n               \n               <!-- Card Image  -->\n               <div  id=\"{{ row.post.image }}\"\n                     @imageEnter\n                     *ngIf=\"row.post.image == imagePost; else elseBlock\"                        \n               >\n                  <img mat-card-image                                      \n                     class=\"image-enter lm__card-image\" \n                     src=\"{{ row.post.image }}\" \n                     alt=\"{{ row.poster.name | titlecase }}\" \n                     (mouseout)=\"mouseLeaveImage($event)\"                    \n                  >                                      \n               </div> \n               <ng-template #elseBlock >\n                  <div id=\"{{ row.post.image }}\" \n                     *ngIf=\"row.post.image\"\n                     (mouseenter)=\"mouseEnterImage($event)\" \n                  >\n                     <img mat-card-image  \n                        src=\"{{ row.post.image }}\" \n                        alt=\"{{ row.poster.name | titlecase }}\"                     \n                     > \n                  </div>\n               </ng-template> \n\n               <div id=\"{{ row.post.id }}\" (mouseenter)=\"mouseEnterCard($event)\" >\n                  <mat-card-header>\n                     <img mat-card-avatar id=\"{{ row.post.image }}\" class=\"lm__avatar\" src=\"{{ row.poster.avatar || 'assets/images/man.png'}}\" >\n                     <mat-card-title class=\"lm__profile-title\">\n                        <a class=\"lm__a\" matTooltip=\"Go to this user profile\"\n                           routerLink=\"{{ row.poster.slug }}\"\n                        >                  \n                           {{ row.poster.name | titlecase }}\n                        </a>\n                     </mat-card-title>\n                     <mat-card-subtitle>\n                        \"{{ row.poster.about | titlecase | slice:0:50 }}\"\n                     </mat-card-subtitle>\n                     <mat-card-subtitle>Posted on: {{ row.post.date | date:'d/M/y, h:mm:ss a' }} </mat-card-subtitle>\n                  </mat-card-header>\n                  <mat-card-title color=\"primary\" class=\"lm__a-primary\">\n                     <a [@xEnter]=\"postsExist\" class=\"lm__a\" matTooltip=\"Go to this post\"\n                        routerLink=\"/post/{{ row.post.slug }}\"\n                     >\n                        {{ row.post.title | titlecase }}\n                     </a>\n                  </mat-card-title>\n                  <mat-card-content>\n                     <div class=\"lm__icons\" fxLayout=\"row\" fxLayoutAlign=\"center center\"> \n                        <div class=\"lm__icon-badge\">\n                           <mat-icon matBadge=\"{{ row.post.liked.length }}\"             matBadgeColor=\"accent\"\n                              matTooltip=\"Like and Dislike\"\n                           >\n                              thumbs_up_down\n                           </mat-icon>\n                        </div>\n                        <div class=\"lm__icon-badge\">\n                           <mat-icon matBadge=\"{{ row.post.comments.length }}\"             matBadgeColor=\"accent\"\n                              matTooltip=\"Like and Dislike\"\n                           >\n                              share\n                           </mat-icon>\n                        </div>\n                        <div class=\"lm__icon-badge\">\n                           <mat-icon matBadge=\"{{ row.post.shared.length }}\" matBadgeColor=\"accent\">\n                              comment\n                           </mat-icon>\n                        </div>\n                     </div>\n                  </mat-card-content>\n                  <mat-card-subtitle>{{ row.post.subtitle | titlecase }}</mat-card-subtitle>\n                  <mat-card-content>                \n                     {{ row.post.content | slice:0:200 }} ...\n                     <button class=\"lm__a-button\" mat-button color=\"accent\" routerLink=\"{{ row.post.slug }}\">Read More</button>\n                  </mat-card-content>\n                  <mat-card-content>\n                     <div class=\"lm__mat-chip\" fxLayout fxLayoutAlign=\"center center\">\n                        <mat-chip-list aria-label=\"Fish selection\">\n                           <mat-chip class=\"lm__mat-chip-list\" \n                              *ngFor=\"let tag of row.post.tags\" \n                              color=\"accent\" \n                              selected\n                              routerLink=\"/posts/tags/tag/{{ tag.tag | lowercase }}\"\n                              matTooltip=\"Go to this tag\"\n                           >\n                              {{ tag.tag | titlecase }}\n                           </mat-chip>\n                        </mat-chip-list>\n                     </div>\n                  </mat-card-content>\n                  <mat-card-actions>\n                     <div class=\"lm__card-actions\" \n                        fxLayout=\"row\"                    \n                        fxLayoutAlign=\"center center\" \n                        @iconButtonEnter \n                        *ngIf=\"postId === row.post.id\"     \n                     >\n                        <button                            \n                           class=\"lm__card-button x-button-enter\" \n                           mat-raised-button color=\"primary\"\n                           matTooltip=\"Go to this post\"\n                           routerLink=\"{{ row.post.slug }}\"\n                        >\n                           <mat-icon class=\"y-icon-enter\">touch_app</mat-icon>\n                           Read More\n                        </button>\n                     </div>\n                  </mat-card-actions>\n               </div>\n            </mat-card>\n         </div>\n      </div>\n   </div>\n\n   <div fxFlex=\"40\" fxFlex.xs=\"100\" class=\"sidebar\">\n      <div>   \n         <mat-card class=\"sidebar__card\">\n            <mat-card-title class=\"lm__card-title\">\n               You might like\n            </mat-card-title>\n            <mat-card-content>\n\n               <div class=\"lm__card-tab\">\n                  <mat-tab-group *ngFor=\"let category of categoriesPosts\">\n                     <mat-tab label=\"{{ category | titlecase }}\">\n                        <div class=\"posts\" fxLayout=\"column\">\n                           <mat-list role=\"list\">\n                              <mat-list-item role=\"listitem\" *ngFor=\"let row of posts\">\n                                 <a class=\"lm__a-small\" matTooltip=\"Go to this post\"\n                                    routerLink=\"/post/{{ row.post.slug }}\"\n                                 >\n                                    {{ row.post.title | titlecase }}\n                                 </a>\n                              </mat-list-item>\n                           </mat-list> \n                        </div> \n                     </mat-tab>\n                     <mat-tab label=\"Second\"> Content 2 </mat-tab>\n                     <mat-tab label=\"Third\"> Content 3 </mat-tab>\n                  </mat-tab-group>\n               </div>\n                        \n            </mat-card-content>\n         </mat-card>\n      </div> \n   </div>\n\n</div>\n\n"
 
 /***/ }),
 
@@ -625,58 +537,6 @@ webpackEmptyAsyncContext.keys = function() { return []; };
 webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
 module.exports = webpackEmptyAsyncContext;
 webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
-
-/***/ }),
-
-/***/ "./src/app/about/about.component.scss":
-/*!********************************************!*\
-  !*** ./src/app/about/about.component.scss ***!
-  \********************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2Fib3V0L2Fib3V0LmNvbXBvbmVudC5zY3NzIn0= */"
-
-/***/ }),
-
-/***/ "./src/app/about/about.component.ts":
-/*!******************************************!*\
-  !*** ./src/app/about/about.component.ts ***!
-  \******************************************/
-/*! exports provided: AboutComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AboutComponent", function() { return AboutComponent; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _configurations_services_profile_service_profile_service_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../configurations/services/profile-service/profile-service.service */ "./src/app/configurations/services/profile-service/profile-service.service.ts");
-
-
-
-var AboutComponent = /** @class */ (function () {
-    function AboutComponent(profileService) {
-        this.profileService = profileService;
-    }
-    AboutComponent.prototype.ngOnInit = function () {
-        var _this = this;
-        this.profileService.profile.subscribe(function (response) {
-            _this.profile = response;
-        });
-    };
-    AboutComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-            selector: 'app-about',
-            template: __webpack_require__(/*! raw-loader!./about.component.html */ "./node_modules/raw-loader/index.js!./src/app/about/about.component.html"),
-            styles: [__webpack_require__(/*! ./about.component.scss */ "./src/app/about/about.component.scss")]
-        }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_configurations_services_profile_service_profile_service_service__WEBPACK_IMPORTED_MODULE_2__["ProfileService"]])
-    ], AboutComponent);
-    return AboutComponent;
-}());
-
-
 
 /***/ }),
 
@@ -2005,42 +1865,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
-/* harmony import */ var _user_login_login_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./user/login/login.component */ "./src/app/user/login/login.component.ts");
-/* harmony import */ var _configurations_services_admin_auth_guard_admin_auth_guard_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./configurations/services/admin-auth-guard/admin-auth-guard.service */ "./src/app/configurations/services/admin-auth-guard/admin-auth-guard.service.ts");
-/* harmony import */ var _configurations_services_auth_guard_auth_guard_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./configurations/services/auth-guard/auth-guard.service */ "./src/app/configurations/services/auth-guard/auth-guard.service.ts");
-/* harmony import */ var _contact_form_contact_form_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./contact-form/contact-form.component */ "./src/app/contact-form/contact-form.component.ts");
-/* harmony import */ var _admin_admin_message_admin_message_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./admin/admin-message/admin-message.component */ "./src/app/admin/admin-message/admin-message.component.ts");
-/* harmony import */ var _user_user_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./user/user.component */ "./src/app/user/user.component.ts");
-/* harmony import */ var _user_register_register_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./user/register/register.component */ "./src/app/user/register/register.component.ts");
-/* harmony import */ var _tags_tags_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./tags/tags.component */ "./src/app/tags/tags.component.ts");
-/* harmony import */ var _home_home_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./home/home.component */ "./src/app/home/home.component.ts");
-/* harmony import */ var _user_auth_register_auth_register_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./user/auth-register/auth-register.component */ "./src/app/user/auth-register/auth-register.component.ts");
-/* harmony import */ var _admin_admin_post_admin_post_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./admin/admin-post/admin-post.component */ "./src/app/admin/admin-post/admin-post.component.ts");
-/* harmony import */ var _about_about_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./about/about.component */ "./src/app/about/about.component.ts");
-/* harmony import */ var _post_post_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./post/post.component */ "./src/app/post/post.component.ts");
-/* harmony import */ var _sales_page_sales_page_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./sales-page/sales-page.component */ "./src/app/sales-page/sales-page.component.ts");
-/* harmony import */ var _sales_page_website_website_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./sales-page/website/website.component */ "./src/app/sales-page/website/website.component.ts");
-/* harmony import */ var _posts_posts_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./posts/posts.component */ "./src/app/posts/posts.component.ts");
-/* harmony import */ var _admin_admin_posts_admin_posts_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./admin/admin-posts/admin-posts.component */ "./src/app/admin/admin-posts/admin-posts.component.ts");
-/* harmony import */ var _admin_admin_post_admin_post_edit_admin_post_edit_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./admin/admin-post/admin-post-edit/admin-post-edit.component */ "./src/app/admin/admin-post/admin-post-edit/admin-post-edit.component.ts");
-/* harmony import */ var _user_forgot_password_forgot_password_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./user/forgot-password/forgot-password.component */ "./src/app/user/forgot-password/forgot-password.component.ts");
-/* harmony import */ var _user_login_linkedin_linkedin_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./user/login/linkedin/linkedin.component */ "./src/app/user/login/linkedin/linkedin.component.ts");
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* harmony import */ var _contact_form_contact_form_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./contact-form/contact-form.component */ "./src/app/contact-form/contact-form.component.ts");
+/* harmony import */ var _page_home_home_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./page/home/home.component */ "./src/app/page/home/home.component.ts");
+/* harmony import */ var _posts_posts_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./posts/posts.component */ "./src/app/posts/posts.component.ts");
+/* harmony import */ var _page_terms_terms_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./page/terms/terms.component */ "./src/app/page/terms/terms.component.ts");
 
 
 
@@ -2049,28 +1877,31 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var routes = [
-    { path: '', component: _home_home_component__WEBPACK_IMPORTED_MODULE_11__["HomeComponent"], data: { name: 'Home', icon: 'home', tooltip: 'Home Page', type: 'public' } },
-    { path: 'about', component: _about_about_component__WEBPACK_IMPORTED_MODULE_14__["AboutComponent"], data: { name: 'About', icon: 'work', tooltip: 'About', type: 'public' } },
-    { path: 'articles', component: _posts_posts_component__WEBPACK_IMPORTED_MODULE_18__["PostsComponent"], data: { name: 'Articles', icon: 'menu_book', tooltip: 'Articles', type: 'public' } },
-    { path: 'contact', component: _contact_form_contact_form_component__WEBPACK_IMPORTED_MODULE_6__["ContactFormComponent"], data: { name: 'Contact Us', icon: 'alternate_email', tooltip: 'Contact Us', type: 'public' } },
-    { path: 'posts/tags/tag/:tag', component: _tags_tags_component__WEBPACK_IMPORTED_MODULE_10__["TagsComponent"], data: { name: 'Tag', icon: 'dashboard', tooltip: 'Tag Page', type: 'user' } },
-    { path: 'user/login', component: _user_login_login_component__WEBPACK_IMPORTED_MODULE_3__["LoginComponent"], data: { name: 'Login', icon: 'person', tooltip: 'Login Page', type: 'auth' } },
-    { path: 'user/login/linkedin', component: _user_login_linkedin_linkedin_component__WEBPACK_IMPORTED_MODULE_22__["LinkedinComponent"], data: { name: 'Linkedin', icon: 'person', tooltip: 'Linkedin Callback Page', type: 'admin' } },
-    { path: 'user/forgot-password', component: _user_forgot_password_forgot_password_component__WEBPACK_IMPORTED_MODULE_21__["ForgotPasswordComponent"], data: { name: 'Forgot Password', icon: 'person', tooltip: 'Forgot Password', type: 'admin' } },
-    { path: 'post/:user/:id/:title', component: _post_post_component__WEBPACK_IMPORTED_MODULE_15__["PostComponent"], data: { name: 'Post', icon: 'menu_book', tooltip: 'Post', type: 'admin' } },
-    { path: 'user/register', component: _user_register_register_component__WEBPACK_IMPORTED_MODULE_9__["RegisterComponent"], data: { name: 'Register', icon: 'person_add', tooltip: 'Register Page', type: 'auth' } },
-    { path: 'user/register/token/:authToken', component: _user_auth_register_auth_register_component__WEBPACK_IMPORTED_MODULE_12__["AuthRegisterComponent"], data: { name: 'Register', icon: 'person_add', tooltip: 'Authentication Register Page', type: 'admin' } },
+    { path: '', component: _page_home_home_component__WEBPACK_IMPORTED_MODULE_4__["HomeComponent"], data: { name: 'Home', icon: 'home', tooltip: 'Home Page', type: 'public' } },
+    { path: 'articles', component: _posts_posts_component__WEBPACK_IMPORTED_MODULE_5__["PostsComponent"], data: { name: 'Articles', icon: 'menu_book', tooltip: 'Articles', type: 'public' } },
+    { path: 'terms', component: _page_terms_terms_component__WEBPACK_IMPORTED_MODULE_6__["TermsComponent"], data: { name: 'Terms', icon: 'policy', tooltip: 'Terms', type: 'public' } },
+    { path: 'contact', component: _contact_form_contact_form_component__WEBPACK_IMPORTED_MODULE_3__["ContactFormComponent"], data: { name: 'Contact Us', icon: 'alternate_email', tooltip: 'Contact Us', type: 'public' } },
+    /*
+    { path: 'user/profile', component: ProfileComponent, data: { name: 'Name', icon: 'account_circle', tooltip: 'Profile Page', type: 'user' } },
+    { path: 'posts/tags/tag/:tag', component: TagsComponent, data: { name: 'Tag', icon: 'dashboard', tooltip: 'Tag Page', type: 'user' } },
+    { path: 'user/login', component: LoginComponent, data: { name: 'Login', icon: 'person', tooltip: 'Login Page', type: 'auth' } },
+    { path: 'user/login/linkedin', component: LinkedinComponent, data: { name: 'Linkedin', icon: 'person', tooltip: 'Linkedin Callback Page', type: 'admin' } },
+    { path: 'user/forgot-password', component: ForgotPasswordComponent, data: { name: 'Forgot Password', icon: 'person', tooltip: 'Forgot Password', type: 'admin' } },
+    { path: 'post/:user/:id/:title', component: PostComponent, data: { name: 'Post', icon: 'menu_book', tooltip: 'Post', type: 'admin' } },
+    { path: 'user/register', component: RegisterComponent, data: { name: 'Register', icon: 'person_add', tooltip: 'Register Page', type: 'auth' } },
+    { path: 'user/register/token/:authToken', component: AuthRegisterComponent, data: { name: 'Register', icon: 'person_add', tooltip: 'Authentication Register Page', type: 'admin' } },
+    
     // User routes
-    { path: 'user/profile', component: _user_user_component__WEBPACK_IMPORTED_MODULE_8__["UserComponent"], canActivate: [_configurations_services_auth_guard_auth_guard_service__WEBPACK_IMPORTED_MODULE_5__["AuthGuardService"]], data: { name: 'Profile', icon: 'person', tooltip: 'Profile Page', type: 'user' } },
+    { path: 'user/profile', component: UserComponent, canActivate: [AuthGuardService], data: { name: 'Profile', icon: 'person', tooltip: 'Profile Page', type: 'user' } },
+  
     // Admin routes
-    { path: 'admin/message', component: _admin_admin_message_admin_message_component__WEBPACK_IMPORTED_MODULE_7__["AdminMessageComponent"], canActivate: [_configurations_services_auth_guard_auth_guard_service__WEBPACK_IMPORTED_MODULE_5__["AuthGuardService"], _configurations_services_admin_auth_guard_admin_auth_guard_service__WEBPACK_IMPORTED_MODULE_4__["AdminAuthGuardService"]], data: { name: 'Message', icon: 'dashboard', type: 'admin' } },
-    { path: 'admin/posts/post/new', component: _admin_admin_post_admin_post_component__WEBPACK_IMPORTED_MODULE_13__["AdminPostComponent"], canActivate: [_configurations_services_auth_guard_auth_guard_service__WEBPACK_IMPORTED_MODULE_5__["AuthGuardService"], _configurations_services_admin_auth_guard_admin_auth_guard_service__WEBPACK_IMPORTED_MODULE_4__["AdminAuthGuardService"]], data: { name: 'Post', icon: 'book', type: 'admin' } },
-    { path: 'admin/posts/post/edit/:id', component: _admin_admin_post_admin_post_edit_admin_post_edit_component__WEBPACK_IMPORTED_MODULE_20__["AdminPostEditComponent"], canActivate: [_configurations_services_auth_guard_auth_guard_service__WEBPACK_IMPORTED_MODULE_5__["AuthGuardService"], _configurations_services_admin_auth_guard_admin_auth_guard_service__WEBPACK_IMPORTED_MODULE_4__["AdminAuthGuardService"]], data: { name: 'Post', icon: 'book', type: 'admin' } },
-    { path: 'admin/posts', component: _admin_admin_posts_admin_posts_component__WEBPACK_IMPORTED_MODULE_19__["AdminPostsComponent"], canActivate: [_configurations_services_auth_guard_auth_guard_service__WEBPACK_IMPORTED_MODULE_5__["AuthGuardService"], _configurations_services_admin_auth_guard_admin_auth_guard_service__WEBPACK_IMPORTED_MODULE_4__["AdminAuthGuardService"]], data: { name: 'Posts', icon: 'book', type: 'admin' } },
-    { path: 'services', component: _sales_page_sales_page_component__WEBPACK_IMPORTED_MODULE_16__["SalesPageComponent"], data: { name: 'Services', icon: 'devices', tooltip: 'Services', type: 'admin' } },
-    { path: 'buat-website', component: _sales_page_website_website_component__WEBPACK_IMPORTED_MODULE_17__["WebsiteComponent"], data: { name: 'Buat Website', icon: 'devices', tooltip: 'Buat Website', type: 'admin' } },
+    { path: 'admin/message', component: AdminMessageComponent, canActivate: [AuthGuardService, AdminAuthGuardService], data: { name: 'Message',icon: 'dashboard', type: 'admin'  } },
+    { path: 'admin/posts/post/new', component: AdminPostComponent, canActivate: [AuthGuardService, AdminAuthGuardService], data: { name: 'Post', icon: 'book', type: 'admin'  } },
+    { path: 'admin/posts/post/edit/:id', component: AdminPostEditComponent, canActivate: [AuthGuardService, AdminAuthGuardService], data: { name: 'Post', icon: 'book', type: 'admin'  } },
+    { path: 'admin/posts', component: AdminPostsComponent, canActivate: [AuthGuardService, AdminAuthGuardService], data: { name: 'Posts', icon: 'book', type: 'admin'  } },
+     */
     // Wildcard routes
-    { path: '**', component: _home_home_component__WEBPACK_IMPORTED_MODULE_11__["HomeComponent"], data: { name: 'Back to Home', icon: 'dashboard', type: 'wildcard' } },
+    { path: '**', component: _page_home_home_component__WEBPACK_IMPORTED_MODULE_4__["HomeComponent"], data: { name: 'Back to Home', icon: 'dashboard', type: 'wildcard' } },
 ];
 var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {
@@ -2174,56 +2005,42 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_cdk_layout__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! @angular/cdk/layout */ "./node_modules/@angular/cdk/esm5/layout.es5.js");
 /* harmony import */ var _navigations_navigations_component__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./navigations/navigations.component */ "./src/app/navigations/navigations.component.ts");
 /* harmony import */ var _tags_tags_component__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./tags/tags.component */ "./src/app/tags/tags.component.ts");
-/* harmony import */ var _side_bar_side_bar_component__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./side-bar/side-bar.component */ "./src/app/side-bar/side-bar.component.ts");
-/* harmony import */ var _home_home_component__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./home/home.component */ "./src/app/home/home.component.ts");
-/* harmony import */ var _user_auth_register_auth_register_component__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./user/auth-register/auth-register.component */ "./src/app/user/auth-register/auth-register.component.ts");
-/* harmony import */ var _side_bar_accordion_accordion_component__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./side-bar/accordion/accordion.component */ "./src/app/side-bar/accordion/accordion.component.ts");
-/* harmony import */ var _side_bar_accordion_form_personal_form_personal_component__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./side-bar/accordion/form-personal/form-personal.component */ "./src/app/side-bar/accordion/form-personal/form-personal.component.ts");
-/* harmony import */ var _side_bar_accordion_form_avatar_form_avatar_component__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./side-bar/accordion/form-avatar/form-avatar.component */ "./src/app/side-bar/accordion/form-avatar/form-avatar.component.ts");
-/* harmony import */ var _side_bar_accordion_form_address_form_address_component__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./side-bar/accordion/form-address/form-address.component */ "./src/app/side-bar/accordion/form-address/form-address.component.ts");
-/* harmony import */ var _side_bar_accordion_form_handphone_form_handphone_component__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./side-bar/accordion/form-handphone/form-handphone.component */ "./src/app/side-bar/accordion/form-handphone/form-handphone.component.ts");
-/* harmony import */ var _visitor_visitor_component__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./visitor/visitor.component */ "./src/app/visitor/visitor.component.ts");
-/* harmony import */ var _visitor_visitor_form_visitor_form_component__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ./visitor/visitor-form/visitor-form.component */ "./src/app/visitor/visitor-form/visitor-form.component.ts");
-/* harmony import */ var _visitor_visitor_form_visitor_avatar_visitor_avatar_component__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! ./visitor/visitor-form/visitor-avatar/visitor-avatar.component */ "./src/app/visitor/visitor-form/visitor-avatar/visitor-avatar.component.ts");
-/* harmony import */ var _admin_admin_post_admin_post_component__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! ./admin/admin-post/admin-post.component */ "./src/app/admin/admin-post/admin-post.component.ts");
-/* harmony import */ var _admin_admin_post_form_post_form_post_component__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(/*! ./admin/admin-post/form-post/form-post.component */ "./src/app/admin/admin-post/form-post/form-post.component.ts");
-/* harmony import */ var _layout_content_layout_content_component__WEBPACK_IMPORTED_MODULE_39__ = __webpack_require__(/*! ./layout-content/layout-content.component */ "./src/app/layout-content/layout-content.component.ts");
-/* harmony import */ var _logo_logo4rem_logo4rem_component__WEBPACK_IMPORTED_MODULE_40__ = __webpack_require__(/*! ./logo/logo4rem/logo4rem.component */ "./src/app/logo/logo4rem/logo4rem.component.ts");
-/* harmony import */ var _logo_logo2rem_logo2rem_component__WEBPACK_IMPORTED_MODULE_41__ = __webpack_require__(/*! ./logo/logo2rem/logo2rem.component */ "./src/app/logo/logo2rem/logo2rem.component.ts");
-/* harmony import */ var _admin_admin_post_form_post_chip_categories_chip_categories_component__WEBPACK_IMPORTED_MODULE_42__ = __webpack_require__(/*! ./admin/admin-post/form-post/chip-categories/chip-categories.component */ "./src/app/admin/admin-post/form-post/chip-categories/chip-categories.component.ts");
-/* harmony import */ var _angular_cdk_keycodes__WEBPACK_IMPORTED_MODULE_43__ = __webpack_require__(/*! @angular/cdk/keycodes */ "./node_modules/@angular/cdk/esm5/keycodes.es5.js");
-/* harmony import */ var _admin_admin_post_form_post_chip_tags_chip_tags_component__WEBPACK_IMPORTED_MODULE_44__ = __webpack_require__(/*! ./admin/admin-post/form-post/chip-tags/chip-tags.component */ "./src/app/admin/admin-post/form-post/chip-tags/chip-tags.component.ts");
-/* harmony import */ var _logo_logo2rem_light_logo2rem_light_component__WEBPACK_IMPORTED_MODULE_45__ = __webpack_require__(/*! ./logo/logo2rem-light/logo2rem-light.component */ "./src/app/logo/logo2rem-light/logo2rem-light.component.ts");
-/* harmony import */ var _admin_admin_post_form_post_preview_post_preview_post_component__WEBPACK_IMPORTED_MODULE_46__ = __webpack_require__(/*! ./admin/admin-post/form-post/preview-post/preview-post.component */ "./src/app/admin/admin-post/form-post/preview-post/preview-post.component.ts");
-/* harmony import */ var _test_test_component__WEBPACK_IMPORTED_MODULE_47__ = __webpack_require__(/*! ./test/test.component */ "./src/app/test/test.component.ts");
-/* harmony import */ var _configurations_angular_editor_angular_editor_module__WEBPACK_IMPORTED_MODULE_48__ = __webpack_require__(/*! ./configurations/angular-editor/angular-editor.module */ "./src/app/configurations/angular-editor/angular-editor.module.ts");
-/* harmony import */ var _ngm_editor_ngm_editor_module__WEBPACK_IMPORTED_MODULE_49__ = __webpack_require__(/*! ./ngm-editor/ngm-editor.module */ "./src/app/ngm-editor/ngm-editor.module.ts");
-/* harmony import */ var _about_about_component__WEBPACK_IMPORTED_MODULE_50__ = __webpack_require__(/*! ./about/about.component */ "./src/app/about/about.component.ts");
-/* harmony import */ var _post_post_component__WEBPACK_IMPORTED_MODULE_51__ = __webpack_require__(/*! ./post/post.component */ "./src/app/post/post.component.ts");
-/* harmony import */ var _comments_comments_component__WEBPACK_IMPORTED_MODULE_52__ = __webpack_require__(/*! ./comments/comments.component */ "./src/app/comments/comments.component.ts");
-/* harmony import */ var _sales_page_sales_page_component__WEBPACK_IMPORTED_MODULE_53__ = __webpack_require__(/*! ./sales-page/sales-page.component */ "./src/app/sales-page/sales-page.component.ts");
-/* harmony import */ var _sales_page_website_website_component__WEBPACK_IMPORTED_MODULE_54__ = __webpack_require__(/*! ./sales-page/website/website.component */ "./src/app/sales-page/website/website.component.ts");
-/* harmony import */ var _home_about_who_about_who_component__WEBPACK_IMPORTED_MODULE_55__ = __webpack_require__(/*! ./home/about-who/about-who.component */ "./src/app/home/about-who/about-who.component.ts");
-/* harmony import */ var _home_about_what_about_what_component__WEBPACK_IMPORTED_MODULE_56__ = __webpack_require__(/*! ./home/about-what/about-what.component */ "./src/app/home/about-what/about-what.component.ts");
-/* harmony import */ var _posts_posts_component__WEBPACK_IMPORTED_MODULE_57__ = __webpack_require__(/*! ./posts/posts.component */ "./src/app/posts/posts.component.ts");
-/* harmony import */ var _home_banner_full_banner_full_component__WEBPACK_IMPORTED_MODULE_58__ = __webpack_require__(/*! ./home/banner-full/banner-full.component */ "./src/app/home/banner-full/banner-full.component.ts");
-/* harmony import */ var _post_post_comments_post_comments_component__WEBPACK_IMPORTED_MODULE_59__ = __webpack_require__(/*! ./post/post-comments/post-comments.component */ "./src/app/post/post-comments/post-comments.component.ts");
-/* harmony import */ var _admin_admin_posts_admin_posts_component__WEBPACK_IMPORTED_MODULE_60__ = __webpack_require__(/*! ./admin/admin-posts/admin-posts.component */ "./src/app/admin/admin-posts/admin-posts.component.ts");
-/* harmony import */ var _admin_admin_post_admin_post_edit_admin_post_edit_component__WEBPACK_IMPORTED_MODULE_61__ = __webpack_require__(/*! ./admin/admin-post/admin-post-edit/admin-post-edit.component */ "./src/app/admin/admin-post/admin-post-edit/admin-post-edit.component.ts");
-/* harmony import */ var _admin_admin_post_admin_post_edit_admin_post_edit_preview_admin_post_edit_preview_component__WEBPACK_IMPORTED_MODULE_62__ = __webpack_require__(/*! ./admin/admin-post/admin-post-edit/admin-post-edit-preview/admin-post-edit-preview.component */ "./src/app/admin/admin-post/admin-post-edit/admin-post-edit-preview/admin-post-edit-preview.component.ts");
-/* harmony import */ var _admin_admin_post_admin_post_edit_admin_post_edit_form_admin_post_edit_form_component__WEBPACK_IMPORTED_MODULE_63__ = __webpack_require__(/*! ./admin/admin-post/admin-post-edit/admin-post-edit-form/admin-post-edit-form.component */ "./src/app/admin/admin-post/admin-post-edit/admin-post-edit-form/admin-post-edit-form.component.ts");
-/* harmony import */ var _user_forgot_password_forgot_password_component__WEBPACK_IMPORTED_MODULE_64__ = __webpack_require__(/*! ./user/forgot-password/forgot-password.component */ "./src/app/user/forgot-password/forgot-password.component.ts");
-/* harmony import */ var _logo_main_logo_main_logo_component__WEBPACK_IMPORTED_MODULE_65__ = __webpack_require__(/*! ./logo/main-logo/main-logo.component */ "./src/app/logo/main-logo/main-logo.component.ts");
-/* harmony import */ var _user_login_callback_callback_component__WEBPACK_IMPORTED_MODULE_66__ = __webpack_require__(/*! ./user/login/callback/callback.component */ "./src/app/user/login/callback/callback.component.ts");
-/* harmony import */ var _user_login_linkedin_linkedin_component__WEBPACK_IMPORTED_MODULE_67__ = __webpack_require__(/*! ./user/login/linkedin/linkedin.component */ "./src/app/user/login/linkedin/linkedin.component.ts");
-/* harmony import */ var _banner_banner_half_banner_half_component__WEBPACK_IMPORTED_MODULE_68__ = __webpack_require__(/*! ./banner/banner-half/banner-half.component */ "./src/app/banner/banner-half/banner-half.component.ts");
-
-
-
-
-
-
-
+/* harmony import */ var _page_home_home_component__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./page/home/home.component */ "./src/app/page/home/home.component.ts");
+/* harmony import */ var _user_auth_register_auth_register_component__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./user/auth-register/auth-register.component */ "./src/app/user/auth-register/auth-register.component.ts");
+/* harmony import */ var _visitor_visitor_component__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./visitor/visitor.component */ "./src/app/visitor/visitor.component.ts");
+/* harmony import */ var _visitor_visitor_form_visitor_form_component__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./visitor/visitor-form/visitor-form.component */ "./src/app/visitor/visitor-form/visitor-form.component.ts");
+/* harmony import */ var _visitor_visitor_form_visitor_avatar_visitor_avatar_component__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./visitor/visitor-form/visitor-avatar/visitor-avatar.component */ "./src/app/visitor/visitor-form/visitor-avatar/visitor-avatar.component.ts");
+/* harmony import */ var _admin_admin_post_admin_post_component__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./admin/admin-post/admin-post.component */ "./src/app/admin/admin-post/admin-post.component.ts");
+/* harmony import */ var _admin_admin_post_form_post_form_post_component__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./admin/admin-post/form-post/form-post.component */ "./src/app/admin/admin-post/form-post/form-post.component.ts");
+/* harmony import */ var _logo_logo4rem_logo4rem_component__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./logo/logo4rem/logo4rem.component */ "./src/app/logo/logo4rem/logo4rem.component.ts");
+/* harmony import */ var _logo_logo2rem_logo2rem_component__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./logo/logo2rem/logo2rem.component */ "./src/app/logo/logo2rem/logo2rem.component.ts");
+/* harmony import */ var _admin_admin_post_form_post_chip_categories_chip_categories_component__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ./admin/admin-post/form-post/chip-categories/chip-categories.component */ "./src/app/admin/admin-post/form-post/chip-categories/chip-categories.component.ts");
+/* harmony import */ var _angular_cdk_keycodes__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! @angular/cdk/keycodes */ "./node_modules/@angular/cdk/esm5/keycodes.es5.js");
+/* harmony import */ var _admin_admin_post_form_post_chip_tags_chip_tags_component__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! ./admin/admin-post/form-post/chip-tags/chip-tags.component */ "./src/app/admin/admin-post/form-post/chip-tags/chip-tags.component.ts");
+/* harmony import */ var _logo_logo2rem_light_logo2rem_light_component__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(/*! ./logo/logo2rem-light/logo2rem-light.component */ "./src/app/logo/logo2rem-light/logo2rem-light.component.ts");
+/* harmony import */ var _admin_admin_post_form_post_preview_post_preview_post_component__WEBPACK_IMPORTED_MODULE_39__ = __webpack_require__(/*! ./admin/admin-post/form-post/preview-post/preview-post.component */ "./src/app/admin/admin-post/form-post/preview-post/preview-post.component.ts");
+/* harmony import */ var _configurations_angular_editor_angular_editor_module__WEBPACK_IMPORTED_MODULE_40__ = __webpack_require__(/*! ./configurations/angular-editor/angular-editor.module */ "./src/app/configurations/angular-editor/angular-editor.module.ts");
+/* harmony import */ var _ngm_editor_ngm_editor_module__WEBPACK_IMPORTED_MODULE_41__ = __webpack_require__(/*! ./ngm-editor/ngm-editor.module */ "./src/app/ngm-editor/ngm-editor.module.ts");
+/* harmony import */ var _post_post_component__WEBPACK_IMPORTED_MODULE_42__ = __webpack_require__(/*! ./post/post.component */ "./src/app/post/post.component.ts");
+/* harmony import */ var _comments_comments_component__WEBPACK_IMPORTED_MODULE_43__ = __webpack_require__(/*! ./comments/comments.component */ "./src/app/comments/comments.component.ts");
+/* harmony import */ var _home_about_who_about_who_component__WEBPACK_IMPORTED_MODULE_44__ = __webpack_require__(/*! ./home/about-who/about-who.component */ "./src/app/home/about-who/about-who.component.ts");
+/* harmony import */ var _home_about_what_about_what_component__WEBPACK_IMPORTED_MODULE_45__ = __webpack_require__(/*! ./home/about-what/about-what.component */ "./src/app/home/about-what/about-what.component.ts");
+/* harmony import */ var _posts_posts_component__WEBPACK_IMPORTED_MODULE_46__ = __webpack_require__(/*! ./posts/posts.component */ "./src/app/posts/posts.component.ts");
+/* harmony import */ var _home_banner_full_banner_full_component__WEBPACK_IMPORTED_MODULE_47__ = __webpack_require__(/*! ./home/banner-full/banner-full.component */ "./src/app/home/banner-full/banner-full.component.ts");
+/* harmony import */ var _post_post_comments_post_comments_component__WEBPACK_IMPORTED_MODULE_48__ = __webpack_require__(/*! ./post/post-comments/post-comments.component */ "./src/app/post/post-comments/post-comments.component.ts");
+/* harmony import */ var _admin_admin_posts_admin_posts_component__WEBPACK_IMPORTED_MODULE_49__ = __webpack_require__(/*! ./admin/admin-posts/admin-posts.component */ "./src/app/admin/admin-posts/admin-posts.component.ts");
+/* harmony import */ var _admin_admin_post_admin_post_edit_admin_post_edit_component__WEBPACK_IMPORTED_MODULE_50__ = __webpack_require__(/*! ./admin/admin-post/admin-post-edit/admin-post-edit.component */ "./src/app/admin/admin-post/admin-post-edit/admin-post-edit.component.ts");
+/* harmony import */ var _admin_admin_post_admin_post_edit_admin_post_edit_preview_admin_post_edit_preview_component__WEBPACK_IMPORTED_MODULE_51__ = __webpack_require__(/*! ./admin/admin-post/admin-post-edit/admin-post-edit-preview/admin-post-edit-preview.component */ "./src/app/admin/admin-post/admin-post-edit/admin-post-edit-preview/admin-post-edit-preview.component.ts");
+/* harmony import */ var _admin_admin_post_admin_post_edit_admin_post_edit_form_admin_post_edit_form_component__WEBPACK_IMPORTED_MODULE_52__ = __webpack_require__(/*! ./admin/admin-post/admin-post-edit/admin-post-edit-form/admin-post-edit-form.component */ "./src/app/admin/admin-post/admin-post-edit/admin-post-edit-form/admin-post-edit-form.component.ts");
+/* harmony import */ var _user_forgot_password_forgot_password_component__WEBPACK_IMPORTED_MODULE_53__ = __webpack_require__(/*! ./user/forgot-password/forgot-password.component */ "./src/app/user/forgot-password/forgot-password.component.ts");
+/* harmony import */ var _logo_main_logo_main_logo_component__WEBPACK_IMPORTED_MODULE_54__ = __webpack_require__(/*! ./logo/main-logo/main-logo.component */ "./src/app/logo/main-logo/main-logo.component.ts");
+/* harmony import */ var _user_login_callback_callback_component__WEBPACK_IMPORTED_MODULE_55__ = __webpack_require__(/*! ./user/login/callback/callback.component */ "./src/app/user/login/callback/callback.component.ts");
+/* harmony import */ var _user_login_linkedin_linkedin_component__WEBPACK_IMPORTED_MODULE_56__ = __webpack_require__(/*! ./user/login/linkedin/linkedin.component */ "./src/app/user/login/linkedin/linkedin.component.ts");
+/* harmony import */ var _page_layout_layout_component__WEBPACK_IMPORTED_MODULE_57__ = __webpack_require__(/*! ./page/layout/layout.component */ "./src/app/page/layout/layout.component.ts");
+/* harmony import */ var _sidebar_sidebar_component__WEBPACK_IMPORTED_MODULE_58__ = __webpack_require__(/*! ./sidebar/sidebar.component */ "./src/app/sidebar/sidebar.component.ts");
+/* harmony import */ var _page_terms_terms_component__WEBPACK_IMPORTED_MODULE_59__ = __webpack_require__(/*! ./page/terms/terms.component */ "./src/app/page/terms/terms.component.ts");
+/* harmony import */ var _page_user_profile_profile_component__WEBPACK_IMPORTED_MODULE_60__ = __webpack_require__(/*! ./page-user/profile/profile.component */ "./src/app/page-user/profile/profile.component.ts");
+/* harmony import */ var _angular_material_form_field__WEBPACK_IMPORTED_MODULE_61__ = __webpack_require__(/*! @angular/material/form-field */ "./node_modules/@angular/material/esm5/form-field.es5.js");
 
 
 
@@ -2308,46 +2125,38 @@ var AppModule = /** @class */ (function () {
                 _admin_admin_message_admin_message_component__WEBPACK_IMPORTED_MODULE_22__["AdminMessageComponent"],
                 _navigations_navigations_component__WEBPACK_IMPORTED_MODULE_24__["NavigationsComponent"],
                 _tags_tags_component__WEBPACK_IMPORTED_MODULE_25__["TagsComponent"],
-                _side_bar_side_bar_component__WEBPACK_IMPORTED_MODULE_26__["SideBarComponent"],
-                _home_home_component__WEBPACK_IMPORTED_MODULE_27__["HomeComponent"],
-                _user_auth_register_auth_register_component__WEBPACK_IMPORTED_MODULE_28__["AuthRegisterComponent"],
-                _side_bar_accordion_accordion_component__WEBPACK_IMPORTED_MODULE_29__["AccordionComponent"],
-                _side_bar_accordion_form_personal_form_personal_component__WEBPACK_IMPORTED_MODULE_30__["FormPersonalComponent"],
-                _side_bar_accordion_form_avatar_form_avatar_component__WEBPACK_IMPORTED_MODULE_31__["FormAvatarComponent"],
-                _side_bar_accordion_form_address_form_address_component__WEBPACK_IMPORTED_MODULE_32__["FormAddressComponent"],
-                _side_bar_accordion_form_handphone_form_handphone_component__WEBPACK_IMPORTED_MODULE_33__["FormHandphoneComponent"],
-                _visitor_visitor_component__WEBPACK_IMPORTED_MODULE_34__["VisitorComponent"],
-                _visitor_visitor_form_visitor_form_component__WEBPACK_IMPORTED_MODULE_35__["VisitorFormComponent"],
-                _visitor_visitor_form_visitor_avatar_visitor_avatar_component__WEBPACK_IMPORTED_MODULE_36__["VisitorAvatarComponent"],
-                _admin_admin_post_admin_post_component__WEBPACK_IMPORTED_MODULE_37__["AdminPostComponent"],
-                _admin_admin_post_form_post_form_post_component__WEBPACK_IMPORTED_MODULE_38__["FormPostComponent"],
-                _layout_content_layout_content_component__WEBPACK_IMPORTED_MODULE_39__["LayoutContentComponent"],
-                _logo_logo4rem_logo4rem_component__WEBPACK_IMPORTED_MODULE_40__["Logo4remComponent"],
-                _logo_logo2rem_logo2rem_component__WEBPACK_IMPORTED_MODULE_41__["Logo2remComponent"],
-                _admin_admin_post_form_post_chip_categories_chip_categories_component__WEBPACK_IMPORTED_MODULE_42__["ChipCategoriesComponent"],
-                _admin_admin_post_form_post_chip_tags_chip_tags_component__WEBPACK_IMPORTED_MODULE_44__["ChipTagsComponent"],
-                _logo_logo2rem_light_logo2rem_light_component__WEBPACK_IMPORTED_MODULE_45__["Logo2remLightComponent"],
-                _admin_admin_post_form_post_preview_post_preview_post_component__WEBPACK_IMPORTED_MODULE_46__["PreviewPostComponent"],
-                _test_test_component__WEBPACK_IMPORTED_MODULE_47__["TestComponent"],
-                _about_about_component__WEBPACK_IMPORTED_MODULE_50__["AboutComponent"],
-                _post_post_component__WEBPACK_IMPORTED_MODULE_51__["PostComponent"],
-                _comments_comments_component__WEBPACK_IMPORTED_MODULE_52__["CommentsComponent"],
-                _sales_page_sales_page_component__WEBPACK_IMPORTED_MODULE_53__["SalesPageComponent"],
-                _sales_page_website_website_component__WEBPACK_IMPORTED_MODULE_54__["WebsiteComponent"],
-                _home_about_who_about_who_component__WEBPACK_IMPORTED_MODULE_55__["AboutWhoComponent"],
-                _home_about_what_about_what_component__WEBPACK_IMPORTED_MODULE_56__["AboutWhatComponent"],
-                _posts_posts_component__WEBPACK_IMPORTED_MODULE_57__["PostsComponent"],
-                _home_banner_full_banner_full_component__WEBPACK_IMPORTED_MODULE_58__["BannerFullComponent"],
-                _post_post_comments_post_comments_component__WEBPACK_IMPORTED_MODULE_59__["PostCommentsComponent"],
-                _admin_admin_posts_admin_posts_component__WEBPACK_IMPORTED_MODULE_60__["AdminPostsComponent"],
-                _admin_admin_post_admin_post_edit_admin_post_edit_component__WEBPACK_IMPORTED_MODULE_61__["AdminPostEditComponent"],
-                _admin_admin_post_admin_post_edit_admin_post_edit_preview_admin_post_edit_preview_component__WEBPACK_IMPORTED_MODULE_62__["AdminPostEditPreviewComponent"],
-                _admin_admin_post_admin_post_edit_admin_post_edit_form_admin_post_edit_form_component__WEBPACK_IMPORTED_MODULE_63__["AdminPostEditFormComponent"],
-                _user_forgot_password_forgot_password_component__WEBPACK_IMPORTED_MODULE_64__["ForgotPasswordComponent"],
-                _logo_main_logo_main_logo_component__WEBPACK_IMPORTED_MODULE_65__["MainLogoComponent"],
-                _user_login_callback_callback_component__WEBPACK_IMPORTED_MODULE_66__["CallbackComponent"],
-                _user_login_linkedin_linkedin_component__WEBPACK_IMPORTED_MODULE_67__["LinkedinComponent"],
-                _banner_banner_half_banner_half_component__WEBPACK_IMPORTED_MODULE_68__["BannerHalfComponent"]
+                _page_home_home_component__WEBPACK_IMPORTED_MODULE_26__["HomeComponent"],
+                _user_auth_register_auth_register_component__WEBPACK_IMPORTED_MODULE_27__["AuthRegisterComponent"],
+                _visitor_visitor_component__WEBPACK_IMPORTED_MODULE_28__["VisitorComponent"],
+                _visitor_visitor_form_visitor_form_component__WEBPACK_IMPORTED_MODULE_29__["VisitorFormComponent"],
+                _visitor_visitor_form_visitor_avatar_visitor_avatar_component__WEBPACK_IMPORTED_MODULE_30__["VisitorAvatarComponent"],
+                _admin_admin_post_admin_post_component__WEBPACK_IMPORTED_MODULE_31__["AdminPostComponent"],
+                _admin_admin_post_form_post_form_post_component__WEBPACK_IMPORTED_MODULE_32__["FormPostComponent"],
+                _logo_logo4rem_logo4rem_component__WEBPACK_IMPORTED_MODULE_33__["Logo4remComponent"],
+                _logo_logo2rem_logo2rem_component__WEBPACK_IMPORTED_MODULE_34__["Logo2remComponent"],
+                _admin_admin_post_form_post_chip_categories_chip_categories_component__WEBPACK_IMPORTED_MODULE_35__["ChipCategoriesComponent"],
+                _admin_admin_post_form_post_chip_tags_chip_tags_component__WEBPACK_IMPORTED_MODULE_37__["ChipTagsComponent"],
+                _logo_logo2rem_light_logo2rem_light_component__WEBPACK_IMPORTED_MODULE_38__["Logo2remLightComponent"],
+                _admin_admin_post_form_post_preview_post_preview_post_component__WEBPACK_IMPORTED_MODULE_39__["PreviewPostComponent"],
+                _post_post_component__WEBPACK_IMPORTED_MODULE_42__["PostComponent"],
+                _comments_comments_component__WEBPACK_IMPORTED_MODULE_43__["CommentsComponent"],
+                _home_about_who_about_who_component__WEBPACK_IMPORTED_MODULE_44__["AboutWhoComponent"],
+                _home_about_what_about_what_component__WEBPACK_IMPORTED_MODULE_45__["AboutWhatComponent"],
+                _posts_posts_component__WEBPACK_IMPORTED_MODULE_46__["PostsComponent"],
+                _home_banner_full_banner_full_component__WEBPACK_IMPORTED_MODULE_47__["BannerFullComponent"],
+                _post_post_comments_post_comments_component__WEBPACK_IMPORTED_MODULE_48__["PostCommentsComponent"],
+                _admin_admin_posts_admin_posts_component__WEBPACK_IMPORTED_MODULE_49__["AdminPostsComponent"],
+                _admin_admin_post_admin_post_edit_admin_post_edit_component__WEBPACK_IMPORTED_MODULE_50__["AdminPostEditComponent"],
+                _admin_admin_post_admin_post_edit_admin_post_edit_preview_admin_post_edit_preview_component__WEBPACK_IMPORTED_MODULE_51__["AdminPostEditPreviewComponent"],
+                _admin_admin_post_admin_post_edit_admin_post_edit_form_admin_post_edit_form_component__WEBPACK_IMPORTED_MODULE_52__["AdminPostEditFormComponent"],
+                _user_forgot_password_forgot_password_component__WEBPACK_IMPORTED_MODULE_53__["ForgotPasswordComponent"],
+                _logo_main_logo_main_logo_component__WEBPACK_IMPORTED_MODULE_54__["MainLogoComponent"],
+                _user_login_callback_callback_component__WEBPACK_IMPORTED_MODULE_55__["CallbackComponent"],
+                _user_login_linkedin_linkedin_component__WEBPACK_IMPORTED_MODULE_56__["LinkedinComponent"],
+                _page_layout_layout_component__WEBPACK_IMPORTED_MODULE_57__["LayoutComponent"],
+                _sidebar_sidebar_component__WEBPACK_IMPORTED_MODULE_58__["SidebarComponent"],
+                _page_terms_terms_component__WEBPACK_IMPORTED_MODULE_59__["TermsComponent"],
+                _page_user_profile_profile_component__WEBPACK_IMPORTED_MODULE_60__["ProfileComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
@@ -2369,13 +2178,14 @@ var AppModule = /** @class */ (function () {
                 _angular_material__WEBPACK_IMPORTED_MODULE_20__["MatSidenavModule"],
                 _angular_material__WEBPACK_IMPORTED_MODULE_20__["MatIconModule"],
                 _angular_material__WEBPACK_IMPORTED_MODULE_20__["MatListModule"],
-                _configurations_angular_editor_angular_editor_module__WEBPACK_IMPORTED_MODULE_48__["AngularEditorModule"],
-                _ngm_editor_ngm_editor_module__WEBPACK_IMPORTED_MODULE_49__["NgmEditorModule"]
+                _configurations_angular_editor_angular_editor_module__WEBPACK_IMPORTED_MODULE_40__["AngularEditorModule"],
+                _ngm_editor_ngm_editor_module__WEBPACK_IMPORTED_MODULE_41__["NgmEditorModule"],
+                _angular_material_form_field__WEBPACK_IMPORTED_MODULE_61__["MatFormFieldModule"]
             ],
             providers: [
                 { provide: _angular_common__WEBPACK_IMPORTED_MODULE_8__["APP_BASE_HREF"], useValue: '/' },
                 { provide: _angular_material__WEBPACK_IMPORTED_MODULE_20__["MAT_CHECKBOX_CLICK_ACTION"], useValue: 'check' },
-                { provide: _angular_material__WEBPACK_IMPORTED_MODULE_20__["MAT_CHIPS_DEFAULT_OPTIONS"], useValue: { separatorKeyCodes: [_angular_cdk_keycodes__WEBPACK_IMPORTED_MODULE_43__["ENTER"], _angular_cdk_keycodes__WEBPACK_IMPORTED_MODULE_43__["COMMA"]] } },
+                { provide: _angular_material__WEBPACK_IMPORTED_MODULE_20__["MAT_CHIPS_DEFAULT_OPTIONS"], useValue: { separatorKeyCodes: [_angular_cdk_keycodes__WEBPACK_IMPORTED_MODULE_36__["ENTER"], _angular_cdk_keycodes__WEBPACK_IMPORTED_MODULE_36__["COMMA"]] } },
                 //{provide: MAT_BOTTOM_SHEET_DEFAULT_OPTIONS, useValue: {hasBackdrop: false}},
                 _configurations_services_auth_auth_service__WEBPACK_IMPORTED_MODULE_7__["AuthService"]
             ],
@@ -2386,104 +2196,6 @@ var AppModule = /** @class */ (function () {
         })
     ], AppModule);
     return AppModule;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/app/banner/banner-half/banner-half.component.scss":
-/*!***************************************************************!*\
-  !*** ./src/app/banner/banner-half/banner-half.component.scss ***!
-  \***************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2Jhbm5lci9iYW5uZXItaGFsZi9iYW5uZXItaGFsZi5jb21wb25lbnQuc2NzcyJ9 */"
-
-/***/ }),
-
-/***/ "./src/app/banner/banner-half/banner-half.component.ts":
-/*!*************************************************************!*\
-  !*** ./src/app/banner/banner-half/banner-half.component.ts ***!
-  \*************************************************************/
-/*! exports provided: BannerHalfComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BannerHalfComponent", function() { return BannerHalfComponent; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _angular_animations__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/animations */ "./node_modules/@angular/animations/fesm5/animations.js");
-/* harmony import */ var src_app_configurations_animations_anim_fn__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/configurations/animations/anim-fn */ "./src/app/configurations/animations/anim-fn.ts");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
-
-
-
-
-
-var BannerHalfComponent = /** @class */ (function () {
-    function BannerHalfComponent(route) {
-        this.route = route;
-        this.banner1AnimationDone = false;
-        this.banner2AnimationDone = false;
-        this.banner3AnimationDone = false;
-        this.banner4AnimationDone = false;
-    }
-    BannerHalfComponent.prototype.ngOnInit = function () {
-        var _this = this;
-        this.banner1AnimationDone = true;
-        this.banner2AnimationDone = true;
-        this.route.url.subscribe(function (response) {
-            console.log(response[0].path);
-            _this.pageTitle = response[0].path;
-        });
-    };
-    BannerHalfComponent.prototype.banner3Done = function (event) {
-        if (event.phaseName === 'done')
-            this.banner3AnimationDone = true;
-    };
-    BannerHalfComponent.prototype.banner4Done = function (event) {
-        if (event.phaseName === 'done')
-            this.banner4AnimationDone = true;
-    };
-    BannerHalfComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-            selector: 'app-banner-half',
-            template: __webpack_require__(/*! raw-loader!./banner-half.component.html */ "./node_modules/raw-loader/index.js!./src/app/banner/banner-half/banner-half.component.html"),
-            animations: [
-                Object(_angular_animations__WEBPACK_IMPORTED_MODULE_2__["trigger"])('banner1Enter', [
-                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_2__["transition"])(':enter', [
-                        Object(_angular_animations__WEBPACK_IMPORTED_MODULE_2__["useAnimation"])(src_app_configurations_animations_anim_fn__WEBPACK_IMPORTED_MODULE_3__["banner1Enter"])
-                    ])
-                ]),
-                Object(_angular_animations__WEBPACK_IMPORTED_MODULE_2__["trigger"])('banner2Enter', [
-                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_2__["transition"])(':enter', [
-                        Object(_angular_animations__WEBPACK_IMPORTED_MODULE_2__["useAnimation"])(src_app_configurations_animations_anim_fn__WEBPACK_IMPORTED_MODULE_3__["banner2Enter"])
-                    ])
-                ]),
-                Object(_angular_animations__WEBPACK_IMPORTED_MODULE_2__["trigger"])('banner3Enter', [
-                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_2__["transition"])(':enter', [
-                        Object(_angular_animations__WEBPACK_IMPORTED_MODULE_2__["useAnimation"])(src_app_configurations_animations_anim_fn__WEBPACK_IMPORTED_MODULE_3__["banner3Enter"])
-                    ])
-                ]),
-                Object(_angular_animations__WEBPACK_IMPORTED_MODULE_2__["trigger"])('banner4Enter', [
-                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_2__["transition"])(':enter', [
-                        Object(_angular_animations__WEBPACK_IMPORTED_MODULE_2__["useAnimation"])(src_app_configurations_animations_anim_fn__WEBPACK_IMPORTED_MODULE_3__["banner4Enter"])
-                    ])
-                ]),
-                Object(_angular_animations__WEBPACK_IMPORTED_MODULE_2__["trigger"])('banner5Enter', [
-                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_2__["transition"])(':enter', [
-                        Object(_angular_animations__WEBPACK_IMPORTED_MODULE_2__["useAnimation"])(src_app_configurations_animations_anim_fn__WEBPACK_IMPORTED_MODULE_3__["banner5Enter"])
-                    ])
-                ]),
-            ],
-            styles: [__webpack_require__(/*! ./banner-half.component.scss */ "./src/app/banner/banner-half/banner-half.component.scss")]
-        }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_4__["ActivatedRoute"]])
-    ], BannerHalfComponent);
-    return BannerHalfComponent;
 }());
 
 
@@ -3910,101 +3622,6 @@ var banner5Enter = Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["anim
 
 /***/ }),
 
-/***/ "./src/app/configurations/services/admin-auth-guard/admin-auth-guard.service.ts":
-/*!**************************************************************************************!*\
-  !*** ./src/app/configurations/services/admin-auth-guard/admin-auth-guard.service.ts ***!
-  \**************************************************************************************/
-/*! exports provided: AdminAuthGuardService */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AdminAuthGuardService", function() { return AdminAuthGuardService; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
-/* harmony import */ var _profile_service_profile_service_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../profile-service/profile-service.service */ "./src/app/configurations/services/profile-service/profile-service.service.ts");
-/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
-
-
-
-
-
-var AdminAuthGuardService = /** @class */ (function () {
-    function AdminAuthGuardService(profileService, router, snackBar) {
-        this.profileService = profileService;
-        this.router = router;
-        this.snackBar = snackBar;
-    }
-    AdminAuthGuardService.prototype.canActivate = function () {
-        var status = this.profileService.getLoggedStatus();
-        if (status.user.admin)
-            return true;
-        else {
-            this.snackBar.open('You are not authorized to acces this page, please Login', 'X', { duration: 10000, panelClass: 'red-theme' });
-            this.router.navigate(['']);
-            return false;
-        }
-    }; //
-    AdminAuthGuardService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
-            providedIn: 'root'
-        }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_profile_service_profile_service_service__WEBPACK_IMPORTED_MODULE_3__["ProfileService"],
-            _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"],
-            _angular_material__WEBPACK_IMPORTED_MODULE_4__["MatSnackBar"]])
-    ], AdminAuthGuardService);
-    return AdminAuthGuardService;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/app/configurations/services/auth-guard/auth-guard.service.ts":
-/*!**************************************************************************!*\
-  !*** ./src/app/configurations/services/auth-guard/auth-guard.service.ts ***!
-  \**************************************************************************/
-/*! exports provided: AuthGuardService */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AuthGuardService", function() { return AuthGuardService; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
-/* harmony import */ var _profile_service_profile_service_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../profile-service/profile-service.service */ "./src/app/configurations/services/profile-service/profile-service.service.ts");
-
-
-
-
-var AuthGuardService = /** @class */ (function () {
-    function AuthGuardService(router, profileService) {
-        this.router = router;
-        this.profileService = profileService;
-    }
-    AuthGuardService.prototype.canActivate = function (routes, state) {
-        var user = this.profileService.getLoggedStatus();
-        if (!user.expired)
-            return true;
-        else
-            return false;
-    };
-    AuthGuardService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
-            providedIn: 'root'
-        }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"],
-            _profile_service_profile_service_service__WEBPACK_IMPORTED_MODULE_3__["ProfileService"]])
-    ], AuthGuardService);
-    return AuthGuardService;
-}());
-
-
-
-/***/ }),
-
 /***/ "./src/app/configurations/services/auth/auth.service.ts":
 /*!**************************************************************!*\
   !*** ./src/app/configurations/services/auth/auth.service.ts ***!
@@ -4323,8 +3940,14 @@ var ProfileService = /** @class */ (function () {
         this.location = this.locSource;
         this.userSource = new rxjs__WEBPACK_IMPORTED_MODULE_3__["BehaviorSubject"](this.user);
         this.profile = this.userSource;
-        this.getUserSource();
     }
+    ProfileService.prototype.ngOnInit = function () {
+        var token = localStorage.getItem('token');
+        if (token)
+            this.getUserSource(token);
+        else
+            return null;
+    };
     ProfileService.prototype.getLocation = function () {
         var _this = this;
         this.http.post('/api/user/location', { location: '' }).subscribe(function (response) { return _this.locSource.next(response.country); }, Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["catchError"])(function (error) { return Object(rxjs__WEBPACK_IMPORTED_MODULE_3__["throwError"])(error); }));
@@ -4344,9 +3967,9 @@ var ProfileService = /** @class */ (function () {
             }
         }, function (error) { return _this.snackBar.open('We encountered a problem with your registration, it might be that your token have expired. Please register again.', 'X', { duration: 10000, panelClass: 'red-theme' }); });
     };
-    ProfileService.prototype.getUserSource = function () {
+    ProfileService.prototype.getUserSource = function (jwtToken) {
         var _this = this;
-        if (_httpOptions__WEBPACK_IMPORTED_MODULE_6__["jwtToken"]) {
+        if (jwtToken) {
             this.http.get('/api/user/profile', _httpOptions__WEBPACK_IMPORTED_MODULE_6__["httpOptions"]).subscribe(function (response) {
                 var user = response[0];
                 if (user && user._id) {
@@ -4640,7 +4263,7 @@ var ContactFormComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".footer {\n  bottom: 0;\n  z-index: 10;\n  position: fixed;\n  font-size: 1rem;\n  height: 40px;\n  color: #fe4365;\n  border-top-color: #fe4365;\n  border-top-width: 2px;\n  border-top-style: solid;\n}\n.footer__text {\n  padding: 0 10px 0 10px;\n}\n.footer__icon {\n  padding-top: 10px;\n  color: #ffffff;\n}\n.footer:hover {\n  -webkit-transform: scale(1.2, 1.2);\n          transform: scale(1.2, 1.2);\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2F6cmluL0RvY3VtZW50cy9HaXRIdWIvb2FyLXRlZ3VoL3NyYy9hcHAvZm9vdGVyL2Zvb3Rlci5jb21wb25lbnQuc2NzcyIsInNyYy9hcHAvZm9vdGVyL2Zvb3Rlci5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFJQTtFQUNHLFNBQUE7RUFDQSxXQUFBO0VBQ0EsZUFBQTtFQUNBLGVBQUE7RUFDQSxZQUFBO0VBQ0EsY0FUTztFQVVQLHlCQVZPO0VBV1AscUJBQUE7RUFDQSx1QkFBQTtBQ0hIO0FETUc7RUFDRyxzQkFBQTtBQ0pOO0FET0c7RUFDRyxpQkFBQTtFQUNBLGNBdEJFO0FDaUJSO0FEV0E7RUFDRyxrQ0FBQTtVQUFBLDBCQUFBO0FDUkgiLCJmaWxlIjoic3JjL2FwcC9mb290ZXIvZm9vdGVyLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiJHdoaXRlOiAjZmZmZmZmO1xuJHByaW1hcnk6ICNmZTQzNjU7XG5cblxuLmZvb3RlcntcbiAgIGJvdHRvbTogMDtcbiAgIHotaW5kZXg6IDEwO1xuICAgcG9zaXRpb246IGZpeGVkO1xuICAgZm9udC1zaXplOiAxcmVtO1xuICAgaGVpZ2h0OiA0MHB4O1xuICAgY29sb3I6ICRwcmltYXJ5O1xuICAgYm9yZGVyLXRvcC1jb2xvcjogJHByaW1hcnk7XG4gICBib3JkZXItdG9wLXdpZHRoOiAycHg7XG4gICBib3JkZXItdG9wLXN0eWxlOiBzb2xpZDtcbiAgIFxuXG4gICAmX190ZXh0e1xuICAgICAgcGFkZGluZzogMCAxMHB4IDAgMTBweDtcbiAgIH1cblxuICAgJl9faWNvbntcbiAgICAgIHBhZGRpbmctdG9wOiAxMHB4O1xuICAgICAgY29sb3I6ICR3aGl0ZTtcbiAgIH0gXG4gICBcbiAgIFxufVxuXG4uZm9vdGVyOmhvdmVye1xuICAgdHJhbnNmb3JtOiBzY2FsZSgxLjIsIDEuMik7XG59IiwiLmZvb3RlciB7XG4gIGJvdHRvbTogMDtcbiAgei1pbmRleDogMTA7XG4gIHBvc2l0aW9uOiBmaXhlZDtcbiAgZm9udC1zaXplOiAxcmVtO1xuICBoZWlnaHQ6IDQwcHg7XG4gIGNvbG9yOiAjZmU0MzY1O1xuICBib3JkZXItdG9wLWNvbG9yOiAjZmU0MzY1O1xuICBib3JkZXItdG9wLXdpZHRoOiAycHg7XG4gIGJvcmRlci10b3Atc3R5bGU6IHNvbGlkO1xufVxuLmZvb3Rlcl9fdGV4dCB7XG4gIHBhZGRpbmc6IDAgMTBweCAwIDEwcHg7XG59XG4uZm9vdGVyX19pY29uIHtcbiAgcGFkZGluZy10b3A6IDEwcHg7XG4gIGNvbG9yOiAjZmZmZmZmO1xufVxuXG4uZm9vdGVyOmhvdmVyIHtcbiAgdHJhbnNmb3JtOiBzY2FsZSgxLjIsIDEuMik7XG59Il19 */"
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2Zvb3Rlci9mb290ZXIuY29tcG9uZW50LnNjc3MifQ== */"
 
 /***/ }),
 
@@ -4905,153 +4528,6 @@ var BannerFullComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/app/home/home.component.scss":
-/*!******************************************!*\
-  !*** ./src/app/home/home.component.scss ***!
-  \******************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = ".timeline__card {\n  margin-bottom: 10px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2F6cmluL0RvY3VtZW50cy9HaXRIdWIvb2FyLXRlZ3VoL3NyYy9hcHAvaG9tZS9ob21lLmNvbXBvbmVudC5zY3NzIiwic3JjL2FwcC9ob21lL2hvbWUuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBT0c7RUFDRyxtQkFBQTtBQ05OIiwiZmlsZSI6InNyYy9hcHAvaG9tZS9ob21lLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLy8gLnByb2ZpbGV7XG4vLyAgICBvdmVyZmxvdzogYXV0bzsgICBcbi8vICAgIG1hcmdpbi1ib3R0b206IDEwcHg7XG4vLyB9XG5cbi50aW1lbGluZXtcblxuICAgJl9fY2FyZHtcbiAgICAgIG1hcmdpbi1ib3R0b206IDEwcHg7XG4gICB9XG59XG5cbi8vIC5zaWRlYmFye1xuLy8gICAgb3ZlcmZsb3c6IGhpZGRlbjsgXG4vLyAgICB0b3A6IDNweDtcbi8vICAgIHBvc2l0aW9uOiBzdGlja3k7XG4vLyAgICBwb3NpdGlvbjogLXdlYmtpdC1zdGlja3k7IFxuLy8gICAgcGFkZGluZzogNXB4IDdweCA1cHggNXB4OyAgIFxuXG4vLyAgICAmX19jYXJke1xuLy8gICAgICAgaGVpZ2h0OiBhdXRvO1xuLy8gICAgfVxuLy8gfVxuXG4iLCIudGltZWxpbmVfX2NhcmQge1xuICBtYXJnaW4tYm90dG9tOiAxMHB4O1xufSJdfQ== */"
-
-/***/ }),
-
-/***/ "./src/app/home/home.component.ts":
-/*!****************************************!*\
-  !*** ./src/app/home/home.component.ts ***!
-  \****************************************/
-/*! exports provided: HomeComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HomeComponent", function() { return HomeComponent; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _angular_animations__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/animations */ "./node_modules/@angular/animations/fesm5/animations.js");
-/* harmony import */ var _configurations_animations_anim_fn__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../configurations/animations/anim-fn */ "./src/app/configurations/animations/anim-fn.ts");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
-/* harmony import */ var _configurations_services_profile_service_profile_service_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../configurations/services/profile-service/profile-service.service */ "./src/app/configurations/services/profile-service/profile-service.service.ts");
-/* harmony import */ var _configurations_services_post_service_post_service_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../configurations/services/post-service/post-service.service */ "./src/app/configurations/services/post-service/post-service.service.ts");
-
-
-
-
-
-
-
-var HomeComponent = /** @class */ (function () {
-    function HomeComponent(router, profileService, postService) {
-        this.router = router;
-        this.profileService = profileService;
-        this.postService = postService;
-        this.postsExist = true;
-        this.imageEntered = false;
-        this.readMoreClick = false;
-    }
-    HomeComponent.prototype.ngOnInit = function () {
-        var _this = this;
-        this.profileService.profile.subscribe(function (response) {
-            if (response && response.id) {
-                _this.profile = response;
-            }
-            else
-                _this.profile = null;
-        });
-        this.postService.getAllPost().subscribe(function (response) {
-            console.log(response);
-            _this.posts = response;
-        });
-    };
-    HomeComponent.prototype.mouseEnterCard = function (event) {
-        this.postId = event.target.id;
-    };
-    HomeComponent.prototype.mouseEnterImage = function (event) {
-        this.imagePost = event.target.id;
-        this.imageEntered = true;
-    };
-    HomeComponent.prototype.mouseLeaveImage = function () {
-        this.imageEntered = false;
-    };
-    HomeComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-            selector: 'app-home',
-            template: __webpack_require__(/*! raw-loader!./home.component.html */ "./node_modules/raw-loader/index.js!./src/app/home/home.component.html"),
-            animations: [
-                Object(_angular_animations__WEBPACK_IMPORTED_MODULE_2__["trigger"])('xEnter', [
-                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_2__["transition"])(':enter', [
-                        Object(_angular_animations__WEBPACK_IMPORTED_MODULE_2__["useAnimation"])(_configurations_animations_anim_fn__WEBPACK_IMPORTED_MODULE_3__["xEnter"])
-                    ])
-                ]),
-                Object(_angular_animations__WEBPACK_IMPORTED_MODULE_2__["trigger"])('iconButtonEnter', [
-                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_2__["transition"])(':enter', [
-                        Object(_angular_animations__WEBPACK_IMPORTED_MODULE_2__["useAnimation"])(_configurations_animations_anim_fn__WEBPACK_IMPORTED_MODULE_3__["iconButtonEnter"])
-                    ])
-                ]),
-                Object(_angular_animations__WEBPACK_IMPORTED_MODULE_2__["trigger"])('imageEnter', [
-                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_2__["transition"])(':enter', [
-                        Object(_angular_animations__WEBPACK_IMPORTED_MODULE_2__["useAnimation"])(_configurations_animations_anim_fn__WEBPACK_IMPORTED_MODULE_3__["imageEnter"])
-                    ])
-                ])
-            ],
-            styles: [__webpack_require__(/*! ./home.component.scss */ "./src/app/home/home.component.scss")]
-        }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"],
-            _configurations_services_profile_service_profile_service_service__WEBPACK_IMPORTED_MODULE_5__["ProfileService"],
-            _configurations_services_post_service_post_service_service__WEBPACK_IMPORTED_MODULE_6__["PostService"]])
-    ], HomeComponent);
-    return HomeComponent;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/app/layout-content/layout-content.component.scss":
-/*!**************************************************************!*\
-  !*** ./src/app/layout-content/layout-content.component.scss ***!
-  \**************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = ".profile {\n  margin-bottom: 2vh;\n}\n\n.timeline {\n  min-height: 400px;\n  height: 87vh;\n  padding: 5px 7px 0 5px;\n}\n\n.sidebar {\n  position: sticky;\n  position: -webkit-sticky;\n  padding: 5px 7px 0 5px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2F6cmluL0RvY3VtZW50cy9HaXRIdWIvb2FyLXRlZ3VoL3NyYy9hcHAvbGF5b3V0LWNvbnRlbnQvbGF5b3V0LWNvbnRlbnQuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL2xheW91dC1jb250ZW50L2xheW91dC1jb250ZW50LmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0csa0JBQUE7QUNDSDs7QURFQTtFQUNHLGlCQUFBO0VBQ0EsWUFBQTtFQUNBLHNCQUFBO0FDQ0g7O0FERUE7RUFDRyxnQkFBQTtFQUNBLHdCQUFBO0VBQ0Esc0JBQUE7QUNDSCIsImZpbGUiOiJzcmMvYXBwL2xheW91dC1jb250ZW50L2xheW91dC1jb250ZW50LmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLnByb2ZpbGV7IFxuICAgbWFyZ2luLWJvdHRvbTogMnZoO1xufVxuXG4udGltZWxpbmV7XG4gICBtaW4taGVpZ2h0OiA0MDBweDtcbiAgIGhlaWdodDogODd2aDsgIFxuICAgcGFkZGluZzogIDVweCA3cHggMCA1cHg7ICAvLyA3cHggNXB4IDIwcHggNXB4OyBcbn1cblxuLnNpZGViYXJ7XG4gICBwb3NpdGlvbjogc3RpY2t5O1xuICAgcG9zaXRpb246IC13ZWJraXQtc3RpY2t5OyBcbiAgIHBhZGRpbmc6IDVweCA3cHggMCA1cHg7ICAgXG59XG4iLCIucHJvZmlsZSB7XG4gIG1hcmdpbi1ib3R0b206IDJ2aDtcbn1cblxuLnRpbWVsaW5lIHtcbiAgbWluLWhlaWdodDogNDAwcHg7XG4gIGhlaWdodDogODd2aDtcbiAgcGFkZGluZzogNXB4IDdweCAwIDVweDtcbn1cblxuLnNpZGViYXIge1xuICBwb3NpdGlvbjogc3RpY2t5O1xuICBwb3NpdGlvbjogLXdlYmtpdC1zdGlja3k7XG4gIHBhZGRpbmc6IDVweCA3cHggMCA1cHg7XG59Il19 */"
-
-/***/ }),
-
-/***/ "./src/app/layout-content/layout-content.component.ts":
-/*!************************************************************!*\
-  !*** ./src/app/layout-content/layout-content.component.ts ***!
-  \************************************************************/
-/*! exports provided: LayoutContentComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LayoutContentComponent", function() { return LayoutContentComponent; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-
-
-var LayoutContentComponent = /** @class */ (function () {
-    function LayoutContentComponent() {
-    }
-    LayoutContentComponent.prototype.ngOnInit = function () {
-    };
-    LayoutContentComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-            selector: 'app-layout-content',
-            template: __webpack_require__(/*! raw-loader!./layout-content.component.html */ "./node_modules/raw-loader/index.js!./src/app/layout-content/layout-content.component.html"),
-            styles: [__webpack_require__(/*! ./layout-content.component.scss */ "./src/app/layout-content/layout-content.component.scss")]
-        }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
-    ], LayoutContentComponent);
-    return LayoutContentComponent;
-}());
-
-
-
-/***/ }),
-
 /***/ "./src/app/logo/logo2rem-light/logo2rem-light.component.scss":
 /*!*******************************************************************!*\
   !*** ./src/app/logo/logo2rem-light/logo2rem-light.component.scss ***!
@@ -5214,7 +4690,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var MainLogoComponent = /** @class */ (function () {
     function MainLogoComponent() {
-        this.logo = 'assets/logo_icons/logo-azrin-dev.png';
+        this.logo = 'assets/images/logo.png';
     }
     MainLogoComponent.prototype.ngOnInit = function () {
     };
@@ -5412,7 +4888,7 @@ var MaterialModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".nav {\n  position: relative;\n}\n.nav__toolbar {\n  z-index: 10;\n  position: fixed;\n  width: 100%;\n  height: 64px;\n  border-bottom: 3px solid #303030;\n}\n.nav__sidenav-content {\n  padding-top: 69px;\n  padding-right: 5px;\n  padding-left: 49px;\n}\n.nav__drawer {\n  padding-top: 64px;\n}\n.nav__drawer-open {\n  width: 250px;\n}\n.nav__drawer-menu {\n  background-color: #303030;\n  padding-top: 10px;\n  padding-bottom: 10px;\n}\n.nav__drawer-link-icon {\n  padding-left: 10px;\n  padding-right: 10px;\n}\n@media only screen and (max-width: 600px) {\n  .nav__toolbar {\n    height: 56px;\n  }\n  .nav__sidenav-content {\n    padding-top: 61px;\n  }\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2F6cmluL0RvY3VtZW50cy9HaXRIdWIvb2FyLXRlZ3VoL3NyYy9hcHAvbmF2aWdhdGlvbnMvbmF2aWdhdGlvbnMuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL25hdmlnYXRpb25zL25hdmlnYXRpb25zLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUlBO0VBRUcsa0JBQUE7QUNKSDtBRE1HO0VBQ0csV0FBQTtFQUNBLGVBQUE7RUFDQSxXQUFBO0VBQ0EsWUFBQTtFQUNBLGdDQUFBO0FDSk47QURTTTtFQUNHLGlCQUFBO0VBQ0Esa0JBQUE7RUFDQSxrQkFBQTtBQ1BUO0FEV0c7RUFFRyxpQkFBQTtBQ1ZOO0FEWU07RUFDRyxZQUFBO0FDVlQ7QURhTTtFQUNFLHlCQUFBO0VBQ0EsaUJBQUE7RUFDQSxvQkFBQTtBQ1hSO0FEY007RUFDRyxrQkFBQTtFQUNBLG1CQUFBO0FDWlQ7QURpQkE7RUFHTTtJQUNHLFlBQUE7RUNoQlA7RURvQk87SUFDRyxpQkFBQTtFQ2xCVjtBQUNGIiwiZmlsZSI6InNyYy9hcHAvbmF2aWdhdGlvbnMvbmF2aWdhdGlvbnMuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIkd2hpdGU6ICNmZmZmZmY7XG4kcHJpbWFyeTogI2ZlNDM2NTtcbiRkYXJrOiAjMzAzMDMwO1xuXG4ubmF2e1xuXG4gICBwb3NpdGlvbjogcmVsYXRpdmU7XG5cbiAgICZfX3Rvb2xiYXJ7XG4gICAgICB6LWluZGV4OiAxMDtcbiAgICAgIHBvc2l0aW9uOiBmaXhlZDtcbiAgICAgIHdpZHRoOjEwMCU7XG4gICAgICBoZWlnaHQ6IDY0cHg7IFxuICAgICAgYm9yZGVyLWJvdHRvbTogM3B4IHNvbGlkICRkYXJrO1xuICAgfVxuXG4gICAmX19zaWRlbmF2e1xuXG4gICAgICAmLWNvbnRlbnR7XG4gICAgICAgICBwYWRkaW5nLXRvcDogNjlweDtcbiAgICAgICAgIHBhZGRpbmctcmlnaHQ6IDVweDtcbiAgICAgICAgIHBhZGRpbmctbGVmdDogNDlweDtcbiAgICAgIH1cbiAgIH1cblxuICAgJl9fZHJhd2Vye1xuXG4gICAgICBwYWRkaW5nLXRvcDogNjRweDtcblxuICAgICAgJi1vcGVue1xuICAgICAgICAgd2lkdGg6IDI1MHB4O1xuICAgICAgfVxuXG4gICAgICAmLW1lbnV7XG4gICAgICAgIGJhY2tncm91bmQtY29sb3I6ICMzMDMwMzA7XG4gICAgICAgIHBhZGRpbmctdG9wOiAxMHB4O1xuICAgICAgICBwYWRkaW5nLWJvdHRvbTogMTBweDtcbiAgICAgIH1cblxuICAgICAgJi1saW5rLWljb257XG4gICAgICAgICBwYWRkaW5nLWxlZnQ6IDEwcHg7XG4gICAgICAgICBwYWRkaW5nLXJpZ2h0OiAxMHB4O1xuICAgICAgfVxuICAgfVxufVxuXG5AbWVkaWEgb25seSBzY3JlZW4gYW5kIChtYXgtd2lkdGg6IDYwMHB4KXsgICBcblxuICAgLm5hdntcbiAgICAgICZfX3Rvb2xiYXJ7XG4gICAgICAgICBoZWlnaHQ6IDU2cHg7XG4gICAgICB9XG5cbiAgICAgICZfX3NpZGVuYXZ7XG4gICAgICAgICAmLWNvbnRlbnR7XG4gICAgICAgICAgICBwYWRkaW5nLXRvcDogNjFweDtcbiAgICAgICAgIH1cbiAgICAgIH1cbiAgIH1cblxufSIsIi5uYXYge1xuICBwb3NpdGlvbjogcmVsYXRpdmU7XG59XG4ubmF2X190b29sYmFyIHtcbiAgei1pbmRleDogMTA7XG4gIHBvc2l0aW9uOiBmaXhlZDtcbiAgd2lkdGg6IDEwMCU7XG4gIGhlaWdodDogNjRweDtcbiAgYm9yZGVyLWJvdHRvbTogM3B4IHNvbGlkICMzMDMwMzA7XG59XG4ubmF2X19zaWRlbmF2LWNvbnRlbnQge1xuICBwYWRkaW5nLXRvcDogNjlweDtcbiAgcGFkZGluZy1yaWdodDogNXB4O1xuICBwYWRkaW5nLWxlZnQ6IDQ5cHg7XG59XG4ubmF2X19kcmF3ZXIge1xuICBwYWRkaW5nLXRvcDogNjRweDtcbn1cbi5uYXZfX2RyYXdlci1vcGVuIHtcbiAgd2lkdGg6IDI1MHB4O1xufVxuLm5hdl9fZHJhd2VyLW1lbnUge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjMzAzMDMwO1xuICBwYWRkaW5nLXRvcDogMTBweDtcbiAgcGFkZGluZy1ib3R0b206IDEwcHg7XG59XG4ubmF2X19kcmF3ZXItbGluay1pY29uIHtcbiAgcGFkZGluZy1sZWZ0OiAxMHB4O1xuICBwYWRkaW5nLXJpZ2h0OiAxMHB4O1xufVxuXG5AbWVkaWEgb25seSBzY3JlZW4gYW5kIChtYXgtd2lkdGg6IDYwMHB4KSB7XG4gIC5uYXZfX3Rvb2xiYXIge1xuICAgIGhlaWdodDogNTZweDtcbiAgfVxuICAubmF2X19zaWRlbmF2LWNvbnRlbnQge1xuICAgIHBhZGRpbmctdG9wOiA2MXB4O1xuICB9XG59Il19 */"
+module.exports = ".nav {\n  position: relative;\n}\n.nav__toolbar {\n  z-index: 10;\n  position: fixed;\n  width: 100%;\n  height: 64px;\n  border-bottom: 3px solid #303030;\n}\n.nav__sidenav {\n  background-color: transparent;\n}\n.nav__sidenav-content {\n  background-color: transparent;\n  padding-top: 69px;\n  padding-right: 5px;\n  padding-left: 49px;\n}\n.nav__drawer {\n  padding-top: 64px;\n}\n.nav__drawer-open {\n  width: 250px;\n}\n.nav__drawer-menu {\n  background-color: #303030;\n  padding-top: 10px;\n  padding-bottom: 10px;\n}\n.nav__drawer-link-icon {\n  padding-left: 10px;\n  padding-right: 10px;\n}\n@media only screen and (max-width: 600px) {\n  .nav__toolbar {\n    height: 56px;\n  }\n  .nav__sidenav-content {\n    padding-top: 61px;\n  }\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2F6cmluL0RvY3VtZW50cy9HaXRIdWIvb2FyLXRlZ3VoL3NyYy9hcHAvbmF2aWdhdGlvbnMvbmF2aWdhdGlvbnMuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL25hdmlnYXRpb25zL25hdmlnYXRpb25zLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUlBO0VBRUcsa0JBQUE7QUNKSDtBRE1HO0VBQ0csV0FBQTtFQUNBLGVBQUE7RUFDQSxXQUFBO0VBQ0EsWUFBQTtFQUNBLGdDQUFBO0FDSk47QURPRztFQUVHLDZCQUFBO0FDTk47QURRTTtFQUNHLDZCQUFBO0VBQ0EsaUJBQUE7RUFDQSxrQkFBQTtFQUNBLGtCQUFBO0FDTlQ7QURVRztFQUVHLGlCQUFBO0FDVE47QURXTTtFQUNHLFlBQUE7QUNUVDtBRFlNO0VBQ0UseUJBQUE7RUFDQSxpQkFBQTtFQUNBLG9CQUFBO0FDVlI7QURhTTtFQUNHLGtCQUFBO0VBQ0EsbUJBQUE7QUNYVDtBRGdCQTtFQUdNO0lBQ0csWUFBQTtFQ2ZQO0VEbUJPO0lBQ0csaUJBQUE7RUNqQlY7QUFDRiIsImZpbGUiOiJzcmMvYXBwL25hdmlnYXRpb25zL25hdmlnYXRpb25zLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiJHdoaXRlOiAjZmZmZmZmO1xuJHByaW1hcnk6ICNmZTQzNjU7XG4kZGFyazogIzMwMzAzMDtcblxuLm5hdntcblxuICAgcG9zaXRpb246IHJlbGF0aXZlO1xuXG4gICAmX190b29sYmFye1xuICAgICAgei1pbmRleDogMTA7XG4gICAgICBwb3NpdGlvbjogZml4ZWQ7XG4gICAgICB3aWR0aDoxMDAlO1xuICAgICAgaGVpZ2h0OiA2NHB4OyBcbiAgICAgIGJvcmRlci1ib3R0b206IDNweCBzb2xpZCAkZGFyaztcbiAgIH1cblxuICAgJl9fc2lkZW5hdntcblxuICAgICAgYmFja2dyb3VuZC1jb2xvcjogdHJhbnNwYXJlbnQ7XG5cbiAgICAgICYtY29udGVudHtcbiAgICAgICAgIGJhY2tncm91bmQtY29sb3I6IHRyYW5zcGFyZW50O1xuICAgICAgICAgcGFkZGluZy10b3A6IDY5cHg7XG4gICAgICAgICBwYWRkaW5nLXJpZ2h0OiA1cHg7XG4gICAgICAgICBwYWRkaW5nLWxlZnQ6IDQ5cHg7XG4gICAgICB9XG4gICB9XG5cbiAgICZfX2RyYXdlcntcblxuICAgICAgcGFkZGluZy10b3A6IDY0cHg7XG5cbiAgICAgICYtb3BlbntcbiAgICAgICAgIHdpZHRoOiAyNTBweDtcbiAgICAgIH1cblxuICAgICAgJi1tZW51e1xuICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjMzAzMDMwO1xuICAgICAgICBwYWRkaW5nLXRvcDogMTBweDtcbiAgICAgICAgcGFkZGluZy1ib3R0b206IDEwcHg7XG4gICAgICB9XG5cbiAgICAgICYtbGluay1pY29ue1xuICAgICAgICAgcGFkZGluZy1sZWZ0OiAxMHB4O1xuICAgICAgICAgcGFkZGluZy1yaWdodDogMTBweDtcbiAgICAgIH1cbiAgIH1cbn1cblxuQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAobWF4LXdpZHRoOiA2MDBweCl7ICAgXG5cbiAgIC5uYXZ7XG4gICAgICAmX190b29sYmFye1xuICAgICAgICAgaGVpZ2h0OiA1NnB4O1xuICAgICAgfVxuXG4gICAgICAmX19zaWRlbmF2e1xuICAgICAgICAgJi1jb250ZW50e1xuICAgICAgICAgICAgcGFkZGluZy10b3A6IDYxcHg7XG4gICAgICAgICB9XG4gICAgICB9XG4gICB9XG5cbn0iLCIubmF2IHtcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xufVxuLm5hdl9fdG9vbGJhciB7XG4gIHotaW5kZXg6IDEwO1xuICBwb3NpdGlvbjogZml4ZWQ7XG4gIHdpZHRoOiAxMDAlO1xuICBoZWlnaHQ6IDY0cHg7XG4gIGJvcmRlci1ib3R0b206IDNweCBzb2xpZCAjMzAzMDMwO1xufVxuLm5hdl9fc2lkZW5hdiB7XG4gIGJhY2tncm91bmQtY29sb3I6IHRyYW5zcGFyZW50O1xufVxuLm5hdl9fc2lkZW5hdi1jb250ZW50IHtcbiAgYmFja2dyb3VuZC1jb2xvcjogdHJhbnNwYXJlbnQ7XG4gIHBhZGRpbmctdG9wOiA2OXB4O1xuICBwYWRkaW5nLXJpZ2h0OiA1cHg7XG4gIHBhZGRpbmctbGVmdDogNDlweDtcbn1cbi5uYXZfX2RyYXdlciB7XG4gIHBhZGRpbmctdG9wOiA2NHB4O1xufVxuLm5hdl9fZHJhd2VyLW9wZW4ge1xuICB3aWR0aDogMjUwcHg7XG59XG4ubmF2X19kcmF3ZXItbWVudSB7XG4gIGJhY2tncm91bmQtY29sb3I6ICMzMDMwMzA7XG4gIHBhZGRpbmctdG9wOiAxMHB4O1xuICBwYWRkaW5nLWJvdHRvbTogMTBweDtcbn1cbi5uYXZfX2RyYXdlci1saW5rLWljb24ge1xuICBwYWRkaW5nLWxlZnQ6IDEwcHg7XG4gIHBhZGRpbmctcmlnaHQ6IDEwcHg7XG59XG5cbkBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG1heC13aWR0aDogNjAwcHgpIHtcbiAgLm5hdl9fdG9vbGJhciB7XG4gICAgaGVpZ2h0OiA1NnB4O1xuICB9XG4gIC5uYXZfX3NpZGVuYXYtY29udGVudCB7XG4gICAgcGFkZGluZy10b3A6IDYxcHg7XG4gIH1cbn0iXX0= */"
 
 /***/ }),
 
@@ -5451,15 +4927,14 @@ var NavigationsComponent = /** @class */ (function () {
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (result) { return result.matches; }));
         this.sideNavIcon = true;
         this.opened = true;
+        this.profile = null;
     }
     NavigationsComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.profileService.profile.subscribe(function (response) {
             if (response && response._id)
                 _this.profile = response;
-            else
-                _this.profile = null;
-        });
+        }, (function (error) { return console.log('Error : ' + error); }));
         var pages = _app_routing_module__WEBPACK_IMPORTED_MODULE_6__["routes"].reduce(function (acc, value) {
             if (value.data.type === 'public')
                 acc.public.push(value);
@@ -5805,6 +5280,193 @@ var NgmEditorService = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/page-user/profile/profile.component.scss":
+/*!**********************************************************!*\
+  !*** ./src/app/page-user/profile/profile.component.scss ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3BhZ2UtdXNlci9wcm9maWxlL3Byb2ZpbGUuY29tcG9uZW50LnNjc3MifQ== */"
+
+/***/ }),
+
+/***/ "./src/app/page-user/profile/profile.component.ts":
+/*!********************************************************!*\
+  !*** ./src/app/page-user/profile/profile.component.ts ***!
+  \********************************************************/
+/*! exports provided: ProfileComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ProfileComponent", function() { return ProfileComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+
+
+
+var ProfileComponent = /** @class */ (function () {
+    function ProfileComponent() {
+        this.post = new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]('', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].maxLength(500), _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].minLength(10), _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]);
+    }
+    ProfileComponent.prototype.ngOnInit = function () {
+    };
+    ProfileComponent.prototype.postContent = function (event) {
+        var char = event.target.textLength;
+        console.log(char);
+    };
+    ProfileComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-profile',
+            template: __webpack_require__(/*! raw-loader!./profile.component.html */ "./node_modules/raw-loader/index.js!./src/app/page-user/profile/profile.component.html"),
+            styles: [__webpack_require__(/*! ./profile.component.scss */ "./src/app/page-user/profile/profile.component.scss")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+    ], ProfileComponent);
+    return ProfileComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/page/home/home.component.scss":
+/*!***********************************************!*\
+  !*** ./src/app/page/home/home.component.scss ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3BhZ2UvaG9tZS9ob21lLmNvbXBvbmVudC5zY3NzIn0= */"
+
+/***/ }),
+
+/***/ "./src/app/page/home/home.component.ts":
+/*!*********************************************!*\
+  !*** ./src/app/page/home/home.component.ts ***!
+  \*********************************************/
+/*! exports provided: HomeComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HomeComponent", function() { return HomeComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+
+
+var HomeComponent = /** @class */ (function () {
+    function HomeComponent() {
+    }
+    HomeComponent.prototype.ngOnInit = function () {
+    };
+    HomeComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-home',
+            template: __webpack_require__(/*! raw-loader!./home.component.html */ "./node_modules/raw-loader/index.js!./src/app/page/home/home.component.html"),
+            styles: [__webpack_require__(/*! ./home.component.scss */ "./src/app/page/home/home.component.scss")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+    ], HomeComponent);
+    return HomeComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/page/layout/layout.component.scss":
+/*!***************************************************!*\
+  !*** ./src/app/page/layout/layout.component.scss ***!
+  \***************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3BhZ2UvbGF5b3V0L2xheW91dC5jb21wb25lbnQuc2NzcyJ9 */"
+
+/***/ }),
+
+/***/ "./src/app/page/layout/layout.component.ts":
+/*!*************************************************!*\
+  !*** ./src/app/page/layout/layout.component.ts ***!
+  \*************************************************/
+/*! exports provided: LayoutComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LayoutComponent", function() { return LayoutComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+
+
+var LayoutComponent = /** @class */ (function () {
+    function LayoutComponent() {
+    }
+    LayoutComponent.prototype.ngOnInit = function () {
+    };
+    LayoutComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-layout',
+            template: __webpack_require__(/*! raw-loader!./layout.component.html */ "./node_modules/raw-loader/index.js!./src/app/page/layout/layout.component.html"),
+            styles: [__webpack_require__(/*! ./layout.component.scss */ "./src/app/page/layout/layout.component.scss")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+    ], LayoutComponent);
+    return LayoutComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/page/terms/terms.component.scss":
+/*!*************************************************!*\
+  !*** ./src/app/page/terms/terms.component.scss ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3BhZ2UvdGVybXMvdGVybXMuY29tcG9uZW50LnNjc3MifQ== */"
+
+/***/ }),
+
+/***/ "./src/app/page/terms/terms.component.ts":
+/*!***********************************************!*\
+  !*** ./src/app/page/terms/terms.component.ts ***!
+  \***********************************************/
+/*! exports provided: TermsComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TermsComponent", function() { return TermsComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+
+
+var TermsComponent = /** @class */ (function () {
+    function TermsComponent() {
+    }
+    TermsComponent.prototype.ngOnInit = function () {
+    };
+    TermsComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-terms',
+            template: __webpack_require__(/*! raw-loader!./terms.component.html */ "./node_modules/raw-loader/index.js!./src/app/page/terms/terms.component.html"),
+            styles: [__webpack_require__(/*! ./terms.component.scss */ "./src/app/page/terms/terms.component.scss")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+    ], TermsComponent);
+    return TermsComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/post/post-comments/post-comments.component.scss":
 /*!*****************************************************************!*\
   !*** ./src/app/post/post-comments/post-comments.component.scss ***!
@@ -6074,820 +5736,55 @@ var PostsComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/app/sales-page/sales-page.component.scss":
-/*!******************************************************!*\
-  !*** ./src/app/sales-page/sales-page.component.scss ***!
-  \******************************************************/
+/***/ "./src/app/sidebar/sidebar.component.scss":
+/*!************************************************!*\
+  !*** ./src/app/sidebar/sidebar.component.scss ***!
+  \************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3NhbGVzLXBhZ2Uvc2FsZXMtcGFnZS5jb21wb25lbnQuc2NzcyJ9 */"
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3NpZGViYXIvc2lkZWJhci5jb21wb25lbnQuc2NzcyJ9 */"
 
 /***/ }),
 
-/***/ "./src/app/sales-page/sales-page.component.ts":
-/*!****************************************************!*\
-  !*** ./src/app/sales-page/sales-page.component.ts ***!
-  \****************************************************/
-/*! exports provided: SalesPageComponent */
+/***/ "./src/app/sidebar/sidebar.component.ts":
+/*!**********************************************!*\
+  !*** ./src/app/sidebar/sidebar.component.ts ***!
+  \**********************************************/
+/*! exports provided: SidebarComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SalesPageComponent", function() { return SalesPageComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SidebarComponent", function() { return SidebarComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 
 
-var SalesPageComponent = /** @class */ (function () {
-    function SalesPageComponent() {
-    }
-    SalesPageComponent.prototype.ngOnInit = function () {
-    };
-    SalesPageComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-            selector: 'app-sales-page',
-            template: __webpack_require__(/*! raw-loader!./sales-page.component.html */ "./node_modules/raw-loader/index.js!./src/app/sales-page/sales-page.component.html"),
-            styles: [__webpack_require__(/*! ./sales-page.component.scss */ "./src/app/sales-page/sales-page.component.scss")]
-        }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
-    ], SalesPageComponent);
-    return SalesPageComponent;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/app/sales-page/website/website.component.scss":
-/*!***********************************************************!*\
-  !*** ./src/app/sales-page/website/website.component.scss ***!
-  \***********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3NhbGVzLXBhZ2Uvd2Vic2l0ZS93ZWJzaXRlLmNvbXBvbmVudC5zY3NzIn0= */"
-
-/***/ }),
-
-/***/ "./src/app/sales-page/website/website.component.ts":
-/*!*********************************************************!*\
-  !*** ./src/app/sales-page/website/website.component.ts ***!
-  \*********************************************************/
-/*! exports provided: WebsiteComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "WebsiteComponent", function() { return WebsiteComponent; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _angular_animations__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/animations */ "./node_modules/@angular/animations/fesm5/animations.js");
-/* harmony import */ var src_app_configurations_animations_anim_fn__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/configurations/animations/anim-fn */ "./src/app/configurations/animations/anim-fn.ts");
-
-
-
-
-;
-var WebsiteComponent = /** @class */ (function () {
-    function WebsiteComponent() {
-        this.issues = [
-            {
-                id: 'package',
-                title: 'Anda sedang merangka strategi untuk <span class="lm__text-title-1-7rem-primary">mencari pelanggan baru</span> atau <span class="lm__text-title-1-7rem-primary">meluaskan pasaran</span> barangan jualan atau servis anda? Maklumlah zaman sekarang kebanyakan sale adalah secara atas talian. <br> <br> Tiada siapa yang tahu atau dapat tolong atau beri penerangan kepada anda macamana sebenarnya strategi atau penggunaan  <span class="lm__text-title-1-7rem-primary">Landing Page</span>, <span class="lm__text-title-1-7rem-primary">Sales Page</span>, <span class="lm__text-title-1-7rem-primary">Blog</span>, <span class="lm__text-title-1-7rem-primary">Iklan Google/Facebook</span> atau konten yang akan menarik banyak <span class="lm__text-title-1-7rem-primary">Like dan Share</span>?',
-                image: 'strategy.jpg'
-            },
-            {
-                id: 'webmaster',
-                title: 'Atau bajet syarikat anda <span class="lm__text-title-1-7rem-primary">tidak mampu</span> untuk menggaji Digital Manager atau Ecommerce Manager yang rata rata gaji mereka RM5K ke atas sebulan tapi anda tahu pentingnya perniagaan atas talian yang mempunyai 18 juta pengguna Malaysia. Nak buat sendiri makan  <span class="lm__text-title-1-7rem-primary">masa yang panjang</span> dan  <span class="lm__text-title2rem-primary">kos yang tinggi</span>.',
-                image: 'stress.jpg'
-            },
-            {
-                id: 'custom',
-                title: 'atau anda didatangi <span class="lm__text-title-1-7rem-primary">idea</span> yang unik untuk perniagaan baru atas talian? Mungkin anda suka bisnes model Lizada, Lilong, Midah atau lain lain yang dipanggil <span class="lm__text-title-1-7rem-primary">Multivendor Website</span> ? Diorang tak perlu buat apa-apa, sedar sedar duit masuk.',
-                image: 'ideas.jpg'
-            }
+var SidebarComponent = /** @class */ (function () {
+    function SidebarComponent() {
+        this.items = [
+            { img: 'assets/images/products/123.jpg', alt: '123' },
+            { img: 'assets/images/products/124.jpg', alt: '124' },
+            { img: 'assets/images/products/125.jpg', alt: '125' },
+            { img: 'assets/images/products/126.jpg', alt: '126' },
+            { img: 'assets/images/products/127.jpg', alt: '127' },
+            { img: 'assets/images/products/128.jpg', alt: '128' },
+            { img: 'assets/images/products/129.jpg', alt: '129' },
+            { img: 'assets/images/products/130.jpg', alt: '130' }
         ];
     }
-    WebsiteComponent.prototype.ngOnInit = function () {
+    SidebarComponent.prototype.ngOnInit = function () {
     };
-    WebsiteComponent.prototype.onClick = function (event) {
-        var sectId = event.target.parentNode.id.split('-')[1];
-        var id = "sect-" + sectId;
-        this.active = { active: true, id: id };
-        console.log(this.active);
-    };
-    WebsiteComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    SidebarComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-            selector: 'app-website',
-            template: __webpack_require__(/*! raw-loader!./website.component.html */ "./node_modules/raw-loader/index.js!./src/app/sales-page/website/website.component.html"),
-            animations: [
-                Object(_angular_animations__WEBPACK_IMPORTED_MODULE_2__["trigger"])('yEnter', [
-                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_2__["transition"])(':enter', [
-                        Object(_angular_animations__WEBPACK_IMPORTED_MODULE_2__["useAnimation"])(src_app_configurations_animations_anim_fn__WEBPACK_IMPORTED_MODULE_3__["yEnter"])
-                    ])
-                ])
-            ],
-            styles: [__webpack_require__(/*! ./website.component.scss */ "./src/app/sales-page/website/website.component.scss")]
+            selector: 'app-sidebar',
+            template: __webpack_require__(/*! raw-loader!./sidebar.component.html */ "./node_modules/raw-loader/index.js!./src/app/sidebar/sidebar.component.html"),
+            styles: [__webpack_require__(/*! ./sidebar.component.scss */ "./src/app/sidebar/sidebar.component.scss")]
         }),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
-    ], WebsiteComponent);
-    return WebsiteComponent;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/app/side-bar/accordion/accordion.component.scss":
-/*!*************************************************************!*\
-  !*** ./src/app/side-bar/accordion/accordion.component.scss ***!
-  \*************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3NpZGUtYmFyL2FjY29yZGlvbi9hY2NvcmRpb24uY29tcG9uZW50LnNjc3MifQ== */"
-
-/***/ }),
-
-/***/ "./src/app/side-bar/accordion/accordion.component.ts":
-/*!***********************************************************!*\
-  !*** ./src/app/side-bar/accordion/accordion.component.ts ***!
-  \***********************************************************/
-/*! exports provided: AccordionComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AccordionComponent", function() { return AccordionComponent; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var src_app_configurations_services_profile_service_profile_service_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/configurations/services/profile-service/profile-service.service */ "./src/app/configurations/services/profile-service/profile-service.service.ts");
-/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
-/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
-
-
-
-
-
-var AccordionComponent = /** @class */ (function () {
-    function AccordionComponent(_profileService, _snackBar) {
-        this._profileService = _profileService;
-        this._snackBar = _snackBar;
-        this.step = null;
-        this.active = true;
-        this.color = 'primary';
-        this.emailDisabled = true;
-        this.startDate = new Date(1990, 0, 1);
-        this.avatars = {
-            boys: ['boy', 'boy-1', 'boy-2', 'boy-3', 'boy-4', 'boy-5'],
-            girls: ['girl', 'girl-1', 'girl-2', 'girl-3', 'girl-4', 'girl-5']
-        };
-        this.formProfile = new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormGroup"]({
-            email: new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormControl"]({ value: '', disabled: true }, [_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].email]),
-            name: new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormControl"]('', [_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].minLength(4)]),
-            birthday: new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormControl"](''),
-            handphone: new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormControl"](''),
-            image: new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormControl"](''),
-            address: new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormControl"]('', [_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].minLength(4)]),
-        });
-        this.formList = Object.keys(this.formProfile.value).map(function (item) {
-            return item;
-        });
-    }
-    AccordionComponent.prototype.ngOnInit = function () {
-        var _this = this;
-        this._profileService.profile.subscribe(function (response) {
-            if (response && response.id)
-                _this.profile = response;
-            else
-                _this.profile = null;
-        });
-    };
-    Object.defineProperty(AccordionComponent.prototype, "emailCtrl", {
-        // Controls get method
-        get: function () { return this.formProfile.get('email'); },
-        enumerable: true,
-        configurable: true
-    });
-    ;
-    Object.defineProperty(AccordionComponent.prototype, "nameCtrl", {
-        get: function () { return this.formProfile.get('name'); },
-        enumerable: true,
-        configurable: true
-    });
-    ;
-    Object.defineProperty(AccordionComponent.prototype, "birthdayCtrl", {
-        get: function () { return this.formProfile.get('birthday'); },
-        enumerable: true,
-        configurable: true
-    });
-    ;
-    Object.defineProperty(AccordionComponent.prototype, "handphoneCtrl", {
-        get: function () { return this.formProfile.get('handphone'); },
-        enumerable: true,
-        configurable: true
-    });
-    ;
-    Object.defineProperty(AccordionComponent.prototype, "imageCtrl", {
-        get: function () { return this.formProfile.get('image'); },
-        enumerable: true,
-        configurable: true
-    });
-    ;
-    AccordionComponent.prototype.setStep = function (index) {
-        this.step = index;
-    };
-    AccordionComponent.prototype.nextStep = function () {
-        this.step++;
-    };
-    AccordionComponent.prototype.prevStep = function () {
-        this.step--;
-    };
-    AccordionComponent.prototype.updateProfile = function (userData) {
-        var _this = this;
-        console.log(userData);
-        var itemKey = Object.keys(userData)
-            .reduce(function (acc, value) {
-            if (value != ( true && 'type'))
-                acc = value;
-            return acc;
-        }, {});
-        var itemValue = userData["" + itemKey];
-        this._profileService.updateUser(userData).subscribe(function (response) {
-            if (response && response.id) {
-                _this._snackBar.open("Your \" " + itemKey + " \" update to \" " + itemValue + " \" is successfull", 'X', { duration: 10000, panelClass: 'pink-style' });
-                _this._profileService.userSource.next(response);
-                _this.formProfile.get(itemKey).reset();
-            }
-            else
-                _this._snackBar.open('Your update is not successfull, please try again.', 'X', { duration: 10000, panelClass: 'red-style' });
-        }, function (error) { return _this._snackBar.open('Error' + error, 'X', { duration: 10000, panelClass: 'red-style' }); });
-    };
-    AccordionComponent.prototype.iconClick = function () {
-        console.log(this.birthdayCtrl);
-    };
-    AccordionComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-            selector: 'app-accordion',
-            template: __webpack_require__(/*! raw-loader!./accordion.component.html */ "./node_modules/raw-loader/index.js!./src/app/side-bar/accordion/accordion.component.html"),
-            styles: [__webpack_require__(/*! ./accordion.component.scss */ "./src/app/side-bar/accordion/accordion.component.scss")]
-        }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [src_app_configurations_services_profile_service_profile_service_service__WEBPACK_IMPORTED_MODULE_2__["ProfileService"],
-            _angular_material__WEBPACK_IMPORTED_MODULE_4__["MatSnackBar"]])
-    ], AccordionComponent);
-    return AccordionComponent;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/app/side-bar/accordion/form-address/form-address.component.scss":
-/*!*****************************************************************************!*\
-  !*** ./src/app/side-bar/accordion/form-address/form-address.component.scss ***!
-  \*****************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3NpZGUtYmFyL2FjY29yZGlvbi9mb3JtLWFkZHJlc3MvZm9ybS1hZGRyZXNzLmNvbXBvbmVudC5zY3NzIn0= */"
-
-/***/ }),
-
-/***/ "./src/app/side-bar/accordion/form-address/form-address.component.ts":
-/*!***************************************************************************!*\
-  !*** ./src/app/side-bar/accordion/form-address/form-address.component.ts ***!
-  \***************************************************************************/
-/*! exports provided: FormAddressComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FormAddressComponent", function() { return FormAddressComponent; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var src_app_configurations_services_profile_service_profile_service_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/configurations/services/profile-service/profile-service.service */ "./src/app/configurations/services/profile-service/profile-service.service.ts");
-/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
-/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
-
-
-
-
-
-var FormAddressComponent = /** @class */ (function () {
-    function FormAddressComponent(_profileService, _snackBar) {
-        this._profileService = _profileService;
-        this._snackBar = _snackBar;
-        this.updatedCity = false;
-        this.formAddressProfile = new _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormGroup"]({
-            address: new _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormControl"]('', [_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].minLength(4)]),
-            address2: new _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormControl"]('', [_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].minLength(4)]),
-            city: new _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormControl"]('', [_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].minLength(3)]),
-            state: new _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormControl"]('', [_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].minLength(3)]),
-            country: new _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormControl"]('', [_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].minLength(3)]),
-        });
-    }
-    FormAddressComponent.prototype.ngOnInit = function () {
-        var _this = this;
-        this._profileService.profile.subscribe(function (response) {
-            if (response && response.id)
-                _this.profile = response;
-            else
-                _this.profile = null;
-        });
-    };
-    Object.defineProperty(FormAddressComponent.prototype, "addressCtrl", {
-        // Controls get method
-        get: function () { return this.formAddressProfile.get('address'); },
-        enumerable: true,
-        configurable: true
-    });
-    ;
-    Object.defineProperty(FormAddressComponent.prototype, "address2Ctrl", {
-        get: function () { return this.formAddressProfile.get('address2'); },
-        enumerable: true,
-        configurable: true
-    });
-    ;
-    Object.defineProperty(FormAddressComponent.prototype, "cityCtrl", {
-        get: function () { return this.formAddressProfile.get('city'); },
-        enumerable: true,
-        configurable: true
-    });
-    ;
-    Object.defineProperty(FormAddressComponent.prototype, "stateCtrl", {
-        get: function () { return this.formAddressProfile.get('state'); },
-        enumerable: true,
-        configurable: true
-    });
-    ;
-    Object.defineProperty(FormAddressComponent.prototype, "countryCtrl", {
-        get: function () { return this.formAddressProfile.get('country'); },
-        enumerable: true,
-        configurable: true
-    });
-    ;
-    FormAddressComponent.prototype.getCity = function () {
-        var _this = this;
-        if (this.cityCtrl.valid) {
-            this._profileService.getCities({ _id: this.profile._id, city: this.cityCtrl.value }).subscribe(function (response) {
-                _this.citiesData = response;
-            });
-        }
-    };
-    FormAddressComponent.prototype.getStates = function () {
-        var _this = this;
-        if (this.stateCtrl.valid) {
-            this._profileService.getStates({ _id: this.profile._id, state: this.stateCtrl.value }).subscribe(function (response) {
-                _this.statesData = response;
-            });
-        }
-    };
-    FormAddressComponent.prototype.getCountry = function () {
-        var _this = this;
-        if (this.countryCtrl.valid) {
-            this._profileService.getCountries({ country: this.countryCtrl.value }).subscribe(function (response) {
-                _this.countriesData = response;
-            });
-        }
-    };
-    FormAddressComponent.prototype.updateCity = function (userData) {
-        var result = this.updateProfile(userData);
-        if (!result.syncErrorThrown) {
-            var resultSC = this.updateStateCountryByCity(this.cityCtrl.value);
-        }
-    };
-    FormAddressComponent.prototype.updateStateCountryByCity = function (city) {
-        var _this = this;
-        var resultSC = this._profileService.updateStateCountryByCity({ _id: this.profile._id, city: city }).subscribe(function (response) {
-            console.log(response);
-            if (response && response._id) {
-                _this._profileService.userSource.next(response);
-            }
-        });
-    };
-    FormAddressComponent.prototype.updateProfile = function (userData) {
-        var _this = this;
-        var itemKey = Object.keys(userData)
-            .reduce(function (acc, value) {
-            if (value != ( true && 'type'))
-                acc = value;
-            return acc;
-        }, {});
-        var itemValue = userData["" + itemKey];
-        var updatedInfo = this._profileService.updateUser(userData).subscribe(function (response) {
-            if (response && response.id) {
-                _this._snackBar.open("Your \" " + itemKey + " \" update to \" " + itemValue + " \" is successfull", 'X', { duration: 10000, panelClass: 'pink-style' });
-                _this._profileService.userSource.next(response);
-                _this.formAddressProfile.get(itemKey).reset();
-                _this.updatedCity = true;
-            }
-            else {
-                _this._snackBar.open('Your update is not successfull, please try again.', 'X', { duration: 10000, panelClass: 'red-style' });
-                _this.updatedCity = false;
-            }
-        }, function (error) {
-            _this._snackBar.open('Error' + error, 'X', { duration: 10000, panelClass: 'red-style' });
-            _this.updatedCity = false;
-        });
-        return updatedInfo;
-    };
-    FormAddressComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-            selector: 'app-form-address',
-            template: __webpack_require__(/*! raw-loader!./form-address.component.html */ "./node_modules/raw-loader/index.js!./src/app/side-bar/accordion/form-address/form-address.component.html"),
-            styles: [__webpack_require__(/*! ./form-address.component.scss */ "./src/app/side-bar/accordion/form-address/form-address.component.scss")]
-        }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [src_app_configurations_services_profile_service_profile_service_service__WEBPACK_IMPORTED_MODULE_2__["ProfileService"],
-            _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatSnackBar"]])
-    ], FormAddressComponent);
-    return FormAddressComponent;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/app/side-bar/accordion/form-avatar/form-avatar.component.scss":
-/*!***************************************************************************!*\
-  !*** ./src/app/side-bar/accordion/form-avatar/form-avatar.component.scss ***!
-  \***************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3NpZGUtYmFyL2FjY29yZGlvbi9mb3JtLWF2YXRhci9mb3JtLWF2YXRhci5jb21wb25lbnQuc2NzcyJ9 */"
-
-/***/ }),
-
-/***/ "./src/app/side-bar/accordion/form-avatar/form-avatar.component.ts":
-/*!*************************************************************************!*\
-  !*** ./src/app/side-bar/accordion/form-avatar/form-avatar.component.ts ***!
-  \*************************************************************************/
-/*! exports provided: FormAvatarComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FormAvatarComponent", function() { return FormAvatarComponent; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var src_app_configurations_services_profile_service_profile_service_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/configurations/services/profile-service/profile-service.service */ "./src/app/configurations/services/profile-service/profile-service.service.ts");
-/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
-/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
-
-
-
-
-
-var FormAvatarComponent = /** @class */ (function () {
-    function FormAvatarComponent(_profileService, _snackBar) {
-        this._profileService = _profileService;
-        this._snackBar = _snackBar;
-        this.avatars = {
-            boys: ['avatars/boy', 'avatars/boy-1', 'avatars/boy-2', 'avatars/boy-3', 'avatars/boy-4', 'avatars/boy-5'],
-            girls: ['avatars/girl', 'avatars/girl-1', 'avatars/girl-2', 'avatars/girl-3', 'avatars/girl-4', 'avatars/girl-5']
-        };
-        this.formAvatarGroup = new _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormGroup"]({
-            image: new _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormControl"]('')
-        });
-    }
-    FormAvatarComponent.prototype.ngOnInit = function () {
-        var _this = this;
-        this._profileService.profile.subscribe(function (response) {
-            if (response && response._id)
-                _this.profile = response;
-            else
-                _this.profile = null;
-        });
-    };
-    Object.defineProperty(FormAvatarComponent.prototype, "imageCtrl", {
-        get: function () { return this.formAvatarGroup.get('image'); },
-        enumerable: true,
-        configurable: true
-    });
-    ;
-    FormAvatarComponent.prototype.updateProfile = function (userData) {
-        var _this = this;
-        console.log(userData);
-        var itemKey = Object.keys(userData)
-            .reduce(function (acc, value) {
-            if (value != ( true && 'type'))
-                acc = value;
-            return acc;
-        }, {});
-        var itemValue = userData["" + itemKey];
-        var slicedItemValue = itemValue.split('/');
-        this._profileService.updateUser(userData).subscribe(function (response) {
-            if (response && response._id) {
-                _this._snackBar.open("Your \" " + itemKey + " \" update to \" " + slicedItemValue[1] + " \" is successfull", 'X', { duration: 10000, panelClass: 'pink-style' });
-                _this._profileService.userSource.next(response);
-                _this.formAvatarGroup.get(itemKey).reset();
-            }
-            else
-                _this._snackBar.open('Your update is not successfull, please try again.', 'X', { duration: 10000, panelClass: 'red-style' });
-        }, function (error) { return _this._snackBar.open('Error' + error, 'X', { duration: 10000, panelClass: 'red-style' }); });
-    };
-    FormAvatarComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-            selector: 'app-form-avatar',
-            template: __webpack_require__(/*! raw-loader!./form-avatar.component.html */ "./node_modules/raw-loader/index.js!./src/app/side-bar/accordion/form-avatar/form-avatar.component.html"),
-            styles: [__webpack_require__(/*! ./form-avatar.component.scss */ "./src/app/side-bar/accordion/form-avatar/form-avatar.component.scss")]
-        }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [src_app_configurations_services_profile_service_profile_service_service__WEBPACK_IMPORTED_MODULE_2__["ProfileService"],
-            _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatSnackBar"]])
-    ], FormAvatarComponent);
-    return FormAvatarComponent;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/app/side-bar/accordion/form-handphone/form-handphone.component.scss":
-/*!*********************************************************************************!*\
-  !*** ./src/app/side-bar/accordion/form-handphone/form-handphone.component.scss ***!
-  \*********************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3NpZGUtYmFyL2FjY29yZGlvbi9mb3JtLWhhbmRwaG9uZS9mb3JtLWhhbmRwaG9uZS5jb21wb25lbnQuc2NzcyJ9 */"
-
-/***/ }),
-
-/***/ "./src/app/side-bar/accordion/form-handphone/form-handphone.component.ts":
-/*!*******************************************************************************!*\
-  !*** ./src/app/side-bar/accordion/form-handphone/form-handphone.component.ts ***!
-  \*******************************************************************************/
-/*! exports provided: FormHandphoneComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FormHandphoneComponent", function() { return FormHandphoneComponent; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var src_app_configurations_services_profile_service_profile_service_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/configurations/services/profile-service/profile-service.service */ "./src/app/configurations/services/profile-service/profile-service.service.ts");
-/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
-/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
-
-
-
-
-
-var FormHandphoneComponent = /** @class */ (function () {
-    function FormHandphoneComponent(_profileService, _snackBar) {
-        this._profileService = _profileService;
-        this._snackBar = _snackBar;
-        this.formHandphoneProfile = new _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormGroup"]({
-            phoneCode: new _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormControl"]('', [_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].minLength(2)]),
-            handphone: new _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormControl"]('', [_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].minLength(7), _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].maxLength(10)])
-        });
-    }
-    FormHandphoneComponent.prototype.ngOnInit = function () {
-        var _this = this;
-        this._profileService.profile.subscribe(function (response) {
-            if (response && response._id)
-                _this.profile = response;
-            else
-                _this.profile = null;
-        });
-    };
-    Object.defineProperty(FormHandphoneComponent.prototype, "phoneCodeCtrl", {
-        // Controls get method
-        get: function () { return this.formHandphoneProfile.get('phoneCode'); },
-        enumerable: true,
-        configurable: true
-    });
-    ;
-    Object.defineProperty(FormHandphoneComponent.prototype, "handphoneCtrl", {
-        get: function () { return this.formHandphoneProfile.get('handphone'); },
-        enumerable: true,
-        configurable: true
-    });
-    ;
-    FormHandphoneComponent.prototype.getCountry = function () {
-        var _this = this;
-        this._profileService.getCountries({ country: this.phoneCodeCtrl.value }).subscribe(function (response) {
-            _this.countriesData = response;
-        });
-    };
-    FormHandphoneComponent.prototype.updateProfile = function (userData) {
-        var _this = this;
-        var itemKey = Object.keys(userData)
-            .reduce(function (acc, value) {
-            if (value != ( true && 'type'))
-                acc = value;
-            return acc;
-        }, {});
-        var itemValue = userData["" + itemKey];
-        this._profileService.updatePhoneCode(userData).subscribe(function (response) {
-            if (response && response._id) {
-                _this._snackBar.open("Your \" " + itemKey + " \" update to \" " + itemValue + " \" is successfull", 'X', { duration: 10000, panelClass: 'pink-style' });
-                _this._profileService.userSource.next(response);
-                _this.formHandphoneProfile.get(itemKey).reset();
-            }
-            else
-                _this._snackBar.open('Your update is not successfull, please try again.', 'X', { duration: 10000, panelClass: 'red-style' });
-        }, function (error) { return _this._snackBar.open('Error' + error, 'X', { duration: 10000, panelClass: 'red-style' }); });
-    };
-    FormHandphoneComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-            selector: 'app-form-handphone',
-            template: __webpack_require__(/*! raw-loader!./form-handphone.component.html */ "./node_modules/raw-loader/index.js!./src/app/side-bar/accordion/form-handphone/form-handphone.component.html"),
-            styles: [__webpack_require__(/*! ./form-handphone.component.scss */ "./src/app/side-bar/accordion/form-handphone/form-handphone.component.scss")]
-        }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [src_app_configurations_services_profile_service_profile_service_service__WEBPACK_IMPORTED_MODULE_2__["ProfileService"],
-            _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatSnackBar"]])
-    ], FormHandphoneComponent);
-    return FormHandphoneComponent;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/app/side-bar/accordion/form-personal/form-personal.component.scss":
-/*!*******************************************************************************!*\
-  !*** ./src/app/side-bar/accordion/form-personal/form-personal.component.scss ***!
-  \*******************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3NpZGUtYmFyL2FjY29yZGlvbi9mb3JtLXBlcnNvbmFsL2Zvcm0tcGVyc29uYWwuY29tcG9uZW50LnNjc3MifQ== */"
-
-/***/ }),
-
-/***/ "./src/app/side-bar/accordion/form-personal/form-personal.component.ts":
-/*!*****************************************************************************!*\
-  !*** ./src/app/side-bar/accordion/form-personal/form-personal.component.ts ***!
-  \*****************************************************************************/
-/*! exports provided: FormPersonalComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FormPersonalComponent", function() { return FormPersonalComponent; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
-/* harmony import */ var src_app_configurations_services_profile_service_profile_service_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/configurations/services/profile-service/profile-service.service */ "./src/app/configurations/services/profile-service/profile-service.service.ts");
-/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
-
-
-
-
-
-var FormPersonalComponent = /** @class */ (function () {
-    function FormPersonalComponent(_profileService, _snackBar) {
-        this._profileService = _profileService;
-        this._snackBar = _snackBar;
-        this.formPersonalProfile = new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormGroup"]({
-            email: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]({ value: '', disabled: true }, [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].email]),
-            name: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]('', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].minLength(4)]),
-            birthday: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]('')
-        });
-    }
-    FormPersonalComponent.prototype.ngOnInit = function () {
-        var _this = this;
-        this._profileService.profile.subscribe(function (response) {
-            if (response && response.id)
-                _this.profile = response;
-            else
-                _this.profile = null;
-        });
-    };
-    Object.defineProperty(FormPersonalComponent.prototype, "emailCtrl", {
-        // Controls get method
-        get: function () { return this.formPersonalProfile.get('email'); },
-        enumerable: true,
-        configurable: true
-    });
-    ;
-    Object.defineProperty(FormPersonalComponent.prototype, "nameCtrl", {
-        get: function () { return this.formPersonalProfile.get('name'); },
-        enumerable: true,
-        configurable: true
-    });
-    ;
-    Object.defineProperty(FormPersonalComponent.prototype, "birthdayCtrl", {
-        get: function () { return this.formPersonalProfile.get('birthday'); },
-        enumerable: true,
-        configurable: true
-    });
-    ;
-    FormPersonalComponent.prototype.updateProfile = function (userData) {
-        var _this = this;
-        var itemKey = Object.keys(userData)
-            .reduce(function (acc, value) {
-            if (value != ( true && 'type'))
-                acc = value;
-            return acc;
-        }, {});
-        var itemValue = userData["" + itemKey];
-        this._profileService.updateUser(userData).subscribe(function (response) {
-            console.log(response);
-            if (response && response.id) {
-                _this._snackBar.open("Your \" " + itemKey + " \" update to \" " + itemValue + " \" is successfull", 'X', { duration: 10000, panelClass: 'pink-style' });
-                _this._profileService.userSource.next(response);
-                _this.formPersonalProfile.get(itemKey).reset();
-            }
-            else
-                _this._snackBar.open('Your update is not successfull, please try again.', 'X', { duration: 10000, panelClass: 'red-style' });
-        }, function (error) { return _this._snackBar.open('Error' + error, 'X', { duration: 10000, panelClass: 'red-style' }); });
-    };
-    FormPersonalComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-            selector: 'app-form-personal',
-            template: __webpack_require__(/*! raw-loader!./form-personal.component.html */ "./node_modules/raw-loader/index.js!./src/app/side-bar/accordion/form-personal/form-personal.component.html"),
-            styles: [__webpack_require__(/*! ./form-personal.component.scss */ "./src/app/side-bar/accordion/form-personal/form-personal.component.scss")]
-        }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [src_app_configurations_services_profile_service_profile_service_service__WEBPACK_IMPORTED_MODULE_3__["ProfileService"],
-            _angular_material__WEBPACK_IMPORTED_MODULE_4__["MatSnackBar"]])
-    ], FormPersonalComponent);
-    return FormPersonalComponent;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/app/side-bar/side-bar.component.scss":
-/*!**************************************************!*\
-  !*** ./src/app/side-bar/side-bar.component.scss ***!
-  \**************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3NpZGUtYmFyL3NpZGUtYmFyLmNvbXBvbmVudC5zY3NzIn0= */"
-
-/***/ }),
-
-/***/ "./src/app/side-bar/side-bar.component.ts":
-/*!************************************************!*\
-  !*** ./src/app/side-bar/side-bar.component.ts ***!
-  \************************************************/
-/*! exports provided: SideBarComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SideBarComponent", function() { return SideBarComponent; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _configurations_services_profile_service_profile_service_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../configurations/services/profile-service/profile-service.service */ "./src/app/configurations/services/profile-service/profile-service.service.ts");
-/* harmony import */ var _angular_animations__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/animations */ "./node_modules/@angular/animations/fesm5/animations.js");
-/* harmony import */ var _configurations_animations_anim_fn__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../configurations/animations/anim-fn */ "./src/app/configurations/animations/anim-fn.ts");
-/* harmony import */ var _configurations_services_visitor_service_visitor_service_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../configurations/services/visitor-service/visitor-service.service */ "./src/app/configurations/services/visitor-service/visitor-service.service.ts");
-
-
-
-
-
-
-var SideBarComponent = /** @class */ (function () {
-    function SideBarComponent(profileService, visitorService) {
-        var _this = this;
-        this.profileService = profileService;
-        this.visitorService = visitorService;
-        this.enteredImage = false;
-        this.profileService.profile.subscribe(function (response) {
-            if (response && response.id) {
-                _this.profile = response;
-            }
-            else
-                _this.profile = null;
-        });
-        var visitor = this.visitorService.visitorProfile.subscribe(function (response) {
-            if (response)
-                _this.visitor = response;
-            else
-                _this.visitor = null;
-        });
-    }
-    SideBarComponent.prototype.ngOnInit = function () { };
-    SideBarComponent.prototype.mouseEnterImage = function (event) {
-        this.enteredImage = event.returnValue;
-    };
-    SideBarComponent.prototype.mouseLeaveImage = function (event) {
-        this.enteredImage = !event.returnValue;
-    };
-    SideBarComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-            selector: 'app-side-bar',
-            template: __webpack_require__(/*! raw-loader!./side-bar.component.html */ "./node_modules/raw-loader/index.js!./src/app/side-bar/side-bar.component.html"),
-            animations: [
-                Object(_angular_animations__WEBPACK_IMPORTED_MODULE_3__["trigger"])('imageEnterDrop', [
-                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_3__["transition"])(':enter', [
-                        Object(_angular_animations__WEBPACK_IMPORTED_MODULE_3__["useAnimation"])(_configurations_animations_anim_fn__WEBPACK_IMPORTED_MODULE_4__["imageEnterDrop"])
-                    ])
-                ])
-            ],
-            styles: [__webpack_require__(/*! ./side-bar.component.scss */ "./src/app/side-bar/side-bar.component.scss")]
-        }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_configurations_services_profile_service_profile_service_service__WEBPACK_IMPORTED_MODULE_2__["ProfileService"],
-            _configurations_services_visitor_service_visitor_service_service__WEBPACK_IMPORTED_MODULE_5__["VisitorService"]])
-    ], SideBarComponent);
-    return SideBarComponent;
+    ], SidebarComponent);
+    return SidebarComponent;
 }());
 
 
@@ -7076,116 +5973,6 @@ var TagsComponent = /** @class */ (function () {
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
     ], TagsComponent);
     return TagsComponent;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/app/test/test.component.scss":
-/*!******************************************!*\
-  !*** ./src/app/test/test.component.scss ***!
-  \******************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = ".ck {\n  color: #000000;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2F6cmluL0RvY3VtZW50cy9HaXRIdWIvb2FyLXRlZ3VoL3NyYy9hcHAvdGVzdC90ZXN0LmNvbXBvbmVudC5zY3NzIiwic3JjL2FwcC90ZXN0L3Rlc3QuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRyxjQUFBO0FDQ0giLCJmaWxlIjoic3JjL2FwcC90ZXN0L3Rlc3QuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuY2t7XG4gICBjb2xvcjogIzAwMDAwMDtcbn0iLCIuY2sge1xuICBjb2xvcjogIzAwMDAwMDtcbn0iXX0= */"
-
-/***/ }),
-
-/***/ "./src/app/test/test.component.ts":
-/*!****************************************!*\
-  !*** ./src/app/test/test.component.ts ***!
-  \****************************************/
-/*! exports provided: TestComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TestComponent", function() { return TestComponent; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-
-
-;
-var TestComponent = /** @class */ (function () {
-    function TestComponent() {
-        this.editable = false;
-        this.selected = { button: { color: 'accent' } };
-        this.id = 1001;
-        this.content = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed maximus eget ante commodo sodales. Fusce lacus nisl, aliquam sed nisl varius, rutrum facilisis enim. Aenean sed libero justo. In hac habitasse platea dictumst. Nunc justo purus, tincidunt nec rhoncus vel, vehicula a mauris. In congue, justo a accumsan tempus, lectus turpis vestibulum nibh, in faucibus lacus tellus sed dui. Fusce magna leo, condimentum sed tincidunt sed, rutrum non ex. In lobortis cursus massa, eget auctor turpis pretium vitae. Vestibulum erat metus, pharetra non bibendum non, auctor sit amet lectus. Phasellus lobortis nunc eget lectus consectetur vulputate nec in arcu. Fusce tempus nisl sit amet nibh ullamcorper congue. Maecenas convallis orci rhoncus fermentum pharetra. Pellentesque mauris nunc, blandit nec arcu sed, suscipit semper sem. In hac habitasse platea dictumst. Pellentesque posuere laoreet eros, ac dignissim dolor. Morbi rhoncus congue efficitur. Donec mollis, ipsum in efficitur imperdiet, tellus elit condimentum sem, sit amet facilisis nisi nulla eget enim. Proin dolor lacus, tincidunt dictum sapien eu, condimentum feugiat leo. Ut turpis nunc, feugiat ac lacinia non, viverra ut tortor. Proin et nisi malesuada erat dictum viverra. In tincidunt tincidunt tortor, at molestie neque ultricies nec. Donec non gravida odio, eget vehicula justo. Proin purus risus, vulputate non malesuada eu, rutrum eget orci. Morbi neque eros, lacinia non tortor vel, ornare maximus lectus. Donec eget quam arcu. Sed leo odio, viverra a fringilla eu, finibus a leo. Nunc pharetra dignissim mi sit amet porta. Phasellus posuere aliquet mauris, in tincidunt risus eleifend ac. Vivamus venenatis placerat tortor, id congue magna. Etiam non nunc vitae leo suscipit dignissim et a libero. Nam venenatis tellus vitae tortor dictum facilisis. Nam in justo non massa semper tempus ut a velit. Aliquam tincidunt tellus eget nulla tristique, eget sollicitudin nunc vestibulum. Nullam nec turpis sit amet odio egestas mattis eget accumsan justo. Pellentesque auctor tempus quam a varius. Suspendisse aliquet ipsum quis tempor efficitur. Curabitur faucibus porta diam, ullamcorper condimentum felis auctor at. Maecenas facilisis, erat vitae ultricies malesuada, libero augue commodo nibh, vel commodo neque elit quis metusCurabitur suscipit varius pulvinar. Duis ligula arcu, cursus non urna sit amet, gravida interdum sem. Nam ullamcorper elit lorem, sed aliquet ligula dignissim id. Sed ullamcorper commodo nunc et condimentum. Nam metus nisl, pulvinar non ex ac, suscipit ullamcorper lacus. Phasellus pretium placerat imperdiet. Vestibulum condimentum pellentesque ornare. Pellentesque bibendum commodo felis, eu mollis odio lacinia quis. Maecenas felis ipsum, bibendum eget lacinia non, porta vitae mi. Sed sagittis quam eget enim pulvinar, a viverra eros mollis. Mauris facilisis nulla est, quis consectetur neque venenatis quis. Mauris egestas ligula at tortor feugiat interdum. Ut lobortis est non tortor sollicitudin, non commodo lectus gravida. Suspendisse lacinia fermentum consectetur. Etiam quis neque vel leo pellentesque vestibulum sed nec nisi. Proin non dui quis dui lobortis volutpat. Mauris ac sapien dolor.';
-    }
-    TestComponent.prototype.ngOnInit = function () {
-        var obj = { x: 1, y: 2, z: 3 };
-        var n = [];
-        var newObj = Object.keys(obj).reduce(function (acc, value) {
-            if (value != 'x') {
-                var y = {};
-                y[value] = obj[value];
-                acc.push(y);
-            }
-            return acc;
-        }, []);
-        console.log(newObj);
-    };
-    TestComponent.prototype.contentSelected = function () {
-        var selection = document.getSelection();
-        this.selection = selection;
-        var ranges = [];
-        for (var i = 0; i < selection.rangeCount; i++) {
-            ranges[i] = selection.getRangeAt(i);
-        }
-        ;
-        this.ranges = ranges;
-        var selectedContent = this.content;
-        var selected = {
-            start: selection.anchorOffset,
-            end: selection.focusOffset,
-            type: selection.type.toLowerCase(),
-            length: selection.focusNode.nodeValue.length
-        };
-        var content = selectedContent.slice((selected.start), (selected.end));
-        selected.content = content;
-        return selected;
-    };
-    TestComponent.prototype.createNode = function (button) {
-        var cmdButton = button._elementRef.nativeElement.id;
-        var selected = this.contentSelected();
-        var elementId = this.id;
-        ++elementId;
-        this.id = elementId;
-        selected.button = { id: cmdButton, color: 'primary' };
-        selected.element = { id: cmdButton + "-" + elementId };
-        var range = this.ranges[0];
-        var newElement = document.createElement(cmdButton);
-        newElement.id = selected.element.id;
-        if (selected && selected.type === 'caret') {
-            // newElement.appendChild(event.target.value);
-        }
-        else if (selected && selected.type === "range") {
-            newElement.textContent = selected.content;
-            range.deleteContents();
-            range.insertNode(newElement);
-            range.endContainer;
-            this.resetButton();
-        }
-        else
-            console.log('Please select element to bold');
-    };
-    TestComponent.prototype.resetButton = function () {
-        this.selected = {
-            button: { color: 'accent' }
-        };
-    };
-    TestComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-            selector: 'app-test',
-            template: __webpack_require__(/*! raw-loader!./test.component.html */ "./node_modules/raw-loader/index.js!./src/app/test/test.component.html"),
-            styles: [__webpack_require__(/*! ./test.component.scss */ "./src/app/test/test.component.scss")]
-        }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
-    ], TestComponent);
-    return TestComponent;
 }());
 
 
