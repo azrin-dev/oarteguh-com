@@ -12,8 +12,12 @@
                            (keyup)="postContent($event)"
                >
                </textarea>
+            </mat-form-field>  
+            <div class="lm__post-control" fxLayout="row" fxLayoutAlign="space-between cente">  
                <mat-hint>{{ 500 - postVar.textLength }} characters left</mat-hint>
-            </mat-form-field>            
+               <button mat-raised-button color="primary">Submit</button>
+            </div>
+                      
          </div>
 
       </mat-card-content>
