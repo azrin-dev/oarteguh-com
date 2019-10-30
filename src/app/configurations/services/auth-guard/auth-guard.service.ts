@@ -10,17 +10,15 @@ import { JwtHelperService } from '@auth0/angular-jwt';
 @Injectable({
   providedIn: 'root'
 })
-export class AuthGuardService implements CanActivate{
+export class AuthGuardService implements CanActivate {
 
   constructor(
     private router: Router,
     private profileService: ProfileService
   ) { }
 
-  canActivate(routes, state: RouterStateSnapshot)
-  {
-      let user = this.profileService.getLoggedStatus();
-      if(!user.expired) return true;
-      else return false;
+  canActivate(routes, state: RouterStateSnapshot) {
+      const user = this.profileService.getLoggedStatus();
+      if (!user.expired) { return true; } else { return false; }
   }
 }

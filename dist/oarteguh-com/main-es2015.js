@@ -150,7 +150,7 @@ module.exports = "<p>\n  admin works!\n</p>\n"
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"spinner\" fxLayout=\"column\" fxLayoutAlign=\"center center\" *ngIf=\"!init\">\n   <div class=\"spinner__container\" fxFlex=\"100vh\" fxLayout=\"column\" fxLayoutAlign=\"center center\" >\n      <mat-spinner color=\"primary\"></mat-spinner>\n   </div>\n</div>\n\n<app-navigations *ngIf=\"init\"></app-navigations>"
+module.exports = "\n\n<app-navigations></app-navigations>"
 
 /***/ }),
 

@@ -16,7 +16,7 @@ export class PostComponent implements OnInit {
 
    post: Post;
    profile: User;
-   addComment: boolean = false;
+   addComment = false;
    commentCtrl: FormControl;
 
 
@@ -25,7 +25,7 @@ export class PostComponent implements OnInit {
      private postService: PostService,
      private profileService: ProfileService,
      public snackBar: MatSnackBar
-  ) { 
+  ) {
          this.commentCtrl = new FormControl('', [ Validators.required, Validators.maxLength(200) ]);
   }
 
@@ -33,60 +33,55 @@ export class PostComponent implements OnInit {
 
       this.router.paramMap.subscribe(
          (response: any) => {
-            let postId = response.params.id;
-            if(postId) this.getPost(postId);
-            else this.snackBar.open('Post does not exist', 'X', { duration: 10000, panelClass: 'red-style'});
+            const postId = response.params.id;
+            if (postId) { this.getPost(postId); } else { this.snackBar.open('Post does not exist', 'X', { duration: 10000, panelClass: 'red-style'}); }
          }
       );
 
       this.profileService.profile.subscribe(
          (response: User) => {
-            if(response && response._id) this.profile = response;
-            else this.profile = null;
+            if (response && response._id) { this.profile = response; } else { this.profile = null; }
          }
-      )
+      );
   }
 
-  getPost(id){
+  getPost(id) {
      this.postService.getPost({ id }).subscribe(
         (response: Post) => {
            console.log(response);
            this.post = response;
         }
-     )
+     );
   }
 
-  likePost(event){
-     let profile = this.profile;
-     if(profile && profile._id){
-     }
-     else this.snackBar.open('Please Login to Like post', 'X', { duration: 10000, panelClass: 'red-style' });
+  likePost(event) {
+     const profile = this.profile;
+     if (profile && profile._id) {
+     } else { this.snackBar.open('Please Login to Like post', 'X', { duration: 10000, panelClass: 'red-style' }); }
   }
 
-  commentPost(event){
-      let profile = this.profile;
-      if(profile && profile._id){
+  commentPost(event) {
+      const profile = this.profile;
+      if (profile && profile._id) {
          this.addComment = true;
-      }
-      else this.snackBar.open('Please Login to Comment on post', 'X', { duration: 10000, panelClass: 'red-style' });
+      } else { this.snackBar.open('Please Login to Comment on post', 'X', { duration: 10000, panelClass: 'red-style' }); }
    }
 
-   submitComment(){
-      let comment = {
+   submitComment() {
+      const comment = {
          content  :  this.commentCtrl.value,
          owner    :  this.profile._id,
          post     :  this.post.id
-      }
-      
+      };
+
       this.postService.newPostComment(comment).subscribe(
          (response: Post) => {
-            if(response && response._id) this.post = response;
-            else this.snackBar.open('Saving comment fail. Please refresh browser and try again', 'X', { duration: 10000, panelClass: 'red-style' });
+            if (response && response._id) { this.post = response; } else { this.snackBar.open('Saving comment fail. Please refresh browser and try again', 'X', { duration: 10000, panelClass: 'red-style' }); }
          },
          error => {
             this.snackBar.open(`Error saving comment. Please refresh browser and try again. Error: ${error}`, 'X', { duration: 10000, panelClass: 'red-style' });
          }
-      )
+      );
    }
 
 }

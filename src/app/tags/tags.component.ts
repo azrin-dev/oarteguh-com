@@ -10,8 +10,8 @@ export class TagsComponent implements OnInit {
 
    posts = [
       {
-         poster: { 
-            name: 'Azrin Amin', 
+         poster: {
+            name: 'Azrin Amin',
             slug: '/user/profile/azrin-amin',
             avatar: 'assets/images/man.png',
             about: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...'
@@ -53,8 +53,8 @@ export class TagsComponent implements OnInit {
          }
       },
       {
-         poster: { 
-            name: 'Azrin Amin', 
+         poster: {
+            name: 'Azrin Amin',
             slug: '/user/profile/azrin-amin',
             avatar: '',
             about: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...'
@@ -96,8 +96,8 @@ export class TagsComponent implements OnInit {
          }
       },
       {
-         poster: { 
-            name: 'Azrin Amin', 
+         poster: {
+            name: 'Azrin Amin',
             slug: '/user/profile/azrin-amin',
             avatar: '',
             about: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...'
@@ -139,34 +139,31 @@ export class TagsComponent implements OnInit {
          }
       }
    ];
-   postsExist: boolean = true;
+   postsExist = true;
    postId: Post;
    imagePost: Post;
-   imageEntered: boolean = false;
+   imageEntered = false;
 
   constructor() { }
 
-  
+
   ngOnInit() {
    }
 
-   mouseEnterCard(event)
-   {
+   mouseEnterCard(event) {
       this.postId = event.target.id;
    }
 
-   mouseEnterImage(event)
-   {
+   mouseEnterImage(event) {
       this.imagePost = event.target.id;
       this.imageEntered = true;
-      
+
    }
 
-   mouseLeaveImage()
-   {
-      
-      this.imageEntered = false;     
-      
+   mouseLeaveImage() {
+
+      this.imageEntered = false;
+
    }
 
 }

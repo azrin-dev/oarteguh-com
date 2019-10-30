@@ -17,11 +17,11 @@ export class AdminSerialComponent implements OnInit {
       serial2: new FormControl('', [Validators.required, Validators.minLength(6), Validators.maxLength(6)]),
       volume:  new FormControl('', Validators.required),
       market:  new FormControl('', Validators.required)
-      
+
    });
    markets = [
       {area: 'Malaysia'},
-      {area: 'Singapore'} 
+      {area: 'Singapore'}
    ];
 
   constructor(
@@ -32,18 +32,16 @@ export class AdminSerialComponent implements OnInit {
   ngOnInit() {
   }
 
-  submitSerialForm()
-  {
+  submitSerialForm() {
      this.serialService.generateSerialNo(this.serialForm.value).subscribe(
          (response: any) => {
-            if(response.code) {               
-               this.snackBar.open(`Bulk serial number generation error: ${response.name}`, 'X', { duration: 10000, panelClass: 'primary' }); }
-            else{
+            if (response.code) {
+               this.snackBar.open(`Bulk serial number generation error: ${response.name}`, 'X', { duration: 10000, panelClass: 'primary' }); } else {
                this.serialService.updateSerials();
                this.snackBar.open('Bulk serial number generation is successfull', 'X', { duration: 10000, panelClass: 'primary' });
             }
          }
-      )
+      );
   }
 
 }

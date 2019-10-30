@@ -28,10 +28,10 @@ export class CommentsComponent implements OnInit {
       );
 
       this.postService.postCard.subscribe(
-         (response) => {            
+         (response) => {
             this.post = response;
          }
-      )
+      );
   }
 
 }

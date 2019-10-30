@@ -4,7 +4,7 @@ import { COMMA, ENTER } from '@angular/cdk/keycodes';
 import { MatChipInputEvent } from '@angular/material/chips';
 import { Post } from 'src/app/configurations/interface/post';
 
-export interface Category{ _id: string };
+export interface Category { _id: string; }
 
 @Component({
   selector: 'app-chip-categories',
@@ -29,19 +29,18 @@ export class ChipCategoriesComponent implements OnInit {
 
       this.postService.getCategories().subscribe(
          (response: any) => {
-            if(response){ 
+            if (response) {
                this.categories = response;
-            }
-            else this.categories = null;
+            } else { this.categories = null; }
          }
       );
   }
 
    add(event: MatChipInputEvent): void {
-      let input = event.input;
-      let value: any = event.value;
+      const input = event.input;
+      const value: any = event.value;
 
-      if ((value || '').trim()) {         
+      if ((value || '').trim()) {
          this.categories.push(value);
          this.updateCatSource();
       }
@@ -60,8 +59,8 @@ export class ChipCategoriesComponent implements OnInit {
       }
    }
 
-   updateCatSource(){
-      let categories: any = this.categories;
+   updateCatSource() {
+      const categories: any = this.categories;
       this.postService.catSource.next(categories);
    }
 

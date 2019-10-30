@@ -8,8 +8,8 @@ import { routes } from '../app-routing.module';
 import { ProfileService } from '../configurations/services/profile-service/profile-service.service';
 import { User } from '../configurations/model/user';
 
-export interface Link { path: string, data: { name: string, icon: string, tooltip: string, type: string } }
-export interface Menu { public: [Link], auth: Link[], user: Link[], admin: Link[] }
+export interface Link { path: string; data: { name: string, icon: string, tooltip: string, type: string }; }
+export interface Menu { public: [Link]; auth: Link[]; user: Link[]; admin: Link[]; }
 
 @Component({
   selector: 'app-navigations',
@@ -20,18 +20,18 @@ export interface Menu { public: [Link], auth: Link[], user: Link[], admin: Link[
       trigger('fadeOut', [
          state('true', style({ opacity: 0.5 })),
          state('false', style({ opacity: 1 })),
-         transition('true <=> false', animate(2000))  ])  //end trigger
+         transition('true <=> false', animate(2000))  ])  // end trigger
 
    ]
 })
-export class NavigationsComponent implements OnInit{   
+export class NavigationsComponent implements OnInit {
 
    isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
       .pipe(
          map(result => result.matches)
-      );   
-   sideNavIcon: boolean = true;
-   opened: boolean = true;
+      );
+   sideNavIcon = true;
+   opened = true;
    links: Menu;
    profile: User = null;
 
@@ -41,41 +41,33 @@ export class NavigationsComponent implements OnInit{
      private profileService: ProfileService
      ) { }
 
-   ngOnInit()
-   {  
+   ngOnInit() {
       this.profileService.profile.subscribe(
          (response: User) => {
-            if(response && response._id) this.profile = response;
+            if (response && response._id) { this.profile = response; }
          },
          (error => console.log('Error : ' + error))
-      )
-      let pages = routes.reduce((acc, value) => {                        
-            if(value.data.type === 'public') acc.public.push(value);
-            else if(value.data.type === 'auth') acc.auth.push(value);
-            else if(value.data.type === 'user') acc.user.push(value);
-            else if(value.data.type === 'admin') acc.admin.push(value);
-         return acc;
-      }, {public:[], auth: [], user: [], admin: []});
+      );
+      const pages = routes.reduce((acc, value) => {
+            if (value.data.type === 'public') { acc.public.push(value); } else if (value.data.type === 'auth') { acc.auth.push(value); } else if (value.data.type === 'user') { acc.user.push(value); } else if (value.data.type === 'admin') { acc.admin.push(value); }
+            return acc;
+      }, {public: [], auth: [], user: [], admin: []});
       this.links = pages as Menu;
    }
 
-  toggleSidenav()
-  {
-      this.sideNavIcon? this.sideNavIcon = false: this.sideNavIcon = true;
+  toggleSidenav() {
+      this.sideNavIcon ? this.sideNavIcon = false : this.sideNavIcon = true;
   }
 
-  itemClicked()
-  {
-     this.sideNavIcon=true;
+  itemClicked() {
+     this.sideNavIcon = true;
   }
 
-  backToHome()
-  {
+  backToHome() {
       this.router.navigate([''], { fragment: 'top' });
   }
 
-  logout()
-  {
+  logout() {
      this.profileService.logout();
   }
 

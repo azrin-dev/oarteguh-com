@@ -17,7 +17,7 @@ export class PostService {
    categories: Post['categories'];
    content: SafeHtml;
    image: any;
-   tags: Post['tags'];   
+   tags: Post['tags'];
 
    postSource = new BehaviorSubject(this.post);
    postCard = this.postSource as Observable<Post>;
@@ -45,12 +45,11 @@ export class PostService {
       private http: HttpClient
    ) { }
 
-   setPostSourceValue(id)
-   {
+   setPostSourceValue(id) {
          this.postSource.next(id);
    }
 
-   getCategories(){
+   getCategories() {
       return this.http.get('/api/posts/categories')
             .pipe(
                map((categories: any) => {
@@ -60,10 +59,10 @@ export class PostService {
                catchError(error => throwError(error)));
    }
 
-   getTags(){
+   getTags() {
       return this.http.get('/api/posts/tags')
             .pipe(
-               map((tags: any)=> {
+               map((tags: any) => {
                   this.tagsSource.next(tags);
                   return tags;
                }),
@@ -71,7 +70,7 @@ export class PostService {
             );
    }
 
-   uploadFileToDb(file){
+   uploadFileToDb(file) {
       const form = new FormData;
       form.set('name', file);
 
@@ -83,18 +82,18 @@ export class PostService {
          catchError(error => throwError(error)));
    }
 
-   newPost(post){
+   newPost(post) {
       return this.http.post('/api/posts/post/new', post, httpOptions)
       .pipe( catchError(error => throwError(error)) );
    }
 
-   getAllPost(){
+   getAllPost() {
       return this.http.get('/api/posts')
          .pipe( catchError(error => throwError(error)) );
    }
 
-   getPost(id){
-      return this.http.post('/api/posts/post', {id}, httpOptions).pipe( 
+   getPost(id) {
+      return this.http.post('/api/posts/post', {id}, httpOptions).pipe(
          catchError(error => throwError(error)),
          map(post => {
             this.postSource.next(post);
@@ -103,7 +102,7 @@ export class PostService {
       );
    }
 
-   newPostComment(comment){
+   newPostComment(comment) {
       return this.http.post('/api/posts/post/comment/new', comment, httpOptions).pipe(
          map(post => {
             this.postSource.next(post);
@@ -113,7 +112,7 @@ export class PostService {
       );
    }
 
-   updatePost(post){
+   updatePost(post) {
       return this.http.post('/api/posts/post/update', post, httpOptions).pipe(
          catchError(error => throwError(error))
       );

@@ -1,4 +1,4 @@
 export interface Mode {
-    new?: boolean,
-    edit?: boolean
+    new?: boolean;
+    edit?: boolean;
 }

@@ -10,8 +10,6 @@ import { Observable } from 'rxjs';
 import { map, tap, last, catchError } from 'rxjs/operators';
 import { Category } from './chip-categories/chip-categories.component';
 import { editorConfig } from 'src/app/configurations/services/post-service/editor-config';
-import { AngularEditorConfig } from '@kolkov/angular-editor';
-import { NgmEditorService } from 'src/app/ngm-editor/service/ngm-editor-service.service';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 
 
@@ -26,17 +24,16 @@ export class FormPostComponent implements OnInit {
    formNewPost: FormGroup;
    profile: User;
    created: number = Date.now();
-   titleSlug: string;   
+   titleSlug: string;
    fileName: string;
    selectedImage;
-   uploadImage: boolean = false;
-   uploading: boolean = false;
+   uploadImage = false;
+   uploading = false;
    uploadPct = 0;
-   uploaded: boolean = false;
+   uploaded = false;
    categories: Post['categories'];
    tags: Post['tags'];
-   sidebar: boolean = false;
-   editorConfig: AngularEditorConfig;
+   sidebar = false;
    rawContent: string;
 
    content: any;
@@ -46,15 +43,12 @@ export class FormPostComponent implements OnInit {
       private profileService: ProfileService,
       private postService: PostService,
       public snackBar: MatSnackBar,
-      private editorService: NgmEditorService,
       private sanitizer: DomSanitizer
 
-  ) {    
-         this.editorConfig = editorConfig;
+  ) {
          const profile = this.profileService.profile.subscribe(
             (response: User) => {
-               if(response && response.id) this.profile = response;
-               else this.profile = null;
+               if (response && response.id) { this.profile = response; } else { this.profile = null; }
             }
          );
 
@@ -67,13 +61,13 @@ export class FormPostComponent implements OnInit {
          });
 
          this.postService.postCats.subscribe(
-            (response: any) => {                          
-               this.categories = response;               
+            (response: any) => {
+               this.categories = response;
          } );
 
          this.postService.postTags.subscribe(
-            (response: any) => {                       
-               this.tags = response;                   
+            (response: any) => {
+               this.tags = response;
          } );
    }
 
@@ -82,94 +76,92 @@ export class FormPostComponent implements OnInit {
 
   }
 
-  get titleCtrl(){ return this.formNewPost.get('title') };
-  get subtitleCtrl(){ return this.formNewPost.get('subtitle') };
-  get contentCtrl(){ return this.formNewPost.get('content') };
-  get imageCtrl(){ return this.formNewPost.get('image') };
-  get slugCtrl(){ return this.formNewPost.get('slug') };
+  get titleCtrl() { return this.formNewPost.get('title'); }
+  get subtitleCtrl() { return this.formNewPost.get('subtitle'); }
+  get contentCtrl() { return this.formNewPost.get('content'); }
+  get imageCtrl() { return this.formNewPost.get('image'); }
+  get slugCtrl() { return this.formNewPost.get('slug'); }
 
-   createSlug(){     
-      let title = this.titleCtrl.value.toLowerCase().split(' ').join('-');
-      let date = Date.now();
-      let name = this.profile.name.toLowerCase().split(' ').join('-');
-      let slug = `/${name}/${date}/${title}`;
+   createSlug() {
+      const title = this.titleCtrl.value.toLowerCase().split(' ').join('-');
+      const date = Date.now();
+      const name = this.profile.name.toLowerCase().split(' ').join('-');
+      const slug = `/${name}/${date}/${title}`;
       this.slugCtrl.setValue(slug);
    }
 
-   updateTitleSource(event){
-      let value = event.target.value;
+   updateTitleSource(event) {
+      const value = event.target.value;
       this.postService.titleSource.next(value);
    }
 
-   updateSubtitleSource(event){
-         let value = event.target.value;
+   updateSubtitleSource(event) {
+         const value = event.target.value;
          this.postService.subtitleSource.next(value);
       }
 
-   updateContentSource(event){
-      let content = event.target.innerText;  
+   updateContentSource(event) {
+      const content = event.target.innerText;
       this.rawContent = content;
-      let safeContent = this.sanitizer.bypassSecurityTrustHtml(content) as SafeHtml;
-      this.content = safeContent;    
+      const safeContent = this.sanitizer.bypassSecurityTrustHtml(content) as SafeHtml;
+      this.content = safeContent;
       this.postService.contentSource.next(safeContent);
    }
 
-   enterEvent(event){  
-      if(event.keyCode === 13){
+   enterEvent(event) {
+      if (event.keyCode === 13) {
 
-         let selection = document.getSelection();
+         const selection = document.getSelection();
 
          // Get range from selection which specify anchorOffset and focusOffset value
-         let ranges: Range[] = [];
-         for(let i = 0; i < selection.rangeCount; i++) {
+         const ranges: Range[] = [];
+         for (let i = 0; i < selection.rangeCount; i++) {
             ranges[i] = selection.getRangeAt(i);
-         };
-         let range = ranges[0];
-         let newElement = document.createElement('p') as HTMLElement;
-         range.insertNode(newElement); 
+         }
+         const range = ranges[0];
+         const newElement = document.createElement('p') as HTMLElement;
+         range.insertNode(newElement);
 
       }
    }
 
-   selectedFile(event){
-      const file = event.target.files[0];     
-      
-      if(file && file.name){
+   selectedFile(event) {
+      const file = event.target.files[0];
+
+      if (file && file.name) {
          this.uploading = true;
          this.uploaded = false;
          this.uploadPct = 0;
-            let fileExt = file.name.split('.');
-            if(fileExt[1] === 'jpg' || 'png' || 'jpeg' ){
+         const fileExt = file.name.split('.');
+         if (fileExt[1] === 'jpg' || 'png' || 'jpeg' ) {
                this.selectedImage = file;
                this.postService.imageSource.next(file);
-            }
-            else this.snackBar.open('Please select an image file with png or jpg or jpeg extension', 'X', { duration: 10000, panelClass: 'red-theme' });
+            } else { this.snackBar.open('Please select an image file with png or jpg or jpeg extension', 'X', { duration: 10000, panelClass: 'red-theme' }); }
       }
    }
 
-   uploadFile(){
-      let file = this.selectedImage;
+   uploadFile() {
+      const file = this.selectedImage;
       const upload = this.postService.uploadFileToDb(file)
          .pipe(
             map(event => this.getEventMessage(event, file)),
-            tap(event => { return event }),
+            tap(event => event),
             last()
          )
          .subscribe(
             (response: any) => {
-               if(response && response.image){
+               if (response && response.image) {
                   this.uploaded = true;
                   this.imageCtrl.setValue(response.image);
                   this.uploading = true;
                   this.snackBar.open('Picture successfully uploaded.', 'X', { duration: 10000, panelClass: 'pink-style'});
-               }
-               else this.snackBar.open('Unable to upload picture, please try again.', 'X', { duration: 10000, panelClass: 'red-style'});
+               } else { this.snackBar.open('Unable to upload picture, please try again.', 'X', { duration: 10000, panelClass: 'red-style'}); }
 
             },
             (error => {
-                  this.snackBar.open('Error during upoload: ' + error, 'X', { duration: 10000, panelClass: 'red-style'})
+                  this.snackBar.open('Error during upoload: ' + error, 'X', { duration: 10000, panelClass: 'red-style'});
                })
-         )
+         );
    }
 
    /** Return distinct message for sent, upload progress, & response events */
@@ -177,7 +169,7 @@ export class FormPostComponent implements OnInit {
       switch (event.type) {
 
          case HttpEventType.UploadProgress:
-            let progress = {
+            const progress = {
                loaded: event.loaded,
                total: event.total
             };
@@ -190,28 +182,27 @@ export class FormPostComponent implements OnInit {
       }
    }
 
-   showProgress(message){
+   showProgress(message) {
       return message;
    }
 
-   submitPost(){
-      let form = this.formNewPost.value;
+   submitPost() {
+      const form = this.formNewPost.value;
       form.categories = this.categories;
       form.owner = this.profile._id;
       form.tags = this.tags;
       form.content = this.rawContent;
       this.postService.newPost(form).subscribe(
          (response: Post) => {
-            if(response && response._id) this.snackBar.open('Post submission is successfull.', 'X', {duration: 10000, panelClass: 'pink-style'});
-            else this.snackBar.open('Post submission fail. Please try again', 'X', {duration: 10000, panelClass: 'red-style'});
+            if (response && response._id) { this.snackBar.open('Post submission is successfull.', 'X', {duration: 10000, panelClass: 'pink-style'}); } else { this.snackBar.open('Post submission fail. Please try again', 'X', {duration: 10000, panelClass: 'red-style'}); }
          },
          error => this.snackBar.open('Post submission error: ' + error, 'X', {duration: 10000, panelClass: 'red-style'})
-      )
+      );
 
    }
-  
 
 
 
-  
+
+
 }

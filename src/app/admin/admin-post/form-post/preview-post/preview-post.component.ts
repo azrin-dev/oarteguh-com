@@ -13,15 +13,15 @@ import { DomSanitizer } from '@angular/platform-browser';
 export class PreviewPostComponent implements OnInit {
 
    profile: User;
-   contentExist: boolean = false;
-   sidebar: boolean = true;
+   contentExist = false;
+   sidebar = true;
    imagePreview;
    avatar;
    title: Post['title'];
    subtitle: Post['subtitle'];
    categories: Post['categories'];
    safeContent: string ;
-   
+
 
   constructor(
      private postService: PostService,
@@ -29,66 +29,64 @@ export class PreviewPostComponent implements OnInit {
      private sanitizer: DomSanitizer
   ) {
          this.profileService.profile.subscribe(
-            (response) => { this.profile = response }
+            (response) => { this.profile = response; }
          );
-         
+
          this.postService.postImage.subscribe(
-            (response: any) => {                
-               if(response && response.name){
+            (response: any) => {
+               if (response && response.name) {
                   // Image preview
                   const reader = new FileReader();
                   reader.onload = () => {
                      this.imagePreview = reader.result;
-                  }
+                  };
                   reader.readAsDataURL(response);
                   this.contentExist = true;
-               }
-               else this.imagePreview = null;
+               } else { this.imagePreview = null; }
          });
 
          // this.avatar = `assets/images/${this.profile.image}.png`;
 
          this.postService.titleCard.subscribe(
-            (response) => { 
+            (response) => {
                this.title = response;
                this.contentExist = true;
             }
          );
 
          this.postService.subtitleCard.subscribe(
-            (response) => { 
+            (response) => {
                this.subtitle = response;
                this.contentExist = true;
             }
          );
 
          this.postService.postCats.subscribe(
-            (response) => { 
+            (response) => {
                this.categories = response;
                this.contentExist = true;
-            
+
             }
-         );     
-         
+         );
+
          this.postService.postContent.subscribe(
-            (response: any) => { 
+            (response: any) => {
                console.log(response);
-               if(response === undefined) this.safeContent = 'HTML content is displayed here';
-               else{
+               if (response === undefined) { this.safeContent = 'HTML content is displayed here'; } else {
                   this.safeContent = response as string;
                   this.contentExist = true;
-               }               
+               }
             }
-         );   
+         );
 
    }
 
   ngOnInit() {
 
-      
+
 
   }
 
-  
+
 
 }

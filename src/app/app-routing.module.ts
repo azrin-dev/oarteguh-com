@@ -13,7 +13,6 @@ import { HomeComponent } from './page/home/home.component';
 import { AuthRegisterComponent } from './user/auth-register/auth-register.component';
 import { AdminPostComponent } from './admin/admin-post/admin-post.component';
 import { PreviewPostComponent } from './admin/admin-post/form-post/preview-post/preview-post.component';
-import { NgmEditorComponent } from './ngm-editor/ngm-editor.component';
 import { AngularEditorComponent } from './configurations/angular-editor/angular-editor.component';
 import { PostComponent } from './post/post.component';
 import { PostsComponent } from './posts/posts.component';
@@ -26,21 +25,21 @@ import { TermsComponent } from './page/terms/terms.component';
 import { ProfileComponent } from './page-user/profile/profile.component';
 
 export const routes: Routes = [
-  { path: '', component: HomeComponent, data: { name: 'Home', icon: 'home', tooltip: 'Home Page', type: 'public' } },      
-  { path: 'articles', component: PostsComponent, data: { name: 'Articles', icon: 'menu_book', tooltip: 'Articles', type: 'public' } }, 
-  { path: 'terms', component: TermsComponent, data: { name: 'Terms', icon: 'policy', tooltip: 'Terms', type: 'public' } }, 
-  { path: 'contact', component: ContactFormComponent, data: { name: 'Contact Us', icon: 'alternate_email', tooltip: 'Contact Us', type: 'public' }}, 
-  
+  { path: '', component: HomeComponent, data: { name: 'Home', icon: 'home', tooltip: 'Home Page', type: 'public' } },
+  { path: 'articles', component: PostsComponent, data: { name: 'Articles', icon: 'menu_book', tooltip: 'Articles', type: 'public' } },
+  { path: 'terms', component: TermsComponent, data: { name: 'Terms', icon: 'policy', tooltip: 'Terms', type: 'public' } },
+  { path: 'contact', component: ContactFormComponent, data: { name: 'Contact Us', icon: 'alternate_email', tooltip: 'Contact Us', type: 'public' }},
+
   /*
-  { path: 'user/profile', component: ProfileComponent, data: { name: 'Name', icon: 'account_circle', tooltip: 'Profile Page', type: 'user' } }, 
-  { path: 'posts/tags/tag/:tag', component: TagsComponent, data: { name: 'Tag', icon: 'dashboard', tooltip: 'Tag Page', type: 'user' } }, 
+  { path: 'user/profile', component: ProfileComponent, data: { name: 'Name', icon: 'account_circle', tooltip: 'Profile Page', type: 'user' } },
+  { path: 'posts/tags/tag/:tag', component: TagsComponent, data: { name: 'Tag', icon: 'dashboard', tooltip: 'Tag Page', type: 'user' } },
   { path: 'user/login', component: LoginComponent, data: { name: 'Login', icon: 'person', tooltip: 'Login Page', type: 'auth' } },
   { path: 'user/login/linkedin', component: LinkedinComponent, data: { name: 'Linkedin', icon: 'person', tooltip: 'Linkedin Callback Page', type: 'admin' } },
-  { path: 'user/forgot-password', component: ForgotPasswordComponent, data: { name: 'Forgot Password', icon: 'person', tooltip: 'Forgot Password', type: 'admin' } }, 
+  { path: 'user/forgot-password', component: ForgotPasswordComponent, data: { name: 'Forgot Password', icon: 'person', tooltip: 'Forgot Password', type: 'admin' } },
   { path: 'post/:user/:id/:title', component: PostComponent, data: { name: 'Post', icon: 'menu_book', tooltip: 'Post', type: 'admin' } },
   { path: 'user/register', component: RegisterComponent, data: { name: 'Register', icon: 'person_add', tooltip: 'Register Page', type: 'auth' } },
   { path: 'user/register/token/:authToken', component: AuthRegisterComponent, data: { name: 'Register', icon: 'person_add', tooltip: 'Authentication Register Page', type: 'admin' } },
-  
+
   // User routes
   { path: 'user/profile', component: UserComponent, canActivate: [AuthGuardService], data: { name: 'Profile', icon: 'person', tooltip: 'Profile Page', type: 'user' } },
 
@@ -50,7 +49,7 @@ export const routes: Routes = [
   { path: 'admin/posts/post/edit/:id', component: AdminPostEditComponent, canActivate: [AuthGuardService, AdminAuthGuardService], data: { name: 'Post', icon: 'book', type: 'admin'  } },
   { path: 'admin/posts', component: AdminPostsComponent, canActivate: [AuthGuardService, AdminAuthGuardService], data: { name: 'Posts', icon: 'book', type: 'admin'  } },
    */
-  
+
   // Wildcard routes
   { path: '**', component: HomeComponent, data: { name: 'Back to Home', icon: 'dashboard', type: 'wildcard' } },
 ];

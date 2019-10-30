@@ -22,7 +22,7 @@ export class AdminPostsComponent implements OnInit {
             console.log(response);
             this.posts = response;
          }
-      )
+      );
   }
 
 }

@@ -1,5 +1,5 @@
 export interface BlogTag {
-    _id?: string,
+    _id?: string;
     tag: string;
   }
-  
+

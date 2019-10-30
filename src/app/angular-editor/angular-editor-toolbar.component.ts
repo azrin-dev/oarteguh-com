@@ -6,10 +6,10 @@ import { MatButton } from '@angular/material';
 import { AngularEditorService } from '../configurations/angular-editor/angular-editor.service';
 import { CustomClass, Font } from '../configurations/angular-editor/config';
 
-export interface Element{
-   id?: string,
-   color: string
-};
+export interface Element {
+   id?: string;
+   color: string;
+}
 
 @Component({
   selector: 'angular-editor-toolbar',
@@ -19,13 +19,13 @@ export interface Element{
 
 export class AngularEditorToolbarComponent {
    id = '';
-   htmlMode: boolean = false;
+   htmlMode = false;
    showToolbar = true;
    linkSelected = false;
    block = 'Header';
    defaultFontId;
    fontName;
-   fontSize: string = '5';
+   fontSize = '5';
    foreColour;
    backColor;
    fonts: Font[];
@@ -37,15 +37,15 @@ export class AngularEditorToolbarComponent {
       A: 'link'
    };
    select = ['H1', 'H2', 'H3', 'H4', 'H5', 'H6', 'P', 'PRE', 'DIV'];
-   buttons = [    
-      'bold', 'italic', 'underline', 
-      'strikeThrough', 'subscript', 'superscript', 
-      'justifyLeft', 'justifyCenter', 'justifyRight', 
-      'justifyFull', 'indent', 'outdent', 
+   buttons = [
+      'bold', 'italic', 'underline',
+      'strikeThrough', 'subscript', 'superscript',
+      'justifyLeft', 'justifyCenter', 'justifyRight',
+      'justifyFull', 'indent', 'outdent',
       'insertUnorderedList', 'insertOrderedList'
    ];
    initColor = 'accent';
-   element: Element; 
+   element: Element;
 
   @Output() execute: EventEmitter<string> = new EventEmitter<string>();
 
@@ -59,7 +59,7 @@ export class AngularEditorToolbarComponent {
     private r: Renderer2,
     private editorService: AngularEditorService,
     @Inject(DOCUMENT) private doc: any
-  ) { 
+  ) {
          this.element = { color: 'accent' };
   }
 
@@ -69,9 +69,9 @@ export class AngularEditorToolbarComponent {
       */
    triggerCommand(elem: MatButton) {
       const command = elem._elementRef.nativeElement.id;
-      const initColor = elem.color;   
+      const initColor = elem.color;
       this.element.id = command; //
-      this.execute.emit(command);   
+      this.execute.emit(command);
    }
 
   /**
@@ -83,9 +83,9 @@ export class AngularEditorToolbarComponent {
       }
       this.buttons.forEach(e => {
          const result = this.doc.queryCommandState(e);
-         const elementById = this.doc.getElementById(e); 
-         
-         if(result) (elementById != null)
+         const elementById = this.doc.getElementById(e);
+
+         if (result) { (elementById != null)
                ?  this.element = {
                      id: elementById,
                      color: 'primary'
@@ -94,10 +94,8 @@ export class AngularEditorToolbarComponent {
                      id: elementById,
                      color: 'accent'
                   };
-               // this.r.addClass(elementById, 'active')
-               // this.r.removeClass(elementById, 'active');
-         else return;
-      });      
+         } else { return; }
+      });
    }
 
    /**

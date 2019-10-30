@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class AboutWhoComponent implements OnInit {
 
    descriptions = [
-      { 
+      {
          title: 'Inventor',
          image: 'trophy.png',
          description: 'With multi winning awards, which includes prestigious MWA awards, you can rest assured that I will do my best in helping you.'
@@ -29,7 +29,7 @@ export class AboutWhoComponent implements OnInit {
          description: 'As your partner, I am aiming for the best for us. We jump while you jump, not after. We are one in the essence.'
       }
 
-   ]
+   ];
 
   constructor() { }
 

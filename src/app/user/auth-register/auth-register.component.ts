@@ -17,7 +17,7 @@ import { ProfileService } from 'src/app/configurations/services/profile-service/
 })
 export class AuthRegisterComponent implements OnInit {
 
-   mouseEnter: boolean = false;
+   mouseEnter = false;
    authToken: User['authToken'];
 
   constructor(
@@ -28,29 +28,25 @@ export class AuthRegisterComponent implements OnInit {
   ngOnInit() {
   }
 
-  mouseEnterCard(event)
-  {
+  mouseEnterCard(event) {
       this.mouseEnter = event.returnValue;
   }
 
-  mouseLeaveCard(event)
-  {
+  mouseLeaveCard(event) {
       this.mouseEnter = !event.returnValue;
   }
 
-  agreeTnc()
-  {
+  agreeTnc() {
       this.activatedRoute.params.subscribe(
          (params: any) => {
-            let authToken = params.authToken as User['authToken'];
+            const authToken = params.authToken as User['authToken'];
             this.authToken = authToken;
             this.sendAuthToken(authToken);
          }
-      )
+      );
   }
 
-  sendAuthToken(authToken)
-  {
+  sendAuthToken(authToken) {
       this.profileService.checkAuthToken(authToken);
   }
 

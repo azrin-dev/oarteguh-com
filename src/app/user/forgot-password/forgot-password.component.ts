@@ -17,7 +17,7 @@ export class ForgotPasswordComponent implements OnInit {
   constructor(
       private profileService: ProfileService,
       public snackBar: MatSnackBar
-  ) { 
+  ) {
 
       this.loginForm = new FormGroup({
          email: new FormControl('', [Validators.required, Validators.email])
@@ -28,13 +28,13 @@ export class ForgotPasswordComponent implements OnInit {
   ngOnInit() {
   }
 
-  login(){
+  login() {
       const email = this.loginForm.get('email').value;
       this.profileService.forgotPassword(email).subscribe(
          (response: any) => console.log(response),
          // this.snackBar.open('A password reset link has been emailed to your registered email.', 'X', { duration: 10000, panelClass: 'pink-style' }),
          (error => this.snackBar.open(`Error: ${error}`, 'X', { duration: 10000, panelClass: 'red-style' }))
-      )
+      );
   }
 
 }

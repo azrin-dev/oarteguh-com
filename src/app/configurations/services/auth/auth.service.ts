@@ -8,41 +8,40 @@ import { User } from 'src/app/configurations/model/user';
 import { httpOptions } from '../httpOptions';
 
 
-@Injectable({ providedIn: "root"})
+@Injectable({ providedIn: 'root'})
 
 export class AuthService {
 
-   constructor( 
+   constructor(
       private http: HttpClient,
       public jwtHelper: JwtHelperService
    ) { }
 
 
-   login(credentials){
+   login(credentials) {
       console.log(credentials);
-      return this.http.post("/api/user/login", credentials).pipe(
+      return this.http.post('/api/user/login', credentials).pipe(
          catchError(error => throwError(error))
       );
    }
 
 
-   get currentUser(){
-      let token = localStorage.getItem('token');
-      if (!token){
+   get currentUser() {
+      const token = localStorage.getItem('token');
+      if (!token) {
          return null;
-      } 
-      if (token){
+      }
+      if (token) {
          return this.jwtHelper.decodeToken(token);
-      }    
+      }
    }
 
-   isLoggedIn(){
-      let token = localStorage.getItem('token');
-      let tokenExpired = this.jwtHelper.isTokenExpired(token);
-      if (!tokenExpired){
+   isLoggedIn() {
+      const token = localStorage.getItem('token');
+      const tokenExpired = this.jwtHelper.isTokenExpired(token);
+      if (!tokenExpired) {
          return true;
-      }
-      else {
+      } else {
          return false;
       }
    }
@@ -53,13 +52,13 @@ export class AuthService {
 
    register(credentials: User){
       return this.http.post("api/register", credentials);
-   }     
+   }
 
    loginMain(credentials){
       return this.http.post("api/login", credentials);
    }
 
-   
+
 
 
    logout(){

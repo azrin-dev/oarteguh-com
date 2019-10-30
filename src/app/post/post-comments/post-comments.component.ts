@@ -19,11 +19,11 @@ export class PostCommentsComponent implements OnInit {
 
    this.postService.postCard.subscribe(
       (response: Post) => {
-         if(response && response._id){
+         if (response && response._id) {
             console.log(response);
             this.post = response;
       }}
-   )
+   );
 
   }
 

@@ -1,8 +1,8 @@
-import { animation, query, style, stagger, animate } from "@angular/animations";
+import { animation, query, style, stagger, animate } from '@angular/animations';
 
 export const xEnter = animation([
    query('.x-enter', [
-      style({ 
+      style({
          opacity: 0.3,
          transform: 'translateX(-100px)'
       }),
@@ -10,7 +10,7 @@ export const xEnter = animation([
          animate('2.5s cubic-bezier(.39,-0.41,0,1)', style({ opacity: 1, transform: 'none' }))
       ])
    ], { optional: true }
-)])      //
+)]);      //
 
 /*   Usage  *
    animations: [
@@ -22,7 +22,7 @@ export const xEnter = animation([
 
 export const yEnter = animation([
    query('.y-enter', [
-      style({ 
+      style({
          opacity: 0.3,
          transform: 'translateY(-100px)'
       }),
@@ -30,7 +30,7 @@ export const yEnter = animation([
          animate('2.5s cubic-bezier(.55,-0.64,.24,2)', style({ opacity: 1, transform: 'rotate(-10deg)' }))
       ])
    ], { optional: true }
-)])      //
+)]);      //
 
 /*   Usage  *
    animations: [
@@ -42,7 +42,7 @@ export const yEnter = animation([
 
 export const leftEnter = animation([
    query('.left-enter', [
-      style({ 
+      style({
          opacity: 0.5,
          transform: 'translateX(400px)'
       }),
@@ -50,7 +50,7 @@ export const leftEnter = animation([
          animate('5.0s cubic-bezier(.55,-0.64,.24,2)', style({ opacity: 1 }))
       ])
    ], { optional: true }
-)])      //
+)]);      //
 
 /*   Usage  *
    animations: [
@@ -62,68 +62,68 @@ export const leftEnter = animation([
 
 export const imageEnter = animation([
    query('.image-enter', [
-      style({ 
+      style({
          opacity: 0.3
       }),
       stagger(-30, [
-         animate('1.0s cubic-bezier(.03,.79,.9,.38)', 
-         style({ 
-            opacity: 1, 
+         animate('1.0s cubic-bezier(.03,.79,.9,.38)',
+         style({
+            opacity: 1,
             transform: 'scaleX(1.2)'
          }))
       ])
    ], { optional: true }
-)])      //
+)]);      //
 
 /*   Usage  *
    animations: [
       trigger('imageEnter', [
-         transition(':enter', [            
+         transition(':enter', [
             useAnimation(imageEnter)
    ]) ]) ]
 */
 
 export const imageEnterDrop = animation([
    query('.image-enter-drop', [
-      style({ 
+      style({
          opacity: 0.3
       }),
       stagger(-30, [
-         animate('1.5s cubic-bezier(.31,-0.91,0,1.31)', 
-         style({ 
-            opacity: 1, 
-            'transform': 'translateY(10px)'
+         animate('1.5s cubic-bezier(.31,-0.91,0,1.31)',
+         style({
+            opacity: 1,
+            transform: 'translateY(10px)'
          }))
       ])
    ], { optional: true }
-)])      //
+)]);      //
 
 /*   Usage  *
    animations: [
       trigger('imageEnter', [
-         transition(':enter', [            
+         transition(':enter', [
             useAnimation(imageEnter)
    ]) ]) ]
 */
 
 export const imageLeave = animation([
    query('.image-enter-leave', [
-      style({ 
+      style({
          opacity: 0.3
       }),
       stagger(-30, [
-         animate('2s cubic-bezier(.03,.79,.9,.38)', 
-         style({ 
-            opacity: 1, 
+         animate('2s cubic-bezier(.03,.79,.9,.38)',
+         style({
+            opacity: 1,
             transform: 'none'
          }))
       ])
    ], { optional: true }
-)])      //
+)]);      //
 
 /*   Usage  *
    trigger('imageEnter', [
-         transition(':enter', [            
+         transition(':enter', [
             useAnimation(imageEnter)
       ]) ]) ]
 */
@@ -131,15 +131,15 @@ export const imageLeave = animation([
 
 export const iconButtonEnter = animation([
    query('.y-icon-enter', [
-      style({ 
+      style({
          opacity: 0.3,
          transform: 'translateY(50px)'
       }),
       stagger(-30, [
-         
-         animate('2.5s cubic-bezier(.18,-0.47,.39,1.36)', style({ 
-            opacity: 1, 
-            transform: 'none' 
+
+         animate('2.5s cubic-bezier(.18,-0.47,.39,1.36)', style({
+            opacity: 1,
+            transform: 'none'
          }))
       ])
    ], { optional: true }),
@@ -149,15 +149,15 @@ export const iconButtonEnter = animation([
          transform: 'scale(0.9, 0.9)',
          'background-color': '#fb002d'
       }),
-      stagger(-30, [         
-         animate('2.5s cubic-bezier(.18,-0.47,.39,1.36)', style({ 
-            opacity: 1, 
-            transform: 'none'            
+      stagger(-30, [
+         animate('2.5s cubic-bezier(.18,-0.47,.39,1.36)', style({
+            opacity: 1,
+            transform: 'none'
          }))
       ])
 
    ])
-])      //
+]);      //
 
 /*   Usage  *
    animations: [
@@ -174,15 +174,15 @@ export const primaryButtonClick = animation([
          transform: 'scale(0.9, 0.9)',
          'background-color': '#fb002d'
       }),
-      stagger(-30, [         
-         animate('2.5s cubic-bezier(.18,-0.47,.39,1.36)', style({ 
-            opacity: 1, 
-            transform: 'none'            
+      stagger(-30, [
+         animate('2.5s cubic-bezier(.18,-0.47,.39,1.36)', style({
+            opacity: 1,
+            transform: 'none'
          }))
       ])
 
    ])
-])      //
+]);      //
 
 /*   Usage  *
    animations: [
@@ -194,7 +194,7 @@ export const primaryButtonClick = animation([
 
 export const xMouseEnter = animation([
    query('.x-mouse-enter', [
-      style({ 
+      style({
          opacity: 0.3,
          transform: 'translateX(-100px)'
       }),
@@ -202,19 +202,19 @@ export const xMouseEnter = animation([
          animate('2.5s cubic-bezier(.55,-0.64,.24,2)', style({ opacity: 1, transform: 'none' }))
       ])
    ], { optional: true }
-)])      //
+)]);      //
 
 /*   Usage  *
    animations: [
       trigger('iconButtonEnter', [
-         transition(':enter', [            
+         transition(':enter', [
             useAnimation(iconButtonEnter)
    ]) ]) ]
 */
 
 export const banner1Enter = animation([
    query('.banner1-enter', [
-      style({ 
+      style({
          opacity: 0.3,
          transform: 'translateX(-100px)'
       }),
@@ -222,7 +222,7 @@ export const banner1Enter = animation([
          animate('2s cubic-bezier(.39,-0.41,0,1)', style({ opacity: 1, transform: 'none' }))
       ])
    ], { optional: true }
-)])      //
+)]);      //
 
 /*   Usage  *
    animations: [
@@ -234,7 +234,7 @@ export const banner1Enter = animation([
 
 export const banner2Enter = animation([
    query('.banner2-enter', [
-      style({ 
+      style({
          opacity: 0.3,
          transform: 'translateX(200px)'
       }),
@@ -242,7 +242,7 @@ export const banner2Enter = animation([
          animate('2s cubic-bezier(.42,.14,.93,.53)', style({ opacity: 1, transform: 'none' }))
       ])
    ], { optional: true }
-)])      //
+)]);      //
 
 /*   Usage  *
    animations: [
@@ -255,7 +255,7 @@ export const banner2Enter = animation([
 
 export const banner3Enter = animation([
    query('.banner3-enter', [
-      style({ 
+      style({
          opacity: 0,
          transform: 'translateY(-100px)'
       }),
@@ -263,7 +263,7 @@ export const banner3Enter = animation([
          animate('3s cubic-bezier(.58,-0.36,0,1.91)', style({ opacity: 1, transform: 'none' }))
       ])
    ], { optional: true }
-)])      //
+)]);      //
 
 /*   Usage  *
    animations: [
@@ -275,7 +275,7 @@ export const banner3Enter = animation([
 
 export const banner4Enter = animation([
    query('.banner4-enter', [
-      style({ 
+      style({
          opacity: 0.3,
          transform: 'translateY(100px)'
       }),
@@ -283,7 +283,7 @@ export const banner4Enter = animation([
          animate('2s cubic-bezier(.58,-0.36,0,1.91)', style({ opacity: 1, transform: 'translateY(-40px)' }))
       ])
    ], { optional: true }
-)])      //
+)]);      //
 
 /*   Usage  *
    animations: [
@@ -295,14 +295,14 @@ export const banner4Enter = animation([
 
 export const banner5Enter = animation([
    query('.banner5-enter', [
-      style({ 
+      style({
          opacity: 0
       }),
       stagger(-30, [
          animate('2s cubic-bezier(.39,-0.41,0,1)', style({ opacity: 1, transform: 'translateY(-40px)' }))
       ])
    ], { optional: true }
-)])      //
+)]);      //
 
 /*   Usage  *
    animations: [

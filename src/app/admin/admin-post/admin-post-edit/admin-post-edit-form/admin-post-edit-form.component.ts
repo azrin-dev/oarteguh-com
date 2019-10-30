@@ -18,8 +18,8 @@ export class AdminPostEditFormComponent implements OnInit {
    formPost: FormGroup;
    content: string;
    selectedImage;
-   uploading: boolean = false;
-   uploaded: boolean = false;
+   uploading = false;
+   uploaded = false;
    uploadPct;
    categories: Post['categories'];
    tags: Post['tags'];
@@ -29,7 +29,7 @@ export class AdminPostEditFormComponent implements OnInit {
    private route: ActivatedRoute,
    private postService: PostService,
    private snackBar: MatSnackBar
-  ) { 
+  ) {
 
          this.formPost = new FormGroup({
             title: new FormControl('', [ Validators.required, Validators.minLength(3) ]),
@@ -44,55 +44,53 @@ export class AdminPostEditFormComponent implements OnInit {
 
       this.route.paramMap.subscribe(
          (response: any) => {
-            if(response.params.id) this.getPost(response.params.id);
-            else this.snackBar.open('Unable to get post, please refresh browser and try again', 'X', { duration: 10000, panelClass: 'red-style'})
+            if (response.params.id) { this.getPost(response.params.id); } else { this.snackBar.open('Unable to get post, please refresh browser and try again', 'X', { duration: 10000, panelClass: 'red-style'}); }
          }
-      )
+      );
 
       this.postService.postCats.subscribe(
          (response: Post['categories']) => {
             this.categories = response;
          }
-      )
+      );
 
       this.postService.postTags.subscribe(
          (response: Post['tags']) => {
             this.tags = response;
          }
-      )
+      );
 
   }
 
-  selectedFile(event){
-     let file = event.target.files[0];
+  selectedFile(event) {
+     const file = event.target.files[0];
      this.postService.imageSource.next(file);
      this.selectedImage = file;
   }
 
-   uploadFile(){
-      let file = this.selectedImage;
+   uploadFile() {
+      const file = this.selectedImage;
       const upload = this.postService.uploadFileToDb(file)
          .pipe(
             map(event => this.getEventMessage(event, file)),
-            tap(event => { return event }),
+            tap(event => event),
             last()
          )
          .subscribe(
             (response: any) => {
                console.log(response);
-               if(response && response.image){
+               if (response && response.image) {
                   this.uploaded = true;
                   this.formPost.get('image').setValue({ image: response.image } );
                   this.uploading = true;
                   this.snackBar.open('Picture successfully uploaded.', 'X', { duration: 10000, panelClass: 'pink-style'});
-               }
-               else this.snackBar.open('Unable to upload picture, please try again.', 'X', { duration: 10000, panelClass: 'red-style'});
+               } else { this.snackBar.open('Unable to upload picture, please try again.', 'X', { duration: 10000, panelClass: 'red-style'}); }
 
             },
             (error => {
-                  this.snackBar.open('Error during upoload: ' + error, 'X', { duration: 10000, panelClass: 'red-style'})
+                  this.snackBar.open('Error during upoload: ' + error, 'X', { duration: 10000, panelClass: 'red-style'});
                })
-         )
+         );
    }
 
    /** Return distinct message for sent, upload progress, & response events */
@@ -100,7 +98,7 @@ export class AdminPostEditFormComponent implements OnInit {
       switch (event.type) {
 
          case HttpEventType.UploadProgress:
-            let progress = {
+            const progress = {
                loaded: event.loaded,
                total: event.total
             };
@@ -113,49 +111,49 @@ export class AdminPostEditFormComponent implements OnInit {
       }
    }
 
-   getPost(id){
+   getPost(id) {
       this.postService.getPost(id).subscribe(
          (response: Post) => {
             console.log(response);
-            this.formPost.setValue({ 
+            this.formPost.setValue({
                title: response.title,
                subtitle: response.subtitle,
                content: response.content,
                image: response.image,
                slug: response.slug
                });
-               this.post = response;
+            this.post = response;
          }
-      )
+      );
    }
 
-   updateTitleSource(){
-      let title = this.formPost.get('title').value;
+   updateTitleSource() {
+      const title = this.formPost.get('title').value;
       this.postService.titleSource.next(title);
    }
 
-   updateSubtitleSource(){     
-      let subtitle = this.formPost.get('subtitle').value;
+   updateSubtitleSource() {
+      const subtitle = this.formPost.get('subtitle').value;
       this.postService.subtitleSource.next(subtitle);
    }
 
-   updateContentSource(event){
+   updateContentSource(event) {
       this.formPost.get('content').setValue(event.target.innerText);
       this.postService.contentSource.next(event.target.innerText);
    }
 
-   createSlug(){
-      let post = this.post;
-      let slug = `post/${post.owner.name}/${post.id}/${post.title}`
+   createSlug() {
+      const post = this.post;
+      const slug = `post/${post.owner.name}/${post.id}/${post.title}`
             .split(' ')
             .join('-');
-         this.formPost.setValue({
-            slug: slug
+      this.formPost.setValue({
+            slug
          });
    }
 
-   updatePost(){
-      let post = this.formPost.value;
+   updatePost() {
+      const post = this.formPost.value;
       post.categories = this.categories;
       post.tags = this.tags;
       post._id = this.post._id;
@@ -163,7 +161,7 @@ export class AdminPostEditFormComponent implements OnInit {
          (response: Post) => {
             console.log(response);
          }
-      )
+      );
 
    }
 

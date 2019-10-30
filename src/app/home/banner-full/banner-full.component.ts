@@ -31,31 +31,31 @@ import { banner1Enter, banner2Enter, banner3Enter, banner4Enter, banner5Enter } 
 })
 export class BannerFullComponent implements OnInit {
 
-   banner1AnimationDone: boolean = false;
-   banner2AnimationDone: boolean = false;
-   banner3AnimationDone: boolean = false;
-   banner4AnimationDone: boolean = false;
+   banner1AnimationDone = false;
+   banner2AnimationDone = false;
+   banner3AnimationDone = false;
+   banner4AnimationDone = false;
 
   constructor() { }
 
   ngOnInit() {
   }
 
-  banner1Done(event){
+  banner1Done(event) {
       console.log(event);
-      if(event.phaseName === 'done') this.banner1AnimationDone = true;
+      if (event.phaseName === 'done') { this.banner1AnimationDone = true; }
    }
 
-   banner2Done(event){
-      if(event.phaseName === 'done') this.banner2AnimationDone = true;
+   banner2Done(event) {
+      if (event.phaseName === 'done') { this.banner2AnimationDone = true; }
    }
 
-   banner3Done(event){
-      if(event.phaseName === 'done') this.banner3AnimationDone = true;
+   banner3Done(event) {
+      if (event.phaseName === 'done') { this.banner3AnimationDone = true; }
    }
 
-   banner4Done(event){
-      if(event.phaseName === 'done') this.banner4AnimationDone = true;
+   banner4Done(event) {
+      if (event.phaseName === 'done') { this.banner4AnimationDone = true; }
    }
 
 }

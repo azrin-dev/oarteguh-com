@@ -3,7 +3,7 @@ import { ENTER, COMMA } from '@angular/cdk/keycodes';
 import { PostService } from 'src/app/configurations/services/post-service/post-service.service';
 import { MatChipInputEvent } from '@angular/material';
 
-export interface Tag{ _id: string };
+export interface Tag { _id: string; }
 
 @Component({
   selector: 'app-chip-tags',
@@ -29,8 +29,7 @@ export class ChipTagsComponent implements OnInit {
   ngOnInit() {
       this.postService.getTags().subscribe(
          (response: any) => {
-            if(response) this.tags = response;   
-            else this.tags = null;
+            if (response) { this.tags = response; } else { this.tags = null; }
          }
       );
   }
@@ -42,7 +41,7 @@ export class ChipTagsComponent implements OnInit {
       // Add our fruit
       if ((value || '').trim()) {
          this.tags.push(value);
-         this.updateSource()
+         this.updateSource();
       }
 
       // Reset the input value
@@ -60,8 +59,8 @@ export class ChipTagsComponent implements OnInit {
       }
    }
 
-   updateSource(){
-      let tags: any = this.tags;
+   updateSource() {
+      const tags: any = this.tags;
       this.postService.tagsSource.next(tags);
    }
 }

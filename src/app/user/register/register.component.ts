@@ -27,8 +27,7 @@ export class RegisterComponent implements OnInit {
 
   }
 
-  register()
-  {
+  register() {
       this.profileService.register(this.registerForm.value);
   }
 

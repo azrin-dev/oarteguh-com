@@ -29,16 +29,16 @@ export class ContactFormComponent implements OnInit {
   ngOnInit() {
   }
 
-  get name(){ return this.contactForm.get('name')}
-  get phone(){return this.contactForm.get('phone')}
-  get email(){ return this.contactForm.get('email')}
-  get comment(){ return this.contactForm.get('comment')}
+  get name() { return this.contactForm.get('name'); }
+  get phone() {return this.contactForm.get('phone'); }
+  get email() { return this.contactForm.get('email'); }
+  get comment() { return this.contactForm.get('comment'); }
 
-  submitContact(){
+  submitContact() {
      this.contactService.saveContact(this.contactForm.value).subscribe(
-        (response: Contact) => { 
+        (response: Contact) => {
             this.contact = response;   }, //
          error => this.snackBar.open('Form submission error, please try again', 'X', {duration: 10000, panelClass: 'warn'})
-     )
+     );
   }
 }

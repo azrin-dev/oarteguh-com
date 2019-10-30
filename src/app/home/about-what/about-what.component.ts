@@ -25,7 +25,7 @@ export class AboutWhatComponent implements OnInit {
          image: 'analytics.png'
       }
 
-   ]
+   ];
 
   constructor() { }
 

@@ -18,40 +18,32 @@ export class SerialAuthService {
 
   constructor(
      private http: HttpClient
-  ) { this.getExistingSerialNos()  }    //
+  ) { this.getExistingSerialNos();  }    //
 
-  updateSerials()
-  {  this.getExistingSerialNos()   }  //
+  updateSerials() {  this.getExistingSerialNos();   }  //
 
-  getExistingSerialNos()
-  {   this.http.get('/api/products/serials')
+  getExistingSerialNos() {   this.http.get('/api/products/serials')
          .pipe( catchError((error) => throwError(error)) )
-         .subscribe((response: Serial[]) => this.serialSource.next(response)    )}    //
+         .subscribe((response: Serial[]) => this.serialSource.next(response)    ); }    //
 
-  authenticateSerial(serial)
-  {   return this.http.post('/api/product/authentication', {serial: serial}).pipe(
-        catchError(error => throwError(error))  )}    //
+  authenticateSerial(serial) {   return this.http.post('/api/product/authentication', {serial}).pipe(
+        catchError(error => throwError(error))  ); }    //
 
-  saveReview(review)
-  {   return this.http.post('/api/product/review', review).pipe(
-         catchError(error => throwError(error)) )}    //
+  saveReview(review) {   return this.http.post('/api/product/review', review).pipe(
+         catchError(error => throwError(error)) ); }    //
 
-  generateSerialNo(serials)
-  {   return this.http.post('/api/product/serial/generate', serials).pipe(
-         catchError(error => throwError(error)) )}   //
+  generateSerialNo(serials) {   return this.http.post('/api/product/serial/generate', serials).pipe(
+         catchError(error => throwError(error)) ); }   //
 
-  getSerialNos()
-  {   return this.http.get('/api/products/serials').pipe(
-         catchError(error => throwError(error))    )}    //
+  getSerialNos() {   return this.http.get('/api/products/serials').pipe(
+         catchError(error => throwError(error))    ); }    //
 
-  deleteASerialNo(serial)
-  {
+  deleteASerialNo(serial) {
       return this.http.post('/api/product/serial/rm', serial).pipe(
          catchError(error => throwError(error))    );   }   //
 
-  deleteSerialNos(serials)
-  {
+  deleteSerialNos(serials) {
      return this.http.post('/api/product/serials/rm', serials).pipe(
-        catchError(error => throwError(error))     )}    //
+        catchError(error => throwError(error))     ); }    //
 
 }

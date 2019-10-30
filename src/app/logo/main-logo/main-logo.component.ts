@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainLogoComponent implements OnInit {
 
-   logo: string = 'assets/images/logo.png';
+   logo = 'assets/images/logo.png';
 
   constructor() { }
 

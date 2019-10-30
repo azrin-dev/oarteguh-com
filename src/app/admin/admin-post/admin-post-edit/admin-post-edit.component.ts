@@ -14,27 +14,27 @@ export class AdminPostEditComponent implements OnInit {
 
   constructor(
      private route: ActivatedRoute,
-      private postService: PostService
+     private postService: PostService
   ) { }
 
   ngOnInit() {
      this.route.paramMap.subscribe(
         (response: any) => {
-           let postId = response.params.id;
+           const postId = response.params.id;
            this.postService.getPost(postId).subscribe(
               (response: Post) => {
-                 if(response && response._id){
+                 if (response && response._id) {
                     this.postService.postCard.subscribe(
                        (post: Post) => {
                           this.post = post;
                        }
-                    )
+                    );
                  }
               }
-           )
+           );
 
         }
-     )
+     );
   }
 
 }

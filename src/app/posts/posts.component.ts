@@ -16,23 +16,23 @@ import { xEnter, iconButtonEnter, imageEnter } from '../configurations/animation
          useAnimation(xEnter)
    ]) ]),
    trigger('iconButtonEnter', [
-      transition(':enter', [            
+      transition(':enter', [
          useAnimation(iconButtonEnter)
    ]) ]),
    trigger('imageEnter', [
-      transition(':enter', [            
+      transition(':enter', [
          useAnimation(imageEnter)
-   ]) ])   
+   ]) ])
 ]
 })
 export class PostsComponent implements OnInit {
 
-   postsExist: boolean = true;
+   postsExist = true;
    posts: Post[];
    postId: Post;
    imagePost: Post;
-   imageEntered: boolean = false;
-   readMoreClick: boolean = false;
+   imageEntered = false;
+   readMoreClick = false;
    profile: User;
 
   constructor(
@@ -44,12 +44,11 @@ export class PostsComponent implements OnInit {
 
       this.profileService.profile.subscribe(
          (response: User) => {
-            if(response && response.id){
+            if (response && response.id) {
                this.profile = response;
-            }
-            else this.profile = null;
-      });  
-      
+            } else { this.profile = null; }
+      });
+
       this.postService.getAllPost().subscribe(
          (response: Post[]) => {
             console.log(response);
@@ -58,20 +57,17 @@ export class PostsComponent implements OnInit {
       );
    }
 
-   mouseEnterCard(event)
-   {
+   mouseEnterCard(event) {
       this.postId = event.target.id;
    }
 
-   mouseEnterImage(event)
-   {
+   mouseEnterImage(event) {
       this.imagePost = event.target.id;
-      this.imageEntered = true;     
+      this.imageEntered = true;
    }
 
-   mouseLeaveImage()
-   {      
-      this.imageEntered = false;         
+   mouseLeaveImage() {
+      this.imageEntered = false;
    }
 
 }

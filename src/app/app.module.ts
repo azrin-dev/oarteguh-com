@@ -29,9 +29,6 @@ import { NavigationsComponent } from './navigations/navigations.component';
 import { TagsComponent } from './tags/tags.component';
 import { HomeComponent } from './page/home/home.component';
 import { AuthRegisterComponent } from './user/auth-register/auth-register.component';
-import { VisitorComponent } from './visitor/visitor.component';
-import { VisitorFormComponent } from './visitor/visitor-form/visitor-form.component';
-import { VisitorAvatarComponent } from './visitor/visitor-form/visitor-avatar/visitor-avatar.component';
 import { AdminPostComponent } from './admin/admin-post/admin-post.component';
 import { FormPostComponent } from './admin/admin-post/form-post/form-post.component';
 import { Logo4remComponent } from './logo/logo4rem/logo4rem.component';
@@ -41,8 +38,6 @@ import { ENTER, COMMA } from '@angular/cdk/keycodes';
 import { ChipTagsComponent } from './admin/admin-post/form-post/chip-tags/chip-tags.component';
 import { Logo2remLightComponent } from './logo/logo2rem-light/logo2rem-light.component';
 import { PreviewPostComponent } from './admin/admin-post/form-post/preview-post/preview-post.component';
-import { AngularEditorModule } from './configurations/angular-editor/angular-editor.module';
-import { NgmEditorModule } from './ngm-editor/ngm-editor.module';
 import { PostComponent } from './post/post.component';
 import { CommentsComponent } from './comments/comments.component';
 import { AboutWhoComponent } from './home/about-who/about-who.component';
@@ -65,7 +60,7 @@ import { ProfileComponent } from './page-user/profile/profile.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 
 
-export function tokenGetter(){
+export function tokenGetter() {
    return localStorage.getItem('access_token');
 }
 
@@ -87,9 +82,6 @@ export function tokenGetter(){
     TagsComponent,
     HomeComponent,
     AuthRegisterComponent,
-    VisitorComponent,
-    VisitorFormComponent,
-    VisitorAvatarComponent,
     AdminPostComponent,
     FormPostComponent,
     Logo4remComponent,
@@ -122,13 +114,13 @@ export function tokenGetter(){
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialModule,    
+    MaterialModule,
     AppRoutingModule,
     FlexLayoutModule,
     HttpClientModule ,
     FormsModule,
     ReactiveFormsModule,
-    JwtModule.forRoot({config: { tokenGetter: tokenGetter }}),
+    JwtModule.forRoot({config: { tokenGetter }}),
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
@@ -138,15 +130,13 @@ export function tokenGetter(){
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-    AngularEditorModule,
-    NgmEditorModule,
     MatFormFieldModule
   ],
   providers: [
     {provide: APP_BASE_HREF, useValue: '/'},
     {provide: MAT_CHECKBOX_CLICK_ACTION, useValue: 'check'},
     {provide: MAT_CHIPS_DEFAULT_OPTIONS, useValue: {separatorKeyCodes: [ENTER, COMMA]}},
-    //{provide: MAT_BOTTOM_SHEET_DEFAULT_OPTIONS, useValue: {hasBackdrop: false}},
+    // {provide: MAT_BOTTOM_SHEET_DEFAULT_OPTIONS, useValue: {hasBackdrop: false}},
     AuthService
   ],
   entryComponents: [

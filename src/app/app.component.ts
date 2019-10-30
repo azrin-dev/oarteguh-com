@@ -5,14 +5,13 @@ import { Component, AfterContentInit } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements AfterContentInit{
+export class AppComponent implements AfterContentInit {
   title = 'strong-arrow';
-  init: boolean = false;
+  init = false;
 
-  ngAfterContentInit()
-  {
+  ngAfterContentInit() {
       this.init = true;
   }
-  
+
 
 }

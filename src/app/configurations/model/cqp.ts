@@ -1,7 +1,7 @@
-import { Product } from "./product";
-import { User } from "./user";
+import { Product } from './product';
+import { User } from './user';
 
 export interface CQP {
-    qty: number,
+    qty: number;
     product: Product;
 }

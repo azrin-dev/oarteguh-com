@@ -17,7 +17,7 @@ import { SafeHtml, DomSanitizer, SafeUrl, SafeResourceUrl } from '@angular/platf
    trigger('fadeIn', [
       state('true', style({ opacity: 1 })),
       state('false', style({ opacity: 0.5 })),
-      transition('true <=> false', animate(7000))  ])  //end trigger
+      transition('true <=> false', animate(7000))  ])  // end trigger
    ]
 
 })
@@ -43,17 +43,16 @@ export class LoginComponent implements OnInit {
 
   }
 
-  login()
-  {
+  login() {
      this.profileService.login(this.loginForm.value);
   }
 
-  signInLinkedin(){
+  signInLinkedin() {
      this.profileService.startLinkedin().subscribe(
         (response: any) => {
            window.location.href = response;
         }
-     )
+     );
   }
 
 }
