@@ -17,7 +17,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UserComponent } from './user/user.component';
 import { LoginComponent } from './user/login/login.component';
 import { RegisterComponent } from './user/register/register.component';
-import { JwtModule } from '@auth0/angular-jwt';
 import { AdminComponent } from './admin/admin.component';
 import { AdminSerialComponent } from './admin/admin-serial/admin-serial.component';
 import { AdminSerialTableComponent, BottomSheetConfirm } from './admin/admin-serial/admin-serial-table/admin-serial-table.component';
@@ -27,7 +26,7 @@ import { AdminMessageComponent } from './admin/admin-message/admin-message.compo
 import { LayoutModule } from '@angular/cdk/layout';
 import { NavigationsComponent } from './navigations/navigations.component';
 import { TagsComponent } from './tags/tags.component';
-import { HomeComponent } from './page/home/home.component';
+import { HomeComponent } from './pages/home/home.component';
 import { AuthRegisterComponent } from './user/auth-register/auth-register.component';
 import { AdminPostComponent } from './admin/admin-post/admin-post.component';
 import { FormPostComponent } from './admin/admin-post/form-post/form-post.component';
@@ -53,10 +52,10 @@ import { ForgotPasswordComponent } from './user/forgot-password/forgot-password.
 import { MainLogoComponent } from './logo/main-logo/main-logo.component';
 import { CallbackComponent } from './user/login/callback/callback.component';
 import { LinkedinComponent } from './user/login/linkedin/linkedin.component';
-import { LayoutComponent } from './page/layout/layout.component';
+import { LayoutComponent } from './pages/layout/layout.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
-import { TermsComponent } from './page/terms/terms.component';
-import { ProfileComponent } from './page-user/profile/profile.component';
+import { TermsComponent } from './pages/terms/terms.component';
+import { ProfileComponent } from './pages-user/profile/profile.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 
 
@@ -120,7 +119,7 @@ export function tokenGetter() {
     HttpClientModule ,
     FormsModule,
     ReactiveFormsModule,
-    JwtModule.forRoot({config: { tokenGetter }}),
+   //  JwtModule.forRoot({config: { tokenGetter }}),
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,

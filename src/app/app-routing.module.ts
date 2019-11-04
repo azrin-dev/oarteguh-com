@@ -9,11 +9,10 @@ import { AdminMessageComponent } from './admin/admin-message/admin-message.compo
 import { UserComponent } from './user/user.component';
 import { RegisterComponent } from './user/register/register.component';
 import { TagsComponent } from './tags/tags.component';
-import { HomeComponent } from './page/home/home.component';
+import { HomeComponent } from './pages/home/home.component';
 import { AuthRegisterComponent } from './user/auth-register/auth-register.component';
 import { AdminPostComponent } from './admin/admin-post/admin-post.component';
 import { PreviewPostComponent } from './admin/admin-post/form-post/preview-post/preview-post.component';
-import { AngularEditorComponent } from './configurations/angular-editor/angular-editor.component';
 import { PostComponent } from './post/post.component';
 import { PostsComponent } from './posts/posts.component';
 import { AdminPostsComponent } from './admin/admin-posts/admin-posts.component';
@@ -21,8 +20,8 @@ import { AdminPostEditComponent } from './admin/admin-post/admin-post-edit/admin
 import { ForgotPasswordComponent } from './user/forgot-password/forgot-password.component';
 import { CallbackComponent } from './user/login/callback/callback.component';
 import { LinkedinComponent } from './user/login/linkedin/linkedin.component';
-import { TermsComponent } from './page/terms/terms.component';
-import { ProfileComponent } from './page-user/profile/profile.component';
+import { TermsComponent } from './pages/terms/terms.component';
+import { ProfileComponent } from './pages-user/profile/profile.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent, data: { name: 'Home', icon: 'home', tooltip: 'Home Page', type: 'public' } },

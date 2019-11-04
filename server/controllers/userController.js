@@ -6,7 +6,6 @@ const { body } = require('express-validator/check');
 const { sanitizeBody } = require('express-validator/filter');
 const jwt = require('jsonwebtoken');
 const crypto = require('crypto');
-const mail = require('../handlers/mail');
 const axios = require('axios');
 const nodemailer = require('../handlers/nodemailer');
 const express = require('express');
