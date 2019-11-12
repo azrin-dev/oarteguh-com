@@ -1,16 +1,7 @@
-<div  class="lm__page-container" 
-      fxLayout="row" 
-      fxLayout.lt-md="column"
-      fxLayoutAlign="center stretch" 
-      fxLayoutGap="10px"
->
+<div class="lm__page-container" fxLayout="row" fxLayout.lt-md="column" fxLayoutAlign="center stretch" fxLayoutGap="10px">
 
-      <div fxFlex="45" fxFlex.lt-md="100" class="lm__page-content-main">
-         <router-outlet></router-outlet>               
-      </div>
+    <div class="lm__page-content-main">
+        <router-outlet></router-outlet>
+    </div>
 
-      <div fxFlex="25" fxFlex.lt-md="100" class="lm__page-content-sidebar">
-         <app-sidebar></app-sidebar>
-      </div>
- 
 </div>
