@@ -54,7 +54,7 @@
     "rxjs": "^6.5.3",
     "session": "^0.1.0",
     "tslib": "^1.9.0",
-    "typescript": "^3.5.3",
+    "typescript": "^3.5.2",
     "uuid": "^3.3.3",
     "zone.js": "~0.9.1"
   },

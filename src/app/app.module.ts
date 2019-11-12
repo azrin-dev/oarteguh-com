@@ -21,7 +21,6 @@ import { AdminComponent } from './admin/admin.component';
 import { AdminSerialComponent } from './admin/admin-serial/admin-serial.component';
 import { AdminSerialTableComponent, BottomSheetConfirm } from './admin/admin-serial/admin-serial-table/admin-serial-table.component';
 import { MatTableModule, MatPaginatorModule, MatSortModule, MAT_CHECKBOX_CLICK_ACTION, MAT_BOTTOM_SHEET_DEFAULT_OPTIONS, MatBottomSheetRef, MAT_BOTTOM_SHEET_DATA, MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule, MAT_CHIPS_DEFAULT_OPTIONS } from '@angular/material';
-import { ContactFormComponent } from './contact-form/contact-form.component';
 import { AdminMessageComponent } from './admin/admin-message/admin-message.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { NavigationsComponent } from './navigations/navigations.component';
@@ -57,6 +56,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { TermsComponent } from './pages/terms/terms.component';
 import { ProfileComponent } from './pages-user/profile/profile.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { ContactFormComponent } from './pages/contact-form/contact-form.component';
 
 
 export function tokenGetter() {

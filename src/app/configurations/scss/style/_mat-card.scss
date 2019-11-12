@@ -1,52 +1,33 @@
-@mixin mat-card-settings($name){
-
-   $white:#fff;
-   $off-white: #f5f5f5;
-   $primary: #FFF66B;
-   $primary-light: #FFF88F;
-   $primary-dark: #E9DD25;
-   $accent: #915CC7;
-   $accent-light: #F2B0E5;
-   $warn: #f44336;
-   $dark-dark-bg: #1D1821;
-   $dark-bg: #272529;
-   $dark-light-bg: #403B44;
-   $font: #403B44;
-
-   #{$name}{
-      box-sizing: border-box !important;  
-      background-color: $off-white!important;
-      text-align: center;
-      margin: 10px 0 10px 0;
-
-      &-title{
-         font-size: 1.5rem !important;
-         color: $font;
-         padding: 10px 10px 10px 10px;
-      }
-
-      &-subtitle{
-         text-align: center;
-         font-size: 1.2rem !important;
-         color: $accent !important;
-         font-weight: bold;
-      }
-      
-      &-sm-image{
-         margin-bottom: 20px;
-      }
-
-      &-content{
-         width: 100% !important;
-         height: 100% !important;
-         box-sizing: border-box !important;
-         padding: 20px 10px 20px 10px;
-         text-align: left;
-      }
-   }
-
-   #{$name}:hover{
-      transform: scaleY(104%);
-   }
-
+@import '../color-config.scss';
+@mixin mat-card-settings($name) {
+    #{$name} {
+        box-sizing: border-box !important;
+        background-color: transparent;
+        text-align: center;
+        margin: 10px 0 10px 0;
+        &-title {
+            font-size: 1.5rem !important;
+            color: $font;
+            padding: 10px 10px 10px 10px;
+        }
+        &-subtitle {
+            text-align: center;
+            font-size: 1.2rem !important;
+            color: $accent !important;
+            font-weight: bold;
+        }
+        &-sm-image {
+            margin-bottom: 20px;
+        }
+        &-content {
+            width: 100% !important;
+            height: 100% !important;
+            box-sizing: border-box !important;
+            padding: 20px 10px 20px 10px;
+            text-align: left;
+        }
+    }
+    #{$name}:hover {
+        transform: scaleY(104%);
+    }
 }

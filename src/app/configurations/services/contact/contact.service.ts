@@ -12,7 +12,9 @@ export class ContactService {
      private http: HttpClient
   ) { }
 
-  saveContact(form) {  return this.http.post('/api/contact/form/save', form).pipe(
-         catchError(error => throwError(error))    ); } //
+  saveContact(form) {  
+      return this.http.post('/api/contact/form/save', form).pipe(
+         catchError(error => throwError(error))    ); 
+   } //
 
 }

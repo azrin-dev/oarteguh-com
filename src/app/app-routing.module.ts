@@ -4,7 +4,6 @@ import { LoginComponent } from './user/login/login.component';
 import { AdminSerialComponent } from './admin/admin-serial/admin-serial.component';
 import { AdminAuthGuardService } from './configurations/services/admin-auth-guard/admin-auth-guard.service';
 import { AuthGuardService } from './configurations/services/auth-guard/auth-guard.service';
-import { ContactFormComponent } from './contact-form/contact-form.component';
 import { AdminMessageComponent } from './admin/admin-message/admin-message.component';
 import { UserComponent } from './user/user.component';
 import { RegisterComponent } from './user/register/register.component';
@@ -22,6 +21,7 @@ import { CallbackComponent } from './user/login/callback/callback.component';
 import { LinkedinComponent } from './user/login/linkedin/linkedin.component';
 import { TermsComponent } from './pages/terms/terms.component';
 import { ProfileComponent } from './pages-user/profile/profile.component';
+import { ContactFormComponent } from './pages/contact-form/contact-form.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent, data: { name: 'Home', icon: 'home', tooltip: 'Home Page', type: 'public' } },

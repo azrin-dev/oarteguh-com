@@ -1,44 +1,39 @@
 /* You can add global styles to this file, and also import other style files */
-// @import '@angular/material/prebuilt-themes/pink-bluegrey.css';
+
 @import './app/configurations/scss/index.scss';
-
-$white:#fff;
-$off-white: #f5f5f5;
-$primary: #FFF66B;
-$primary-light: #FFF88F;
-$accent: #915CC7;
-$accent-light: #F2B0E5;
-$warn: #f44336;
-$dark-dark-bg: #1D1821;
-$dark-bg: #272529;
-$dark-light-bg: #403B44;
-$font: rgba(255, 255, 255, 0.7);
-
-html, body { height: 100%;}
-body { margin: 0; font-family: Lato, Oswald, Roboto, "Helvetica Neue", sans-serif; background-color: $off-white }
-.mat-list-item-content{
-   padding-right: 0 !important; 
-   padding-left: 0 !important; 
-}
-.mat-form-field-wrapper{
-   width: 100% !important;
+html,
+body {
+    height: 100%;
 }
 
-.mat-form-field-infix{
-   width: 100% !important;
+body {
+    margin: 0;
+    font-family: Lato, Oswald, Roboto, "Helvetica Neue", sans-serif;
+    background-color: $off-white
+}
+
+.mat-list-item-content {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+}
+
+.mat-form-field-wrapper {
+    width: 100% !important;
+}
+
+.mat-form-field-infix {
+    width: 100% !important;
 }
 
 .ck-editor__editable_inline {
-   min-height: 500px;
-  color: #303030;
+    min-height: 500px;
+    color: #303030;
 }
 
-.angular-editor-toolbar{
-   background-color: transparent !important;
+.angular-editor-toolbar {
+    background-color: transparent !important;
 }
 
-.angular-editor-button{
-   color: #303030;
+.angular-editor-button {
+    color: #303030;
 }
-
-
