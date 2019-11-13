@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
 const Contact = mongoose.model('Contact');
 const User = mongoose.model('User');
-const { promisify } = require('es6-promisify');
+const nodemailer = require('../handlers/nodemailer');
 
 // Create Mail Contact
 exports.saveContactForm = async(req, res) => {
@@ -12,8 +12,10 @@ exports.saveContactForm = async(req, res) => {
         phone: req.body.phone,
         text: req.body.comment
     });
-
-    const saveContact = await contact.save();
-    res.json(saveContact);
-
+    const savedContact = await contact.save();
+    if (savedContact && savedContact._id) {
+        savedContact.dept = req.body.department;
+        const infoAdmin = nodemailer.newContactForm(savedContact);
+        res.json(infoAdmin);
+    }
 }

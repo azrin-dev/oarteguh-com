@@ -13,12 +13,20 @@ export class ContactFormComponent implements OnInit {
 
    useForm = true;
    contactForm = new FormGroup({
-      name     : new FormControl('', Validators.required),
-      phone    : new FormControl('', Validators.required),
-      email    : new FormControl('', [ Validators.required, Validators.email ]),
-      comment  : new FormControl('', Validators.required)
+      department  : new FormControl('', Validators.required),
+      name        : new FormControl('', Validators.required),
+      phone       : new FormControl('', Validators.required),
+      email       : new FormControl('', [ Validators.required, Validators.email ]),
+      comment     : new FormControl('', Validators.required)
    });
    contact: Contact;
+   depts = [
+      { option: 'Sales & Marketing',   value: 'sales'    },
+      { option: 'Administrative',      value: 'admin'    },
+      { option: 'Accounts & Finance',  value: 'finance'  },
+      { option: 'Store & Logistic',    value: 'store'    },
+      { option: 'Arts & Creative',     value: 'creative' }
+   ];
 
   constructor(
      private contactService: ContactService,
@@ -29,6 +37,7 @@ export class ContactFormComponent implements OnInit {
   ngOnInit() {
   }
 
+  get departmet() { return this.contactForm.get('department'); }
   get name() { return this.contactForm.get('name'); }
   get phone() {return this.contactForm.get('phone'); }
   get email() { return this.contactForm.get('email'); }

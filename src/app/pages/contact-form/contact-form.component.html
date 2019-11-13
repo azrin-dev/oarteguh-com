@@ -14,6 +14,15 @@
                     <div fxLayout="column" fxLayoutAlign="center">
 
                         <mat-form-field appearance="fill" color="accent">
+                            <mat-select placeholder="Select a department" formControlName="department">
+                                <mat-option *ngFor="let dept of depts" value="{{ dept.value }}">
+                                    {{ dept.option }}
+                                </mat-option>
+                            </mat-select>
+                            <mat-hint>Ex: Sales & Marketing</mat-hint>
+                        </mat-form-field>
+
+                        <mat-form-field appearance="fill" color="accent">
                             <mat-label>Name</mat-label>
                             <input matInput placeholder="Enter Name" formControlName="name" required>
                             <mat-icon matSuffix color="accent">contacts</mat-icon>
@@ -27,7 +36,7 @@
                             <mat-label>Phone No</mat-label>
                             <input matInput placeholder="Enter Phone No" formControlName="phone" type="number" required>
                             <mat-icon matSuffix color="accent">contact_phone</mat-icon>
-                            <mat-hint>Ex: 111111111</mat-hint>
+                            <mat-hint>Ex: 60999999999</mat-hint>
                             <mat-error *ngIf="phone.invalid">
                                 Phone no is <strong>required</strong>
                             </mat-error>
