@@ -16,9 +16,9 @@ const app = express();
 
 // view engine setup
 // this is the folder where we keep our pug files
-app.set('views', path.join(__dirname, 'views')); 
+app.set('views', path.join(__dirname, 'views'));
 // we use the engine pug, mustache or EJS work great too
-app.set('view engine', 'pug'); 
+app.set('view engine', 'pug');
 
 // ** ROUTE SETUP **
 const api = require('./server/routes/api');
@@ -27,9 +27,9 @@ const api = require('./server/routes/api');
 app.use(express.static(path.join(__dirname, 'dist/oarteguh-com/')));
 
 // Return other routes to Angular index file
-// app.get('*', (req, res) => {
-//     res.sendFile(path.join(__dirname, './dist/oarteguh-com/index.html'));
-// });
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, './dist/oarteguh-com/index.html'));
+});
 
 // Takes the raw requests and turns them into usable properties on req.body
 app.use(bodyParser.json());
@@ -44,11 +44,11 @@ app.use(cookieParser());
 // Sessions allow us to store data on visitors from request to request
 // This keeps users logged in and allows us to send flash messages
 app.use(session({
-  secret: process.env.SECRET,
-  key: process.env.KEY,
-  resave: false,
-  saveUninitialized: false,
-  store: new MongoStore({ mongooseConnection: mongoose.connection })
+    secret: process.env.SECRET,
+    key: process.env.KEY,
+    resave: false,
+    saveUninitialized: false,
+    store: new MongoStore({ mongooseConnection: mongoose.connection })
 }));
 
 // Passport JS is what we use to handle our logins
@@ -57,8 +57,8 @@ app.use(passport.session());
 
 // promisify some callback based APIs
 app.use((req, res, next) => {
-  req.login = promisify(req.login, req);
-  next();
+    req.login = promisify(req.login, req);
+    next();
 });
 
 // Set api routes
@@ -72,8 +72,8 @@ app.use(errorHandlers.notFound);
 
 // Otherwise this was a really bad error we didn't expect! Shoot eh
 if (app.get('env') === 'development') {
-  /* Development Error Handler - Prints stack trace */
-  app.use(errorHandlers.developmentErrors);
+    /* Development Error Handler - Prints stack trace */
+    app.use(errorHandlers.developmentErrors);
 }
 
 // production error handler
