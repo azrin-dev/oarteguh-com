@@ -2167,27 +2167,7 @@ const routes = [
     { path: 'articles', component: _posts_posts_component__WEBPACK_IMPORTED_MODULE_4__["PostsComponent"], data: { name: 'Articles', icon: 'menu_book', tooltip: 'Articles', type: 'public' } },
     { path: 'terms', component: _pages_terms_terms_component__WEBPACK_IMPORTED_MODULE_5__["TermsComponent"], data: { name: 'Terms', icon: 'policy', tooltip: 'Terms', type: 'public' } },
     { path: 'contact', component: _pages_contact_form_contact_form_component__WEBPACK_IMPORTED_MODULE_6__["ContactFormComponent"], data: { name: 'Contact Us', icon: 'alternate_email', tooltip: 'Contact Us', type: 'public' } },
-    /*
-    { path: 'user/profile', component: ProfileComponent, data: { name: 'Name', icon: 'account_circle', tooltip: 'Profile Page', type: 'user' } },
-    { path: 'posts/tags/tag/:tag', component: TagsComponent, data: { name: 'Tag', icon: 'dashboard', tooltip: 'Tag Page', type: 'user' } },
-    { path: 'user/login', component: LoginComponent, data: { name: 'Login', icon: 'person', tooltip: 'Login Page', type: 'auth' } },
-    { path: 'user/login/linkedin', component: LinkedinComponent, data: { name: 'Linkedin', icon: 'person', tooltip: 'Linkedin Callback Page', type: 'admin' } },
-    { path: 'user/forgot-password', component: ForgotPasswordComponent, data: { name: 'Forgot Password', icon: 'person', tooltip: 'Forgot Password', type: 'admin' } },
-    { path: 'post/:user/:id/:title', component: PostComponent, data: { name: 'Post', icon: 'menu_book', tooltip: 'Post', type: 'admin' } },
-    { path: 'user/register', component: RegisterComponent, data: { name: 'Register', icon: 'person_add', tooltip: 'Register Page', type: 'auth' } },
-    { path: 'user/register/token/:authToken', component: AuthRegisterComponent, data: { name: 'Register', icon: 'person_add', tooltip: 'Authentication Register Page', type: 'admin' } },
-  
-    // User routes
-    { path: 'user/profile', component: UserComponent, canActivate: [AuthGuardService], data: { name: 'Profile', icon: 'person', tooltip: 'Profile Page', type: 'user' } },
-  
-    // Admin routes
-    { path: 'admin/message', component: AdminMessageComponent, canActivate: [AuthGuardService, AdminAuthGuardService], data: { name: 'Message',icon: 'dashboard', type: 'admin'  } },
-    { path: 'admin/posts/post/new', component: AdminPostComponent, canActivate: [AuthGuardService, AdminAuthGuardService], data: { name: 'Post', icon: 'book', type: 'admin'  } },
-    { path: 'admin/posts/post/edit/:id', component: AdminPostEditComponent, canActivate: [AuthGuardService, AdminAuthGuardService], data: { name: 'Post', icon: 'book', type: 'admin'  } },
-    { path: 'admin/posts', component: AdminPostsComponent, canActivate: [AuthGuardService, AdminAuthGuardService], data: { name: 'Posts', icon: 'book', type: 'admin'  } },
-     */
-    // Wildcard routes
-    { path: '**', component: _pages_home_home_component__WEBPACK_IMPORTED_MODULE_3__["HomeComponent"], data: { name: 'Back to Home', icon: 'dashboard', type: 'wildcard' } },
+    { path: '**', component: _pages_home_home_component__WEBPACK_IMPORTED_MODULE_3__["HomeComponent"], data: { name: 'Back to Home', icon: 'dashboard', type: 'wildcard' } }
 ];
 let AppRoutingModule = class AppRoutingModule {
 };

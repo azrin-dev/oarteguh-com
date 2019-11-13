@@ -20,7 +20,7 @@ import { RegisterComponent } from './user/register/register.component';
 import { AdminComponent } from './admin/admin.component';
 import { AdminSerialComponent } from './admin/admin-serial/admin-serial.component';
 import { AdminSerialTableComponent, BottomSheetConfirm } from './admin/admin-serial/admin-serial-table/admin-serial-table.component';
-import { MatTableModule, MatPaginatorModule, MatSortModule, MAT_CHECKBOX_CLICK_ACTION, MAT_BOTTOM_SHEET_DEFAULT_OPTIONS, MatBottomSheetRef, MAT_BOTTOM_SHEET_DATA, MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule, MAT_CHIPS_DEFAULT_OPTIONS } from '@angular/material';
+import { MatTableModule, MatPaginatorModule, MatSortModule, MAT_CHECKBOX_CLICK_ACTION, MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule, MAT_CHIPS_DEFAULT_OPTIONS } from '@angular/material';
 import { AdminMessageComponent } from './admin/admin-message/admin-message.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { NavigationsComponent } from './navigations/navigations.component';
@@ -29,15 +29,11 @@ import { HomeComponent } from './pages/home/home.component';
 import { AuthRegisterComponent } from './user/auth-register/auth-register.component';
 import { AdminPostComponent } from './admin/admin-post/admin-post.component';
 import { FormPostComponent } from './admin/admin-post/form-post/form-post.component';
-import { Logo4remComponent } from './logo/logo4rem/logo4rem.component';
-import { Logo2remComponent } from './logo/logo2rem/logo2rem.component';
 import { ChipCategoriesComponent } from './admin/admin-post/form-post/chip-categories/chip-categories.component';
 import { ENTER, COMMA } from '@angular/cdk/keycodes';
 import { ChipTagsComponent } from './admin/admin-post/form-post/chip-tags/chip-tags.component';
-import { Logo2remLightComponent } from './logo/logo2rem-light/logo2rem-light.component';
 import { PreviewPostComponent } from './admin/admin-post/form-post/preview-post/preview-post.component';
 import { PostComponent } from './post/post.component';
-import { CommentsComponent } from './comments/comments.component';
 import { AboutWhoComponent } from './home/about-who/about-who.component';
 import { AboutWhatComponent } from './home/about-what/about-what.component';
 import { PostsComponent } from './posts/posts.component';
@@ -83,14 +79,10 @@ export function tokenGetter() {
     AuthRegisterComponent,
     AdminPostComponent,
     FormPostComponent,
-    Logo4remComponent,
-    Logo2remComponent,
     ChipCategoriesComponent,
     ChipTagsComponent,
-    Logo2remLightComponent,
     PreviewPostComponent,
     PostComponent,
-    CommentsComponent,
     AboutWhoComponent,
     AboutWhatComponent,
     PostsComponent,
@@ -119,7 +111,6 @@ export function tokenGetter() {
     HttpClientModule ,
     FormsModule,
     ReactiveFormsModule,
-   //  JwtModule.forRoot({config: { tokenGetter }}),
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
@@ -135,8 +126,9 @@ export function tokenGetter() {
     {provide: APP_BASE_HREF, useValue: '/'},
     {provide: MAT_CHECKBOX_CLICK_ACTION, useValue: 'check'},
     {provide: MAT_CHIPS_DEFAULT_OPTIONS, useValue: {separatorKeyCodes: [ENTER, COMMA]}},
-    // {provide: MAT_BOTTOM_SHEET_DEFAULT_OPTIONS, useValue: {hasBackdrop: false}},
-    AuthService
+    AuthService,
+    AuthGuardService,
+    AdminAuthGuardService
   ],
   entryComponents: [
      BottomSheetConfirm
