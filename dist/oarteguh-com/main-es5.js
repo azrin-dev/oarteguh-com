@@ -153,17 +153,6 @@
             /* harmony default export */ __webpack_exports__["default"] = ("\n\n<app-navigations></app-navigations>");
             /***/ 
         }),
-        /***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/comments/comments.component.html": 
-        /*!****************************************************************************************!*\
-          !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/comments/comments.component.html ***!
-          \****************************************************************************************/
-        /*! exports provided: default */
-        /***/ (function (module, __webpack_exports__, __webpack_require__) {
-            "use strict";
-            __webpack_require__.r(__webpack_exports__);
-            /* harmony default export */ __webpack_exports__["default"] = ("<div  class=\"lm__comments-wrapper\"\n>\n\n   <div  class=\"lm__comments-title\"\n         fxLayout=\"column\" fxLayoutAlign=\"center\"\n   >\n         <h3>Comments</h3>\n   </div>\n\n   <div class=\"lm__comments-new\"\n         *ngIf=\"profile ? true : false\"   \n         fxLayout=\"row\" fxLayoutAlign=\"start center\" fxLayoutGap=\"20px\"\n   >\n      <img mat-card-avatar class=\"lm__comment-image\" src=\"assets/images/uploads/{{ profile.image }}\">     \n      <mat-form-field class=\"lm__form-input\">\n         <textarea matInput rows=\"2\"  placeholder=\"type your comment here\"></textarea> \n      </mat-form-field>      \n   </div>\n\n   <div class=\"lm__post-comments\" *ngIf=\"post.comments ? true : false\">\n      <mat-list>\n         <mat-list-item *ngFor=\"let comment of post.comments\">\n            <img matListAvatar src=\"assets/images/uploads/{{ comment.owner.image }}\" alt=\"\">\n         </mat-list-item>\n      </mat-list>\n   </div>\n\n</div>\n");
-            /***/ 
-        }),
         /***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/footer/footer.component.html": 
         /*!************************************************************************************!*\
           !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/footer/footer.component.html ***!
@@ -206,39 +195,6 @@
             "use strict";
             __webpack_require__.r(__webpack_exports__);
             /* harmony default export */ __webpack_exports__["default"] = ("<div  class=\"lm__container-100vh-padding-top\" \n      fxLayout=\"column\"\n      fxLayoutAlign=\" center\"\n>\n   <div  class=\"lm__text-intro\" \n         fxFlexAlign=\"start\"\n         @banner1Enter\n         (@banner1Enter.done)=\"banner1Done($event)\"\n   >\n      <div class=\"shadow__text-right banner1-enter\"  \n      >\n         Thank you for making the ...\n      </div>\n   </div>\n\n   <div  class=\"lm__text-intro\" \n         fxFlexAlign=\"start\"\n         @banner2Enter\n         *ngIf=\"banner1AnimationDone\"\n         (@banner2Enter.done)=\"banner2Done($event)\"\n   >\n      <div class=\"lm__text-intro-accent shadow__text-right banner2-enter\">\n         right choice in visiting ...\n      </div>\n   </div>\n\n   <div  class=\"lm__img-intro\"\n         fxLayout=\"column\"    \n         fxLayoutAlign=\"center center\"        \n   >\n      <div  class=\"banner3\"\n            fxLayout=\"column\"    \n            fxLayoutAlign=\"center center\" \n            *ngIf=\"banner2AnimationDone\"\n            @banner3Enter   \n            (@banner3Enter.done)=\"banner3Done($event)\"\n      >\n         <img  class=\"lm__img-profile shadow__png-ac-right banner3-enter\" \n               src=\"assets/images/azrin.jpg\" \n               alt=\"Azrin Amin\"\n\n         >\n      </div>\n      <div  class=\"banner4\"\n            fxLayout=\"column\"    \n            fxLayoutAlign=\"center center\"  \n            *ngIf=\"banner3AnimationDone\"\n            @banner4Enter   \n            (@banner4Enter.done)=\"banner4Done($event)\"\n      >\n         <img  class=\"lm__img-logo shadow__png-ac-right banner4-enter\"\n               src=\"assets/images/logo.png\" \n               alt=\"Azrin Amin Logo\"\n         >\n      </div>\n   \n      <div  *ngIf=\"banner4AnimationDone\"\n            @banner5Enter  \n      >\n         <div  class=\"lm__text-intro-subtitle shadow__text-right banner5-enter\"\n               fxLayout=\"column\"    \n               fxLayoutAlign=\"center center\" \n         >\n            Freelance Consultant & Application Developer\n            <br>\n            <button  class=\"lm__banner-button\" \n                     mat-raised-button color=\"accent\"\n                     fxLayout=\"column\"    \n                     fxLayoutAlign=\"center center\" \n            >\n               <mat-icon>info</mat-icon>\n               Further Info\n            </button>\n         </div>      \n      </div>\n   \n   </div>\n\n</div>\n\n");
-            /***/ 
-        }),
-        /***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/logo/logo2rem-light/logo2rem-light.component.html": 
-        /*!*********************************************************************************************************!*\
-          !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/logo/logo2rem-light/logo2rem-light.component.html ***!
-          \*********************************************************************************************************/
-        /*! exports provided: default */
-        /***/ (function (module, __webpack_exports__, __webpack_require__) {
-            "use strict";
-            __webpack_require__.r(__webpack_exports__);
-            /* harmony default export */ __webpack_exports__["default"] = ("<div class=\"lm__logo-2rem-light\">\n   azrin.dev\n</div>\n");
-            /***/ 
-        }),
-        /***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/logo/logo2rem/logo2rem.component.html": 
-        /*!*********************************************************************************************!*\
-          !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/logo/logo2rem/logo2rem.component.html ***!
-          \*********************************************************************************************/
-        /*! exports provided: default */
-        /***/ (function (module, __webpack_exports__, __webpack_require__) {
-            "use strict";
-            __webpack_require__.r(__webpack_exports__);
-            /* harmony default export */ __webpack_exports__["default"] = ("<div class=\"lm__logo-2rem\">\n   azrin.dev\n</div>\n");
-            /***/ 
-        }),
-        /***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/logo/logo4rem/logo4rem.component.html": 
-        /*!*********************************************************************************************!*\
-          !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/logo/logo4rem/logo4rem.component.html ***!
-          \*********************************************************************************************/
-        /*! exports provided: default */
-        /***/ (function (module, __webpack_exports__, __webpack_require__) {
-            "use strict";
-            __webpack_require__.r(__webpack_exports__);
-            /* harmony default export */ __webpack_exports__["default"] = ("<div fxLayout=\"column\" fxLayoutAlign=\"center center\">\n   <img  class=\"lm__logo\"\n         alt=\"\"\n         src=\"assets/logo_icons/logo-azrin-dev.png\" \n   >\n</div>\n");
             /***/ 
         }),
         /***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/logo/main-logo/main-logo.component.html": 
@@ -2121,54 +2077,52 @@
             /* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/platform-browser/animations */ "./node_modules/@angular/platform-browser/fesm2015/animations.js");
             /* harmony import */ var _material_module__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./material.module */ "./src/app/material.module.ts");
             /* harmony import */ var _configurations_services_auth_auth_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./configurations/services/auth/auth.service */ "./src/app/configurations/services/auth/auth.service.ts");
-            /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm2015/common.js");
-            /* harmony import */ var _angular_flex_layout__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/flex-layout */ "./node_modules/@angular/flex-layout/esm2015/flex-layout.js");
-            /* harmony import */ var _footer_footer_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./footer/footer.component */ "./src/app/footer/footer.component.ts");
-            /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
-            /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
-            /* harmony import */ var _user_user_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./user/user.component */ "./src/app/user/user.component.ts");
-            /* harmony import */ var _user_login_login_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./user/login/login.component */ "./src/app/user/login/login.component.ts");
-            /* harmony import */ var _user_register_register_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./user/register/register.component */ "./src/app/user/register/register.component.ts");
-            /* harmony import */ var _admin_admin_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./admin/admin.component */ "./src/app/admin/admin.component.ts");
-            /* harmony import */ var _admin_admin_serial_admin_serial_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./admin/admin-serial/admin-serial.component */ "./src/app/admin/admin-serial/admin-serial.component.ts");
-            /* harmony import */ var _admin_admin_serial_admin_serial_table_admin_serial_table_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./admin/admin-serial/admin-serial-table/admin-serial-table.component */ "./src/app/admin/admin-serial/admin-serial-table/admin-serial-table.component.ts");
-            /* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm2015/material.js");
-            /* harmony import */ var _admin_admin_message_admin_message_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./admin/admin-message/admin-message.component */ "./src/app/admin/admin-message/admin-message.component.ts");
-            /* harmony import */ var _angular_cdk_layout__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! @angular/cdk/layout */ "./node_modules/@angular/cdk/esm2015/layout.js");
-            /* harmony import */ var _navigations_navigations_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./navigations/navigations.component */ "./src/app/navigations/navigations.component.ts");
-            /* harmony import */ var _tags_tags_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./tags/tags.component */ "./src/app/tags/tags.component.ts");
-            /* harmony import */ var _pages_home_home_component__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./pages/home/home.component */ "./src/app/pages/home/home.component.ts");
-            /* harmony import */ var _user_auth_register_auth_register_component__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./user/auth-register/auth-register.component */ "./src/app/user/auth-register/auth-register.component.ts");
-            /* harmony import */ var _admin_admin_post_admin_post_component__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./admin/admin-post/admin-post.component */ "./src/app/admin/admin-post/admin-post.component.ts");
-            /* harmony import */ var _admin_admin_post_form_post_form_post_component__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./admin/admin-post/form-post/form-post.component */ "./src/app/admin/admin-post/form-post/form-post.component.ts");
-            /* harmony import */ var _logo_logo4rem_logo4rem_component__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./logo/logo4rem/logo4rem.component */ "./src/app/logo/logo4rem/logo4rem.component.ts");
-            /* harmony import */ var _logo_logo2rem_logo2rem_component__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./logo/logo2rem/logo2rem.component */ "./src/app/logo/logo2rem/logo2rem.component.ts");
+            /* harmony import */ var _configurations_services_auth_guard_auth_guard_service__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./configurations/services/auth-guard/auth-guard.service */ "./src/app/configurations/services/auth-guard/auth-guard.service.ts");
+            /* harmony import */ var _configurations_services_admin_auth_guard_admin_auth_guard_service__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./configurations/services/admin-auth-guard/admin-auth-guard.service */ "./src/app/configurations/services/admin-auth-guard/admin-auth-guard.service.ts");
+            /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm2015/common.js");
+            /* harmony import */ var _angular_flex_layout__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @angular/flex-layout */ "./node_modules/@angular/flex-layout/esm2015/flex-layout.js");
+            /* harmony import */ var _footer_footer_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./footer/footer.component */ "./src/app/footer/footer.component.ts");
+            /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
+            /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
+            /* harmony import */ var _user_user_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./user/user.component */ "./src/app/user/user.component.ts");
+            /* harmony import */ var _user_login_login_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./user/login/login.component */ "./src/app/user/login/login.component.ts");
+            /* harmony import */ var _user_register_register_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./user/register/register.component */ "./src/app/user/register/register.component.ts");
+            /* harmony import */ var _admin_admin_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./admin/admin.component */ "./src/app/admin/admin.component.ts");
+            /* harmony import */ var _admin_admin_serial_admin_serial_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./admin/admin-serial/admin-serial.component */ "./src/app/admin/admin-serial/admin-serial.component.ts");
+            /* harmony import */ var _admin_admin_serial_admin_serial_table_admin_serial_table_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./admin/admin-serial/admin-serial-table/admin-serial-table.component */ "./src/app/admin/admin-serial/admin-serial-table/admin-serial-table.component.ts");
+            /* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm2015/material.js");
+            /* harmony import */ var _admin_admin_message_admin_message_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./admin/admin-message/admin-message.component */ "./src/app/admin/admin-message/admin-message.component.ts");
+            /* harmony import */ var _angular_cdk_layout__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! @angular/cdk/layout */ "./node_modules/@angular/cdk/esm2015/layout.js");
+            /* harmony import */ var _navigations_navigations_component__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./navigations/navigations.component */ "./src/app/navigations/navigations.component.ts");
+            /* harmony import */ var _tags_tags_component__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./tags/tags.component */ "./src/app/tags/tags.component.ts");
+            /* harmony import */ var _pages_home_home_component__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./pages/home/home.component */ "./src/app/pages/home/home.component.ts");
+            /* harmony import */ var _user_auth_register_auth_register_component__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./user/auth-register/auth-register.component */ "./src/app/user/auth-register/auth-register.component.ts");
+            /* harmony import */ var _admin_admin_post_admin_post_component__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./admin/admin-post/admin-post.component */ "./src/app/admin/admin-post/admin-post.component.ts");
+            /* harmony import */ var _admin_admin_post_form_post_form_post_component__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./admin/admin-post/form-post/form-post.component */ "./src/app/admin/admin-post/form-post/form-post.component.ts");
             /* harmony import */ var _admin_admin_post_form_post_chip_categories_chip_categories_component__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./admin/admin-post/form-post/chip-categories/chip-categories.component */ "./src/app/admin/admin-post/form-post/chip-categories/chip-categories.component.ts");
             /* harmony import */ var _angular_cdk_keycodes__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! @angular/cdk/keycodes */ "./node_modules/@angular/cdk/esm2015/keycodes.js");
             /* harmony import */ var _admin_admin_post_form_post_chip_tags_chip_tags_component__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./admin/admin-post/form-post/chip-tags/chip-tags.component */ "./src/app/admin/admin-post/form-post/chip-tags/chip-tags.component.ts");
-            /* harmony import */ var _logo_logo2rem_light_logo2rem_light_component__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./logo/logo2rem-light/logo2rem-light.component */ "./src/app/logo/logo2rem-light/logo2rem-light.component.ts");
-            /* harmony import */ var _admin_admin_post_form_post_preview_post_preview_post_component__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./admin/admin-post/form-post/preview-post/preview-post.component */ "./src/app/admin/admin-post/form-post/preview-post/preview-post.component.ts");
-            /* harmony import */ var _post_post_component__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ./post/post.component */ "./src/app/post/post.component.ts");
-            /* harmony import */ var _comments_comments_component__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! ./comments/comments.component */ "./src/app/comments/comments.component.ts");
-            /* harmony import */ var _home_about_who_about_who_component__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! ./home/about-who/about-who.component */ "./src/app/home/about-who/about-who.component.ts");
-            /* harmony import */ var _home_about_what_about_what_component__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(/*! ./home/about-what/about-what.component */ "./src/app/home/about-what/about-what.component.ts");
-            /* harmony import */ var _posts_posts_component__WEBPACK_IMPORTED_MODULE_39__ = __webpack_require__(/*! ./posts/posts.component */ "./src/app/posts/posts.component.ts");
-            /* harmony import */ var _home_banner_full_banner_full_component__WEBPACK_IMPORTED_MODULE_40__ = __webpack_require__(/*! ./home/banner-full/banner-full.component */ "./src/app/home/banner-full/banner-full.component.ts");
-            /* harmony import */ var _post_post_comments_post_comments_component__WEBPACK_IMPORTED_MODULE_41__ = __webpack_require__(/*! ./post/post-comments/post-comments.component */ "./src/app/post/post-comments/post-comments.component.ts");
-            /* harmony import */ var _admin_admin_posts_admin_posts_component__WEBPACK_IMPORTED_MODULE_42__ = __webpack_require__(/*! ./admin/admin-posts/admin-posts.component */ "./src/app/admin/admin-posts/admin-posts.component.ts");
-            /* harmony import */ var _admin_admin_post_admin_post_edit_admin_post_edit_component__WEBPACK_IMPORTED_MODULE_43__ = __webpack_require__(/*! ./admin/admin-post/admin-post-edit/admin-post-edit.component */ "./src/app/admin/admin-post/admin-post-edit/admin-post-edit.component.ts");
-            /* harmony import */ var _admin_admin_post_admin_post_edit_admin_post_edit_preview_admin_post_edit_preview_component__WEBPACK_IMPORTED_MODULE_44__ = __webpack_require__(/*! ./admin/admin-post/admin-post-edit/admin-post-edit-preview/admin-post-edit-preview.component */ "./src/app/admin/admin-post/admin-post-edit/admin-post-edit-preview/admin-post-edit-preview.component.ts");
-            /* harmony import */ var _admin_admin_post_admin_post_edit_admin_post_edit_form_admin_post_edit_form_component__WEBPACK_IMPORTED_MODULE_45__ = __webpack_require__(/*! ./admin/admin-post/admin-post-edit/admin-post-edit-form/admin-post-edit-form.component */ "./src/app/admin/admin-post/admin-post-edit/admin-post-edit-form/admin-post-edit-form.component.ts");
-            /* harmony import */ var _user_forgot_password_forgot_password_component__WEBPACK_IMPORTED_MODULE_46__ = __webpack_require__(/*! ./user/forgot-password/forgot-password.component */ "./src/app/user/forgot-password/forgot-password.component.ts");
-            /* harmony import */ var _logo_main_logo_main_logo_component__WEBPACK_IMPORTED_MODULE_47__ = __webpack_require__(/*! ./logo/main-logo/main-logo.component */ "./src/app/logo/main-logo/main-logo.component.ts");
-            /* harmony import */ var _user_login_callback_callback_component__WEBPACK_IMPORTED_MODULE_48__ = __webpack_require__(/*! ./user/login/callback/callback.component */ "./src/app/user/login/callback/callback.component.ts");
-            /* harmony import */ var _user_login_linkedin_linkedin_component__WEBPACK_IMPORTED_MODULE_49__ = __webpack_require__(/*! ./user/login/linkedin/linkedin.component */ "./src/app/user/login/linkedin/linkedin.component.ts");
-            /* harmony import */ var _pages_layout_layout_component__WEBPACK_IMPORTED_MODULE_50__ = __webpack_require__(/*! ./pages/layout/layout.component */ "./src/app/pages/layout/layout.component.ts");
-            /* harmony import */ var _sidebar_sidebar_component__WEBPACK_IMPORTED_MODULE_51__ = __webpack_require__(/*! ./sidebar/sidebar.component */ "./src/app/sidebar/sidebar.component.ts");
-            /* harmony import */ var _pages_terms_terms_component__WEBPACK_IMPORTED_MODULE_52__ = __webpack_require__(/*! ./pages/terms/terms.component */ "./src/app/pages/terms/terms.component.ts");
-            /* harmony import */ var _pages_user_profile_profile_component__WEBPACK_IMPORTED_MODULE_53__ = __webpack_require__(/*! ./pages-user/profile/profile.component */ "./src/app/pages-user/profile/profile.component.ts");
-            /* harmony import */ var _angular_material_form_field__WEBPACK_IMPORTED_MODULE_54__ = __webpack_require__(/*! @angular/material/form-field */ "./node_modules/@angular/material/esm2015/form-field.js");
-            /* harmony import */ var _pages_contact_form_contact_form_component__WEBPACK_IMPORTED_MODULE_55__ = __webpack_require__(/*! ./pages/contact-form/contact-form.component */ "./src/app/pages/contact-form/contact-form.component.ts");
+            /* harmony import */ var _admin_admin_post_form_post_preview_post_preview_post_component__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./admin/admin-post/form-post/preview-post/preview-post.component */ "./src/app/admin/admin-post/form-post/preview-post/preview-post.component.ts");
+            /* harmony import */ var _post_post_component__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./post/post.component */ "./src/app/post/post.component.ts");
+            /* harmony import */ var _home_about_who_about_who_component__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ./home/about-who/about-who.component */ "./src/app/home/about-who/about-who.component.ts");
+            /* harmony import */ var _home_about_what_about_what_component__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! ./home/about-what/about-what.component */ "./src/app/home/about-what/about-what.component.ts");
+            /* harmony import */ var _posts_posts_component__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! ./posts/posts.component */ "./src/app/posts/posts.component.ts");
+            /* harmony import */ var _home_banner_full_banner_full_component__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(/*! ./home/banner-full/banner-full.component */ "./src/app/home/banner-full/banner-full.component.ts");
+            /* harmony import */ var _post_post_comments_post_comments_component__WEBPACK_IMPORTED_MODULE_39__ = __webpack_require__(/*! ./post/post-comments/post-comments.component */ "./src/app/post/post-comments/post-comments.component.ts");
+            /* harmony import */ var _admin_admin_posts_admin_posts_component__WEBPACK_IMPORTED_MODULE_40__ = __webpack_require__(/*! ./admin/admin-posts/admin-posts.component */ "./src/app/admin/admin-posts/admin-posts.component.ts");
+            /* harmony import */ var _admin_admin_post_admin_post_edit_admin_post_edit_component__WEBPACK_IMPORTED_MODULE_41__ = __webpack_require__(/*! ./admin/admin-post/admin-post-edit/admin-post-edit.component */ "./src/app/admin/admin-post/admin-post-edit/admin-post-edit.component.ts");
+            /* harmony import */ var _admin_admin_post_admin_post_edit_admin_post_edit_preview_admin_post_edit_preview_component__WEBPACK_IMPORTED_MODULE_42__ = __webpack_require__(/*! ./admin/admin-post/admin-post-edit/admin-post-edit-preview/admin-post-edit-preview.component */ "./src/app/admin/admin-post/admin-post-edit/admin-post-edit-preview/admin-post-edit-preview.component.ts");
+            /* harmony import */ var _admin_admin_post_admin_post_edit_admin_post_edit_form_admin_post_edit_form_component__WEBPACK_IMPORTED_MODULE_43__ = __webpack_require__(/*! ./admin/admin-post/admin-post-edit/admin-post-edit-form/admin-post-edit-form.component */ "./src/app/admin/admin-post/admin-post-edit/admin-post-edit-form/admin-post-edit-form.component.ts");
+            /* harmony import */ var _user_forgot_password_forgot_password_component__WEBPACK_IMPORTED_MODULE_44__ = __webpack_require__(/*! ./user/forgot-password/forgot-password.component */ "./src/app/user/forgot-password/forgot-password.component.ts");
+            /* harmony import */ var _logo_main_logo_main_logo_component__WEBPACK_IMPORTED_MODULE_45__ = __webpack_require__(/*! ./logo/main-logo/main-logo.component */ "./src/app/logo/main-logo/main-logo.component.ts");
+            /* harmony import */ var _user_login_callback_callback_component__WEBPACK_IMPORTED_MODULE_46__ = __webpack_require__(/*! ./user/login/callback/callback.component */ "./src/app/user/login/callback/callback.component.ts");
+            /* harmony import */ var _user_login_linkedin_linkedin_component__WEBPACK_IMPORTED_MODULE_47__ = __webpack_require__(/*! ./user/login/linkedin/linkedin.component */ "./src/app/user/login/linkedin/linkedin.component.ts");
+            /* harmony import */ var _pages_layout_layout_component__WEBPACK_IMPORTED_MODULE_48__ = __webpack_require__(/*! ./pages/layout/layout.component */ "./src/app/pages/layout/layout.component.ts");
+            /* harmony import */ var _sidebar_sidebar_component__WEBPACK_IMPORTED_MODULE_49__ = __webpack_require__(/*! ./sidebar/sidebar.component */ "./src/app/sidebar/sidebar.component.ts");
+            /* harmony import */ var _pages_terms_terms_component__WEBPACK_IMPORTED_MODULE_50__ = __webpack_require__(/*! ./pages/terms/terms.component */ "./src/app/pages/terms/terms.component.ts");
+            /* harmony import */ var _pages_user_profile_profile_component__WEBPACK_IMPORTED_MODULE_51__ = __webpack_require__(/*! ./pages-user/profile/profile.component */ "./src/app/pages-user/profile/profile.component.ts");
+            /* harmony import */ var _angular_material_form_field__WEBPACK_IMPORTED_MODULE_52__ = __webpack_require__(/*! @angular/material/form-field */ "./node_modules/@angular/material/esm2015/form-field.js");
+            /* harmony import */ var _pages_contact_form_contact_form_component__WEBPACK_IMPORTED_MODULE_53__ = __webpack_require__(/*! ./pages/contact-form/contact-form.component */ "./src/app/pages/contact-form/contact-form.component.ts");
             function tokenGetter() {
                 return localStorage.getItem('access_token');
             }
@@ -2181,47 +2135,43 @@
                 Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
                     declarations: [
                         _app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"],
-                        _footer_footer_component__WEBPACK_IMPORTED_MODULE_10__["FooterComponent"],
-                        _user_user_component__WEBPACK_IMPORTED_MODULE_13__["UserComponent"],
-                        _user_login_login_component__WEBPACK_IMPORTED_MODULE_14__["LoginComponent"],
-                        _user_register_register_component__WEBPACK_IMPORTED_MODULE_15__["RegisterComponent"],
-                        _admin_admin_component__WEBPACK_IMPORTED_MODULE_16__["AdminComponent"],
-                        _admin_admin_serial_admin_serial_component__WEBPACK_IMPORTED_MODULE_17__["AdminSerialComponent"],
-                        _admin_admin_serial_admin_serial_table_admin_serial_table_component__WEBPACK_IMPORTED_MODULE_18__["AdminSerialTableComponent"],
-                        _admin_admin_serial_admin_serial_table_admin_serial_table_component__WEBPACK_IMPORTED_MODULE_18__["BottomSheetConfirm"],
-                        _pages_contact_form_contact_form_component__WEBPACK_IMPORTED_MODULE_55__["ContactFormComponent"],
-                        _admin_admin_message_admin_message_component__WEBPACK_IMPORTED_MODULE_20__["AdminMessageComponent"],
-                        _navigations_navigations_component__WEBPACK_IMPORTED_MODULE_22__["NavigationsComponent"],
-                        _tags_tags_component__WEBPACK_IMPORTED_MODULE_23__["TagsComponent"],
-                        _pages_home_home_component__WEBPACK_IMPORTED_MODULE_24__["HomeComponent"],
-                        _user_auth_register_auth_register_component__WEBPACK_IMPORTED_MODULE_25__["AuthRegisterComponent"],
-                        _admin_admin_post_admin_post_component__WEBPACK_IMPORTED_MODULE_26__["AdminPostComponent"],
-                        _admin_admin_post_form_post_form_post_component__WEBPACK_IMPORTED_MODULE_27__["FormPostComponent"],
-                        _logo_logo4rem_logo4rem_component__WEBPACK_IMPORTED_MODULE_28__["Logo4remComponent"],
-                        _logo_logo2rem_logo2rem_component__WEBPACK_IMPORTED_MODULE_29__["Logo2remComponent"],
+                        _footer_footer_component__WEBPACK_IMPORTED_MODULE_12__["FooterComponent"],
+                        _user_user_component__WEBPACK_IMPORTED_MODULE_15__["UserComponent"],
+                        _user_login_login_component__WEBPACK_IMPORTED_MODULE_16__["LoginComponent"],
+                        _user_register_register_component__WEBPACK_IMPORTED_MODULE_17__["RegisterComponent"],
+                        _admin_admin_component__WEBPACK_IMPORTED_MODULE_18__["AdminComponent"],
+                        _admin_admin_serial_admin_serial_component__WEBPACK_IMPORTED_MODULE_19__["AdminSerialComponent"],
+                        _admin_admin_serial_admin_serial_table_admin_serial_table_component__WEBPACK_IMPORTED_MODULE_20__["AdminSerialTableComponent"],
+                        _admin_admin_serial_admin_serial_table_admin_serial_table_component__WEBPACK_IMPORTED_MODULE_20__["BottomSheetConfirm"],
+                        _pages_contact_form_contact_form_component__WEBPACK_IMPORTED_MODULE_53__["ContactFormComponent"],
+                        _admin_admin_message_admin_message_component__WEBPACK_IMPORTED_MODULE_22__["AdminMessageComponent"],
+                        _navigations_navigations_component__WEBPACK_IMPORTED_MODULE_24__["NavigationsComponent"],
+                        _tags_tags_component__WEBPACK_IMPORTED_MODULE_25__["TagsComponent"],
+                        _pages_home_home_component__WEBPACK_IMPORTED_MODULE_26__["HomeComponent"],
+                        _user_auth_register_auth_register_component__WEBPACK_IMPORTED_MODULE_27__["AuthRegisterComponent"],
+                        _admin_admin_post_admin_post_component__WEBPACK_IMPORTED_MODULE_28__["AdminPostComponent"],
+                        _admin_admin_post_form_post_form_post_component__WEBPACK_IMPORTED_MODULE_29__["FormPostComponent"],
                         _admin_admin_post_form_post_chip_categories_chip_categories_component__WEBPACK_IMPORTED_MODULE_30__["ChipCategoriesComponent"],
                         _admin_admin_post_form_post_chip_tags_chip_tags_component__WEBPACK_IMPORTED_MODULE_32__["ChipTagsComponent"],
-                        _logo_logo2rem_light_logo2rem_light_component__WEBPACK_IMPORTED_MODULE_33__["Logo2remLightComponent"],
-                        _admin_admin_post_form_post_preview_post_preview_post_component__WEBPACK_IMPORTED_MODULE_34__["PreviewPostComponent"],
-                        _post_post_component__WEBPACK_IMPORTED_MODULE_35__["PostComponent"],
-                        _comments_comments_component__WEBPACK_IMPORTED_MODULE_36__["CommentsComponent"],
-                        _home_about_who_about_who_component__WEBPACK_IMPORTED_MODULE_37__["AboutWhoComponent"],
-                        _home_about_what_about_what_component__WEBPACK_IMPORTED_MODULE_38__["AboutWhatComponent"],
-                        _posts_posts_component__WEBPACK_IMPORTED_MODULE_39__["PostsComponent"],
-                        _home_banner_full_banner_full_component__WEBPACK_IMPORTED_MODULE_40__["BannerFullComponent"],
-                        _post_post_comments_post_comments_component__WEBPACK_IMPORTED_MODULE_41__["PostCommentsComponent"],
-                        _admin_admin_posts_admin_posts_component__WEBPACK_IMPORTED_MODULE_42__["AdminPostsComponent"],
-                        _admin_admin_post_admin_post_edit_admin_post_edit_component__WEBPACK_IMPORTED_MODULE_43__["AdminPostEditComponent"],
-                        _admin_admin_post_admin_post_edit_admin_post_edit_preview_admin_post_edit_preview_component__WEBPACK_IMPORTED_MODULE_44__["AdminPostEditPreviewComponent"],
-                        _admin_admin_post_admin_post_edit_admin_post_edit_form_admin_post_edit_form_component__WEBPACK_IMPORTED_MODULE_45__["AdminPostEditFormComponent"],
-                        _user_forgot_password_forgot_password_component__WEBPACK_IMPORTED_MODULE_46__["ForgotPasswordComponent"],
-                        _logo_main_logo_main_logo_component__WEBPACK_IMPORTED_MODULE_47__["MainLogoComponent"],
-                        _user_login_callback_callback_component__WEBPACK_IMPORTED_MODULE_48__["CallbackComponent"],
-                        _user_login_linkedin_linkedin_component__WEBPACK_IMPORTED_MODULE_49__["LinkedinComponent"],
-                        _pages_layout_layout_component__WEBPACK_IMPORTED_MODULE_50__["LayoutComponent"],
-                        _sidebar_sidebar_component__WEBPACK_IMPORTED_MODULE_51__["SidebarComponent"],
-                        _pages_terms_terms_component__WEBPACK_IMPORTED_MODULE_52__["TermsComponent"],
-                        _pages_user_profile_profile_component__WEBPACK_IMPORTED_MODULE_53__["ProfileComponent"]
+                        _admin_admin_post_form_post_preview_post_preview_post_component__WEBPACK_IMPORTED_MODULE_33__["PreviewPostComponent"],
+                        _post_post_component__WEBPACK_IMPORTED_MODULE_34__["PostComponent"],
+                        _home_about_who_about_who_component__WEBPACK_IMPORTED_MODULE_35__["AboutWhoComponent"],
+                        _home_about_what_about_what_component__WEBPACK_IMPORTED_MODULE_36__["AboutWhatComponent"],
+                        _posts_posts_component__WEBPACK_IMPORTED_MODULE_37__["PostsComponent"],
+                        _home_banner_full_banner_full_component__WEBPACK_IMPORTED_MODULE_38__["BannerFullComponent"],
+                        _post_post_comments_post_comments_component__WEBPACK_IMPORTED_MODULE_39__["PostCommentsComponent"],
+                        _admin_admin_posts_admin_posts_component__WEBPACK_IMPORTED_MODULE_40__["AdminPostsComponent"],
+                        _admin_admin_post_admin_post_edit_admin_post_edit_component__WEBPACK_IMPORTED_MODULE_41__["AdminPostEditComponent"],
+                        _admin_admin_post_admin_post_edit_admin_post_edit_preview_admin_post_edit_preview_component__WEBPACK_IMPORTED_MODULE_42__["AdminPostEditPreviewComponent"],
+                        _admin_admin_post_admin_post_edit_admin_post_edit_form_admin_post_edit_form_component__WEBPACK_IMPORTED_MODULE_43__["AdminPostEditFormComponent"],
+                        _user_forgot_password_forgot_password_component__WEBPACK_IMPORTED_MODULE_44__["ForgotPasswordComponent"],
+                        _logo_main_logo_main_logo_component__WEBPACK_IMPORTED_MODULE_45__["MainLogoComponent"],
+                        _user_login_callback_callback_component__WEBPACK_IMPORTED_MODULE_46__["CallbackComponent"],
+                        _user_login_linkedin_linkedin_component__WEBPACK_IMPORTED_MODULE_47__["LinkedinComponent"],
+                        _pages_layout_layout_component__WEBPACK_IMPORTED_MODULE_48__["LayoutComponent"],
+                        _sidebar_sidebar_component__WEBPACK_IMPORTED_MODULE_49__["SidebarComponent"],
+                        _pages_terms_terms_component__WEBPACK_IMPORTED_MODULE_50__["TermsComponent"],
+                        _pages_user_profile_profile_component__WEBPACK_IMPORTED_MODULE_51__["ProfileComponent"]
                     ],
                     imports: [
                         _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
@@ -2229,90 +2179,35 @@
                         _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_5__["BrowserAnimationsModule"],
                         _material_module__WEBPACK_IMPORTED_MODULE_6__["MaterialModule"],
                         _app_routing_module__WEBPACK_IMPORTED_MODULE_3__["AppRoutingModule"],
-                        _angular_flex_layout__WEBPACK_IMPORTED_MODULE_9__["FlexLayoutModule"],
-                        _angular_common_http__WEBPACK_IMPORTED_MODULE_11__["HttpClientModule"],
-                        _angular_forms__WEBPACK_IMPORTED_MODULE_12__["FormsModule"],
-                        _angular_forms__WEBPACK_IMPORTED_MODULE_12__["ReactiveFormsModule"],
-                        //  JwtModule.forRoot({config: { tokenGetter }}),
-                        _angular_material__WEBPACK_IMPORTED_MODULE_19__["MatTableModule"],
-                        _angular_material__WEBPACK_IMPORTED_MODULE_19__["MatPaginatorModule"],
-                        _angular_material__WEBPACK_IMPORTED_MODULE_19__["MatSortModule"],
-                        _angular_cdk_layout__WEBPACK_IMPORTED_MODULE_21__["LayoutModule"],
-                        _angular_material__WEBPACK_IMPORTED_MODULE_19__["MatToolbarModule"],
-                        _angular_material__WEBPACK_IMPORTED_MODULE_19__["MatButtonModule"],
-                        _angular_material__WEBPACK_IMPORTED_MODULE_19__["MatSidenavModule"],
-                        _angular_material__WEBPACK_IMPORTED_MODULE_19__["MatIconModule"],
-                        _angular_material__WEBPACK_IMPORTED_MODULE_19__["MatListModule"],
-                        _angular_material_form_field__WEBPACK_IMPORTED_MODULE_54__["MatFormFieldModule"]
+                        _angular_flex_layout__WEBPACK_IMPORTED_MODULE_11__["FlexLayoutModule"],
+                        _angular_common_http__WEBPACK_IMPORTED_MODULE_13__["HttpClientModule"],
+                        _angular_forms__WEBPACK_IMPORTED_MODULE_14__["FormsModule"],
+                        _angular_forms__WEBPACK_IMPORTED_MODULE_14__["ReactiveFormsModule"],
+                        _angular_material__WEBPACK_IMPORTED_MODULE_21__["MatTableModule"],
+                        _angular_material__WEBPACK_IMPORTED_MODULE_21__["MatPaginatorModule"],
+                        _angular_material__WEBPACK_IMPORTED_MODULE_21__["MatSortModule"],
+                        _angular_cdk_layout__WEBPACK_IMPORTED_MODULE_23__["LayoutModule"],
+                        _angular_material__WEBPACK_IMPORTED_MODULE_21__["MatToolbarModule"],
+                        _angular_material__WEBPACK_IMPORTED_MODULE_21__["MatButtonModule"],
+                        _angular_material__WEBPACK_IMPORTED_MODULE_21__["MatSidenavModule"],
+                        _angular_material__WEBPACK_IMPORTED_MODULE_21__["MatIconModule"],
+                        _angular_material__WEBPACK_IMPORTED_MODULE_21__["MatListModule"],
+                        _angular_material_form_field__WEBPACK_IMPORTED_MODULE_52__["MatFormFieldModule"]
                     ],
                     providers: [
-                        { provide: _angular_common__WEBPACK_IMPORTED_MODULE_8__["APP_BASE_HREF"], useValue: '/' },
-                        { provide: _angular_material__WEBPACK_IMPORTED_MODULE_19__["MAT_CHECKBOX_CLICK_ACTION"], useValue: 'check' },
-                        { provide: _angular_material__WEBPACK_IMPORTED_MODULE_19__["MAT_CHIPS_DEFAULT_OPTIONS"], useValue: { separatorKeyCodes: [_angular_cdk_keycodes__WEBPACK_IMPORTED_MODULE_31__["ENTER"], _angular_cdk_keycodes__WEBPACK_IMPORTED_MODULE_31__["COMMA"]] } },
-                        // {provide: MAT_BOTTOM_SHEET_DEFAULT_OPTIONS, useValue: {hasBackdrop: false}},
-                        _configurations_services_auth_auth_service__WEBPACK_IMPORTED_MODULE_7__["AuthService"]
+                        { provide: _angular_common__WEBPACK_IMPORTED_MODULE_10__["APP_BASE_HREF"], useValue: '/' },
+                        { provide: _angular_material__WEBPACK_IMPORTED_MODULE_21__["MAT_CHECKBOX_CLICK_ACTION"], useValue: 'check' },
+                        { provide: _angular_material__WEBPACK_IMPORTED_MODULE_21__["MAT_CHIPS_DEFAULT_OPTIONS"], useValue: { separatorKeyCodes: [_angular_cdk_keycodes__WEBPACK_IMPORTED_MODULE_31__["ENTER"], _angular_cdk_keycodes__WEBPACK_IMPORTED_MODULE_31__["COMMA"]] } },
+                        _configurations_services_auth_auth_service__WEBPACK_IMPORTED_MODULE_7__["AuthService"],
+                        _configurations_services_auth_guard_auth_guard_service__WEBPACK_IMPORTED_MODULE_8__["AuthGuardService"],
+                        _configurations_services_admin_auth_guard_admin_auth_guard_service__WEBPACK_IMPORTED_MODULE_9__["AdminAuthGuardService"]
                     ],
                     entryComponents: [
-                        _admin_admin_serial_admin_serial_table_admin_serial_table_component__WEBPACK_IMPORTED_MODULE_18__["BottomSheetConfirm"]
+                        _admin_admin_serial_admin_serial_table_admin_serial_table_component__WEBPACK_IMPORTED_MODULE_20__["BottomSheetConfirm"]
                     ],
                     bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]]
                 })
             ], AppModule);
-            /***/ 
-        }),
-        /***/ "./src/app/comments/comments.component.scss": 
-        /*!**************************************************!*\
-          !*** ./src/app/comments/comments.component.scss ***!
-          \**************************************************/
-        /*! exports provided: default */
-        /***/ (function (module, __webpack_exports__, __webpack_require__) {
-            "use strict";
-            __webpack_require__.r(__webpack_exports__);
-            /* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NvbW1lbnRzL2NvbW1lbnRzLmNvbXBvbmVudC5zY3NzIn0= */");
-            /***/ 
-        }),
-        /***/ "./src/app/comments/comments.component.ts": 
-        /*!************************************************!*\
-          !*** ./src/app/comments/comments.component.ts ***!
-          \************************************************/
-        /*! exports provided: CommentsComponent */
-        /***/ (function (module, __webpack_exports__, __webpack_require__) {
-            "use strict";
-            __webpack_require__.r(__webpack_exports__);
-            /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CommentsComponent", function () { return CommentsComponent; });
-            /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-            /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-            /* harmony import */ var _configurations_services_profile_service_profile_service_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../configurations/services/profile-service/profile-service.service */ "./src/app/configurations/services/profile-service/profile-service.service.ts");
-            /* harmony import */ var _configurations_services_post_service_post_service_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../configurations/services/post-service/post-service.service */ "./src/app/configurations/services/post-service/post-service.service.ts");
-            var CommentsComponent = /** @class */ (function () {
-                function CommentsComponent(profileService, postService) {
-                    this.profileService = profileService;
-                    this.postService = postService;
-                }
-                CommentsComponent.prototype.ngOnInit = function () {
-                    var _this = this;
-                    this.profileService.profile.subscribe(function (response) {
-                        _this.profile = response;
-                    });
-                    this.postService.postCard.subscribe(function (response) {
-                        _this.post = response;
-                    });
-                };
-                return CommentsComponent;
-            }());
-            CommentsComponent.ctorParameters = function () { return [
-                { type: _configurations_services_profile_service_profile_service_service__WEBPACK_IMPORTED_MODULE_2__["ProfileService"] },
-                { type: _configurations_services_post_service_post_service_service__WEBPACK_IMPORTED_MODULE_3__["PostService"] }
-            ]; };
-            CommentsComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-                Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-                    selector: 'app-comments',
-                    template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./comments.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/comments/comments.component.html")).default,
-                    styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./comments.component.scss */ "./src/app/comments/comments.component.scss")).default]
-                }),
-                tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_configurations_services_profile_service_profile_service_service__WEBPACK_IMPORTED_MODULE_2__["ProfileService"],
-                    _configurations_services_post_service_post_service_service__WEBPACK_IMPORTED_MODULE_3__["PostService"]])
-            ], CommentsComponent);
             /***/ 
         }),
         /***/ "./src/app/configurations/animations/anim-fn.ts": 
@@ -2615,6 +2510,96 @@
                         useAnimation(banner2Enter)
                ]) ]) ]
             */
+            /***/ 
+        }),
+        /***/ "./src/app/configurations/services/admin-auth-guard/admin-auth-guard.service.ts": 
+        /*!**************************************************************************************!*\
+          !*** ./src/app/configurations/services/admin-auth-guard/admin-auth-guard.service.ts ***!
+          \**************************************************************************************/
+        /*! exports provided: AdminAuthGuardService */
+        /***/ (function (module, __webpack_exports__, __webpack_require__) {
+            "use strict";
+            __webpack_require__.r(__webpack_exports__);
+            /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AdminAuthGuardService", function () { return AdminAuthGuardService; });
+            /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+            /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+            /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+            /* harmony import */ var _profile_service_profile_service_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../profile-service/profile-service.service */ "./src/app/configurations/services/profile-service/profile-service.service.ts");
+            /* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm2015/material.js");
+            var AdminAuthGuardService = /** @class */ (function () {
+                function AdminAuthGuardService(profileService, router, snackBar) {
+                    this.profileService = profileService;
+                    this.router = router;
+                    this.snackBar = snackBar;
+                }
+                AdminAuthGuardService.prototype.canActivate = function () {
+                    var status = this.profileService.getLoggedStatus();
+                    if (status.user.admin) {
+                        return true;
+                    }
+                    else {
+                        this.snackBar.open('You are not authorized to acces this page, please Login', 'X', { duration: 10000, panelClass: 'red-theme' });
+                        this.router.navigate(['']);
+                        return false;
+                    }
+                }; //
+                return AdminAuthGuardService;
+            }());
+            AdminAuthGuardService.ctorParameters = function () { return [
+                { type: _profile_service_profile_service_service__WEBPACK_IMPORTED_MODULE_3__["ProfileService"] },
+                { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] },
+                { type: _angular_material__WEBPACK_IMPORTED_MODULE_4__["MatSnackBar"] }
+            ]; };
+            AdminAuthGuardService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+                Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+                    providedIn: 'root'
+                }),
+                tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_profile_service_profile_service_service__WEBPACK_IMPORTED_MODULE_3__["ProfileService"],
+                    _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"],
+                    _angular_material__WEBPACK_IMPORTED_MODULE_4__["MatSnackBar"]])
+            ], AdminAuthGuardService);
+            /***/ 
+        }),
+        /***/ "./src/app/configurations/services/auth-guard/auth-guard.service.ts": 
+        /*!**************************************************************************!*\
+          !*** ./src/app/configurations/services/auth-guard/auth-guard.service.ts ***!
+          \**************************************************************************/
+        /*! exports provided: AuthGuardService */
+        /***/ (function (module, __webpack_exports__, __webpack_require__) {
+            "use strict";
+            __webpack_require__.r(__webpack_exports__);
+            /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AuthGuardService", function () { return AuthGuardService; });
+            /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+            /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+            /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+            /* harmony import */ var _profile_service_profile_service_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../profile-service/profile-service.service */ "./src/app/configurations/services/profile-service/profile-service.service.ts");
+            var AuthGuardService = /** @class */ (function () {
+                function AuthGuardService(router, profileService) {
+                    this.router = router;
+                    this.profileService = profileService;
+                }
+                AuthGuardService.prototype.canActivate = function (routes, state) {
+                    var user = this.profileService.getLoggedStatus();
+                    if (!user.expired) {
+                        return true;
+                    }
+                    else {
+                        return false;
+                    }
+                };
+                return AuthGuardService;
+            }());
+            AuthGuardService.ctorParameters = function () { return [
+                { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] },
+                { type: _profile_service_profile_service_service__WEBPACK_IMPORTED_MODULE_3__["ProfileService"] }
+            ]; };
+            AuthGuardService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+                Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+                    providedIn: 'root'
+                }),
+                tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"],
+                    _profile_service_profile_service_service__WEBPACK_IMPORTED_MODULE_3__["ProfileService"]])
+            ], AuthGuardService);
             /***/ 
         }),
         /***/ "./src/app/configurations/services/auth/auth.service.ts": 
@@ -3302,123 +3287,6 @@
                 }),
                 tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
             ], BannerFullComponent);
-            /***/ 
-        }),
-        /***/ "./src/app/logo/logo2rem-light/logo2rem-light.component.scss": 
-        /*!*******************************************************************!*\
-          !*** ./src/app/logo/logo2rem-light/logo2rem-light.component.scss ***!
-          \*******************************************************************/
-        /*! exports provided: default */
-        /***/ (function (module, __webpack_exports__, __webpack_require__) {
-            "use strict";
-            __webpack_require__.r(__webpack_exports__);
-            /* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2xvZ28vbG9nbzJyZW0tbGlnaHQvbG9nbzJyZW0tbGlnaHQuY29tcG9uZW50LnNjc3MifQ== */");
-            /***/ 
-        }),
-        /***/ "./src/app/logo/logo2rem-light/logo2rem-light.component.ts": 
-        /*!*****************************************************************!*\
-          !*** ./src/app/logo/logo2rem-light/logo2rem-light.component.ts ***!
-          \*****************************************************************/
-        /*! exports provided: Logo2remLightComponent */
-        /***/ (function (module, __webpack_exports__, __webpack_require__) {
-            "use strict";
-            __webpack_require__.r(__webpack_exports__);
-            /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Logo2remLightComponent", function () { return Logo2remLightComponent; });
-            /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-            /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-            var Logo2remLightComponent = /** @class */ (function () {
-                function Logo2remLightComponent() {
-                }
-                Logo2remLightComponent.prototype.ngOnInit = function () {
-                };
-                return Logo2remLightComponent;
-            }());
-            Logo2remLightComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-                Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-                    selector: 'app-logo2rem-light',
-                    template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./logo2rem-light.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/logo/logo2rem-light/logo2rem-light.component.html")).default,
-                    styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./logo2rem-light.component.scss */ "./src/app/logo/logo2rem-light/logo2rem-light.component.scss")).default]
-                }),
-                tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
-            ], Logo2remLightComponent);
-            /***/ 
-        }),
-        /***/ "./src/app/logo/logo2rem/logo2rem.component.scss": 
-        /*!*******************************************************!*\
-          !*** ./src/app/logo/logo2rem/logo2rem.component.scss ***!
-          \*******************************************************/
-        /*! exports provided: default */
-        /***/ (function (module, __webpack_exports__, __webpack_require__) {
-            "use strict";
-            __webpack_require__.r(__webpack_exports__);
-            /* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2xvZ28vbG9nbzJyZW0vbG9nbzJyZW0uY29tcG9uZW50LnNjc3MifQ== */");
-            /***/ 
-        }),
-        /***/ "./src/app/logo/logo2rem/logo2rem.component.ts": 
-        /*!*****************************************************!*\
-          !*** ./src/app/logo/logo2rem/logo2rem.component.ts ***!
-          \*****************************************************/
-        /*! exports provided: Logo2remComponent */
-        /***/ (function (module, __webpack_exports__, __webpack_require__) {
-            "use strict";
-            __webpack_require__.r(__webpack_exports__);
-            /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Logo2remComponent", function () { return Logo2remComponent; });
-            /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-            /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-            var Logo2remComponent = /** @class */ (function () {
-                function Logo2remComponent() {
-                }
-                Logo2remComponent.prototype.ngOnInit = function () {
-                };
-                return Logo2remComponent;
-            }());
-            Logo2remComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-                Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-                    selector: 'app-logo2rem',
-                    template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./logo2rem.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/logo/logo2rem/logo2rem.component.html")).default,
-                    styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./logo2rem.component.scss */ "./src/app/logo/logo2rem/logo2rem.component.scss")).default]
-                }),
-                tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
-            ], Logo2remComponent);
-            /***/ 
-        }),
-        /***/ "./src/app/logo/logo4rem/logo4rem.component.scss": 
-        /*!*******************************************************!*\
-          !*** ./src/app/logo/logo4rem/logo4rem.component.scss ***!
-          \*******************************************************/
-        /*! exports provided: default */
-        /***/ (function (module, __webpack_exports__, __webpack_require__) {
-            "use strict";
-            __webpack_require__.r(__webpack_exports__);
-            /* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2xvZ28vbG9nbzRyZW0vbG9nbzRyZW0uY29tcG9uZW50LnNjc3MifQ== */");
-            /***/ 
-        }),
-        /***/ "./src/app/logo/logo4rem/logo4rem.component.ts": 
-        /*!*****************************************************!*\
-          !*** ./src/app/logo/logo4rem/logo4rem.component.ts ***!
-          \*****************************************************/
-        /*! exports provided: Logo4remComponent */
-        /***/ (function (module, __webpack_exports__, __webpack_require__) {
-            "use strict";
-            __webpack_require__.r(__webpack_exports__);
-            /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Logo4remComponent", function () { return Logo4remComponent; });
-            /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-            /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-            var Logo4remComponent = /** @class */ (function () {
-                function Logo4remComponent() {
-                }
-                Logo4remComponent.prototype.ngOnInit = function () {
-                };
-                return Logo4remComponent;
-            }());
-            Logo4remComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-                Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-                    selector: 'app-logo4rem',
-                    template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./logo4rem.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/logo/logo4rem/logo4rem.component.html")).default,
-                    styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./logo4rem.component.scss */ "./src/app/logo/logo4rem/logo4rem.component.scss")).default]
-                }),
-                tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
-            ], Logo4remComponent);
             /***/ 
         }),
         /***/ "./src/app/logo/main-logo/main-logo.component.scss": 
