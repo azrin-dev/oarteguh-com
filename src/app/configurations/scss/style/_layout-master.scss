@@ -167,6 +167,7 @@
                 overflow-y: auto;
                 overflow-x: hidden;
                 margin-bottom: 2vh;
+                background-color: $grey-light;
             }
             &-content-sidebar {
                 position: sticky;
@@ -181,7 +182,7 @@
             }
             &-full {
                 min-height: 82vh;
-                background-color: $white;
+                background-color: transparent;
                 margin-top: 10px;
                 padding: 10px 10px 10px 10px;
                 overflow: hidden;
