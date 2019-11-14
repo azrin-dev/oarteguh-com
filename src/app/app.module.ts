@@ -53,6 +53,9 @@ import { TermsComponent } from './pages/terms/terms.component';
 import { ProfileComponent } from './pages-user/profile/profile.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { ContactFormComponent } from './pages/contact-form/contact-form.component';
+import { DashboardAdminComponent } from './pages-admin/dashboard-admin/dashboard-admin.component';
+import { PostsAdminComponent } from './pages-admin/posts-admin/posts-admin.component';
+import { PostAdminComponent } from './pages-admin/posts-admin/post-admin/post-admin.component';
 
 
 export function tokenGetter() {
@@ -99,7 +102,11 @@ export function tokenGetter() {
     LayoutComponent,
     SidebarComponent,
     TermsComponent,
-    ProfileComponent
+    ProfileComponent,
+    DashboardAdminComponent,
+    PostsAdminComponent,
+    PostAdminComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
