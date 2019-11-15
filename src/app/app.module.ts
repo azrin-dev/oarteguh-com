@@ -56,6 +56,13 @@ import { ContactFormComponent } from './pages/contact-form/contact-form.componen
 import { DashboardAdminComponent } from './pages-admin/dashboard-admin/dashboard-admin.component';
 import { PostsAdminComponent } from './pages-admin/posts-admin/posts-admin.component';
 import { PostAdminComponent } from './pages-admin/posts-admin/post-admin/post-admin.component';
+import { TablePostsAdminComponent } from './pages-admin/posts-admin/table-posts-admin/table-posts-admin.component';
+import { DashboardUserComponent } from './pages-user/dashboard-user/dashboard-user.component';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatCardModule } from '@angular/material/card';
+import { MatMenuModule } from '@angular/material/menu';
+import { TreeUserComponent } from './pages-user/dashboard-user/tree-user/tree-user.component';
+import { MatTreeModule } from '@angular/material/tree';
 
 
 export function tokenGetter() {
@@ -106,7 +113,10 @@ export function tokenGetter() {
     DashboardAdminComponent,
     PostsAdminComponent,
     PostAdminComponent,
-    LoginComponent
+    LoginComponent,
+    TablePostsAdminComponent,
+    DashboardUserComponent,
+    TreeUserComponent
   ],
   imports: [
     BrowserModule,
@@ -127,7 +137,11 @@ export function tokenGetter() {
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatGridListModule,
+    MatCardModule,
+    MatMenuModule,
+    MatTreeModule
   ],
   providers: [
     {provide: APP_BASE_HREF, useValue: '/'},

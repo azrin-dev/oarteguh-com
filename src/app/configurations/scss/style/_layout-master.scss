@@ -248,6 +248,11 @@
                 overflow-y: hidden;
             }
         }
+        &__button {
+            &-dark {
+                background-color: $dark-bg;
+            }
+        }
         &__timeline {
             margin-top: 10px;
             background-color: $off-white;
@@ -457,6 +462,11 @@
         }
         &__icon {
             padding-right: 20px;
+            &-padding {
+                margin: 0 10px 0 10px;
+                background-color: $dark-bg;
+                border-radius: 50%;
+            }
             &-badge {
                 padding-right: 40px;
             }
@@ -603,6 +613,10 @@
                 font-size: 2rem;
                 transform: translateY(-40px);
                 text-align: center;
+            }
+            &-title {
+                font-size: 2rem;
+                padding: 10px 0 10px 0;
             }
             &-title-primary {
                 color: $primary;

@@ -8,6 +8,8 @@ import { DashboardAdminComponent } from './pages-admin/dashboard-admin/dashboard
 import { AuthGuardService } from './configurations/services/auth-guard/auth-guard.service';
 import { AdminAuthGuardService } from './configurations/services/admin-auth-guard/admin-auth-guard.service';
 import { LoginComponent } from './user/login/login.component';
+import { PostsAdminComponent } from './pages-admin/posts-admin/posts-admin.component';
+import { DashboardUserComponent } from './pages-user/dashboard-user/dashboard-user.component';
 
 export const routes: Routes = [
 
@@ -17,12 +19,17 @@ export const routes: Routes = [
   { path: 'terms', component: TermsComponent, data: { name: 'Terms', icon: 'policy', tooltip: 'Terms', type: 'public' } },
   { path: 'contact', component: ContactFormComponent, data: { name: 'Contact Us', icon: 'alternate_email', tooltip: 'Contact Us', type: 'public' }},
 
+  // User routes
+  { path: 'user/dashboard', component: DashboardUserComponent, canActivate: [AuthGuardService], data: { name: 'Dashboard', icon: 'person', tooltip: 'User Dashboard Page', type: 'user' } },
+
    // Auth routes 
   { path: 'auth/login', component: LoginComponent, data: { name: 'Login', icon: 'person', tooltip: 'Login Page', type: 'auth' } },
 
   // Admin routes
   { path: 'admin/dashboard', component: DashboardAdminComponent, canActivate: [AuthGuardService, AdminAuthGuardService], 
          data: { name: 'Admin Dashboard', icon: 'dashboard', type: 'admin'  } },
+   { path: 'admin/posts', component: PostsAdminComponent, canActivate: [AuthGuardService, AdminAuthGuardService], 
+         data: { name: 'Admin Posts', icon: 'local_library', type: 'admin'  } },
 
    // Wildcard
   { path: '**', component: HomeComponent, data: { name: 'Back to Home', icon: 'dashboard', type: 'wildcard' } }
